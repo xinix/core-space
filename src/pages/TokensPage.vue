@@ -1,27 +1,25 @@
 <script lang="ts" setup>
 import InventoryItem from '@/components/InventoryItem.vue'
-import tokens from '@/tokens'
+import { TokenType } from '@/tokens/types'
 import { computed } from 'vue'
 
-const props = withDefaults(defineProps<{ q?: string }>(), { q: '' })
-
-const items = computed(() => {
-    let q = props.q
-    if (q != undefined) {
-        q = q.toLowerCase().trim()
-        if (q != '') {
-            return tokens
-                .filter((a) => a.name.toLowerCase().indexOf(q as string) >= 0)
-                .sort((a, b) => a.name.localeCompare(b.name))
-        }
-    }
-    return tokens.sort((a, b) => a.name.localeCompare(b.name))
-})
+const props = defineProps<{ items: TokenType[]; q: string }>()
+defineEmits(['clear'])
+const qSummary = computed(
+    () => `Search results for: <strong>${props.q}</strong>`
+)
 </script>
 
 <template>
-    <section class="tokens">
-        <transition-group name="list">
+    <section class="container">
+        <p v-if="q" class="summary">
+            <span v-html="qSummary" />
+            <button class="btn-link" type="button" @click="$emit('clear')">
+                Clear filter
+            </button>
+        </p>
+
+        <transition-group class="tokens" name="list" tag="div">
             <InventoryItem
                 v-for="item in items"
                 :key="item.slug"
@@ -36,6 +34,10 @@ const items = computed(() => {
 .tokens {
     display: flex;
     flex-wrap: wrap;
+}
+
+.summary {
+    margin: 0.5em 1em;
 }
 
 /* transition: list */

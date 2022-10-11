@@ -41,11 +41,11 @@ h6 {
 }
 
 body {
-    background: var(--body-bg);
+    animation: gradient 15s ease infinite;
     color: var(--body-color);
 
+    background: var(--body-bg);
     background-size: 400% 400%;
-    animation: gradient 15s ease infinite;
 }
 
 @keyframes gradient {
@@ -58,6 +58,22 @@ body {
     100% {
         background-position: 0 50%;
     }
+}
+
+.btn-link {
+    font-family: inherit;
+    font-size: 100%;
+    line-height: 1.15;
+    margin: 0;
+    padding: 0 .5em;
+    cursor: pointer;
+    text-decoration: underline;
+    text-transform: none;
+    color: inherit;
+    border: none;
+    outline: none;
+    background: inherit;
+    -webkit-appearance: button;
 }
 
 @import "tokens/base";

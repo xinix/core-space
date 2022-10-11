@@ -1,29 +1,13 @@
 <script lang="ts" setup>
-import { computed, ref, watch } from 'vue'
-import { LocationQueryValue, useRoute, useRouter } from 'vue-router'
-import { debounce } from '@/helpers/debounce'
+import TokensPage from '@/pages/TokensPage.vue'
 
-const route = useRoute()
-const router = useRouter()
+import { computed } from 'vue'
+import { useTokens } from '@/stores/tokens'
 
-const q = ref(route.query.q ?? '')
+const tokens = useTokens()
 const searchClass = computed(() => ({
-    'has-text': q.value.length > 0,
+    'has-text': tokens.q.length > 0,
 }))
-
-const updateQ = debounce((newQ: string | LocationQueryValue[]) => {
-    router.push({ query: { q: newQ } })
-}, 500)
-
-const onClear = (event: MouseEvent) => {
-    q.value = ''
-    event.preventDefault()
-    return event
-}
-
-watch(q, (newQ) => {
-    updateQ(newQ)
-})
 </script>
 
 <template>
@@ -34,7 +18,7 @@ watch(q, (newQ) => {
             </a>
             <form :class="searchClass" class="search">
                 <input
-                    v-model.trim="q"
+                    v-model.trim="tokens.q"
                     autocapitalize="off"
                     autocomplete="off"
                     autocorrect="off"
@@ -47,7 +31,7 @@ watch(q, (newQ) => {
                     class="material-symbols-rounded search-clear"
                     type="reset"
                     value="close"
-                    @click.prevent="onClear"
+                    @click.prevent="tokens.clearQ()"
                 />
                 <input
                     class="material-symbols-rounded search-button"
@@ -57,7 +41,11 @@ watch(q, (newQ) => {
             </form>
         </header>
         <main class="content">
-            <router-view />
+            <TokensPage
+                :items="tokens.items"
+                :q="tokens.q"
+                @clear="tokens.clearQ()"
+            />
         </main>
     </div>
 </template>
