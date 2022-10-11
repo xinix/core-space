@@ -8,6 +8,10 @@ const tokens = useTokens()
 const searchClass = computed(() => ({
     'has-text': tokens.q.length > 0,
 }))
+const onClear = (ev: MouseEvent) => {
+    tokens.clearQ()
+    return ev
+}
 </script>
 
 <template>
@@ -31,7 +35,7 @@ const searchClass = computed(() => ({
                     class="material-symbols-rounded search-clear"
                     type="reset"
                     value="close"
-                    @click.prevent="tokens.clearQ()"
+                    @click.prevent="onClear"
                 />
                 <input
                     class="material-symbols-rounded search-button"

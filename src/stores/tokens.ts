@@ -21,8 +21,9 @@ export const useTokens = defineStore('tokens', {
         },
     },
     actions: {
-        clearQ() {
+        clearQ(ev: MouseEvent | null = null) {
             this.q = ''
+            return ev
         },
     },
 })

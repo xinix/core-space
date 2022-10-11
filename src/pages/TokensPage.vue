@@ -4,17 +4,21 @@ import { TokenType } from '@/tokens/types'
 import { computed } from 'vue'
 
 const props = defineProps<{ items: TokenType[]; q: string }>()
-defineEmits(['clear'])
+const emit = defineEmits(['clear'])
 const qSummary = computed(
     () => `Search results for: <strong>${props.q}</strong>`
 )
+const onClear = (ev: MouseEvent) => {
+    emit('clear')
+    return ev
+}
 </script>
 
 <template>
     <section class="container">
         <p v-if="q" class="summary">
             <span v-html="qSummary" />
-            <button class="btn-link" type="button" @click="$emit('clear')">
+            <button class="btn-link" type="button" @click="onClear">
                 Clear filter
             </button>
         </p>
