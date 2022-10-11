@@ -46,9 +46,12 @@ const onClear = (ev: MouseEvent) => {
         </header>
         <main class="content">
             <TokensPage
+                :active-slug="tokens.active"
                 :items="tokens.items"
                 :q="tokens.q"
-                @clear="tokens.clearQ()"
+                @back="tokens.backToOverview"
+                @clear="tokens.clearQ"
+                @select="tokens.activate"
             />
         </main>
     </div>

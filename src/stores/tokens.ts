@@ -6,11 +6,16 @@ export const useTokens = defineStore('tokens', {
     state: () => {
         return {
             q: '',
+            active: '',
             rawItems: [...tokens] as TokenType[],
         }
     },
     getters: {
         items: (state) => {
+            if (state.active !== '') {
+                return state.rawItems.filter((a) => a.slug === state.active)
+            }
+
             const q = state.q.toLowerCase().trim()
             if (q != '') {
                 return state.rawItems
@@ -24,6 +29,12 @@ export const useTokens = defineStore('tokens', {
         clearQ(ev: MouseEvent | null = null) {
             this.q = ''
             return ev
+        },
+        activate(item: TokenType) {
+            this.active = item.slug
+        },
+        backToOverview() {
+            this.active = ''
         },
     },
 })

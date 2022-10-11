@@ -76,5 +76,49 @@ body {
     -webkit-appearance: button;
 }
 
+.btn {
+    font-family: inherit;
+    font-size: 125%;
+    font-weight: bold;
+    display: inline-flex;
+    align-content: center;
+    margin: 0;
+    cursor: pointer;
+    transition: transform .2s ease-in;
+    text-transform: uppercase;
+    color: inherit;
+    border: none;
+    outline: none;
+    background: inherit;
+    -webkit-appearance: button;
+
+    .icon {
+        transition: transform .2s ease-out;
+    }
+
+    .icon + span {
+        margin-left: .5em;
+    }
+
+    &:active,
+    &:hover {
+        transform: scale(1.1);
+
+        .icon {
+            transform: translateX(-.125em);
+        }
+    }
+}
+
+.dl {
+    display: grid;
+    grid-gap: .5em .5em;
+    grid-template-columns: auto auto auto 1fr;
+
+    dt {
+        font-weight: bold;
+    }
+}
+
 @import "tokens/base";
 @import "tokens/first_born";
