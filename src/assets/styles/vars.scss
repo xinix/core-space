@@ -1,0 +1,47 @@
+:root {
+    --font-title: 'Saira Condensed', sans-serif;
+    --font-main: 'Space Grotesk', sans-serif;
+
+    --shadow-sm: 3px 3px 6px 0 rgb(0 0 0 / 10%), -3px -3px 6px 0 rgb(212 210 210 / 10%);
+    --shadow-md: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 2px 4px 0 rgb(0 0 0 / 8%);
+    --shadow-lg: 0 15px 30px 0 rgb(0 0 0 / 11%), 0 5px 15px 0 rgb(0 0 0 / 8%);
+
+    --input-radius: .5rem;
+    --search-height: 44px;
+    --icon-button-width: 48px;
+
+    --first-born-tokens: url('../images/first_born_equipment.jpg');
+
+    /* THEME COLORS */
+    --body-bg: linear-gradient(45deg, #293c33, #151310, #4c605f, #293332);
+    --body-color: #ffffff;
+
+    --header-bg: rgba(0, 0, 0, .5);
+
+    --primary: #83b7bb;
+    --primary-transparent: rgba(131, 183, 187, .6);
+    --primary-contrast: #ffffff;
+
+    --input-bg: #151310;
+    --input-color: #ffffff;
+    --input-border: rgba(0, 0, 0, 0.15);
+}
+
+html[data-theme='light'] {
+    --body-bg: linear-gradient(45deg, #6c979d, #4c605f, #80b4b8, #293332);
+    --body-color: black;
+}
+
+@media screen and (prefers-color-scheme: light) {
+    :root {
+        --body-bg: linear-gradient(45deg, #6c979d, #4c605f, #80b4b8, #293332);
+        --body-color: black;
+    }
+}
+
+@media (max-width: 450px) {
+    :root {
+        --icon-button-width: 32px;
+    }
+}
+

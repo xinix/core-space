@@ -1,0 +1,11 @@
+.token {
+    background-repeat: no-repeat;
+    width: 118px;
+    height: 118px;
+    border-radius: 15px;
+
+    &.sm {
+        width: 118px;
+        height: 118px;
+    }
+}

@@ -1,0 +1,26 @@
+$sm-cols: (-44px, -173px, -301px, -430px, -558px, -686px, -815px, -943px, -1072px, -1200px);
+$sm-rows: (-79px, -207px, -336px, -464px);
+
+$sm-tokens: (
+    1: ('port-engram', '', 'shield-engram', '', 'phase-engram', 'liege-shard-6', 'liege-shard-4', 'dyson-spike', 'dyson-draw'),
+    2: ('dyson-vent', '', 'phase-loop', '', 'larva', 'fibril', '', '', 'necro-flask'),
+    3: ('sypher-orb', 'ecco-orb', 'photon-shifter', 'matter-shifter', '', 'liege-ring-6', 'liege-ring-4', 'artifact', '', 'quantum-lens'),
+    4: ('artifact-4', '', '', '', 'bracer', 'shard-fins', 'shard-fin', 'raw-materials', '', 'liege-shard-5'),
+);
+
+.token.first-born {
+    background-image: var(--first-born-tokens);
+    background-size: 1362.75px 1920px;
+
+    @each $row, $columns in $sm-tokens {
+        @each $col in $columns {
+
+            @if $col != '' {
+                &.#{$col} {
+                    background-position-x: nth($sm-cols, index($columns, $col));
+                    background-position-y: nth($sm-rows, $row);
+                }
+            }
+        }
+    }
+}

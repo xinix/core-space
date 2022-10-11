@@ -1,0 +1,10 @@
+build
+cypress
+dist
+node_modules
+public
+
+shims-vue.d.ts
+tracking.ts
+*.config.js
+*.svg
