@@ -23,7 +23,7 @@ watch(() => tokens.q, tokens.search)
 <template>
     <div class="page">
         <header class="header">
-            <a class="logo" href="/">
+            <a class="logo" href="/core-space">
                 <img alt="logo" src="/logo.svg" />
             </a>
             <form
