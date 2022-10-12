@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import InventoryItem from '@/components/InventoryItem.vue'
+import TokenDetails from '@/components/TokenDetails.vue'
 import { TokenType } from '@/tokens/types'
 import { computed } from 'vue'
 
@@ -42,7 +42,7 @@ const onBack = (ev: MouseEvent) => {
         </p>
 
         <transition-group class="tokens" name="list" tag="div">
-            <InventoryItem
+            <TokenDetails
                 v-for="item in items"
                 :key="item.slug"
                 :active="item.slug === activeSlug"

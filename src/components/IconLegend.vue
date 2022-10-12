@@ -1,8 +1,32 @@
 <script lang="ts" setup>
 import AttributeIcon from '@/components/icons/AttributIcon.vue'
 import { ItemIcon } from '@/tokens/types'
+import { useI18n } from 'vue-i18n'
+import { computed } from 'vue'
 
-withDefaults(defineProps<{ icon: ItemIcon; tag?: string }>(), { tag: 'div' })
+const props = withDefaults(
+    defineProps<{
+        icon: ItemIcon
+        tag?: string
+        mustache?: number | number[] | null
+    }>(),
+    {
+        tag: 'div',
+        mustache: null,
+    }
+)
+
+const { t } = useI18n()
+
+const text = computed(() => {
+    if (props.mustache != null) {
+        return t(
+            props.icon,
+            Array.isArray(props.mustache) ? props.mustache : [props.mustache]
+        )
+    }
+    return t(props.icon)
+})
 </script>
 
 <template>
@@ -10,7 +34,7 @@ withDefaults(defineProps<{ icon: ItemIcon; tag?: string }>(), { tag: 'div' })
         <figure>
             <AttributeIcon :attribute="icon" />
         </figure>
-        <span v-html="$t(icon)" />
+        <span v-html="text" />
     </component>
 </template>
 

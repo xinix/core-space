@@ -38,12 +38,17 @@ export type ItemIcon =
     | 'repair'
     | 'physical_armour'
     | 'shield_armour'
+    | 'phase'
+    | 'throw'
+    | 'close'
+    | 'grenade'
 
 export type ItemDescription = 'rotating'
 
 export type TokenType = {
     product: ProductType
     slug: string
+    icon?: string
     name: string
     color:
         | 'blue'
@@ -57,14 +62,14 @@ export type TokenType = {
     size: 'xs' | 'sm' | 'md'
     close?: number
     heavy?: number
-    throw?: number | number[]
+    throw?: number
+    grenade?: number[]
     range?: 's' | 'm' | 'l'
     short?: number
     medium?: number
     long?: number
     buy?: number
     sell?: number | number[]
-    shield?: number | number[]
     blast?: number[]
     scatter?: number
     phase?: number

@@ -6,8 +6,18 @@ import ScatterIcon from '@/components/icons/ScatterIcon.vue'
 import FlipIcon from '@/components/icons/FlipIcon.vue'
 import DiscardIcon from '@/components/icons/DiscardIcon.vue'
 import PhysicalArmourIcon from '@/components/icons/PhysicalArmourIcon.vue'
+import PhaseIcon from '@/components/icons/PhaseIcon.vue'
+import ReRollIcon from '@/components/icons/ReRollIcon.vue'
+import CloseIcon from '@/components/icons/CloseIcon.vue'
+import ThrowIcon from '@/components/icons/ThrowIcon.vue'
+import GrenadeIcon from '@/components/icons/GrenadeIcon.vue'
 
 export function loadGlobalComponents(app: App) {
+    app.component('GrenadeIcon', GrenadeIcon)
+    app.component('ThrowIcon', ThrowIcon)
+    app.component('CloseIcon', CloseIcon)
+    app.component('ReRollIcon', ReRollIcon)
+    app.component('PhaseIcon', PhaseIcon)
     app.component('PhysicalArmourIcon', PhysicalArmourIcon)
     app.component('DiscardIcon', DiscardIcon)
     app.component('FlipIcon', FlipIcon)

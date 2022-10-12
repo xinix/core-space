@@ -135,6 +135,21 @@ strong {
     background-size: 100% 3px;
 }
 
+.list ul {
+    margin: 1em 0 1em 1em;
+    list-style: none;
+
+    > li:before {
+        padding-right: .5em;
+        content: "•";
+        color: var(--primary)
+    }
+
+    > li + li {
+        margin-top: .5em;
+    }
+}
+
 @import "tokens/base";
 @import "tokens/first_born";
 

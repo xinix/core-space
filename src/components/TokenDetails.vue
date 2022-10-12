@@ -1,8 +1,8 @@
 <script lang="ts" setup>
-import IconDescription from '@/components/IconDescription.vue'
-import AttributeDescription from '@/components/AttributeDescription.vue'
+import IconLegend from '@/components/IconLegend.vue'
+import JustText from '@/components/JustText.vue'
 
-import { TokenType } from '@/tokens/types'
+import { ItemIcon, TokenType } from '@/tokens/types'
 import { computed } from 'vue'
 
 const props = defineProps<{ item: TokenType; active: boolean }>()
@@ -20,6 +20,15 @@ const onSelect = (ev: MouseEvent) => {
     emit('select', props.item)
     return ev
 }
+const mustacheIcons = computed(() => {
+    const icons: { key: ItemIcon; value: any }[] = [
+        { key: 'phase', value: props.item.phase },
+        { key: 'close', value: props.item.close },
+        { key: 'throw', value: props.item.throw },
+        { key: 'grenade', value: props.item.grenade },
+    ]
+    return icons.filter((x) => x.value != undefined)
+})
 </script>
 
 <template>
@@ -41,7 +50,7 @@ const onSelect = (ev: MouseEvent) => {
         </header>
         <section v-if="active" class="more">
             <ul v-if="item.description" class="list">
-                <AttributeDescription
+                <JustText
                     v-for="attr in item.description"
                     :key="attr"
                     :attribute="attr"
@@ -49,8 +58,15 @@ const onSelect = (ev: MouseEvent) => {
                 />
             </ul>
 
-            <ul v-if="item.icons" class="list">
-                <IconDescription
+            <ul class="list">
+                <IconLegend
+                    v-for="snor in mustacheIcons"
+                    :key="snor.key"
+                    :icon="snor.key"
+                    :mustache="snor.value"
+                    tag="li"
+                />
+                <IconLegend
                     v-for="icon in item.icons"
                     :key="icon"
                     :icon="icon"

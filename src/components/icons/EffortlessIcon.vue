@@ -6,13 +6,14 @@ import BaseIcon from '@/components/icons/BaseIcon.vue'
         <circle
             cx="45"
             cy="45"
+            fill="white"
             r="41.5"
-            stroke="currentColor"
+            stroke="black"
             stroke-width="7"
         />
         <path
-            d="M23 43.9459 40.1429 58 68 32"
-            stroke="currentColor"
+            d="M23 43.9459L40.1429 58L68 32"
+            stroke="black"
             stroke-linecap="round"
             stroke-width="8"
         />
