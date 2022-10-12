@@ -51,7 +51,7 @@ const onSearch = (ev: SubmitEvent) => {
                     value="search"
                 />
             </form>
-            <ThemeToggle />
+            <ThemeToggle class="theme" />
         </header>
         <main class="content">
             <TokensPage
@@ -173,6 +173,30 @@ const onSearch = (ev: SubmitEvent) => {
 }
 
 @media (max-width: 450px) {
+    .header {
+        position: relative;
+        height: auto;
+        padding-bottom: 1em;
+        grid-template-columns: auto 1fr;
+        grid-template-areas:
+            'logo theme'
+            'form form';
+        grid-gap: 1em 0.75em;
+
+        .logo {
+            margin: 0.25em 0.5em;
+            grid-area: logo;
+        }
+
+        .theme {
+            justify-content: flex-end;
+            grid-area: theme;
+        }
+
+        form {
+            grid-area: form;
+        }
+    }
     .search {
         padding: 0 0.5em;
     }
