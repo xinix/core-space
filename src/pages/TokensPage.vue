@@ -31,13 +31,13 @@ const onBack = (ev: MouseEvent) => {
         <p v-if="activeSlug" class="summary">
             <button class="btn" type="button" @click="onBack">
                 <span class="material-symbols-rounded icon">arrow_back</span>
-                <span>Back</span>
+                <span>{{ $t('back') }}</span>
             </button>
         </p>
         <p v-else-if="q" class="summary">
             <span v-html="qSummary" />
             <button class="btn-link" type="button" @click="onClear">
-                Clear filter
+                {{ $t('clear_filter') }}
             </button>
         </p>
 

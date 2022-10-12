@@ -17,10 +17,26 @@
     --body-color: #ffffff;
 
     --header-bg: rgba(0, 0, 0, .5);
+    --transparent-bg: rgba(0, 0, 0, 0.5);
 
     --primary: #83b7bb;
     --primary-transparent: rgba(131, 183, 187, .6);
     --primary-contrast: #ffffff;
+
+    --primary-1: #709aa0;
+    --primary-2: #899390;
+    --primary-3: #9abbc0;
+    --primary-4: #81b8bb;
+
+    --secondary-1: #9a363f;
+    --secondary-2: #e85049;
+    --secondary-3: #a8423b;
+    --secondary-4: #712619;
+
+    --secondary-a1: rgba(154, 54, 63, .75);
+    --secondary-a2: rgba(232, 80, 73, .75);
+    --secondary-a3: rgba(168, 66, 59, .75);
+    --secondary-a4: rgba(113, 38, 25, .75);
 
     --input-bg: #151310;
     --input-color: #ffffff;
@@ -28,15 +44,15 @@
 }
 
 html[data-theme='light'] {
-    --body-bg: linear-gradient(45deg, #6c979d, #4c605f, #80b4b8, #293332);
+    --body-bg: linear-gradient(45deg, #b5dde5, #8ed0cd, #d7f6fa, #80b4b4);
     --body-color: black;
-}
 
-@media screen and (prefers-color-scheme: light) {
-    :root {
-        --body-bg: linear-gradient(45deg, #6c979d, #4c605f, #80b4b8, #293332);
-        --body-color: black;
-    }
+    --input-bg: #ffffff;
+    --input-color: #151310;
+    --input-border: rgba(255, 255, 255, 0.15);
+
+    --header-bg: rgba(255, 255, 255, .5);
+    --transparent-bg: rgba(239, 232, 232, 0.5);
 }
 
 @media (max-width: 450px) {

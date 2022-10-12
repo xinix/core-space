@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import TokensPage from '@/pages/TokensPage.vue'
+import ThemeToggle from '@/components/buttons/ThemeToggle.vue'
 
 import { computed } from 'vue'
 import { useTokens } from '@/stores/tokens'
@@ -12,6 +13,9 @@ const onClear = (ev: MouseEvent) => {
     tokens.clearQ()
     return ev
 }
+const onSearch = (ev: SubmitEvent) => {
+    return ev
+}
 </script>
 
 <template>
@@ -20,15 +24,19 @@ const onClear = (ev: MouseEvent) => {
             <a class="logo" href="/">
                 <img alt="logo" src="/logo.svg" />
             </a>
-            <form :class="searchClass" class="search">
+            <form
+                :class="searchClass"
+                class="search"
+                @submit.prevent="onSearch"
+            >
                 <input
                     v-model.trim="tokens.q"
+                    :placeholder="$t('search_placeholder')"
                     autocapitalize="off"
                     autocomplete="off"
                     autocorrect="off"
                     class="search-input"
                     name="q"
-                    placeholder="Search Core Space items..."
                     type="text"
                 />
                 <input
@@ -43,6 +51,7 @@ const onClear = (ev: MouseEvent) => {
                     value="search"
                 />
             </form>
+            <ThemeToggle />
         </header>
         <main class="content">
             <TokensPage
@@ -71,14 +80,14 @@ const onClear = (ev: MouseEvent) => {
     padding: 0 1em;
     background-color: var(--header-bg);
     box-shadow: var(--shadow-md);
-    grid-template-columns: auto 1fr;
+    grid-template-columns: auto 1fr auto;
 
     .logo > img {
         width: 3.5rem;
         height: 3.5rem;
-        border: solid 1px var(--body-color);
+        border: solid 1px #ffffff;
         border-radius: 100%;
-        background-color: var(--body-color);
+        background-color: #ffffff;
     }
 }
 

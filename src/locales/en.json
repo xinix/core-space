@@ -1,0 +1,16 @@
+{
+  "back": "Back",
+  "clear_filter": "Clear filter",
+  "search_placeholder": "Search for ...",
+  "buy": "Buy",
+  "sell": "Sell",
+  "physical_armour": "<strong>Physical armour</strong> has a permanent affect while it is worn, reducing the number of hits scored in an attack against the wearer by the physical armour value on the counter. E.g. if a character with a physical armour value of 1 suffers 2 hits, the armour will <strong>deflect/absorb</strong> 1 of those hits. This will happen each time the character is attacked.",
+  "rare": "This item is <strong>rare</strong> and cannot be bought. It can only be found using the Search action during a mission.",
+  "effortless": "This item can be used as an <strong>effortless</strong> action.",
+  "flip": "When this item has been used, <strong>flip the token</strong> face down. There will often be be an alternate effect on the back, but otherwise it cannot be used for the rest of the mission.<br><br>Some items do not get \"used\" as such but will have this icon. Flipping the token (usually as an effortless action,) will then trigger the effects shown on the back instead.",
+  "discard": "When this item has been used, <strong>discard</strong> it and return it to the supply.",
+  "mine": "Items with this icon can be used to make <strong>Mine</strong> actions.",
+  "trophy": "This item is a <strong>Trophy</strong> and will act as a target for a Game Hunter. It can be sold for its value if claimed.",
+  "scatter": "This item <strong>scatters the target</strong> number of times shown, or twice if no number is shown, with <strong>no attacks of opportunity</strong> allowed. Roll a single die - on a double hit you can choose the direction; otherwise it is determined by the <strong>Knowledge Die</strong>. The target can be scattered through a wall or terrain piece but cannot end its move on top of it.<br>They cannot be scattered off of the board but can be scattered into mid-air if using multi-level terrain, in which case they will fall from their current height. Roll dice as shown (if any) for any characters within 1 and 2 squares respectively. Any hits will scatter them to, in a random direction. Not that this can be used on a friendly character, or even the user themselves.",
+  "rotating": "Some tokens have <strong>multiple-use or timed effects</strong>. These effects will be shown on different sides of the token. When placed into your item tray these tokens should be oriented so the text on the back is upright.<br><br>Only the effect shown the right way up is available to use. When the item is used, <strong>rotate the token 90° clockwise</strong>. If rotating the token shows FLIP or DISCARD icon, do this immediately.<br><br>If an item is <strong>not 'used'</strong> and provides a constant effect like physical armour, it is rotated in the <strong>Assessment Phase</strong>."
+}

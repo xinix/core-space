@@ -1,4 +1,7 @@
 <script lang="ts" setup>
+import IconDescription from '@/components/IconDescription.vue'
+import AttributeDescription from '@/components/AttributeDescription.vue'
+
 import { TokenType } from '@/tokens/types'
 import { computed } from 'vue'
 
@@ -30,15 +33,31 @@ const onSelect = (ev: MouseEvent) => {
         <header class="title">
             <h3>{{ item.name }}</h3>
             <dl v-if="active" class="dl">
-                <dt v-if="item.buy">Buy:</dt>
+                <dt v-if="item.buy">{{ $t('buy') }}:</dt>
                 <dd v-if="item.buy">{{ item.buy }}</dd>
-                <dt v-if="item.sell">Sell:</dt>
+                <dt v-if="item.sell">{{ $t('sell') }}:</dt>
                 <dd v-if="item.sell">{{ item.sell }}</dd>
             </dl>
         </header>
-        <div v-if="active" class="more">
-            <pre><code>{{ item }}</code></pre>
-        </div>
+        <section v-if="active" class="more">
+            <ul v-if="item.description" class="list">
+                <AttributeDescription
+                    v-for="attr in item.description"
+                    :key="attr"
+                    :attribute="attr"
+                    tag="li"
+                />
+            </ul>
+
+            <ul v-if="item.icons" class="list">
+                <IconDescription
+                    v-for="icon in item.icons"
+                    :key="icon"
+                    :icon="icon"
+                    tag="li"
+                />
+            </ul>
+        </section>
     </div>
 </template>
 
@@ -53,7 +72,7 @@ const onSelect = (ev: MouseEvent) => {
     &:not(.active) {
         cursor: pointer;
         border-radius: 0.5em;
-        background-color: rgba(0, 0, 0, 0.5);
+        background-color: var(--transparent-bg);
         box-shadow: var(--shadow-md);
 
         &:active,
@@ -91,16 +110,37 @@ const onSelect = (ev: MouseEvent) => {
 
         h3 {
             font-size: 2em;
+            max-width: available;
             margin-bottom: 0.125em;
             text-align: left;
         }
     }
 
     h3 {
-        font-size: 1.25em;
+        font-size: 1.125em;
         font-weight: bold;
-        text-align: center;
+        max-width: fit-content;
         text-transform: uppercase;
+        text-overflow: ellipsis;
     }
+}
+
+.more {
+    border-radius: 0.5em;
+    background-color: var(--header-bg);
+    box-shadow: var(--shadow-md);
+}
+
+.list {
+    font-size: 1.25em;
+    margin: 1em;
+    list-style: none;
+}
+
+.list + .list,
+.list li + li {
+    margin-top: 1em;
+    padding-top: 1em;
+    border-top: inset 3px var(--primary-transparent);
 }
 </style>

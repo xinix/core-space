@@ -29,13 +29,17 @@ export type ItemIcon =
     | 'reload-ammo-accelerant'
     | 'freeze'
     | 'timewarp'
+    | 'scatter'
     | 'dyson'
     | 'dyson-throw'
     | 'dyson-range'
     | 'boomerang'
     | 'larva'
     | 'repair'
-    | 'rotating'
+    | 'physical_armour'
+    | 'shield_armour'
+
+export type ItemDescription = 'rotating'
 
 export type TokenType = {
     product: ProductType
@@ -45,6 +49,7 @@ export type TokenType = {
         | 'blue'
         | 'yellow'
         | 'orange'
+        | 'red'
         | 'purple'
         | 'green'
         | 'light-green'
@@ -63,5 +68,6 @@ export type TokenType = {
     blast?: number[]
     scatter?: number
     phase?: number
+    description?: ItemDescription[]
     icons?: ItemIcon[]
 }

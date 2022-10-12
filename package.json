@@ -11,7 +11,8 @@
   "dependencies": {
     "pinia": "^2.0.23",
     "sass": "^1.55.0",
-    "vue": "^3.2.37"
+    "vue": "^3.2.37",
+    "vue-i18n": "^9.2.2"
   },
   "devDependencies": {
     "@types/node": "^18.8.4",
@@ -91,6 +92,7 @@
       "@typescript-eslint/explicit-module-boundary-types": "off",
       "@typescript-eslint/ban-ts-comment": "off",
       "vue/no-v-html": "off",
+      "vue/no-v-text-v-html-on-component": "off",
       "no-console": "off",
       "no-debugger": "off",
       "max-len": "off"
