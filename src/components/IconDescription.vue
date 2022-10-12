@@ -25,4 +25,11 @@ withDefaults(defineProps<{ icon: ItemIcon; tag?: string }>(), { tag: 'div' })
         justify-content: center;
     }
 }
+
+@media (max-width: 600px) {
+    .icon-description {
+        grid-template-columns: 1fr;
+        grid-row-gap: 1em;
+    }
+}
 </style>

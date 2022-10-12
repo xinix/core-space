@@ -42,11 +42,15 @@ h6 {
 }
 
 body {
-    animation: gradient 15s ease infinite;
     color: var(--body-color);
-
     background: var(--body-bg);
     background-size: 400% 400%;
+}
+
+@media (min-width: 600px) {
+    body {
+        animation: gradient 15s ease infinite;
+    }
 }
 
 @keyframes gradient {

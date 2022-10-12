@@ -143,4 +143,11 @@ const onSelect = (ev: MouseEvent) => {
     padding-top: 1em;
     border-top: inset 3px var(--primary-transparent);
 }
+
+@media (max-width: 600px) {
+    .inventory-item.active {
+        margin: 0;
+        padding: 0.325em;
+    }
+}
 </style>

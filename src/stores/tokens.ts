@@ -28,6 +28,10 @@ export const useTokens = defineStore('tokens', {
         },
     },
     actions: {
+        search(q: string) {
+            this.q = q
+            this.active = ''
+        },
         clearQ(ev: MouseEvent | null = null) {
             this.q = ''
             return ev

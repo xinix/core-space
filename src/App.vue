@@ -2,7 +2,7 @@
 import TokensPage from '@/pages/TokensPage.vue'
 import ThemeToggle from '@/components/buttons/ThemeToggle.vue'
 
-import { computed } from 'vue'
+import { computed, watch } from 'vue'
 import { useTokens } from '@/stores/tokens'
 
 const tokens = useTokens()
@@ -16,6 +16,8 @@ const onClear = (ev: MouseEvent) => {
 const onSearch = (ev: SubmitEvent) => {
     return ev
 }
+
+watch(() => tokens.q, tokens.search)
 </script>
 
 <template>
