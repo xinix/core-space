@@ -143,7 +143,7 @@ const mustacheIcons = computed(() => {
 
 .more {
     border-radius: 0.5em;
-    background-color: var(--header-bg);
+    background-color: var(--transparent-bg);
     box-shadow: var(--shadow-md);
 }
 

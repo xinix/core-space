@@ -16,7 +16,7 @@
     --body-bg: linear-gradient(45deg, #293c33, #151310, #4c605f, #293332);
     --body-color: #ffffff;
 
-    --header-bg: rgba(0, 0, 0, .5);
+    --header-bg: rgba(0, 0, 0, .75);
     --transparent-bg: rgba(0, 0, 0, 0.5);
 
     --primary: #83b7bb;
@@ -51,7 +51,7 @@ html[data-theme='light'] {
     --input-color: #151310;
     --input-border: rgba(255, 255, 255, 0.15);
 
-    --header-bg: rgba(255, 255, 255, .5);
+    --header-bg: rgba(255, 255, 255, .75);
     --transparent-bg: rgba(239, 232, 232, 0.5);
 }
 

@@ -1,7 +1,9 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
 
-const dark = ref(window.localStorage.getItem('light') == null)
+const prefersDark = window.matchMedia('(prefers-color-scheme: dark').matches
+const theme = window.localStorage.getItem('theme')
+const dark = ref(theme == null ? prefersDark : theme === 'dark')
 
 const applyTheme = () => {
     /* html[data-theme='light'] */
@@ -17,12 +19,9 @@ const applyTheme = () => {
 applyTheme()
 
 const onToggleDark = (ev: MouseEvent) => {
+    window.localStorage.removeItem('light')
     dark.value = !dark.value
-    if (dark.value) {
-        window.localStorage.removeItem('light')
-    } else {
-        window.localStorage.setItem('light', 'on')
-    }
+    window.localStorage.setItem('theme', dark.value ? 'dark' : 'light')
     applyTheme()
     return ev
 }
