@@ -203,6 +203,9 @@ const tokens: TokenType[] = [
         name: 'Bracer',
         color: 'green',
         size: 'sm',
+        short: 2,
+        medium: 3,
+        icons: ['silent'],
     },
     {
         product: 'first-born',

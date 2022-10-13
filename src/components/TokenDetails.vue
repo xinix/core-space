@@ -21,9 +21,12 @@ const onSelect = (ev: MouseEvent) => {
     return ev
 }
 const mustacheIcons = computed(() => {
-    const icons: { key: ItemIcon; value: any }[] = [
+    const icons: { key: ItemIcon; value: any; icon?: ItemIcon }[] = [
         { key: 'phase', value: props.item.phase },
         { key: 'close', value: props.item.close },
+        { key: 'short', value: props.item.short, icon: 'range' },
+        { key: 'medium', value: props.item.medium, icon: 'range' },
+        { key: 'long', value: props.item.long, icon: 'range' },
         { key: 'throw', value: props.item.throw },
         { key: 'grenade', value: props.item.grenade },
     ]
@@ -62,7 +65,8 @@ const mustacheIcons = computed(() => {
                 <IconLegend
                     v-for="snor in mustacheIcons"
                     :key="snor.key"
-                    :icon="snor.key"
+                    :icon="snor.icon ?? snor.key"
+                    :legend="snor.key"
                     :mustache="snor.value"
                     tag="li"
                 />

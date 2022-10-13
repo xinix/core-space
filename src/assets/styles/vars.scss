@@ -5,6 +5,7 @@
     --shadow-sm: 3px 3px 6px 0 rgb(0 0 0 / 10%), -3px -3px 6px 0 rgb(212 210 210 / 10%);
     --shadow-md: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 2px 4px 0 rgb(0 0 0 / 8%);
     --shadow-lg: 0 15px 30px 0 rgb(0 0 0 / 11%), 0 5px 15px 0 rgb(0 0 0 / 8%);
+    --glow: rgb(131, 183, 187, .3) 0px 0px 0px 3px;
 
     --input-radius: .5rem;
     --search-height: 44px;
@@ -46,6 +47,7 @@
 html[data-theme='light'] {
     --body-bg: linear-gradient(45deg, #b5dde5, #8ed0cd, #d7f6fa, #80b4b4);
     --body-color: black;
+    --primary-contrast: black;
 
     --input-bg: #ffffff;
     --input-color: #151310;

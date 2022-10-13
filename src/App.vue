@@ -103,11 +103,12 @@ watch(() => tokens.q, tokens.search)
     display: flex;
     max-width: 590px;
     margin: 0 1em;
-    padding: 0 2em;
+    padding: 0 1.5em;
     color: var(--input-color);
     border: solid 1px var(--input-border);
     border-radius: var(--input-radius);
     background-color: var(--input-bg);
+    box-shadow: var(--glow);
 
     .search-input {
         position: relative;

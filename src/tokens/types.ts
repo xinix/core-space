@@ -42,6 +42,10 @@ export type ItemIcon =
     | 'throw'
     | 'close'
     | 'grenade'
+    | 'range'
+    | 'short'
+    | 'medium'
+    | 'long'
 
 export type ItemDescription = 'rotating'
 

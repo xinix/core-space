@@ -1,8 +1,8 @@
 <template>
     <svg
-        :height="height"
-        :viewBox="viewBox"
-        :width="width"
+        :height="h"
+        :viewBox="vb"
+        :width="w"
         class="icon"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
@@ -12,8 +12,15 @@
 </template>
 
 <script lang="ts" setup>
-withDefaults(
-    defineProps<{ width: number; height: number; viewBox?: string }>(),
-    { viewBox: '0 0 24 24' }
+import { computed } from 'vue'
+
+const props = withDefaults(
+    defineProps<{ width: number; height: number; scale?: number }>(),
+    {
+        scale: 1,
+    }
 )
+const w = computed(() => props.width * props.scale)
+const h = computed(() => props.height * props.scale)
+const vb = computed(() => `0 0 ${props.width} ${props.height}`)
 </script>

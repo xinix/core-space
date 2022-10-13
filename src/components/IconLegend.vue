@@ -9,23 +9,26 @@ const props = withDefaults(
         icon: ItemIcon
         tag?: string
         mustache?: number | number[] | null
+        legend?: string
     }>(),
     {
         tag: 'div',
         mustache: null,
+        legend: '',
     }
 )
 
 const { t } = useI18n()
 
 const text = computed(() => {
+    const legend = props.legend === '' ? props.icon : props.legend
     if (props.mustache != null) {
         return t(
-            props.icon,
+            legend,
             Array.isArray(props.mustache) ? props.mustache : [props.mustache]
         )
     }
-    return t(props.icon)
+    return t(legend)
 })
 </script>
 

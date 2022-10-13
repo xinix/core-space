@@ -2,7 +2,7 @@
 import BaseIcon from '@/components/icons/BaseIcon.vue'
 </script>
 <template>
-    <BaseIcon :height="0.4 * 76" :width="0.4 * 70" view-box="0 0 70 76">
+    <BaseIcon :height="76" :scale="0.4" :width="70">
         <path
             d="M33.68 2 2 13.2993v40.5444l19.8 18.6106c4.62 1.9939 7.92 2.1269 13.2 0l26.4-8.6407C68 62.4843 68 54.0653 68 49.1911V13.2993L33.68 2Z"
             fill="#fff"
