@@ -58,6 +58,7 @@ const onBack = (ev: MouseEvent) => {
 .tokens {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 .summary {

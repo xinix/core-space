@@ -37,7 +37,7 @@ const mustacheIcons = computed(() => {
 <template>
     <div
         :class="{ active }"
-        class="inventory-item"
+        class="token-details"
         tabindex="-1"
         @click="onSelect"
     >
@@ -82,7 +82,7 @@ const mustacheIcons = computed(() => {
 </template>
 
 <style lang="scss" scoped>
-.inventory-item {
+.token-details {
     display: grid;
     margin: 0.5em;
     padding: 0.75em;
@@ -165,9 +165,21 @@ const mustacheIcons = computed(() => {
 }
 
 @media (max-width: 600px) {
-    .inventory-item.active {
+    .token-details.active {
         margin: 0;
         padding: 0.325em;
+    }
+}
+
+@media (min-width: 1000px) {
+    .token-details.active {
+        max-width: 1400px;
+        grid-template-columns: minmax(5em, 1fr) 3fr;
+        grid-template-rows: min-content 1fr;
+
+        grid-template-areas:
+            'title more'
+            'pic more';
     }
 }
 </style>

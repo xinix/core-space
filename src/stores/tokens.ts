@@ -37,7 +37,11 @@ export const useTokens = defineStore('tokens', {
             return ev
         },
         activate(item: TokenType) {
-            this.active = item.slug
+            console.log('activate')
+            document.body.scrollTop = 0
+            setTimeout(() => {
+                this.active = item.slug
+            }, 100)
         },
         backToOverview() {
             this.active = ''
