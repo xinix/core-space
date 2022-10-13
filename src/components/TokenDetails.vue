@@ -32,6 +32,7 @@ const mustacheIcons = computed(() => {
         { key: 'grenade', value: props.item.grenade },
         { key: 'armour', value: props.item.armour, icon: 'physical_armour' },
         { key: 'shield', value: props.item.shield, icon: 'shield_armour' },
+        { key: 'dyson', value: props.item.dyson },
     ]
     return icons.filter((x) => x.value != undefined)
 })

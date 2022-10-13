@@ -85,12 +85,16 @@ watch(() => tokens.q, tokens.search)
     box-shadow: var(--shadow-md);
     grid-template-columns: auto 1fr auto;
 
-    .logo > img {
-        width: 3.5rem;
-        height: 3.5rem;
-        border: solid 1px #ffffff;
-        border-radius: 100%;
-        background-color: #ffffff;
+    .logo {
+        margin-right: 1.5em;
+
+        > img {
+            width: 3.5rem;
+            height: 3.5rem;
+            border: solid 1px #ffffff;
+            border-radius: 100%;
+            background-color: #ffffff;
+        }
     }
 }
 

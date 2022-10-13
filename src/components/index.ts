@@ -27,8 +27,10 @@ import Burst1Icon from '@/components/icons/Burst1Icon.vue'
 import Burst2Icon from '@/components/icons/Burst2Icon.vue'
 import FullChargeIcon from '@/components/icons/FullChargeIcon.vue'
 import HeavyIcon from '@/components/icons/HeavyIcon.vue'
+import NecroFlaskIcon from '@/components/icons/NecroFlaskIcon.vue'
 
 export function loadGlobalComponents(app: App) {
+    app.component('NecroFlaskIcon', NecroFlaskIcon)
     app.component('HeavyIcon', HeavyIcon)
     app.component('FullChargeIcon', FullChargeIcon)
     app.component('Burst2Icon', Burst2Icon)

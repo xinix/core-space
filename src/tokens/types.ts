@@ -51,8 +51,9 @@ export type AttributeType =
     | 'shield'
     | 'mech'
     | 'heavy'
+    | 'necro-flask'
 
-export type ItemDescription = 'rotating'
+export type ItemDescription = 'rotating' | 'larva'
 
 export type TokenType = {
     product: ProductType
@@ -84,6 +85,7 @@ export type TokenType = {
     phase?: number
     armour?: number
     shield?: number
+    dyson?: number
     description?: ItemDescription[]
     icons?: AttributeType[]
 }

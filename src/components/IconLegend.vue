@@ -84,6 +84,10 @@ const text = computed(() => {
                 top: 0.25em;
                 margin-left: 0.125em;
             }
+
+            &.dyson {
+                top: 0.125em;
+            }
         }
     }
 }
