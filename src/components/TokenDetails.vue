@@ -2,7 +2,7 @@
 import IconLegend from '@/components/IconLegend.vue'
 import JustText from '@/components/JustText.vue'
 
-import { ItemIcon, TokenType } from '@/tokens/types'
+import { AttributeType, TokenType } from '@/tokens/types'
 import { computed } from 'vue'
 
 const props = defineProps<{ item: TokenType; active: boolean }>()
@@ -21,14 +21,17 @@ const onSelect = (ev: MouseEvent) => {
     return ev
 }
 const mustacheIcons = computed(() => {
-    const icons: { key: ItemIcon; value: any; icon?: ItemIcon }[] = [
+    const icons: { key: AttributeType; value: any; icon?: AttributeType }[] = [
         { key: 'phase', value: props.item.phase },
         { key: 'close', value: props.item.close },
+        { key: 'heavy', value: props.item.heavy },
         { key: 'short', value: props.item.short, icon: 'range' },
         { key: 'medium', value: props.item.medium, icon: 'range' },
         { key: 'long', value: props.item.long, icon: 'range' },
         { key: 'throw', value: props.item.throw },
         { key: 'grenade', value: props.item.grenade },
+        { key: 'armour', value: props.item.armour, icon: 'physical_armour' },
+        { key: 'shield', value: props.item.shield, icon: 'shield_armour' },
     ]
     return icons.filter((x) => x.value != undefined)
 })

@@ -4,9 +4,9 @@
 
 <script lang="ts" setup>
 import { computed } from 'vue'
-import { ItemIcon } from '@/tokens/types'
+import { AttributeType } from '@/tokens/types'
 
-const props = defineProps<{ attribute: ItemIcon }>()
+const props = defineProps<{ attribute: AttributeType }>()
 
 const symbol = computed<string>(
     () => `${props.attribute.replace('_', '-')}-icon`

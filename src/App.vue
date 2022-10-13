@@ -71,6 +71,7 @@ watch(() => tokens.q, tokens.search)
 <style lang="scss" scoped>
 .header {
     position: sticky;
+    z-index: 100;
     top: 0;
     right: 0;
     left: 0;
@@ -101,6 +102,7 @@ watch(() => tokens.q, tokens.search)
     font-size: 16px;
     position: relative;
     display: flex;
+    width: 100%;
     max-width: 590px;
     margin: 0 1em;
     padding: 0 1.5em;
@@ -109,6 +111,7 @@ watch(() => tokens.q, tokens.search)
     border-radius: var(--input-radius);
     background-color: var(--input-bg);
     box-shadow: var(--glow);
+    justify-self: center;
 
     .search-input {
         position: relative;

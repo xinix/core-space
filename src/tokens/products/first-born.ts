@@ -98,7 +98,7 @@ const tokens: TokenType[] = [
         color: 'green',
         size: 'sm',
         sell: 6,
-        throw: 4,
+        throw: 3,
         icons: ['boomerang'],
     },
     {
@@ -133,6 +133,7 @@ const tokens: TokenType[] = [
         color: 'green',
         size: 'sm',
         sell: 2,
+        icons: ['effortless', 'event', 'discard'],
     },
 
     {
@@ -205,7 +206,7 @@ const tokens: TokenType[] = [
         size: 'sm',
         short: 2,
         medium: 3,
-        icons: ['silent'],
+        icons: ['silent', 'infinite'],
     },
     {
         product: 'first-born',
@@ -234,6 +235,8 @@ const tokens: TokenType[] = [
         name: 'Liege shard',
         color: 'green',
         size: 'sm',
+        close: 3,
+        throw: 3,
     },
     {
         product: 'first-born',
@@ -241,6 +244,7 @@ const tokens: TokenType[] = [
         name: 'Mining drubber',
         color: 'red',
         size: 'sm',
+        icons: ['mine'],
     },
     {
         product: 'first-born',
@@ -248,6 +252,7 @@ const tokens: TokenType[] = [
         name: 'Combat vest',
         color: 'yellow',
         size: 'sm',
+        armour: 1,
     },
     {
         product: 'first-born',
@@ -255,6 +260,7 @@ const tokens: TokenType[] = [
         name: 'Combat vest shiny',
         color: 'yellow',
         size: 'sm',
+        armour: 1,
     },
     {
         product: 'first-born',
@@ -262,6 +268,7 @@ const tokens: TokenType[] = [
         name: 'Shield belt',
         color: 'yellow',
         size: 'sm',
+        shield: 1,
     },
     {
         product: 'first-born',
@@ -269,6 +276,7 @@ const tokens: TokenType[] = [
         name: 'Shield belt custom',
         color: 'yellow',
         size: 'sm',
+        shield: 2,
     },
     {
         product: 'first-born',
@@ -276,6 +284,8 @@ const tokens: TokenType[] = [
         name: 'Neoflex plate upgrade',
         color: 'yellow',
         size: 'sm',
+        armour: 1,
+        icons: ['mech'],
     },
     {
         product: 'first-born',
@@ -283,6 +293,9 @@ const tokens: TokenType[] = [
         name: 'Common pistol',
         color: 'blue',
         size: 'sm',
+        short: 1,
+        medium: 1,
+        icons: ['burst-1'],
     },
     {
         product: 'first-born',
@@ -290,6 +303,9 @@ const tokens: TokenType[] = [
         name: 'Military pistol',
         color: 'blue',
         size: 'sm',
+        short: 2,
+        medium: 1,
+        icons: ['burst-1'],
     },
     {
         product: 'first-born',
@@ -297,6 +313,9 @@ const tokens: TokenType[] = [
         name: 'Energy pistol',
         color: 'blue',
         size: 'sm',
+        short: 2,
+        medium: 2,
+        icons: ['full-charge'],
     },
     {
         product: 'first-born',
@@ -304,6 +323,8 @@ const tokens: TokenType[] = [
         name: 'Machine pistol',
         color: 'blue',
         size: 'sm',
+        short: 3,
+        medium: 1,
     },
     {
         product: 'first-born',
@@ -311,6 +332,10 @@ const tokens: TokenType[] = [
         name: "Officer's pistol custom",
         color: 'blue',
         size: 'sm',
+        short: 2,
+        medium: 2,
+        long: 1,
+        icons: ['burst-1'],
     },
     {
         product: 'first-born',
@@ -318,6 +343,8 @@ const tokens: TokenType[] = [
         name: 'Burst vest',
         color: 'yellow',
         size: 'sm',
+        armour: 1,
+        icons: ['effortless', 'flip'],
     },
     {
         product: 'first-born',
@@ -325,6 +352,8 @@ const tokens: TokenType[] = [
         name: 'Utility knife',
         color: 'blue',
         size: 'sm',
+        close: 1,
+        throw: 1,
     },
     {
         product: 'first-born',
@@ -332,6 +361,8 @@ const tokens: TokenType[] = [
         name: 'Energy combat knife',
         color: 'blue',
         size: 'sm',
+        close: 2,
+        throw: 2,
     },
     {
         product: 'first-born',
@@ -339,6 +370,9 @@ const tokens: TokenType[] = [
         name: 'Short sword crafted',
         color: 'blue',
         size: 'sm',
+        close: 2,
+        heavy: 3,
+        throw: 2,
     },
     {
         product: 'first-born',
@@ -346,6 +380,7 @@ const tokens: TokenType[] = [
         name: 'Outland pistol',
         color: 'blue',
         size: 'sm',
+        short: 1,
     },
     {
         product: 'first-born',
@@ -360,6 +395,8 @@ const tokens: TokenType[] = [
         name: 'Magnum custom',
         color: 'blue',
         size: 'sm',
+        short: 3,
+        medium: 2,
     },
     {
         product: 'first-born',
@@ -367,6 +404,9 @@ const tokens: TokenType[] = [
         name: 'Military twin',
         color: 'blue',
         size: 'sm',
+        short: 2,
+        medium: 2,
+        icons: ['burst-1'],
     },
     {
         product: 'first-born',
@@ -374,6 +414,9 @@ const tokens: TokenType[] = [
         name: "Quell's riposte",
         color: 'blue',
         size: 'sm',
+        short: 2,
+        close: 3,
+        icons: ['burst-1'],
     },
     {
         product: 'first-born',
@@ -381,6 +424,8 @@ const tokens: TokenType[] = [
         name: 'Havoc custom',
         color: 'blue',
         size: 'sm',
+        short: 3,
+        icons: ['re-roll'],
     },
 ]
 

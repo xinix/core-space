@@ -1,6 +1,6 @@
 export type ProductType = 'first-born'
 
-export type ItemIcon =
+export type AttributeType =
     | 'rare'
     | 'effortless'
     | 'flip'
@@ -12,7 +12,7 @@ export type ItemIcon =
     | 'burst-1'
     | 'burst-2'
     | 'full-charge'
-    | 'infinite-ammo'
+    | 'infinite'
     | 'reliable'
     | 'super-reliable'
     | 'target-lock'
@@ -46,6 +46,11 @@ export type ItemIcon =
     | 'short'
     | 'medium'
     | 'long'
+    | 'event'
+    | 'armour'
+    | 'shield'
+    | 'mech'
+    | 'heavy'
 
 export type ItemDescription = 'rotating'
 
@@ -77,6 +82,8 @@ export type TokenType = {
     blast?: number[]
     scatter?: number
     phase?: number
+    armour?: number
+    shield?: number
     description?: ItemDescription[]
-    icons?: ItemIcon[]
+    icons?: AttributeType[]
 }
