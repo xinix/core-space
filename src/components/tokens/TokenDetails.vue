@@ -1,12 +1,11 @@
 <script lang="ts" setup>
-import IconLegend from '@/components/IconLegend.vue'
-import JustText from '@/components/JustText.vue'
+import IconLegend from '@/components/tokens/IconLegend.vue'
+import JustText from '@/components/tokens/JustText.vue'
 
 import { AttributeType, TokenType } from '@/tokens/types'
 import { computed } from 'vue'
 
 const props = defineProps<{ item: TokenType; active: boolean }>()
-const emit = defineEmits(['select'])
 
 const tokenClass = computed(() => {
     const cls: any = {}
@@ -16,10 +15,6 @@ const tokenClass = computed(() => {
     return cls
 })
 
-const onSelect = (ev: MouseEvent) => {
-    emit('select', props.item)
-    return ev
-}
 const mustacheIcons = computed(() => {
     const icons: { key: AttributeType; value: any; icon?: AttributeType }[] = [
         { key: 'phase', value: props.item.phase },
@@ -39,11 +34,11 @@ const mustacheIcons = computed(() => {
 </script>
 
 <template>
-    <div
+    <router-link
         :class="{ active }"
+        :to="`/item/${item.slug}`"
         class="token-details"
         tabindex="-1"
-        @click="onSelect"
     >
         <figure :class="tokenClass" class="token" />
         <header class="title">
@@ -82,7 +77,7 @@ const mustacheIcons = computed(() => {
                 />
             </ul>
         </section>
-    </div>
+    </router-link>
 </template>
 
 <style lang="scss" scoped>
@@ -91,6 +86,8 @@ const mustacheIcons = computed(() => {
     margin: 0.5em;
     padding: 0.75em;
     transition: transform 0.2s ease-out, background-color 0.2s ease;
+    text-decoration: none;
+    color: inherit;
     grid-row-gap: 0.5em;
 
     &:not(.active) {

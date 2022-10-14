@@ -1,38 +1,48 @@
 <script lang="ts" setup>
-import TokensPage from '@/pages/TokensPage.vue'
 import ThemeToggle from '@/components/buttons/ThemeToggle.vue'
 
-import { computed, watch } from 'vue'
+import { computed, ref, watch } from 'vue'
 import { useTokens } from '@/stores/tokens'
+import { useRouter } from 'vue-router'
 
-const tokens = useTokens()
+const router = useRouter()
+useTokens()
+const q = ref('')
+
 const searchClass = computed(() => ({
-    'has-text': tokens.q.length > 0,
+    'has-text': q.value.length > 0,
 }))
-const onClear = (ev: MouseEvent) => {
-    tokens.clearQ()
-    return ev
-}
+
 const onSearch = (ev: SubmitEvent) => {
     return ev
 }
 
-watch(() => tokens.q, tokens.search)
+const onClear = (ev: MouseEvent) => {
+    q.value = ''
+    return ev
+}
+
+watch(q, (query) => {
+    if (query === '') {
+        return router.push('/')
+    }
+    return router.push({ path: '/', query: { q: query } })
+})
 </script>
 
 <template>
     <div class="page">
         <header class="header">
-            <a class="logo" href="/core-space">
+            <router-link class="logo" to="/">
                 <img alt="logo" src="/logo.svg" />
-            </a>
+            </router-link>
             <form
                 :class="searchClass"
                 class="search"
                 @submit.prevent="onSearch"
             >
                 <input
-                    v-model.trim="tokens.q"
+                    v-model.trim="q"
                     :placeholder="$t('search_placeholder')"
                     autocapitalize="off"
                     autocomplete="off"
@@ -56,14 +66,7 @@ watch(() => tokens.q, tokens.search)
             <ThemeToggle class="theme" />
         </header>
         <main class="content">
-            <TokensPage
-                :active-slug="tokens.active"
-                :items="tokens.items"
-                :q="tokens.q"
-                @back="tokens.backToOverview"
-                @clear="tokens.clearQ"
-                @select="tokens.activate"
-            />
+            <router-view />
         </main>
     </div>
 </template>

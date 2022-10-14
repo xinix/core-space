@@ -18,13 +18,11 @@ export const useTokens = defineStore('tokens', {
 
             const q = state.q.toLowerCase().trim()
             if (q != '') {
-                return state.rawItems.filter(
-                    (a) => a.name.toLowerCase().indexOf(q) >= 0
-                )
-                //  .sort((a, b) => a.name.localeCompare(b.name))
+                return state.rawItems
+                    .filter((a) => a.name.toLowerCase().indexOf(q) >= 0)
+                    .sort((a, b) => a.name.localeCompare(b.name))
             }
-            return state.rawItems
-            //.sort((a, b) => a.name.localeCompare(b.name))
+            return state.rawItems.sort((a, b) => a.name.localeCompare(b.name))
         },
     },
     actions: {
@@ -36,14 +34,9 @@ export const useTokens = defineStore('tokens', {
             this.q = ''
             return ev
         },
-        activate(item: TokenType) {
+        activate(slug: string) {
             document.body.scrollTop = 0
-            setTimeout(() => {
-                this.active = item.slug
-            }, 100)
-        },
-        backToOverview() {
-            this.active = ''
+            this.active = slug
         },
     },
 })

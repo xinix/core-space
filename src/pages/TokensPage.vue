@@ -1,40 +1,55 @@
 <script lang="ts" setup>
-import TokenDetails from '@/components/TokenDetails.vue'
-import { TokenType } from '@/tokens/types'
-import { computed } from 'vue'
+import TokenDetails from '@/components/tokens/TokenDetails.vue'
+import { computed, watch } from 'vue'
+import { useTokens } from '@/stores/tokens'
+import { useRouter } from 'vue-router'
 
-const props = defineProps<{
-    items: TokenType[]
-    q: string
-    activeSlug: string
-}>()
-const emit = defineEmits(['back', 'clear', 'select'])
+const props = withDefaults(defineProps<{ slug?: string; q?: string }>(), {
+    slug: '',
+    q: '',
+})
+
+const tokens = useTokens()
+tokens.activate(props.slug)
+tokens.search(props.q)
+
+watch(
+    () => props.slug,
+    (slug) => tokens.activate(slug)
+)
+watch(
+    () => props.q,
+    (q) => tokens.search(q)
+)
+
 const qSummary = computed(
-    () => `Search results for: <strong>${props.q}</strong>`
+    () => `Search results for: <strong>${tokens.q}</strong>`
 )
 const onClear = (ev: MouseEvent) => {
-    emit('clear')
+    tokens.clearQ()
     return ev
 }
-const onSelect = (item: TokenType) => {
-    emit('select', item)
-}
 
+const router = useRouter()
 const onBack = (ev: MouseEvent) => {
-    emit('back')
+    if (window.history.length > 2) {
+        router.back()
+    } else {
+        router.push('/')
+    }
     return ev
 }
 </script>
 
 <template>
     <section class="container">
-        <p v-if="activeSlug" class="summary">
+        <p v-if="slug" class="summary">
             <button class="btn" type="button" @click="onBack">
                 <span class="material-symbols-rounded icon">arrow_back</span>
                 <span>{{ $t('back') }}</span>
             </button>
         </p>
-        <p v-else-if="q" class="summary">
+        <p v-else-if="tokens.q" class="summary">
             <span v-html="qSummary" />
             <button class="btn-link" type="button" @click="onClear">
                 {{ $t('clear_filter') }}
@@ -43,12 +58,11 @@ const onBack = (ev: MouseEvent) => {
 
         <transition-group class="tokens" name="list" tag="div">
             <TokenDetails
-                v-for="item in items"
+                v-for="item in tokens.items"
                 :key="item.slug"
-                :active="item.slug === activeSlug"
+                :active="item.slug === slug"
                 :item="item"
                 class="item"
-                @select="onSelect"
             />
         </transition-group>
     </section>
