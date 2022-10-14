@@ -17,6 +17,14 @@ export default defineConfig({
         https: true,
     },
     base: '/core-space/',
+    build: {
+        rollupOptions: {
+            input: {
+                main: resolve(__dirname, 'index.html'),
+                notFound: resolve(__dirname, '404.html'),
+            },
+        },
+    },
     plugins: [vue(), mkcert()],
     resolve: {
         alias: [

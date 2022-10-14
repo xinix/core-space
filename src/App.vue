@@ -6,8 +6,14 @@ import { useTokens } from '@/stores/tokens'
 import { useRouter } from 'vue-router'
 
 const router = useRouter()
-useTokens()
+const tokens = useTokens()
 const q = ref('')
+
+tokens.$subscribe((mutation, state) => {
+    if (state.q == '') {
+        q.value = ''
+    }
+})
 
 const searchClass = computed(() => ({
     'has-text': q.value.length > 0,
@@ -177,11 +183,14 @@ watch(q, (query) => {
         }
     }
 
-    &:hover {
-        .search-button {
-            color: var(--primary-contrast);
-            background: var(--primary);
-        }
+    .search-button:hover {
+        transform: scale(1.2);
+        color: var(--primary-contrast);
+        background: var(--primary);
+    }
+
+    .search-clear:hover {
+        transform: scale(1.2);
     }
 }
 

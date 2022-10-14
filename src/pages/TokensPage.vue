@@ -26,7 +26,7 @@ const qSummary = computed(
     () => `Search results for: <strong>${tokens.q}</strong>`
 )
 const onClear = (ev: MouseEvent) => {
-    tokens.clearQ()
+    router.push('/')
     return ev
 }
 
@@ -43,7 +43,7 @@ const onBack = (ev: MouseEvent) => {
 
 <template>
     <section class="container">
-        <p v-if="slug" class="summary">
+        <p v-if="slug" class="summary with-back">
             <button class="btn" type="button" @click="onBack">
                 <span class="material-symbols-rounded icon">arrow_back</span>
                 <span>{{ $t('back') }}</span>
@@ -56,7 +56,12 @@ const onBack = (ev: MouseEvent) => {
             </button>
         </p>
 
-        <transition-group class="tokens" name="list" tag="div">
+        <transition-group
+            :class="{ 'with-q': tokens.q !== '' }"
+            class="tokens"
+            name="list"
+            tag="div"
+        >
             <TokenDetails
                 v-for="item in tokens.items"
                 :key="item.slug"
@@ -73,10 +78,21 @@ const onBack = (ev: MouseEvent) => {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+
+    &.with-q {
+        justify-content: center;
+    }
 }
 
 .summary {
-    margin: 0.5em 1em;
+    margin: 1em;
+    text-align: center;
+
+    &.with-back {
+        max-width: 1400px;
+        margin: 1em auto;
+        text-align: left;
+    }
 }
 
 /* transition: list */
