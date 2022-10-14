@@ -6,16 +6,14 @@ let installPrompt: any
 
 window.addEventListener('beforeinstallprompt', (e) => {
     installPrompt = e
-    if (window.localStorage.getItem('app') == null) {
-        showPrompt.value = true
-    }
+    showPrompt.value = true
 })
 
 const install = async () => {
     installPrompt.prompt()
     const { outcome } = await installPrompt.userChoice
     if (outcome === 'accepted') {
-        window.localStorage.setItem('app', 'installed')
+        showPrompt.value = false
     }
 }
 
@@ -23,7 +21,6 @@ const onInstall = (ev: MouseEvent) => {
     if (installPrompt != null) {
         install().then()
     }
-    showPrompt.value = false
     return ev
 }
 </script>
