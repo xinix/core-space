@@ -30,9 +30,9 @@ const onClear = (ev: MouseEvent) => {
 
 watch(q, (query) => {
     if (query === '') {
-        return router.push('/')
+        return router.push({ query: {} })
     }
-    return router.push({ path: '/', query: { q: query } })
+    return router.push({ query: { q: query } })
 })
 </script>
 

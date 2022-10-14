@@ -26,17 +26,10 @@ export const useTokens = defineStore('tokens', {
         },
     },
     actions: {
-        search(q: string) {
-            this.q = q
-            this.active = ''
-        },
-        clearQ(ev: MouseEvent | null = null) {
-            this.q = ''
-            return ev
-        },
-        activate(slug: string) {
-            document.body.scrollTop = 0
-            this.active = slug
+        transfer(data: { q: string; slug: string }) {
+            console.log(data)
+            this.q = data.q
+            this.active = data.slug
         },
     },
 })

@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import TokenDetails from '@/components/tokens/TokenDetails.vue'
-import { computed, watch } from 'vue'
+import { computed, watchEffect } from 'vue'
 import { useTokens } from '@/stores/tokens'
 import { useRouter } from 'vue-router'
 
@@ -10,20 +10,13 @@ const props = withDefaults(defineProps<{ slug?: string; q?: string }>(), {
 })
 
 const tokens = useTokens()
-if (props.slug != '') {
-    tokens.activate(props.slug)
-} else {
-    tokens.search(props.q)
-}
 
-watch(
-    () => props.slug,
-    (slug) => tokens.activate(slug)
-)
-watch(
-    () => props.q,
-    (q) => tokens.search(q)
-)
+watchEffect(() => {
+    tokens.transfer({
+        q: props.q,
+        slug: props.slug,
+    })
+})
 
 const qSummary = computed(
     () => `Search results for: <strong>${tokens.q}</strong>`
