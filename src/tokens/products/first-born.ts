@@ -139,7 +139,7 @@ const tokens: TokenType[] = [
         color: 'green',
         size: 'sm',
         sell: [3, 5, 8],
-        icons: ['discard', 'repair'],
+        icons: ['repair', 'discard'],
     },
     {
         product: 'first-born',

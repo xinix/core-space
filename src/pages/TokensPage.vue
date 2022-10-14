@@ -10,8 +10,11 @@ const props = withDefaults(defineProps<{ slug?: string; q?: string }>(), {
 })
 
 const tokens = useTokens()
-tokens.search(props.q)
-tokens.activate(props.slug)
+if (props.slug != '') {
+    tokens.activate(props.slug)
+} else {
+    tokens.search(props.q)
+}
 
 watch(
     () => props.slug,
