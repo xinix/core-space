@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import ThemeToggle from '@/components/buttons/ThemeToggle.vue'
+import InstallApp from '@/components/buttons/InstallApp.vue'
 
 import { computed, ref, watch } from 'vue'
 import { useTokens } from '@/stores/tokens'
@@ -74,6 +75,7 @@ watch(q, (query) => {
         <main class="content">
             <router-view />
         </main>
+        <InstallApp />
     </div>
 </template>
 
