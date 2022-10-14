@@ -147,6 +147,7 @@ const mustacheIcons = computed(() => {
 }
 
 .more {
+    align-self: flex-start;
     border-radius: 0.5em;
     background-color: var(--transparent-bg);
     box-shadow: var(--shadow-md);

@@ -412,6 +412,7 @@ const tokens: TokenType[] = [
         name: "Hunter's trophy objective",
         color: 'brown',
         size: 'sm',
+        icons: ['trophy'],
     },
     {
         product: 'first-born',
