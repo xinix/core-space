@@ -1,51 +1,32 @@
 <script lang="ts" setup>
 import TokenDetails from '@/components/tokens/TokenDetails.vue'
+
 import { computed, watchEffect } from 'vue'
 import { useTokens } from '@/stores/tokens'
 import { useRouter } from 'vue-router'
 
-const props = withDefaults(defineProps<{ slug?: string; q?: string }>(), {
-    slug: '',
-    q: '',
-})
-
 const tokens = useTokens()
+const router = useRouter()
+
+const props = withDefaults(defineProps<{ q?: string }>(), { q: '' })
 
 watchEffect(() => {
-    tokens.transfer({
-        q: props.q,
-        slug: props.slug,
-    })
+    tokens.q = props.q
 })
 
 const qSummary = computed(
     () => `Search results for: <strong>${tokens.q}</strong>`
 )
+
 const onClear = (ev: MouseEvent) => {
     router.push('/')
-    return ev
-}
-
-const router = useRouter()
-const onBack = (ev: MouseEvent) => {
-    if (window.history.length > 2) {
-        router.back()
-    } else {
-        router.push('/')
-    }
     return ev
 }
 </script>
 
 <template>
     <section class="container">
-        <p v-if="slug" class="summary with-back">
-            <button class="btn" type="button" @click="onBack">
-                <span class="material-symbols-rounded icon">arrow_back</span>
-                <span>{{ $t('back') }}</span>
-            </button>
-        </p>
-        <p v-else-if="tokens.q" class="summary">
+        <p v-if="tokens.q" class="summary">
             <span v-html="qSummary" />
             <button class="btn-link" type="button" @click="onClear">
                 {{ $t('clear_filter') }}
@@ -68,7 +49,6 @@ const onBack = (ev: MouseEvent) => {
             <TokenDetails
                 v-for="item in tokens.items"
                 :key="item.slug"
-                :active="item.slug === slug"
                 :item="item"
                 class="item"
             />
@@ -104,12 +84,6 @@ const onBack = (ev: MouseEvent) => {
 .summary {
     margin: 1em;
     text-align: center;
-
-    &.with-back {
-        max-width: 1400px;
-        margin: 1em auto;
-        text-align: left;
-    }
 }
 
 /* transition: list */

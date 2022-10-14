@@ -6,7 +6,10 @@ import BuyWithCrystals from '@/components/tokens/BuyWithCrystals.vue'
 import { AttributeType, TokenType } from '@/tokens/types'
 import { computed } from 'vue'
 
-const props = defineProps<{ item: TokenType; active: boolean }>()
+const props = withDefaults(
+    defineProps<{ item: TokenType; active?: boolean }>(),
+    { active: false }
+)
 
 const tokenClass = computed(() => {
     const cls: any = {}

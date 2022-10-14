@@ -65,6 +65,9 @@ body {
     }
 }
 
+@import "tokens/base";
+@import "tokens/first_born";
+
 .btn-link {
     font-family: inherit;
     font-size: 100%;
@@ -168,11 +171,18 @@ body {
 
 }
 
-@import "tokens/base";
-@import "tokens/first_born";
-
 @media (max-width: 600px) {
     .dl {
         grid-template-columns: auto 1fr;
     }
+}
+
+.fade-enter-active,
+.fade-leave-active {
+    transition: opacity 0.2s ease-in;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+    opacity: 0;
 }

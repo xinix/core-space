@@ -24,11 +24,15 @@ export const useTokens = defineStore('tokens', {
             }
             return state.rawItems.sort((a, b) => a.color.localeCompare(b.color))
         },
+        getItemBySlug: (state) => {
+            return (slug: string) => {
+                return state.rawItems.find((a) => a.slug === slug)
+            }
+        },
     },
     actions: {
-        transfer(data: { q: string; slug: string }) {
+        transfer(data: { q: string }) {
             this.q = data.q
-            this.active = data.slug
         },
     },
 })

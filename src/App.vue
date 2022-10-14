@@ -76,7 +76,11 @@ watch(q, (query) => {
             </div>
         </header>
         <main class="content">
-            <router-view />
+            <router-view v-slot="{ Component, route }">
+                <transition mode="out-in" name="fade">
+                    <component :is="Component" :key="route.path" />
+                </transition>
+            </router-view>
         </main>
     </div>
 </template>

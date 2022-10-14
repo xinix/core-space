@@ -47,7 +47,7 @@ withDefaults(
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    margin-left: 0.5em;
+    margin: 0.5em;
     padding: 0.125em 0.5em;
     border-radius: 0.5em;
     background-color: rgba(255, 255, 255, 0.9);
