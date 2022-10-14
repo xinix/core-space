@@ -70,12 +70,14 @@ watch(q, (query) => {
                     value="search"
                 />
             </form>
-            <ThemeToggle class="theme" />
+            <div class="actions">
+                <InstallApp class="install" />
+                <ThemeToggle class="theme" />
+            </div>
         </header>
         <main class="content">
             <router-view />
         </main>
-        <InstallApp />
     </div>
 </template>
 
@@ -106,6 +108,12 @@ watch(q, (query) => {
             border-radius: 100%;
             background-color: #ffffff;
         }
+    }
+
+    .actions {
+        display: flex;
+        align-items: center;
+        padding-left: 1em;
     }
 }
 
@@ -203,7 +211,7 @@ watch(q, (query) => {
         padding-bottom: 1em;
         grid-template-columns: auto 1fr;
         grid-template-areas:
-            'logo theme'
+            'logo actions'
             'form form';
         grid-gap: 1em 0.75em;
 
@@ -212,9 +220,9 @@ watch(q, (query) => {
             grid-area: logo;
         }
 
-        .theme {
+        .actions {
             justify-content: flex-end;
-            grid-area: theme;
+            grid-area: actions;
         }
 
         form {

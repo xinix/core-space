@@ -34,7 +34,7 @@ export default defineConfig({
             includeAssets: ['favicon.ico', 'apple-touch-icon.png', 'logo.svg'],
             manifest: {
                 name: 'Core Space index',
-                short_name: 'CoreSpace',
+                short_name: 'Core Space',
                 description: 'Awesome index for Core Space inventory items',
                 theme_color: '#293c33',
                 icons: [
