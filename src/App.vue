@@ -33,7 +33,7 @@ watch(q, (query) => {
     if (query === '') {
         return router.push({ query: {} })
     }
-    return router.push({ query: { q: query } })
+    return router.push({ path: '/', query: { q: query } })
 })
 </script>
 
@@ -229,8 +229,13 @@ watch(q, (query) => {
             grid-area: form;
         }
     }
+
     .search {
         padding: 0 0.5em;
+    }
+
+    .content {
+        padding: 1em 0.25em;
     }
 }
 </style>

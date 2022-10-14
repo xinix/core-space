@@ -52,6 +52,13 @@ const onBack = (ev: MouseEvent) => {
             </button>
         </p>
 
+        <p v-if="tokens.items.length === 0" class="empty">
+            <em>🥹</em>
+            <br />
+            <br />
+            {{ $t('no_result') }}
+        </p>
+
         <transition-group
             :class="{ 'with-q': tokens.q !== '' }"
             class="tokens"
@@ -77,6 +84,20 @@ const onBack = (ev: MouseEvent) => {
 
     &.with-q {
         justify-content: center;
+    }
+}
+
+.empty {
+    font-size: 1.5em;
+    line-height: 1.4;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 1em;
+    text-align: center;
+
+    em {
+        font-size: 3em;
+        font-style: normal;
     }
 }
 

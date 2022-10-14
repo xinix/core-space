@@ -1,6 +1,7 @@
 <script lang="ts" setup>
 import IconLegend from '@/components/tokens/IconLegend.vue'
 import JustText from '@/components/tokens/JustText.vue'
+import BuyWithCrystals from '@/components/tokens/BuyWithCrystals.vue'
 
 import { AttributeType, TokenType } from '@/tokens/types'
 import { computed } from 'vue'
@@ -28,6 +29,9 @@ const mustacheIcons = computed(() => {
         { key: 'armour', value: props.item.armour, icon: 'physical_armour' },
         { key: 'shield', value: props.item.shield, icon: 'shield_armour' },
         { key: 'dyson', value: props.item.dyson },
+        { key: 'move', value: props.item.move },
+        { key: 'scramble', value: props.item.scramble },
+        { key: 'stim-heal', value: props.item.stim_heal },
     ]
     return icons.filter((x) => x.value != undefined)
 })
@@ -48,6 +52,8 @@ const mustacheIcons = computed(() => {
                 <dd v-if="item.buy">{{ item.buy }}</dd>
                 <dt v-if="item.sell">{{ $t('sell') }}:</dt>
                 <dd v-if="item.sell">{{ item.sell }}</dd>
+                <dt v-if="item.range">{{ $t('range') }}:</dt>
+                <dd v-if="item.range">{{ $t(item.range) }}</dd>
             </dl>
         </header>
         <section v-if="active" class="more">
@@ -60,7 +66,7 @@ const mustacheIcons = computed(() => {
                 />
             </ul>
 
-            <ul class="list">
+            <ul v-if="mustacheIcons.length > 0 || item.icons" class="list">
                 <IconLegend
                     v-for="snor in mustacheIcons"
                     :key="snor.key"
@@ -73,6 +79,15 @@ const mustacheIcons = computed(() => {
                     v-for="icon in item.icons"
                     :key="icon"
                     :icon="icon"
+                    tag="li"
+                />
+            </ul>
+            <ul v-if="item.crystals" class="list">
+                <BuyWithCrystals
+                    v-if="item.crystals"
+                    :buy="item.buy"
+                    :crystals="item.crystals"
+                    :name="item.name"
                     tag="li"
                 />
             </ul>

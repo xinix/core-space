@@ -2,17 +2,16 @@
 import BaseIcon from '@/components/icons/BaseIcon.vue'
 </script>
 <template>
-    <BaseIcon :height="90" :scale="0.4" :width="90">
+    <BaseIcon :height="82" :scale="0.4" :width="82">
         <circle
-            cx="45"
-            cy="45"
-            fill="none"
-            r="41.5"
+            cx="43"
+            cy="41"
+            r="27.5"
             stroke="currentColor"
-            stroke-width="8"
+            stroke-width="7"
         />
         <path
-            d="M23 43.9459L40.1429 58L68 32"
+            d="M27.8445 40.2739L39.654 49.9555L58.8445 32.0444"
             stroke="currentColor"
             stroke-linecap="round"
             stroke-width="8"

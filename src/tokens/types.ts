@@ -52,8 +52,23 @@ export type AttributeType =
     | 'mech'
     | 'heavy'
     | 'necro-flask'
+    | 'deflect'
+    | 'fade-to-black-3'
+    | 'blast-2'
+    | 'manipulate-3'
+    | 'artifact'
+    | 'infra-lens'
+    | 'scramble'
+    | 'move'
+    | 'free-close'
+    | 'na'
+    | 'effortless-reload'
+    | 'search'
+    | 'stim-heal'
 
-export type ItemDescription = 'rotating' | 'larva'
+export type CrystalType = 'green' | 'orange' | 'purple'
+
+export type ItemDescription = 'rotating' | 'larva' | 'mineral'
 
 export type TokenType = {
     product: ProductType
@@ -69,7 +84,7 @@ export type TokenType = {
         | 'green'
         | 'light-green'
         | 'brown'
-    size: 'xs' | 'sm' | 'md'
+    size: 'xs' | 'sm' | 'md' | 'lg'
     close?: number
     heavy?: number
     throw?: number
@@ -78,7 +93,8 @@ export type TokenType = {
     short?: number
     medium?: number
     long?: number
-    buy?: number
+    buy?: number | number[]
+    crystals?: CrystalType[]
     sell?: number | number[]
     blast?: number[]
     scatter?: number
@@ -86,6 +102,9 @@ export type TokenType = {
     armour?: number
     shield?: number
     dyson?: number
+    move?: number
+    scramble?: number[]
+    stim_heal?: number
     description?: ItemDescription[]
     icons?: AttributeType[]
 }

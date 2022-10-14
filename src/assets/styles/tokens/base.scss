@@ -1,11 +1,21 @@
 .token {
-    background-repeat: no-repeat;
     width: 118px;
     height: 118px;
     border-radius: 15px;
+    background-repeat: no-repeat;
 
     &.sm {
         width: 118px;
+        height: 118px;
+    }
+
+    &.md {
+        width: 166px;
+        height: 118px;
+    }
+
+    &.lg {
+        width: 215px;
         height: 118px;
     }
 }

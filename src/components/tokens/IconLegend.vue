@@ -88,6 +88,16 @@ const text = computed(() => {
             &.dyson {
                 top: 0.125em;
             }
+
+            &.move {
+                font-size: 0.5em;
+            }
+
+            &.stim-heal {
+                font-size: 0.625em;
+                top: -3px;
+                padding-left: 16px;
+            }
         }
     }
 }

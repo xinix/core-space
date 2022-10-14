@@ -126,14 +126,22 @@ body {
     }
 }
 
-strong {
-    font-weight: bold;
-    border-radius: 2px;
-    background-color: transparent;
-    background-image: linear-gradient(to right, var(--secondary-a1), var(--secondary-a2) 33%, var(--secondary-a3) 66%, var(--secondary-a4));
-    background-repeat: no-repeat;
-    background-position: left bottom;
-    background-size: 100% 3px;
+.tokens {
+
+    strong {
+        font-weight: bold;
+        border-radius: 2px;
+        background-color: transparent;
+        background-image: linear-gradient(to right, var(--secondary-a1), var(--secondary-a2) 33%, var(--secondary-a3) 66%, var(--secondary-a4));
+        background-repeat: no-repeat;
+        background-position: left bottom;
+        background-size: 100% 3px;
+    }
+
+    em {
+        font-weight: bold;
+    }
+
 }
 
 .list ul {
@@ -149,6 +157,15 @@ strong {
     > li + li {
         margin-top: .5em;
     }
+}
+
+.list ol {
+    margin: 1em 0 1em 1em;
+
+    > li + li {
+        margin-top: .5em;
+    }
+
 }
 
 @import "tokens/base";

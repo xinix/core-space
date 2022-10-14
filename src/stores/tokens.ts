@@ -18,18 +18,15 @@ export const useTokens = defineStore('tokens', {
 
             const q = state.q.toLowerCase().trim()
             if (q != '') {
-                return state.rawItems.filter(
-                    (a) => a.name.toLowerCase().indexOf(q) >= 0
-                )
-                //.sort((a, b) => a.name.localeCompare(b.name))
+                return state.rawItems
+                    .filter((a) => a.name.toLowerCase().indexOf(q) >= 0)
+                    .sort((a, b) => a.color.localeCompare(b.color))
             }
-            return state.rawItems
-            //.sort((a, b) => a.name.localeCompare(b.name))
+            return state.rawItems.sort((a, b) => a.color.localeCompare(b.color))
         },
     },
     actions: {
         transfer(data: { q: string; slug: string }) {
-            console.log(data)
             this.q = data.q
             this.active = data.slug
         },

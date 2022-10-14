@@ -1,63 +1,50 @@
-import { App } from 'vue'
+// noinspection JSUnusedGlobalSymbols
 
-import RareIcon from '@/components/icons/RareIcon.vue'
-import EffortlessIcon from '@/components/icons/EffortlessIcon.vue'
-import ScatterIcon from '@/components/icons/ScatterIcon.vue'
-import FlipIcon from '@/components/icons/FlipIcon.vue'
-import DiscardIcon from '@/components/icons/DiscardIcon.vue'
-import PhysicalArmourIcon from '@/components/icons/PhysicalArmourIcon.vue'
-import PhaseIcon from '@/components/icons/PhaseIcon.vue'
-import ReRollIcon from '@/components/icons/ReRollIcon.vue'
-import CloseIcon from '@/components/icons/CloseIcon.vue'
-import ThrowIcon from '@/components/icons/ThrowIcon.vue'
-import GrenadeIcon from '@/components/icons/GrenadeIcon.vue'
-import DysonIcon from '@/components/icons/DysonIcon.vue'
-import DysonThrowIcon from '@/components/icons/DysonThrowIcon.vue'
-import DysonRangeIcon from '@/components/icons/DysonRangeIcon.vue'
-import RangeIcon from '@/components/icons/RangeIcon.vue'
-import BoomerangIcon from '@/components/icons/BoomerangIcon.vue'
-import RepairIcon from '@/components/icons/RepairIcon.vue'
-import EventIcon from '@/components/icons/EventIcon.vue'
-import SilentIcon from '@/components/icons/SilentIcon.vue'
-import InfiniteIcon from '@/components/icons/InfiniteIcon.vue'
-import MineIcon from '@/components/icons/MineIcon.vue'
-import ShieldArmourIcon from '@/components/icons/ShieldArmourIcon.vue'
-import MechIcon from '@/components/icons/MechIcon.vue'
-import Burst1Icon from '@/components/icons/Burst1Icon.vue'
-import Burst2Icon from '@/components/icons/Burst2Icon.vue'
-import FullChargeIcon from '@/components/icons/FullChargeIcon.vue'
-import HeavyIcon from '@/components/icons/HeavyIcon.vue'
-import NecroFlaskIcon from '@/components/icons/NecroFlaskIcon.vue'
-import TrophyIcon from '@/components/icons/TrophyIcon.vue'
-
-export function loadGlobalComponents(app: App) {
-    app.component('TrophyIcon', TrophyIcon)
-    app.component('NecroFlaskIcon', NecroFlaskIcon)
-    app.component('HeavyIcon', HeavyIcon)
-    app.component('FullChargeIcon', FullChargeIcon)
-    app.component('Burst2Icon', Burst2Icon)
-    app.component('Burst1Icon', Burst1Icon)
-    app.component('MechIcon', MechIcon)
-    app.component('ShieldArmourIcon', ShieldArmourIcon)
-    app.component('MineIcon', MineIcon)
-    app.component('InfiniteIcon', InfiniteIcon)
-    app.component('SilentIcon', SilentIcon)
-    app.component('EventIcon', EventIcon)
-    app.component('RepairIcon', RepairIcon)
-    app.component('BoomerangIcon', BoomerangIcon)
-    app.component('RangeIcon', RangeIcon)
-    app.component('DysonRangeIcon', DysonRangeIcon)
-    app.component('DysonThrowIcon', DysonThrowIcon)
-    app.component('DysonIcon', DysonIcon)
-    app.component('GrenadeIcon', GrenadeIcon)
-    app.component('ThrowIcon', ThrowIcon)
-    app.component('CloseIcon', CloseIcon)
-    app.component('ReRollIcon', ReRollIcon)
-    app.component('PhaseIcon', PhaseIcon)
-    app.component('PhysicalArmourIcon', PhysicalArmourIcon)
-    app.component('DiscardIcon', DiscardIcon)
-    app.component('FlipIcon', FlipIcon)
-    app.component('ScatterIcon', ScatterIcon)
-    app.component('EffortlessIcon', EffortlessIcon)
-    app.component('RareIcon', RareIcon)
+export default {
+    ArtifactIcon: () => import('@/components/icons/ArtifactIcon.vue'),
+    Blast2Icon: () => import('@/components/icons/Blast2Icon.vue'),
+    BoomerangIcon: () => import('@/components/icons/BoomerangIcon.vue'),
+    Burst1Icon: () => import('@/components/icons/Burst1Icon.vue'),
+    Burst2Icon: () => import('@/components/icons/Burst2Icon.vue'),
+    CloseIcon: () => import('@/components/icons/CloseIcon.vue'),
+    DeflectIcon: () => import('@/components/icons/DeflectIcon.vue'),
+    DiscardIcon: () => import('@/components/icons/DiscardIcon.vue'),
+    DysonIcon: () => import('@/components/icons/DysonIcon.vue'),
+    DysonRangeIcon: () => import('@/components/icons/DysonRangeIcon.vue'),
+    DysonThrowIcon: () => import('@/components/icons/DysonThrowIcon.vue'),
+    EffortlessIcon: () => import('@/components/icons/EffortlessIcon.vue'),
+    EffortlessReloadIcon: () =>
+        import('@/components/icons/EffortlessReloadIcon.vue'),
+    EventIcon: () => import('@/components/icons/EventIcon.vue'),
+    FadeToBlack3Icon: () => import('@/components/icons/FadeToBlack3Icon.vue'),
+    FlipIcon: () => import('@/components/icons/FlipIcon.vue'),
+    FreeCloseIcon: () => import('@/components/icons/FreeCloseIcon.vue'),
+    FullChargeIcon: () => import('@/components/icons/FullChargeIcon.vue'),
+    GrenadeIcon: () => import('@/components/icons/GrenadeIcon.vue'),
+    HeavyIcon: () => import('@/components/icons/HeavyIcon.vue'),
+    InfiniteIcon: () => import('@/components/icons/InfiniteIcon.vue'),
+    InfraLensIcon: () => import('@/components/icons/InfraLensIcon.vue'),
+    Manipulate3Icon: () => import('@/components/icons/Manipulate3Icon.vue'),
+    MechIcon: () => import('@/components/icons/MechIcon.vue'),
+    MineIcon: () => import('@/components/icons/MineIcon.vue'),
+    MoveIcon: () => import('@/components/icons/MoveIcon.vue'),
+    NaIcon: () => import('@/components/icons/NaIcon.vue'),
+    NecroFlaskIcon: () => import('@/components/icons/NecroFlaskIcon.vue'),
+    PhaseIcon: () => import('@/components/icons/PhaseIcon.vue'),
+    PhysicalArmourIcon: () =>
+        import('@/components/icons/PhysicalArmourIcon.vue'),
+    RangeIcon: () => import('@/components/icons/RangeIcon.vue'),
+    RareIcon: () => import('@/components/icons/RareIcon.vue'),
+    ReliableIcon: () => import('@/components/icons/ReliableIcon.vue'),
+    RepairIcon: () => import('@/components/icons/RepairIcon.vue'),
+    ReRollIcon: () => import('@/components/icons/ReRollIcon.vue'),
+    ScatterIcon: () => import('@/components/icons/ScatterIcon.vue'),
+    ScrambleIcon: () => import('@/components/icons/ScrambleIcon.vue'),
+    SearchIcon: () => import('@/components/icons/SearchIcon.vue'),
+    ShieldArmourIcon: () => import('@/components/icons/ShieldArmourIcon.vue'),
+    SilentIcon: () => import('@/components/icons/SilentIcon.vue'),
+    StimHealIcon: () => import('@/components/icons/StimHealIcon.vue'),
+    SuperReliableIcon: () => import('@/components/icons/SuperReliableIcon.vue'),
+    ThrowIcon: () => import('@/components/icons/ThrowIcon.vue'),
+    TrophyIcon: () => import('@/components/icons/TrophyIcon.vue'),
 }

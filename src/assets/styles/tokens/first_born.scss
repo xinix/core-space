@@ -4,16 +4,29 @@ $sm-rows: (-79px, -207px, -336px, -464px, -876px, -1005px, -1133px);
 $sm-tokens: (
     1: ('port-engram', '', 'shield-engram', '', 'phase-engram', 'liege-shard-6', 'liege-shard-4', 'dyson-spike', 'dyson-draw-5', 'dyson-draw-3'),
     2: ('dyson-vent-5', 'dyson-vent-3', 'phase-loop-4', 'phase-loop-3', 'larva', '', 'fibril', '', '', 'necro-flask'),
-    3: ('sypher-orb', 'ecco-orb', 'photon-shifter', 'matter-shifter', '', 'liege-ring-6', 'liege-ring-4', 'artifact', '', 'quantum-lens'),
-    4: ('artifact-4', '', '', '', 'bracer', 'shard-fin-8', 'shard-fin-4', 'raw-materials', '', 'liege-shard-5'),
+    3: ('sypher-orb', 'ecco-orb', 'photon-shifter', 'matter-shifter-4', 'matter-shifter-5', 'liege-ring-6', 'liege-ring-4', 'artifact', '', 'quantum-lens'),
+    4: ('artifact-4', '', '', '', 'bracer', 'shard-fin-8', 'shard-fin-4', 'raw-minerals', '', 'liege-shard-5'),
     5: ('mining-drubber', 'combat-vest', 'combat-vest-shiny', 'shield-belt', 'shield-belt-custom', 'neoflex-plate', 'common-pistol', 'military-pistol', '', 'energy-pistol'),
-    6: ('machine-pistol', 'officer-pistol', 'burst-vest', 'utility-knife', 'energy-combat-knife', 'short-sword-crafted', 'outland-pistol', 'hunter-trophy', '', 'magnum-custom'),
+    6: ('machine-pistol', 'officer-pistol', 'burst-vest', 'utility-knife', 'energy-combat-knife', 'short-sword-crafted', '', 'hunter-trophy', '', 'magnum-custom'),
     7: ('', '', '', '', '', '', '', 'military-twin', 'quell-riposte', 'havoc-custom'),
 );
 
+$lg-row: -1133px;
+$lg-cols: (-44px, -269px, -494px, -719px);
+$lg-tokens: ('combat-sword', 'combat-rifle-custom', 'shock-rifle', 'breach-rifle');
+
+$md-row: -1261px;
+$md-cols: (-44px, -220px, -396px);
+$md-tokens: ('tactical-rifle', 'outland-gun', 'kalamite-fist');
+
+$sm1-row: -1261px;
+$sm1-cols: (-572px, -701px, -830px, -958px, -1086px);
+$sm1-tokens: ('outland-pistol', 'jump-pack', 'sensor-goggles', 'medi-pack', 'medi-stim');
+
+
 .token.first-born {
     background-image: var(--first-born-tokens);
-    background-size: 1362.75px 1920px;
+    background-size: 1363px 1661px;
 
     @each $row, $columns in $sm-tokens {
         @each $col in $columns {
@@ -24,6 +37,27 @@ $sm-tokens: (
                     background-position-y: nth($sm-rows, $row);
                 }
             }
+        }
+    }
+
+    @each $token in $lg-tokens {
+        &.#{$token} {
+            background-position-x: nth($lg-cols, index($lg-tokens, $token));
+            background-position-y: $lg-row;
+        }
+    }
+
+    @each $token in $md-tokens {
+        &.#{$token} {
+            background-position-x: nth($md-cols, index($md-tokens, $token));
+            background-position-y: $md-row;
+        }
+    }
+
+    @each $token in $sm1-tokens {
+        &.#{$token} {
+            background-position-x: nth($sm1-cols, index($sm1-tokens, $token));
+            background-position-y: $sm1-row;
         }
     }
 }
