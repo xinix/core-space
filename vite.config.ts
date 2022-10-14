@@ -2,7 +2,7 @@ import { defineConfig } from 'vite'
 import { resolve } from 'path'
 import vue from '@vitejs/plugin-vue'
 import mkcert from 'vite-plugin-mkcert' // https://vitejs.dev/config/
-import { VitePWA } from 'vite-plugin-pwa'
+import { VitePWA } from 'vite-plugin-pwa' // https://vitejs.dev/config/
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -26,7 +26,38 @@ export default defineConfig({
             },
         },
     },
-    plugins: [vue(), mkcert(), VitePWA({ registerType: 'autoUpdate' })],
+    plugins: [
+        vue(),
+        mkcert(),
+        VitePWA({
+            registerType: 'autoUpdate',
+            includeAssets: ['favicon.ico', 'apple-touch-icon.png', 'logo.svg'],
+            manifest: {
+                name: 'Core Space index',
+                short_name: 'CoreSpace',
+                description: 'Awesome index for Core Space inventory items',
+                theme_color: '#293c33',
+                icons: [
+                    {
+                        src: 'pwa-192x192.png',
+                        sizes: '192x192',
+                        type: 'image/png',
+                    },
+                    {
+                        src: 'pwa-512x512.png',
+                        sizes: '512x512',
+                        type: 'image/png',
+                    },
+                    {
+                        src: 'pwa-512x512.png',
+                        sizes: '512x512',
+                        type: 'image/png',
+                        purpose: 'any maskable',
+                    },
+                ],
+            },
+        }),
+    ],
     resolve: {
         alias: [
             {
