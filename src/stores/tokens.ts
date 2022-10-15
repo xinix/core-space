@@ -22,7 +22,8 @@ export const useTokens = defineStore('tokens', {
                     .filter((a) => a.name.toLowerCase().indexOf(q) >= 0)
                     .sort((a, b) => a.color.localeCompare(b.color))
             }
-            return state.rawItems.sort((a, b) => a.color.localeCompare(b.color))
+            return state.rawItems
+            //.sort((a, b) => a.color.localeCompare(b.color))
         },
         getItemBySlug: (state) => {
             return (slug: string) => {

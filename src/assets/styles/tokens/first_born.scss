@@ -1,6 +1,5 @@
 $sm-cols: (-44px, -173px, -301px, -430px, -558px, -686px, -815px, -943px, -1072px, -1200px);
 $sm-rows: (-79px, -207px, -336px, -464px, -876px, -1005px, -1133px);
-
 $sm-tokens: (
     1: ('port-engram', '', 'shield-engram', '', 'phase-engram', 'liege-shard-6', 'liege-shard-4', 'dyson-spike', 'dyson-draw-5', 'dyson-draw-3'),
     2: ('dyson-vent-5', 'dyson-vent-3', 'phase-loop-4', 'phase-loop-3', 'larva', '', 'fibril', '', '', 'necro-flask'),
@@ -23,6 +22,16 @@ $sm1-row: -1261px;
 $sm1-cols: (-572px, -701px, -830px, -958px, -1086px);
 $sm1-tokens: ('outland-pistol', 'jump-pack', 'sensor-goggles', 'medi-pack', 'medi-stim');
 
+$nano-cols: (-81px, -162px, -243px, -323px, -404px, -485px, -566px, -646px, -726px, -808px, -889px, -969px, -1050px, -1131px, -1215px);
+$nano-rows: (-604px, -733px, -1261px, -1402px, -1531px);
+$nano-tokens: (
+    1: ('n-shard', '', 'dyson-rod', '', '', '', '', 'n-engram', '', 'n-orb-5', 'n-orb-4', '', 'n-super-heal', '', ''),
+    2: ('n-super-skill-2', 'n-super-skill-3', 'n-action-2', '', 'n-action-3', 'n-raw-green', 'n-raw-orange', '', 'n-raw-purple', 'n-event', 'n-key', '', 'n-freeze', '', ''),
+    3: ('', '', '', '', '', '', '', '', '', '', '', '', '', '', 'detonator-l'),
+    4: ('n-walkie', '', 'n-ammo', '', '', '', 'n-heal', '', '', 'n-action', '', 'n-skill', '', 'n-nade', ''),
+    5: ('n-reroll', 'n-target', 'n-shield', 'n-mine', '', '', 'detonator-m', 'n-throw', '', '', 'n-acc-ammo', '', 'n-ammo', '', 'n-obj')
+);
+
 
 .token.first-born {
     background-image: var(--first-born-tokens);
@@ -30,11 +39,21 @@ $sm1-tokens: ('outland-pistol', 'jump-pack', 'sensor-goggles', 'medi-pack', 'med
 
     @each $row, $columns in $sm-tokens {
         @each $col in $columns {
-
             @if $col != '' {
                 &.#{$col} {
                     background-position-x: nth($sm-cols, index($columns, $col));
                     background-position-y: nth($sm-rows, $row);
+                }
+            }
+        }
+    }
+
+    @each $row, $columns in $nano-tokens {
+        @each $col in $columns {
+            @if $col != '' {
+                &.#{$col} {
+                    background-position-x: nth($nano-cols, index($columns, $col));
+                    background-position-y: nth($nano-rows, $row);
                 }
             }
         }

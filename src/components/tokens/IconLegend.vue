@@ -93,10 +93,19 @@ const text = computed(() => {
                 font-size: 0.5em;
             }
 
+            &.stim-actions,
             &.stim-heal {
                 font-size: 0.625em;
                 top: -3px;
                 padding-left: 16px;
+            }
+
+            &.stim-heal-plus,
+            &.stim-skill-plus {
+                font-size: 0.625em;
+                top: -3px;
+                padding-left: 16px;
+                color: black;
             }
         }
     }

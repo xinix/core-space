@@ -34,7 +34,12 @@ const mustacheIcons = computed(() => {
         { key: 'dyson', value: props.item.dyson },
         { key: 'move', value: props.item.move },
         { key: 'scramble', value: props.item.scramble },
-        { key: 'stim-heal', value: props.item.stim_heal },
+        { key: 'stim-heal', value: props.item.heal },
+        { key: 'stim-heal-plus', value: props.item.super_heal },
+        { key: 'stim-skill-plus', value: props.item.super_skill },
+        { key: 'stim-actions', value: props.item.action },
+        { key: 'freeze', value: props.item.freeze },
+        { key: 'explode', value: props.item.explode },
     ]
     return icons.filter((x) => x.value != undefined)
 })
@@ -109,6 +114,8 @@ const mustacheIcons = computed(() => {
     grid-row-gap: 0.5em;
 
     &:not(.active) {
+        justify-content: center;
+        min-width: 7rem;
         cursor: pointer;
         border-radius: 0.5em;
         background-color: var(--transparent-bg);

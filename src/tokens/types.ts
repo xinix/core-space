@@ -22,8 +22,8 @@ export type AttributeType =
     | 'ammo-returns'
     | 'stim-skill'
     | 'stim-skill-plus'
-    | 'stim-health'
-    | 'stim-health-plus'
+    | 'stim-heal'
+    | 'stim-heal-plus'
     | 'stim-actions'
     | 'reload-ammo'
     | 'reload-ammo-accelerant'
@@ -64,11 +64,19 @@ export type AttributeType =
     | 'na'
     | 'effortless-reload'
     | 'search'
-    | 'stim-heal'
+    | 'pairs'
+    | 'key'
+    | 'explode'
 
 export type CrystalType = 'green' | 'orange' | 'purple'
 
-export type ItemDescription = 'rotating' | 'larva' | 'mineral'
+export type ItemDescription =
+    | 'rotating'
+    | 'larva'
+    | 'mineral'
+    | 'dyson-rod'
+    | 'detonator'
+    | 'mines'
 
 export type TokenType = {
     product: ProductType
@@ -84,11 +92,12 @@ export type TokenType = {
         | 'green'
         | 'light-green'
         | 'brown'
-    size: 'xs' | 'sm' | 'md' | 'lg'
+    size: 'nano' | 'sm' | 'md' | 'lg'
     close?: number
     heavy?: number
     throw?: number
     grenade?: number[]
+    explode?: number[]
     range?: 's' | 'm' | 'l'
     short?: number
     medium?: number
@@ -104,7 +113,11 @@ export type TokenType = {
     dyson?: number
     move?: number
     scramble?: number[]
-    stim_heal?: number
+    heal?: number
+    super_heal?: number
+    super_skill?: number
+    action?: number
+    freeze?: number[]
     description?: ItemDescription[]
     icons?: AttributeType[]
 }
