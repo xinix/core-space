@@ -13,15 +13,19 @@ const routes = [
 ]
 
 function setupRouter() {
-    return createRouter({
+    const router = createRouter({
         history: createWebHistory('/core-space/'),
         routes,
-        // eslint-disable-next-line @typescript-eslint/no-unused-vars
-        scrollBehavior(_to, _from, _savedPosition) {
-            // always scroll to top
-            return { top: 0 }
-        },
     })
+    router.afterEach(() => {
+        const el = document.getElementById('app')
+        if (el != null) {
+            setTimeout(() => {
+                el.scrollTop = 0
+            }, 200)
+        }
+    })
+    return router
 }
 
 export { setupRouter }
