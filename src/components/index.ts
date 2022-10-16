@@ -1,6 +1,7 @@
 // noinspection JSUnusedGlobalSymbols
 
 export default {
+    AmmoIcon: () => import('@/components/icons/AmmoIcon.vue'),
     ArtifactIcon: () => import('@/components/icons/ArtifactIcon.vue'),
     Blast2Icon: () => import('@/components/icons/Blast2Icon.vue'),
     BoomerangIcon: () => import('@/components/icons/BoomerangIcon.vue'),
@@ -33,6 +34,7 @@ export default {
     MoveIcon: () => import('@/components/icons/MoveIcon.vue'),
     NaIcon: () => import('@/components/icons/NaIcon.vue'),
     NecroFlaskIcon: () => import('@/components/icons/NecroFlaskIcon.vue'),
+    ObjectiveIcon: () => import('@/components/icons/ObjectiveIcon.vue'),
     PairsIcon: () => import('@/components/icons/PairsIcon.vue'),
     PhaseIcon: () => import('@/components/icons/PhaseIcon.vue'),
     PhysicalArmourIcon: () =>
@@ -42,6 +44,7 @@ export default {
     ReliableIcon: () => import('@/components/icons/ReliableIcon.vue'),
     RepairIcon: () => import('@/components/icons/RepairIcon.vue'),
     ReRollIcon: () => import('@/components/icons/ReRollIcon.vue'),
+    ReRollRangedIcon: () => import('@/components/icons/ReRollRangedIcon.vue'),
     ScatterIcon: () => import('@/components/icons/ScatterIcon.vue'),
     ScrambleIcon: () => import('@/components/icons/ScrambleIcon.vue'),
     SearchIcon: () => import('@/components/icons/SearchIcon.vue'),
@@ -51,7 +54,12 @@ export default {
     StimHealIcon: () => import('@/components/icons/StimHealIcon.vue'),
     StimHealPlusIcon: () => import('@/components/icons/StimHealPlusIcon.vue'),
     StimSkillPlusIcon: () => import('@/components/icons/StimSkillPlusIcon.vue'),
+    StimSkillIcon: () => import('@/components/icons/StimSkillIcon.vue'),
+    SuperAmmoIcon: () => import('@/components/icons/SuperAmmoIcon.vue'),
     SuperReliableIcon: () => import('@/components/icons/SuperReliableIcon.vue'),
+    SwapIcon: () => import('@/components/icons/SwapIcon.vue'),
+    TargetLockIcon: () => import('@/components/icons/TargetLockIcon.vue'),
+    TempArmourIcon: () => import('@/components/icons/TempArmourIcon.vue'),
     ThrowIcon: () => import('@/components/icons/ThrowIcon.vue'),
     TrophyIcon: () => import('@/components/icons/TrophyIcon.vue'),
 }

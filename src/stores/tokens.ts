@@ -2,6 +2,16 @@ import { defineStore } from 'pinia'
 import { TokenType } from '@/tokens/types'
 import tokens from '@/tokens'
 
+const sizeOrder = ['nano', 'sm', 'md', 'lg']
+
+const sortToken = (a: TokenType, b: TokenType) => {
+    return (
+        sizeOrder.indexOf(a.size) - sizeOrder.indexOf(b.size) ||
+        a.color.localeCompare(b.color) ||
+        a.name.localeCompare(b.name)
+    )
+}
+
 export const useTokens = defineStore('tokens', {
     state: () => {
         return {
@@ -19,11 +29,10 @@ export const useTokens = defineStore('tokens', {
             const q = state.q.toLowerCase().trim()
             if (q != '') {
                 return state.rawItems
-                    .filter((a) => a.name.toLowerCase().indexOf(q) >= 0)
-                    .sort((a, b) => a.color.localeCompare(b.color))
+                    .filter((a) => a.size.toLowerCase().indexOf(q) >= 0)
+                    .sort(sortToken)
             }
-            return state.rawItems
-            //.sort((a, b) => a.color.localeCompare(b.color))
+            return state.rawItems.sort(sortToken)
         },
         getItemBySlug: (state) => {
             return (slug: string) => {

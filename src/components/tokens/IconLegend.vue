@@ -94,6 +94,7 @@ const text = computed(() => {
             }
 
             &.stim-actions,
+            &.stim-skill,
             &.stim-heal {
                 font-size: 0.625em;
                 top: -3px;

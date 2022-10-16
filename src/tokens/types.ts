@@ -8,7 +8,7 @@ export type AttributeType =
     | 'mine'
     | 'trophy'
     | 're-roll'
-    | 'range-re-roll'
+    | 're-roll-ranged'
     | 'burst-1'
     | 'burst-2'
     | 'full-charge'
@@ -67,6 +67,11 @@ export type AttributeType =
     | 'pairs'
     | 'key'
     | 'explode'
+    | 'swap'
+    | 'ammo'
+    | 'super-ammo'
+    | 'temp-armour'
+    | 'objective'
 
 export type CrystalType = 'green' | 'orange' | 'purple'
 
@@ -87,7 +92,6 @@ export type TokenType = {
         | 'blue'
         | 'yellow'
         | 'orange'
-        | 'red'
         | 'purple'
         | 'green'
         | 'light-green'
@@ -115,6 +119,7 @@ export type TokenType = {
     scramble?: number[]
     heal?: number
     super_heal?: number
+    skill?: number
     super_skill?: number
     action?: number
     freeze?: number[]

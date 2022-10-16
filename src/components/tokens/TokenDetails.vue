@@ -36,6 +36,7 @@ const mustacheIcons = computed(() => {
         { key: 'scramble', value: props.item.scramble },
         { key: 'stim-heal', value: props.item.heal },
         { key: 'stim-heal-plus', value: props.item.super_heal },
+        { key: 'stim-skill', value: props.item.skill },
         { key: 'stim-skill-plus', value: props.item.super_skill },
         { key: 'stim-actions', value: props.item.action },
         { key: 'freeze', value: props.item.freeze },
