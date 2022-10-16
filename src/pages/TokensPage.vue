@@ -1,25 +1,17 @@
 <script lang="ts" setup>
 import TokenDetails from '@/components/tokens/TokenDetails.vue'
 
-import { computed, watchEffect } from 'vue'
+import { computed } from 'vue'
 import { useTokens } from '@/stores/tokens'
-import { useRouter } from 'vue-router'
 
 const tokens = useTokens()
-const router = useRouter()
-
-const props = withDefaults(defineProps<{ q?: string }>(), { q: '' })
-
-watchEffect(() => {
-    tokens.q = props.q
-})
 
 const qSummary = computed(
     () => `Search results for: <strong>${tokens.q}</strong>`
 )
 
 const onClear = (ev: MouseEvent) => {
-    router.push('/')
+    tokens.q = ''
     return ev
 }
 </script>

@@ -97,6 +97,7 @@ const mustacheIcons = computed(() => {
                     :buy="item.buy"
                     :crystals="item.crystals"
                     :name="item.name"
+                    :sell="item.sell"
                     tag="li"
                 />
             </ul>

@@ -6,15 +6,23 @@ withDefaults(
         tag?: string
         name: string
         buy?: number | number[]
+        sell?: number | number[]
         crystals: CrystalType[]
     }>(),
-    { tag: 'div', buy: 0 }
+    { tag: 'div', buy: -1, sell: -1 }
 )
 </script>
 
 <template>
     <component :is="tag">
-        <span v-html="$t('buy-with-crystal', [name, buy, crystals.length])" />
+        <span
+            v-if="buy === -1"
+            v-html="$t('sell-with-crystal', [name, sell, crystals.length])"
+        />
+        <span
+            v-else
+            v-html="$t('buy-with-crystal', [name, buy, crystals.length])"
+        />
         <span class="crystals">
             <span
                 v-for="(crystal, index) in crystals"

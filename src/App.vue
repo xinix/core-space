@@ -2,39 +2,31 @@
 import ThemeToggle from '@/components/buttons/ThemeToggle.vue'
 import InstallApp from '@/components/buttons/InstallApp.vue'
 
-import { computed, ref, watch } from 'vue'
+import { computed, ref } from 'vue'
 import { useTokens } from '@/stores/tokens'
 import { useRouter } from 'vue-router'
 
-const router = useRouter()
 const tokens = useTokens()
-const q = ref('')
+const router = useRouter()
 
-tokens.$subscribe((mutation, state) => {
-    if (state.q == '') {
-        q.value = ''
-    }
-})
+const q = ref(tokens.q)
 
 const searchClass = computed(() => ({
     'has-text': q.value.length > 0,
 }))
 
 const onSearch = (ev: SubmitEvent) => {
+    tokens.q = q.value
+    router.push('/')
     return ev
 }
 
 const onClear = (ev: MouseEvent) => {
     q.value = ''
+    tokens.q = ''
+    router.push('/')
     return ev
 }
-
-watch(q, (query) => {
-    if (query === '') {
-        return router.push({ query: {} })
-    }
-    return router.push({ path: '/', query: { q: query } })
-})
 </script>
 
 <template>

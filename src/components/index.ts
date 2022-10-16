@@ -2,9 +2,12 @@
 
 export default {
     AmmoIcon: () => import('@/components/icons/AmmoIcon.vue'),
+    AmmoReturnsIcon: () => import('@/components/icons/AmmoReturnsIcon.vue'),
     ArtifactIcon: () => import('@/components/icons/ArtifactIcon.vue'),
+    AutoCloseHitIcon: () => import('@/components/icons/AutoCloseHitIcon.vue'),
     Blast2Icon: () => import('@/components/icons/Blast2Icon.vue'),
     BoomerangIcon: () => import('@/components/icons/BoomerangIcon.vue'),
+    BreachIcon: () => import('@/components/icons/BreachIcon.vue'),
     Burst1Icon: () => import('@/components/icons/Burst1Icon.vue'),
     Burst2Icon: () => import('@/components/icons/Burst2Icon.vue'),
     CloseIcon: () => import('@/components/icons/CloseIcon.vue'),
@@ -24,7 +27,11 @@ export default {
     FreezeIcon: () => import('@/components/icons/FreezeIcon.vue'),
     FullChargeIcon: () => import('@/components/icons/FullChargeIcon.vue'),
     GrenadeIcon: () => import('@/components/icons/GrenadeIcon.vue'),
+    GrenadeLauncherIcon: () =>
+        import('@/components/icons/GrenadeLauncherIcon.vue'),
     HeavyIcon: () => import('@/components/icons/HeavyIcon.vue'),
+    IgnoreArmourIcon: () => import('@/components/icons/IgnoreArmourIcon.vue'),
+    IgnoreShieldIcon: () => import('@/components/icons/IgnoreShieldIcon.vue'),
     InfiniteIcon: () => import('@/components/icons/InfiniteIcon.vue'),
     InfraLensIcon: () => import('@/components/icons/InfraLensIcon.vue'),
     KeyIcon: () => import('@/components/icons/KeyIcon.vue'),
@@ -61,5 +68,6 @@ export default {
     TargetLockIcon: () => import('@/components/icons/TargetLockIcon.vue'),
     TempArmourIcon: () => import('@/components/icons/TempArmourIcon.vue'),
     ThrowIcon: () => import('@/components/icons/ThrowIcon.vue'),
+    TimewarpIcon: () => import('@/components/icons/TimewarpIcon.vue'),
     TrophyIcon: () => import('@/components/icons/TrophyIcon.vue'),
 }

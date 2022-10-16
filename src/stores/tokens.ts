@@ -28,9 +28,9 @@ export const useTokens = defineStore('tokens', {
 
             const q = state.q.toLowerCase().trim()
             if (q != '') {
-                return state.rawItems
-                    .filter((a) => a.size.toLowerCase().indexOf(q) >= 0)
-                    .sort(sortToken)
+                return state.rawItems.filter(
+                    (a) => a.name.toLowerCase().indexOf(q) >= 0
+                )
             }
             return state.rawItems.sort(sortToken)
         },

@@ -26,7 +26,6 @@ export type AttributeType =
     | 'stim-heal-plus'
     | 'stim-actions'
     | 'reload-ammo'
-    | 'reload-ammo-accelerant'
     | 'freeze'
     | 'timewarp'
     | 'scatter'
@@ -72,6 +71,10 @@ export type AttributeType =
     | 'super-ammo'
     | 'temp-armour'
     | 'objective'
+    | 'ignore-armour'
+    | 'ignore-shield'
+    | 'auto-close-hit'
+    | 'breach'
 
 export type CrystalType = 'green' | 'orange' | 'purple'
 
@@ -82,11 +85,11 @@ export type ItemDescription =
     | 'dyson-rod'
     | 'detonator'
     | 'mines'
+    | 'caaligorn'
 
 export type TokenType = {
     product: ProductType
     slug: string
-    icon?: string
     name: string
     color:
         | 'blue'

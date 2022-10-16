@@ -41,6 +41,7 @@ for (const folder of keys) {
 
         const outImg = `src/assets/images/${folder}.png`
         const outCss = `src/assets/generated/${folder}.css`
+        const outJS = `src/assets/generated/${folder}.txt`
 
         fs.writeFileSync(`${__dirname}/../${outImg}`, result.image)
         console.log('SPRITE image done: ', outImg)
@@ -48,21 +49,43 @@ for (const folder of keys) {
         const css = [
             `.token.${folder} { background-image: url('../images/${folder}.png'); background-size: ${result.properties.width}px ${result.properties.height}px }`
         ]
+        const js = [
+            'const tokens: TokenType[] = ['
+        ]
+
         let lines = Object.keys(result.coordinates)
         for (const line of lines) {
             const coord = result.coordinates[line]
             const token = line
                 .replace(BASE_URL, '')
                 .replace('.jpg', '')
+                .replace('.png', '')
                 .split('/')
-            css.push(`.token.${token[1]} { background-position-x: -${coord.x}px; background-position-y: -${coord.y}px; }`)
+
+            let name = token[1]
+                .replaceAll('-', ' ')
+            name = name.charAt(0).toUpperCase() + name.slice(1)
+
+            css.push(`.token.${folder}.${token[1]} { background-position-x: -${coord.x}px; background-position-y: -${coord.y}px; }`)
+            js.push(...[
+                '{',
+                `  product: '${folder}',`,
+                `  slug: '${token[1]}',`,
+                `  name: '${name}',`,
+                `  color: 'blue',`,
+                `  size: 'sm',`,
+                `  icons: [],`,
+                '},',
+            ])
         }
+
+        js.push(']')
+        js.push('export default tokens')
 
         fs.writeFileSync(`${__dirname}/../${outCss}`, css.join('\r'))
         console.log('SPRITE css done: ', outCss)
+
+        fs.writeFileSync(`${__dirname}/../${outJS}`, js.join('\r'))
+        console.log('SPRITE js done: ', outJS)
     })
 }
-
-
-
-

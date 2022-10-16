@@ -63,6 +63,7 @@
   "na": "This item <strong>cannot be used in the same mission</strong> that you find it - turn it face down to remind yourself.",
   "mech": "<strong>Exclusive Item:</strong> This weapon or item is exclusive to a characters with a MECH class.",
   "buy-with-crystal": "This item can be crafted by spending minerals in its buy value in addition to a UA cost.<br><br>To craft this <strong>{0}</strong> you will need <strong>{1}UA</strong> and <strong>{2} crystal(s):</strong>",
+  "sell-with-crystal": "This item can be sold for minerals in addition to a UA value.<br><br>If you sell this <strong>{0}</strong> you will get <strong>{1}UA</strong> and <strong>{2} crystal(s):</strong>",
   "effortless-reload": "This weapon allows you to <strong>Reload as an effortless</strong> action.",
   "search": "<strong>Sensor goggles</strong> allow you to Search effortlessly.",
   "stim-heal": "<strong>Stim:</strong> Restore {0} Health pegs to a maximum of the character starting Health.",
@@ -79,5 +80,13 @@
   "swap": "Each turn, this character may spend up to the number of actions shown to give that many actions to another character carrying an item with this icon, to be spent in their next turn.",
   "ammo": "Reload 7 standard <strong>ammo pegs</strong>, replacing any different pegs in your dashboard.",
   "super-ammo": "Reload 7 <strong>accelerant ammo pegs</strong>, replacing any different pegs in your dashboard.",
-  "objective": "<strong>Objective token:</strong> If your objectives involve finding items specific to your narrative, rather than weapons or other existing equipment, the game includes objective tokens for this purpose that can be carried as normal.<br><br>Objective tokens cannot be broken or destroyed."
+  "objective": "<strong>Objective token:</strong> If your objectives involve finding items specific to your narrative, rather than weapons or other existing equipment, the game includes objective tokens for this purpose that can be carried as normal.<br><br>Objective tokens cannot be broken or destroyed.",
+  "auto-close-hit": "This weapon is used in Close Assault. Instead of rolling dice it applies <strong>a single automatic hit</strong>.",
+  "ignore-armour": "Physical Armour <strong>cannot negate</strong> hits from this weapon.",
+  "ignore-shield": "Shield Armour <strong>cannot negate</strong> hits from this weapon.",
+  "breach": "<strong>Laser Cutter:</strong> When using the rules for doors, this allows a character to unlock and open a locked door in base contact.",
+  "grenade-launcher": "Instead of firing normally. a Ranged Assault action with this weapon can be used to <strong>fire a grenade token at up to medium range</strong> instead of short.",
+  "timewarp": "<strong>Reaction:</strong> Use the Timewarp Grenade immediately after a character in short range and LoS has activated. Roll one combat die. On a hit, fully reverse the effect of the target's last two actions. They are still marked as activated. On a blank or misfire, reverse just their most recent action. After use, mark your character with a reminder counter - they will lose an action in their next turn.",
+  "ammo-returns": "Standard bullets fired from this weapon that <strong>miss their target will return to the gun</strong> (accelerant ammo is discarded as normal). When firing, remove the ammo pegs as normal but set them aside until you roll. For each point of damage caused discard a peg, up to the number set aside. If any pegs remain, return them to your dashboard. Regardless of whether damage is caused, a peg must still be added to the Hostility Tracker if applicable.",
+  "caaligorn": "<strong>Caaligorn's Rifle:</strong> This item can only be obtained by disarming Caaligorn."
 }

@@ -4,11 +4,7 @@ const TokensPage = () => import('@/pages/TokensPage.vue')
 const TokenPage = () => import('@/pages/TokenPage.vue')
 
 const routes = [
-    {
-        path: '/',
-        component: TokensPage,
-        props: (route: any) => ({ q: route.query.q }),
-    },
+    { path: '/', component: TokensPage },
     { path: '/item/:slug', component: TokenPage, props: true },
 ]
 
