@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build ",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "sprite": "node build/sprite.cjs"
   },
   "dependencies": {
     "pinia": "^2.0.23",
@@ -30,6 +31,7 @@
     "postcss-preset-env": "^7.8.2",
     "postcss-scss": "^4.0.5",
     "prettier": "^2.7.1",
+    "spritesmith": "^3.4.0",
     "stylelint": "^14.13.0",
     "stylelint-config-recommended": "^9.0.0",
     "stylelint-config-standard": "^28.0.0",

@@ -1,5 +1,3 @@
-import 'normalize.css/normalize.css'
-import '@/assets/styles/vars.scss'
 import '@/assets/styles/main.scss'
 
 import { createApp, defineAsyncComponent } from 'vue'

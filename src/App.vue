@@ -38,8 +38,8 @@ watch(q, (query) => {
 </script>
 
 <template>
-    <div class="page">
-        <header class="header">
+    <header class="menu">
+        <div class="container">
             <router-link class="logo" to="/">
                 <img alt="logo" src="/logo.svg" />
             </router-link>
@@ -74,57 +74,18 @@ watch(q, (query) => {
                 <InstallApp class="install" />
                 <ThemeToggle class="theme" />
             </div>
-        </header>
-        <main class="content">
-            <router-view v-slot="{ Component, route }">
-                <transition mode="out-in" name="fade">
-                    <component :is="Component" :key="route.path" />
-                </transition>
-            </router-view>
-        </main>
-    </div>
+        </div>
+    </header>
+    <main class="content">
+        <router-view v-slot="{ Component, route }">
+            <transition mode="out-in" name="fade">
+                <component :is="Component" :key="route.path" />
+            </transition>
+        </router-view>
+    </main>
 </template>
 
 <style lang="scss" scoped>
-.header {
-    position: sticky;
-    z-index: 100;
-    top: 0;
-    right: 0;
-    left: 0;
-    display: grid;
-    align-items: center;
-    width: 100%;
-    height: 5rem;
-    margin: 0;
-    padding: 0 1em;
-    background-color: var(--header-bg);
-    box-shadow: var(--shadow-md);
-    grid-template-columns: auto 1fr auto;
-
-    .logo {
-        margin-right: 1.5em;
-
-        > img {
-            width: 3.5rem;
-            height: 3.5rem;
-            border: solid 1px #ffffff;
-            border-radius: 100%;
-            background-color: #ffffff;
-        }
-    }
-
-    .actions {
-        display: flex;
-        align-items: center;
-        padding-left: 1em;
-    }
-}
-
-.content {
-    padding: 1rem;
-}
-
 .search {
     font-size: 16px;
     position: relative;
@@ -209,37 +170,8 @@ watch(q, (query) => {
 }
 
 @media (max-width: 450px) {
-    .header {
-        position: relative;
-        height: auto;
-        padding-bottom: 1em;
-        grid-template-columns: auto 1fr;
-        grid-template-areas:
-            'logo actions'
-            'form form';
-        grid-gap: 1em 0.75em;
-
-        .logo {
-            margin: 0.25em 0.5em;
-            grid-area: logo;
-        }
-
-        .actions {
-            justify-content: flex-end;
-            grid-area: actions;
-        }
-
-        form {
-            grid-area: form;
-        }
-    }
-
     .search {
         padding: 0 0.5em;
-    }
-
-    .content {
-        padding: 1em 0.25em;
     }
 }
 </style>
