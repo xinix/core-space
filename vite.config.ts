@@ -31,10 +31,6 @@ export default defineConfig({
         mkcert(),
         VitePWA({
             registerType: 'autoUpdate',
-            injectRegister: false,
-            workbox: {
-                cleanupOutdatedCaches: true,
-            },
             includeAssets: ['favicon.ico', 'apple-touch-icon.png', 'logo.svg'],
             manifest: {
                 name: 'Core Space index',
