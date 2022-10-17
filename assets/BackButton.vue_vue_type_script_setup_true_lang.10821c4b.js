@@ -1,0 +1,1 @@
+import{d as a,s as n,o as r,b as c,f as t,t as p,v as u}from"./main.8241129e.js";const l=t("span",{class:"material-symbols-rounded icon"},"arrow_back",-1),b=a({__name:"BackButton",setup(_){const o=n(),e=s=>(o.push("/"),s);return(s,i)=>(r(),c("button",u({class:"btn",type:"button"},s.$attrs,{onClick:e}),[l,t("span",null,p(s.$t("back")),1)],16))}});export{b as _};
