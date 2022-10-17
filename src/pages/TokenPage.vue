@@ -1,33 +1,24 @@
 <script lang="ts" setup>
 import TokenDetails from '@/components/tokens/TokenDetails.vue'
+import BackButton from '@/components/buttons/BackButton.vue'
 
-import { useRouter } from 'vue-router'
 import { useTokens } from '@/stores/tokens'
+import { useProducts } from '@/stores/products'
 import { computed } from 'vue'
 
 const props = defineProps<{ slug: string }>()
 const tokens = useTokens()
+const products = useProducts()
 
-const router = useRouter()
-const onBack = (ev: MouseEvent) => {
-    if (window.history.length > 2) {
-        router.back()
-    } else {
-        router.push('/')
-    }
-    return ev
-}
+tokens.loadIfNeeded(products.active)
 
-const item = computed(() => tokens.getItemBySlug(props.slug))
+const item = computed(() => tokens.getItemByKey(props.slug))
 </script>
 
 <template>
     <div class="container">
         <header class="header">
-            <button class="btn" type="button" @click="onBack">
-                <span class="material-symbols-rounded icon">arrow_back</span>
-                <span>{{ $t('back') }}</span>
-            </button>
+            <BackButton />
         </header>
         <main v-if="item" class="details">
             <TokenDetails :item="item" active class="item" />

@@ -1,4 +1,3 @@
-//const sm = require('spritesmith')
 const fs = require('fs')
 const path = require('path')
 
@@ -28,10 +27,10 @@ function getFilesFrom(dir, fileTypes) {
 
 console.log('*** Welcome to the SPRITE MASTER ***')
 const files = getFilesFrom(`./${BASE_URL}`, ['.jpg', '.png'])
-const keys = Object.keys(files)
+const folders = Object.keys(files)
 const Spritesmith = require('spritesmith')
 
-for (const folder of keys) {
+for (const folder of folders) {
     console.log('Creating sprite for: ', folder)
     Spritesmith.run({
         src: files[folder],

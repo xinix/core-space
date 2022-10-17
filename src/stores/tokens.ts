@@ -1,13 +1,13 @@
 import { defineStore } from 'pinia'
-import { TokenType } from '@/tokens/types'
+import { CoreSpaceToken, ProductType } from '@/tokens/types'
 import tokens from '@/tokens'
 
 const sizeOrder = ['nano', 'sm', 'md', 'lg']
 
-const sortToken = (a: TokenType, b: TokenType) => {
+const sortToken = (a: CoreSpaceToken, b: CoreSpaceToken) => {
     return (
-        sizeOrder.indexOf(a.size) - sizeOrder.indexOf(b.size) ||
         a.color.localeCompare(b.color) ||
+        sizeOrder.indexOf(a.size) - sizeOrder.indexOf(b.size) ||
         a.name.localeCompare(b.name)
     )
 }
@@ -17,13 +17,13 @@ export const useTokens = defineStore('tokens', {
         return {
             q: '',
             active: '',
-            rawItems: [...tokens] as TokenType[],
+            rawItems: [] as CoreSpaceToken[],
         }
     },
     getters: {
         items: (state) => {
             if (state.active !== '') {
-                return state.rawItems.filter((a) => a.slug === state.active)
+                return state.rawItems.filter((a) => a.key === state.active)
             }
 
             const q = state.q.toLowerCase().trim()
@@ -34,15 +34,24 @@ export const useTokens = defineStore('tokens', {
             }
             return state.rawItems.sort(sortToken)
         },
-        getItemBySlug: (state) => {
-            return (slug: string) => {
-                return state.rawItems.find((a) => a.slug === slug)
+        getItemByKey: (state) => {
+            return (key: string) => {
+                return state.rawItems.find((a) => a.key === key)
             }
         },
     },
     actions: {
-        transfer(data: { q: string }) {
-            this.q = data.q
+        load(products: ProductType[]) {
+            this.rawItems.splice(0, this.rawItems.length)
+            for (const product of products) {
+                this.rawItems.push(...tokens[product])
+            }
+        },
+
+        loadIfNeeded(products: ProductType[]) {
+            if (this.rawItems.length === 0) {
+                this.load(products)
+            }
         },
     },
 })

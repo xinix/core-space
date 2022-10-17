@@ -85,4 +85,8 @@ withDefaults(
         }
     }
 }
+
+.crystal:nth-child(even) {
+    transform: rotate(180deg);
+}
 </style>

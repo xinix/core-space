@@ -1,6 +1,32 @@
-export type ProductType = 'first-born'
+export type ProductType =
+    | 'first-born'
+    | 'fury'
+    | 'line-of-fire'
+    | 'rysa'
+    | 'trading-post-5'
+    | 'utility'
+
+export type TokenMap = {
+    'first-born': CoreSpaceToken[]
+    'fury': CoreSpaceToken[]
+    'line-of-fire': CoreSpaceToken[]
+    'rysa': CoreSpaceToken[]
+    'trading-post-5': CoreSpaceToken[]
+    'utility': CoreSpaceToken[]
+}
 
 export type AttributeType =
+    | 'fire'
+    | 'bomb'
+    | 'toxic'
+    | 'scythe'
+    | 'ff'
+    | 'data'
+    | 'gear'
+    | 'fuel'
+    | 'repair-2'
+    | 'target-laser'
+    | 'triple-charge'
     | 'rare'
     | 'effortless'
     | 'flip'
@@ -87,6 +113,10 @@ export type ItemDescription =
     | 'mines'
     | 'caaligorn'
 
+export type CoreSpaceToken = TokenType & {
+    key: string
+}
+
 export type TokenType = {
     product: ProductType
     slug: string
@@ -99,7 +129,8 @@ export type TokenType = {
         | 'green'
         | 'light-green'
         | 'brown'
-    size: 'nano' | 'sm' | 'md' | 'lg'
+        | 'white'
+    size: 'nano' | 'sm' | 'md' | 'lg' | 'xl' | 'umd' | 'ulg'
     close?: number
     heavy?: number
     throw?: number
@@ -126,6 +157,8 @@ export type TokenType = {
     super_skill?: number
     action?: number
     freeze?: number[]
+    util?: 'all' | 'nano' | 'sling'
+    fuel?: number
     description?: ItemDescription[]
     icons?: AttributeType[]
 }

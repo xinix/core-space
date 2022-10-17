@@ -3,8 +3,12 @@ import TokenDetails from '@/components/tokens/TokenDetails.vue'
 
 import { computed } from 'vue'
 import { useTokens } from '@/stores/tokens'
+import { useProducts } from '@/stores/products'
 
 const tokens = useTokens()
+const products = useProducts()
+
+tokens.loadIfNeeded(products.active)
 
 const qSummary = computed(
     () => `Search results for: <strong>${tokens.q}</strong>`

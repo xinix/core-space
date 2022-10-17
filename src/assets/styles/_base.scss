@@ -1,0 +1,43 @@
+html {
+    font-family: var(--font-main);
+    font-size: 100%;
+    font-weight: var(--normal);
+    line-height: 1.1;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    color: var(--body-color);
+    background: var(--body-bg);
+    background-attachment: fixed;
+    background-size: 400% 400%;
+    -webkit-print-color-adjust: exact;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-title);
+    font-weight: var(--bold);
+    line-height: 1.1;
+}
+
+@media (min-width: 600px) {
+    body {
+        animation: gradient 15s ease infinite;
+    }
+    @keyframes gradient {
+        0% {
+            background-position: 0 50%;
+        }
+        50% {
+            background-position: 100% 50%;
+        }
+        100% {
+            background-position: 0 50%;
+        }
+    }
+}

@@ -5,9 +5,18 @@ import InstallApp from '@/components/buttons/InstallApp.vue'
 import { computed, ref } from 'vue'
 import { useTokens } from '@/stores/tokens'
 import { useRouter } from 'vue-router'
+import { useProducts } from '@/stores/products'
 
 const tokens = useTokens()
+const products = useProducts()
 const router = useRouter()
+
+products.$subscribe((mutation, state) => {
+    const events: any = mutation.events
+    if (events && events.key === 'active') {
+        tokens.load(state.active)
+    }
+})
 
 const q = ref(tokens.q)
 
@@ -33,7 +42,8 @@ const onClear = (ev: MouseEvent) => {
     <header class="menu">
         <div class="container">
             <router-link class="logo" to="/">
-                <img alt="logo" src="/logo.svg" />
+                <span>Core</span>
+                <span>Space</span>
             </router-link>
             <form
                 :class="searchClass"
@@ -64,13 +74,16 @@ const onClear = (ev: MouseEvent) => {
             </form>
             <div class="actions">
                 <InstallApp class="install" />
+                <router-link to="/settings">
+                    <span class="material-symbols-rounded">Settings</span>
+                </router-link>
                 <ThemeToggle class="theme" />
             </div>
         </div>
     </header>
     <main class="content">
         <router-view v-slot="{ Component, route }">
-            <transition mode="out-in" name="fade">
+            <transition mode="out-in" name="slide-fade">
                 <component :is="Component" :key="route.path" />
             </transition>
         </router-view>
@@ -158,6 +171,28 @@ const onClear = (ev: MouseEvent) => {
 
     .search-clear:hover {
         transform: scale(1.2);
+    }
+}
+
+.actions {
+    display: flex;
+    color: var(--body-color);
+
+    a {
+        margin-left: 1em;
+        transition: all 0.2s ease-out;
+        opacity: 0.75;
+        color: inherit;
+
+        span {
+            font-size: 200%;
+        }
+
+        &:active,
+        &:hover {
+            transform: scale(1.25);
+            opacity: 1;
+        }
     }
 }
 

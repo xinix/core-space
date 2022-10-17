@@ -2,10 +2,12 @@ import { createRouter, createWebHistory } from 'vue-router'
 
 const TokensPage = () => import('@/pages/TokensPage.vue')
 const TokenPage = () => import('@/pages/TokenPage.vue')
+const SettingsPage = () => import('@/pages/SettingsPage.vue')
 
 const routes = [
     { path: '/', component: TokensPage },
     { path: '/item/:slug', component: TokenPage, props: true },
+    { path: '/settings', component: SettingsPage },
 ]
 
 function setupRouter() {

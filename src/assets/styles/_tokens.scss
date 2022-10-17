@@ -23,6 +23,26 @@
         width: 248px;
         height: 131px;
     }
+
+    &.xl {
+        width: 364px;
+        height: 131px;
+    }
+
+    &.umd {
+        width: 131px;
+        height: 188px;
+    }
+
+    &.ulg {
+        width: 264px;
+        height: 188px;
+    }
 }
 
 @import "@/assets/generated/first-born.css";
+@import "@/assets/generated/fury.css";
+@import "@/assets/generated/line-of-fire.css";
+@import "@/assets/generated/rysa.css";
+@import "@/assets/generated/trading-post-5.css";
+@import "@/assets/generated/utility.css";

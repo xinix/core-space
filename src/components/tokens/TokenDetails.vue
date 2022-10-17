@@ -3,11 +3,11 @@ import IconLegend from '@/components/tokens/IconLegend.vue'
 import JustText from '@/components/tokens/JustText.vue'
 import BuyWithCrystals from '@/components/tokens/BuyWithCrystals.vue'
 
-import { AttributeType, TokenType } from '@/tokens/types'
+import { AttributeType, CoreSpaceToken } from '@/tokens/types'
 import { computed } from 'vue'
 
 const props = withDefaults(
-    defineProps<{ item: TokenType; active?: boolean }>(),
+    defineProps<{ item: CoreSpaceToken; active?: boolean }>(),
     { active: false }
 )
 
@@ -49,7 +49,7 @@ const mustacheIcons = computed(() => {
 <template>
     <router-link
         :class="{ active }"
-        :to="`/item/${item.slug}`"
+        :to="`/item/${item.key}`"
         class="token-details"
         tabindex="-1"
     >
@@ -137,15 +137,20 @@ const mustacheIcons = computed(() => {
         grid-template-columns: auto 1fr;
         grid-gap: 1rem 1rem;
         grid-template-areas:
-            'pic title'
-            'more more';
+            'token title'
+            'more  more';
 
         header {
             font-size: 1.25em;
         }
 
-        .pic {
-            grid-area: pic;
+        .token {
+            grid-area: token;
+        }
+
+        .token.xl {
+            margin-left: -10%;
+            transform: scale(0.8);
         }
 
         .title {
@@ -208,7 +213,7 @@ const mustacheIcons = computed(() => {
 
         grid-template-areas:
             'title more'
-            'pic more';
+            'token more';
     }
 }
 </style>

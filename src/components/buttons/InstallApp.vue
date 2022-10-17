@@ -41,8 +41,10 @@ const onInstall = (ev: MouseEvent) => {
 .btn-link {
     padding: 0.6em;
     opacity: 0.75;
-    border-radius: 100%;
-    background-color: var(--primary-transparent);
+
+    span {
+        font-size: 150%;
+    }
 
     &:hover,
     &:active {

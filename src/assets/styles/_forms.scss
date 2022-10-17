@@ -1,0 +1,37 @@
+.form-field {
+    margin: 1.5em 1em;
+
+    .form-label {
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 0.5em;
+        text-transform: uppercase;
+    }
+}
+
+@media (min-width: 1000px) {
+    .form-field {
+        display: grid;
+
+        .form-label {
+            display: block;
+        }
+
+        grid-gap: 1em 1em;
+        grid-template-columns: 1fr 5fr;
+    }
+}
+
+
+.form-field + .form-field {
+    margin-top: 2.5em;
+    padding-top: 2.5em;
+    border-top: dotted 5px var(--primary-transparent);
+}
+
+.theme-option + .theme-option {
+    margin-top: 1em;
+
+}

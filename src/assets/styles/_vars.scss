@@ -2,14 +2,34 @@
     --font-title: 'Saira Condensed', sans-serif;
     --font-main: 'Space Grotesk', sans-serif;
 
+    --cassie: url('../images/cassie.png');
+    --balcor: url('../images/balcor.png');
+
+    --first-born: url('../images/box-fb.png');
+    --fury: url('../images/box-fury.png');
+    --line-of-fire: url('../images/box-lof.png');
+    --rysa: url('../images/box-rysa.png');
+    --trading-post-5: url('../images/box-tp5.png');
+    --utility: url('../images/box-util.png');
+
     --shadow-sm: 3px 3px 6px 0 rgb(0 0 0 / 10%), -3px -3px 6px 0 rgb(212 210 210 / 10%);
     --shadow-md: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 2px 4px 0 rgb(0 0 0 / 8%);
     --shadow-lg: 0 15px 30px 0 rgb(0 0 0 / 11%), 0 5px 15px 0 rgb(0 0 0 / 8%);
     --glow: rgb(131, 183, 187, .3) 0px 0px 0px 3px;
+    --radiant: 0 0 3px 1px #ffffff, /* inner white */
+    0 0 5px 3px #ff00ff, /* middle magenta */
+    0 0 7px 4px #00ffff; /* outer cyan */
+
+    --magenta: #ff00ff;
 
     --input-radius: .5rem;
     --search-height: 44px;
     --icon-button-width: 48px;
+
+    --dark-bg: linear-gradient(45deg, #293c33, #4c605f, #293332);
+    --dark-color: #ffffff;
+    --light-bg: linear-gradient(45deg, #b5dde5, #d7f6fa, #80b4b4);
+    --light-color: #000000;
 
     /* THEME COLORS */
     --body-bg: linear-gradient(45deg, #293c33, #151310, #4c605f, #293332);

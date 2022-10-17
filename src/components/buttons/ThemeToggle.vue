@@ -1,35 +1,20 @@
 <script lang="ts" setup>
-import { ref } from 'vue'
+import { useTheme } from '@/stores/theme'
 
-const prefersDark = window.matchMedia('(prefers-color-scheme: dark').matches
-const theme = window.localStorage.getItem('theme')
-const dark = ref(theme == null ? prefersDark : theme === 'dark')
-
-const applyTheme = () => {
-    /* html[data-theme='light'] */
-    const el = document.querySelector('html')
-    if (!el) return
-
-    if (!dark.value) {
-        el.dataset.theme = 'light'
-    } else {
-        delete el.dataset.theme
-    }
-}
-applyTheme()
+const theme = useTheme()
+theme.apply()
 
 const onToggleDark = (ev: MouseEvent) => {
-    window.localStorage.removeItem('light')
-    dark.value = !dark.value
-    window.localStorage.setItem('theme', dark.value ? 'dark' : 'light')
-    applyTheme()
+    theme.toggle()
+    theme.save()
+    theme.apply()
     return ev
 }
 </script>
 
 <template>
     <button
-        :class="{ dark }"
+        :class="{ dark: theme.dark }"
         class="btn theme-toggle"
         type="button"
         @click="onToggleDark"
