@@ -40,6 +40,12 @@
     }
 }
 
+@media (max-width: 400px) {
+    .token.xl {
+        transform: scale(0.9);
+    }
+}
+
 @import "@/assets/generated/first-born.css";
 @import "@/assets/generated/fury.css";
 @import "@/assets/generated/line-of-fire.css";

@@ -7,7 +7,9 @@ import ProgressBar from '@/components/forms/ProgressBar.vue'
 
 import { useTheme } from '@/stores/theme'
 import { useProducts } from '@/stores/products'
+import { useTokens } from '@/stores/tokens'
 
+const tokens = useTokens()
 const theme = useTheme()
 const products = useProducts()
 
@@ -19,14 +21,10 @@ theme.$subscribe((mutation) => {
     }
 })
 
-products.$subscribe((mutation) => {
-    const events: any = mutation.events
-    if (events && events.key === 'active') {
-        products.save()
-    }
-})
-
 const onSave = (ev: SubmitEvent) => {
+    theme.save()
+    products.save()
+    tokens.load(products.active)
     return ev
 }
 </script>
@@ -50,7 +48,10 @@ const onSave = (ev: SubmitEvent) => {
                     />
                 </template>
                 <template #default>
-                    <ProductSelector v-model="products.active" />
+                    <ProductSelector
+                        v-model="products.active"
+                        @update:model-value="onSave"
+                    />
                 </template>
             </FormField>
 

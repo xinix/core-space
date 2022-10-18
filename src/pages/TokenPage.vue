@@ -3,14 +3,10 @@ import TokenDetails from '@/components/tokens/TokenDetails.vue'
 import BackButton from '@/components/buttons/BackButton.vue'
 
 import { useTokens } from '@/stores/tokens'
-import { useProducts } from '@/stores/products'
 import { computed } from 'vue'
 
 const props = defineProps<{ slug: string }>()
 const tokens = useTokens()
-const products = useProducts()
-
-tokens.loadIfNeeded(products.active)
 
 const item = computed(() => tokens.getItemByKey(props.slug))
 </script>

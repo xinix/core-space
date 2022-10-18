@@ -11,6 +11,14 @@ const props = withDefaults(
     { active: false }
 )
 
+const wrapperClass = computed(() => {
+    const cls: any = {
+        active: props.active,
+    }
+    cls[props.item.size] = true
+    return cls
+})
+
 const tokenClass = computed(() => {
     const cls: any = {}
     cls[props.item.product] = true
@@ -48,7 +56,7 @@ const mustacheIcons = computed(() => {
 
 <template>
     <router-link
-        :class="{ active }"
+        :class="wrapperClass"
         :to="`/item/${item.key}`"
         class="token-details"
         tabindex="-1"
@@ -132,6 +140,7 @@ const mustacheIcons = computed(() => {
     }
 
     &.active {
+        position: relative;
         flex: 1;
         max-width: 900px;
         grid-template-columns: auto 1fr;
@@ -146,11 +155,6 @@ const mustacheIcons = computed(() => {
 
         .token {
             grid-area: token;
-        }
-
-        .token.xl {
-            margin-left: -10%;
-            transform: scale(0.8);
         }
 
         .title {
@@ -203,6 +207,20 @@ const mustacheIcons = computed(() => {
         margin: 0;
         padding: 0.325em;
     }
+    .token-details.active.md,
+    .token-details.active.lg,
+    .token-details.active.xl,
+    .token-details.active.ulg {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            'token'
+            'title'
+            'more';
+
+        .token {
+            justify-self: center;
+        }
+    }
 }
 
 @media (min-width: 1000px) {
@@ -214,6 +232,11 @@ const mustacheIcons = computed(() => {
         grid-template-areas:
             'title more'
             'token more';
+
+        .token.xl {
+            position: absolute;
+            transform: scale(0.65) translateX(-25%);
+        }
     }
 }
 </style>

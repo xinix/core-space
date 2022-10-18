@@ -47,11 +47,5 @@ export const useTokens = defineStore('tokens', {
                 this.rawItems.push(...tokens[product])
             }
         },
-
-        loadIfNeeded(products: ProductType[]) {
-            if (this.rawItems.length === 0) {
-                this.load(products)
-            }
-        },
     },
 })

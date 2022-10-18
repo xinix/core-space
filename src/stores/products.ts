@@ -4,9 +4,10 @@ import { ProductType } from '@/tokens/types'
 export const useProducts = defineStore('products', {
     state: () => {
         const active: ProductType[] = []
-        const hist = window.localStorage.getItem('products')
+        const hist = window.localStorage.getItem('my-collection')
         if (hist != null) {
-            active.push(...JSON.parse(hist))
+            const products: ProductType[] = hist.split(';') as ProductType[]
+            active.push(...products)
         } else {
             active.push('first-born')
         }
@@ -18,7 +19,7 @@ export const useProducts = defineStore('products', {
     },
     actions: {
         save() {
-            window.localStorage.setItem('products', JSON.stringify(this.active))
+            window.localStorage.setItem('my-collection', this.active.join(';'))
         },
     },
 })

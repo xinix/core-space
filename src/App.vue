@@ -5,18 +5,10 @@ import InstallApp from '@/components/buttons/InstallApp.vue'
 import { computed, ref } from 'vue'
 import { useTokens } from '@/stores/tokens'
 import { useRouter } from 'vue-router'
-import { useProducts } from '@/stores/products'
 
 const tokens = useTokens()
-const products = useProducts()
-const router = useRouter()
 
-products.$subscribe((mutation, state) => {
-    const events: any = mutation.events
-    if (events && events.key === 'active') {
-        tokens.load(state.active)
-    }
-})
+const router = useRouter()
 
 const q = ref(tokens.q)
 
