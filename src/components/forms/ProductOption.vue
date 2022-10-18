@@ -84,6 +84,7 @@ const onSelect = (ev: MouseEvent) => {
 
         .image {
             box-shadow: var(--radiant);
+            filter: grayscale(0) blur(0);
 
             .checkbox {
                 transform: translateY(0);
@@ -107,6 +108,7 @@ const onSelect = (ev: MouseEvent) => {
         transition: all 0.1s ease-out;
         border-radius: 100%;
         background-color: var(--transparent-bg);
+        filter: grayscale(100%) blur(1px);
         justify-self: center;
 
         .checkbox {

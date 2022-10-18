@@ -187,6 +187,7 @@ const mustacheIcons = computed(() => {
     border-radius: 0.5em;
     background-color: var(--transparent-bg);
     box-shadow: var(--shadow-md);
+    backdrop-filter: blur(5px);
 }
 
 .list {

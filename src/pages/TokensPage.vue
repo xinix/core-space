@@ -40,7 +40,7 @@ const onClear = (ev: MouseEvent) => {
         >
             <TokenDetails
                 v-for="item in tokens.items"
-                :key="item.slug"
+                :key="item.key"
                 :item="item"
                 class="item"
             />

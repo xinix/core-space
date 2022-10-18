@@ -2,7 +2,7 @@ import { defineStore } from 'pinia'
 import { CoreSpaceToken, ProductType } from '@/tokens/types'
 import tokens from '@/tokens'
 
-const sizeOrder = ['nano', 'sm', 'md', 'lg']
+const sizeOrder = ['nano', 'sm', 'md', 'lg', 'xl', 'umd', 'ulg']
 
 const sortToken = (a: CoreSpaceToken, b: CoreSpaceToken) => {
     return (
