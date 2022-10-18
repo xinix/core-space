@@ -31,12 +31,12 @@ const onSearch = (ev: SubmitEvent) => {
     return ev
 }
 
-const onFocus = (ev: Event) => {
+const onFocus = (ev: FocusEvent) => {
     searching.value = true
     return ev
 }
 
-const onBlur = (ev: Event) => {
+const onBlur = (ev: FocusEvent) => {
     searching.value = false
     return ev
 }
