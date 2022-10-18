@@ -20,13 +20,22 @@ export type AttributeType =
     | 'bomb'
     | 'toxic'
     | 'scythe'
-    | 'ff'
     | 'data'
     | 'gear'
     | 'fuel'
     | 'repair-2'
-    | 'target-laser'
+    | 'interrupt'
     | 'triple-charge'
+    | 'symbiote'
+    | 'fear'
+    | 'ignore-knowledge'
+    | 'effortless-armour'
+    | 'hover'
+    | 'supply-drop'
+    | 'special-armour'
+    | 'blue-armour'
+    | 'blue-armour-regen'
+    | 'true-born'
     | 'rare'
     | 'effortless'
     | 'flip'
@@ -101,6 +110,10 @@ export type AttributeType =
     | 'ignore-shield'
     | 'auto-close-hit'
     | 'breach'
+    | 'backpack-all'
+    | 'backpack-nano'
+    | 'belt'
+    | 'weapon-mount'
 
 export type CrystalType = 'green' | 'orange' | 'purple'
 
@@ -112,6 +125,7 @@ export type ItemDescription =
     | 'detonator'
     | 'mines'
     | 'caaligorn'
+    | 'joined'
 
 export type CoreSpaceToken = TokenType & {
     key: string
@@ -147,6 +161,8 @@ export type TokenType = {
     scatter?: number
     phase?: number
     armour?: number
+    blue_armour?: number
+    blue_armour_regen?: number
     shield?: number
     dyson?: number
     move?: number

@@ -73,7 +73,7 @@ const onSelect = (ev: MouseEvent) => {
             transform: scale(1.05);
             opacity: 0.8;
 
-            .image {
+            .image:before {
                 box-shadow: var(--radiant);
             }
         }
@@ -83,8 +83,11 @@ const onSelect = (ev: MouseEvent) => {
         opacity: 1;
 
         .image {
-            box-shadow: var(--radiant);
             filter: grayscale(0) blur(0);
+
+            &:before {
+                box-shadow: var(--radiant);
+            }
 
             .checkbox {
                 transform: translateY(0);
@@ -106,10 +109,20 @@ const onSelect = (ev: MouseEvent) => {
         height: 85%;
         padding: 1em;
         transition: all 0.1s ease-out;
-        border-radius: 100%;
-        background-color: var(--transparent-bg);
         filter: grayscale(100%) blur(1px);
         justify-self: center;
+
+        &:before {
+            position: absolute;
+            z-index: -1;
+            top: calc(50% - 2em);
+            left: calc(50% - 3em);
+            width: 6em;
+            height: 4em;
+            content: '';
+            transition: all 0.1s ease-out;
+            border-radius: 100%;
+        }
 
         .checkbox {
             font-size: 2.5em;

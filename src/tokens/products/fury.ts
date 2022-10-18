@@ -29,7 +29,7 @@ const tokens: TokenType[] = [
         buy: 0,
         crystals: ['purple', 'orange', 'green'],
         sell: 30,
-        icons: [],
+        icons: ['scythe'],
     },
     {
         product: 'fury',
@@ -41,7 +41,7 @@ const tokens: TokenType[] = [
         buy: 0,
         crystals: ['purple'],
         sell: 21,
-        icons: [],
+        icons: ['fear'],
     },
     {
         product: 'fury',
@@ -53,7 +53,7 @@ const tokens: TokenType[] = [
         crystals: ['orange'],
         buy: 18,
         sell: 12,
-        icons: [],
+        icons: ['triple-charge'],
     },
     {
         product: 'fury',
@@ -67,7 +67,7 @@ const tokens: TokenType[] = [
         crystals: ['green', 'green', 'green'],
         buy: 25,
         sell: 18,
-        icons: [],
+        icons: ['triple-charge'],
     },
     {
         product: 'fury',
@@ -79,7 +79,7 @@ const tokens: TokenType[] = [
         crystals: ['orange', 'green'],
         buy: 15,
         sell: 12,
-        icons: ['reliable'],
+        icons: ['sustained-fire', 'reliable'],
     },
     {
         product: 'fury',
@@ -139,7 +139,8 @@ const tokens: TokenType[] = [
         throw: 3,
         buy: 22,
         sell: 18,
-        icons: ['boomerang'],
+        armour: 1,
+        icons: ['effortless-armour', 'boomerang'],
     },
     {
         product: 'fury',
@@ -160,7 +161,7 @@ const tokens: TokenType[] = [
         size: 'sm',
         armour: 1,
         sell: 14,
-        icons: [],
+        icons: ['ignore-knowledge', 'true-born'],
     },
     {
         product: 'fury',

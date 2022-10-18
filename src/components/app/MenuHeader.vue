@@ -286,14 +286,17 @@ const onClear = (ev: MouseEvent) => {
 
 @media (max-width: 600px) {
     .container {
-        grid-template-columns: 1fr auto;
+        display: flex;
+        align-items: center;
     }
     .search {
-        width: 70vw;
-        max-width: 70vw;
+        flex: 1;
+        width: 100%;
+        max-width: 100%;
         padding: 0 0.5em;
     }
     .actions {
+        margin-right: 0.5em;
         justify-self: flex-end;
     }
     .logo,

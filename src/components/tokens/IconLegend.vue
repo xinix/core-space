@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import AttributeIcon from '@/components/icons/AttributIcon.vue'
+import AttributeIcon from '@/components/icons/AttributeIcon.vue'
 import { AttributeType } from '@/tokens/types'
 import { useI18n } from 'vue-i18n'
 import { computed } from 'vue'
@@ -91,6 +91,17 @@ const text = computed(() => {
 
             &.move {
                 font-size: 0.5em;
+            }
+
+            &.blue-armour {
+                color: black;
+            }
+
+            &.blue-armour-regen {
+                font-size: 0.625em;
+                top: 2px;
+                margin-left: -12px;
+                color: black;
             }
 
             &.stim-actions,

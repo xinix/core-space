@@ -38,6 +38,8 @@ const mustacheIcons = computed(() => {
         { key: 'throw', value: props.item.throw },
         { key: 'grenade', value: props.item.grenade },
         { key: 'armour', value: props.item.armour, icon: 'physical_armour' },
+        { key: 'blue-armour', value: props.item.blue_armour },
+        { key: 'blue-armour-regen', value: props.item.blue_armour_regen },
         { key: 'shield', value: props.item.shield, icon: 'shield_armour' },
         { key: 'dyson', value: props.item.dyson },
         { key: 'move', value: props.item.move },
