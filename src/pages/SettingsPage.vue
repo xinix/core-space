@@ -13,16 +13,9 @@ const tokens = useTokens()
 const theme = useTheme()
 const products = useProducts()
 
-theme.$subscribe((mutation) => {
-    const events: any = mutation.events
-    if (events && events.key === 'theme') {
-        theme.apply()
-        theme.save()
-    }
-})
-
 const onSave = (ev: SubmitEvent) => {
     theme.save()
+    theme.apply()
     products.save()
     tokens.load(products.active)
     return ev
@@ -60,11 +53,13 @@ const onSave = (ev: SubmitEvent) => {
                     v-model="theme.theme"
                     name="dark-mode"
                     value="dark"
+                    @update:model-value="onSave"
                 />
                 <ThemeOption
                     v-model="theme.theme"
                     name="light-mode"
                     value="light"
+                    @update:model-value="onSave"
                 />
             </FormField>
         </form>

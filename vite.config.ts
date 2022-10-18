@@ -1,10 +1,10 @@
 import { defineConfig } from 'vite'
 import { resolve } from 'path'
 import vue from '@vitejs/plugin-vue'
-import mkcert from 'vite-plugin-mkcert' // https://vitejs.dev/config/
-import { VitePWA } from 'vite-plugin-pwa' // https://vitejs.dev/config/
+import { VitePWA } from 'vite-plugin-pwa'
+import fs from 'fs'
 
-// https://vitejs.dev/config/
+/* More info https://vitejs.dev/config/ */
 export default defineConfig({
     define: {
         __VUE_I18N_FULL_INSTALL__: true,
@@ -15,7 +15,10 @@ export default defineConfig({
         host: 'core-space.dev',
         open: true,
         port: 8765,
-        https: true,
+        https: {
+            key: fs.readFileSync('./.cert/key.pem'),
+            cert: fs.readFileSync('./.cert/cert.pem'),
+        },
     },
     base: '/core-space/',
     build: {
@@ -28,7 +31,6 @@ export default defineConfig({
     },
     plugins: [
         vue(),
-        mkcert(),
         VitePWA({
             registerType: 'autoUpdate',
             includeAssets: ['favicon.ico', 'apple-touch-icon.png', 'logo.svg'],
