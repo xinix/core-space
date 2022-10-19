@@ -2,6 +2,7 @@ import { CoreSpaceToken, TokenMap, TokenType } from '@/tokens/types'
 
 import coreSpace from '@/tokens/products/core-space'
 import zed from '@/tokens/products/zed'
+import galacticCorps from '@/tokens/products/galactic-corps'
 import utility from '@/tokens/products/utility'
 
 import firstBorn from '@/tokens/products/first-born'
@@ -20,6 +21,7 @@ function toCoreSpaceToken(token: TokenType): CoreSpaceToken {
 const tokens: TokenMap = {
     'core-space': coreSpace.map(toCoreSpaceToken),
     'zed': zed.map(toCoreSpaceToken),
+    'galactic-corps': galacticCorps.map(toCoreSpaceToken),
     'first-born': firstBorn.map(toCoreSpaceToken),
     'fury': fury.map(toCoreSpaceToken),
     'line-of-fire': lineOfFire.map(toCoreSpaceToken),

@@ -20,6 +20,7 @@ export const useProducts = defineStore('products', {
             [
                 'core-space',
                 'zed',
+                'galactic-corps',
                 'utility',
                 'first-born',
                 'fury',
@@ -33,6 +34,8 @@ export const useProducts = defineStore('products', {
                     'core-space':
                         'https://battlesystems.co.uk/product/core-space-starter-set/',
                     'zed': 'https://battlesystems.co.uk/product/core-space-shootout-at-zeds-expansion/',
+                    'galactic-corps':
+                        'https://battlesystems.co.uk/product/core-space-galactic-corps-expansion/',
                     'first-born':
                         'https://battlesystems.co.uk/product/core-space-first-born-starter-set/',
                     'fury': 'https://battlesystems.co.uk/product/core-space-fury-of-the-insane-god-expansion/',

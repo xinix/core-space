@@ -1,6 +1,7 @@
 export type ProductType =
     | 'core-space'
     | 'zed'
+    | 'galactic-corps'
     | 'first-born'
     | 'fury'
     | 'line-of-fire'
@@ -11,6 +12,7 @@ export type ProductType =
 export type TokenMap = {
     'core-space': CoreSpaceToken[]
     'zed': CoreSpaceToken[]
+    'galactic-corps': CoreSpaceToken[]
     'first-born': CoreSpaceToken[]
     'fury': CoreSpaceToken[]
     'line-of-fire': CoreSpaceToken[]
@@ -20,6 +22,8 @@ export type TokenMap = {
 }
 
 export type AttributeType =
+    | 'jam'
+    | 'time-pulse'
     | 'scatter-core'
     | 'action-2'
     | 'ammo-7'

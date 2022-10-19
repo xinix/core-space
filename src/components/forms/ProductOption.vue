@@ -219,6 +219,10 @@ const onClickBuy = (ev: MouseEvent) => {
     background-image: var(--zed);
 }
 
+.product-option.galactic-corps figure {
+    background-image: var(--galactic-corps);
+}
+
 .product-option.first-born figure {
     background-image: var(--first-born);
 }
