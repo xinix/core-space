@@ -21,6 +21,7 @@ export default {
     BreachIcon: () => import('@/components/icons/BreachIcon.vue'),
     Burst1Icon: () => import('@/components/icons/Burst1Icon.vue'),
     Burst2Icon: () => import('@/components/icons/Burst2Icon.vue'),
+    CannotReloadIcon: () => import('@/components/icons/CannotReloadIcon.vue'),
     CloseIcon: () => import('@/components/icons/CloseIcon.vue'),
     DangerousIcon: () => import('@/components/icons/DangerousIcon.vue'),
     DataIcon: () => import('@/components/icons/DataIcon.vue'),

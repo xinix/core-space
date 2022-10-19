@@ -2,6 +2,7 @@ export type ProductType =
     | 'core-space'
     | 'zed'
     | 'galactic-corps'
+    | 'purge-outbreak'
     | 'first-born'
     | 'fury'
     | 'line-of-fire'
@@ -13,6 +14,7 @@ export type TokenMap = {
     'core-space': CoreSpaceToken[]
     'zed': CoreSpaceToken[]
     'galactic-corps': CoreSpaceToken[]
+    'purge-outbreak': CoreSpaceToken[]
     'first-born': CoreSpaceToken[]
     'fury': CoreSpaceToken[]
     'line-of-fire': CoreSpaceToken[]
@@ -22,6 +24,7 @@ export type TokenMap = {
 }
 
 export type AttributeType =
+    | 'cannot-reload'
     | 'jam'
     | 'time-pulse'
     | 'scatter-core'
@@ -145,6 +148,7 @@ export type ItemDescription =
     | 'raw-blue'
     | 'ship-parts'
     | 'tech-pack'
+    | 'mothers-venom'
 
 export type CoreSpaceToken = TokenType & {
     key: string

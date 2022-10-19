@@ -11,13 +11,14 @@
   "core-space": "Core Space",
   "zed": "Shootout at Zed's Expansion",
   "galactic-corps": "Galactic Corps Expansion",
+  "purge-outbreak": "Purge Outbreak Expansion",
   "first-born": "Core Space: First Born",
   "fury": "Fury of the Insane God Expansion",
   "line-of-fire": "In the Line of Fire Expansion",
   "rysa": "Gates of Ry'sa Expansion",
   "trading-post-5": "Trading Post 5 Expansion",
   "utility": "Utility Dashboards",
-  "no_result": "This is not what you were looking for, but couldn't find it either.",
+  "no_result": "This is not what you were looking for, but we couldn't find it either.",
   "buy-now": "Buy now!",
   "buy": "Buy",
   "sell": "Sell",
@@ -142,5 +143,7 @@
   "tech-pack": "<strong>Tech pack:</strong> This allow a Tech or Machine character to add one die to a Repair roll.<br><br>All items that can be repaired will require a number of Repair points to be spent. For mission objectives this will be detailed in the mission briefing, but otherwise use the following:<ul><li><strong>Equipment Tokens:</strong> 1 Repair Point</li><li><strong>Consoles:</strong> 3 Repair Points</li><li><strong>Defeated Machine Characters:</strong> 5 Repair Points (once Repaired, stand them up with 1 Health)</li><li><strong>Damaged Machine Characters:</strong> 1 Repair Point per Health Point</li></ul>To make a Repair action your character must be in contact with the thing that needs Repairing, and not in contact with any enemies. For items, the character must be holding them, or in contact with the character that is.<br><br>Roll one combat die. Each hit will you to apply 1 Repair Point. If this is not enough to fully repair the equipment, place a Reminder Counter on it to track the Repair Points.<br><br>Unless stated otherwise, a Machine character cannot make a Repair action on itself.",
   "scatter-core": "This weapon <strong>scatters the target</strong>, with no attacks of opportunity allowed. No dice roll is needed. The target can be scattered through a wall or terrain piece, but cannot end its move on top of it.<br><br>They cannot be scattered of the board, but can be scattered into mid-air if using multi-level terrain, in which case they will fall from their current height.<br><br>Roll {0} dice as shown for any character within one squares and {1} dice for any characters within two squares. Any hits will scatter them too. Note that this can be used on a friendly character.<br><br>To scatter an item or character, roll the <strong>Chance Die</strong>. The item or character is moved a number of squares from its current position using the number and direction shown on the die.",
   "jam": "All characters within short range of the target, regardless of LoS, armour or cover, <strong>may not make Ranged Assault actions this round</strong>. No dice roll is needed.",
-  "time-pulse": "This weapons <strong>freezes the target</strong> and they miss their next turn. No dice roll is needed. Roll dice as shown for any characters within 1 and 2 squares. Any hits will freeze them too, regardless of armour or cover."
+  "time-pulse": "This weapons <strong>freezes the target</strong> and they miss their next turn. No dice roll is needed. Roll dice as shown for any characters within 1 and 2 squares. Any hits will freeze them too, regardless of armour or cover.",
+  "cannot-reload": "This weapon <strong>cannot be Reloaded</strong> during the game - it is only Reloaded between missions.",
+  "mothers-venom": "<strong>The Mother's Venom:</strong> The Mother has two push-out sections at the top of the Gatherers Board, representing various valuable parts of her body. If the Mother is defeated these are left on the floor where she fell (red or yellow face up depending on whether she was using the Charged statistics or not when she died).<br><br>The can be picked up by Traders, and be sold in the Trader Phase.<br><br>Alternatively, if a Trader collects both items, they can be combined into the Mother's Venom - an incredible powerful weapon. This can only be done at the <strong>Giger's Emporium Trading Post</strong>, and will cost 20UA on top of trading in the items."
 }

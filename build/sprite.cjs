@@ -49,6 +49,7 @@ for (const folder of folders) {
             `.token.${folder} { background-image: url('../images/${folder}.png'); background-size: ${result.properties.width}px ${result.properties.height}px }`
         ]
         const js = [
+            'import { TokenType } from "@/tokens/types"',
             'const tokens: TokenType[] = ['
         ]
 

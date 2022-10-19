@@ -223,6 +223,10 @@ const onClickBuy = (ev: MouseEvent) => {
     background-image: var(--galactic-corps);
 }
 
+.product-option.purge-outbreak figure {
+    background-image: var(--purge-outbreak);
+}
+
 .product-option.first-born figure {
     background-image: var(--first-born);
 }
