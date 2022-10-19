@@ -22,6 +22,7 @@ export const useProducts = defineStore('products', {
                 'zed',
                 'galactic-corps',
                 'purge-outbreak',
+                'dead-or-alive',
                 'utility',
                 'first-born',
                 'fury',
@@ -39,6 +40,8 @@ export const useProducts = defineStore('products', {
                         'https://battlesystems.co.uk/product/core-space-galactic-corps-expansion/',
                     'purge-outbreak':
                         'https://battlesystems.co.uk/product/core-space-purge-outbreak-expansion/',
+                    'dead-or-alive':
+                        'https://battlesystems.co.uk/product/core-space-wanted-dead-or-alive/',
                     'first-born':
                         'https://battlesystems.co.uk/product/core-space-first-born-starter-set/',
                     'fury': 'https://battlesystems.co.uk/product/core-space-fury-of-the-insane-god-expansion/',

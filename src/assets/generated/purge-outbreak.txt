@@ -1,1 +1,0 @@
-import { TokenType } from "@/tokens/types"const tokens: TokenType[] = [{  product: 'purge-outbreak',  slug: 'mothers-venom',  name: 'Mothers venom',  color: 'blue',  size: 'sm',  icons: [],},]export default tokens

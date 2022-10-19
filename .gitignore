@@ -22,3 +22,6 @@ dist-ssr
 *.sln
 *.sw?
 *.pem
+
+# generated files
+src/assets/generated/*.txt

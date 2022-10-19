@@ -10,6 +10,7 @@ import KofiIcon from '@/components/app/KofiIcon.vue'
 import { useTheme } from '@/stores/theme'
 import { useProducts } from '@/stores/products'
 import { useTokens } from '@/stores/tokens'
+import { APP_VERSION } from '@/helpers/env'
 
 const tokens = useTokens()
 const theme = useTheme()
@@ -23,7 +24,7 @@ const onSave = (ev: SubmitEvent) => {
     return ev
 }
 
-const version = __APP_VERSION__
+const version = APP_VERSION
 </script>
 
 <template>

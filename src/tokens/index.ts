@@ -11,6 +11,7 @@ import fury from '@/tokens/products/fury'
 import rysa from '@/tokens/products/rysa'
 import tradingPost5 from '@/tokens/products/trading-post-5'
 import purgeOutbreak from '@/tokens/products/purge-outbreak'
+import deadOrAlive from '@/tokens/products/dead-or-alive'
 
 function toCoreSpaceToken(token: TokenType): CoreSpaceToken {
     return {
@@ -24,6 +25,7 @@ const tokens: TokenMap = {
     'zed': zed.map(toCoreSpaceToken),
     'galactic-corps': galacticCorps.map(toCoreSpaceToken),
     'purge-outbreak': purgeOutbreak.map(toCoreSpaceToken),
+    'dead-or-alive': deadOrAlive.map(toCoreSpaceToken),
     'first-born': firstBorn.map(toCoreSpaceToken),
     'fury': fury.map(toCoreSpaceToken),
     'line-of-fire': lineOfFire.map(toCoreSpaceToken),

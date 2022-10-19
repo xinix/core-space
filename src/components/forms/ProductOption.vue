@@ -227,6 +227,10 @@ const onClickBuy = (ev: MouseEvent) => {
     background-image: var(--purge-outbreak);
 }
 
+.product-option.dead-or-alive figure {
+    background-image: var(--dead-or-alive);
+}
+
 .product-option.first-born figure {
     background-image: var(--first-born);
 }

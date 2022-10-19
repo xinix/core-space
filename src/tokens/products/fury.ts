@@ -103,7 +103,7 @@ const tokens: TokenType[] = [
     {
         product: 'fury',
         slug: 'n-reroll',
-        name: 'N reroll',
+        name: 'Re-roll ranged',
         color: 'orange',
         size: 'nano',
         buy: 18,
