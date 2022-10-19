@@ -11,11 +11,14 @@ const props = withDefaults(
     { active: false }
 )
 
+const tag = computed(() => (props.active ? 'div' : 'router-link'))
+
 const wrapperClass = computed(() => {
     const cls: any = {
         active: props.active,
     }
     cls[props.item.size] = true
+    cls[props.item.color] = true
     return cls
 })
 
@@ -48,7 +51,7 @@ const mustacheIcons = computed(() => {
         { key: 'stim-heal-plus', value: props.item.super_heal },
         { key: 'stim-skill', value: props.item.skill },
         { key: 'stim-skill-plus', value: props.item.super_skill },
-        { key: 'stim-actions', value: props.item.action },
+        { key: 'stim-combat', value: props.item.action },
         { key: 'freeze', value: props.item.freeze },
         { key: 'explode', value: props.item.explode },
     ]
@@ -57,7 +60,8 @@ const mustacheIcons = computed(() => {
 </script>
 
 <template>
-    <router-link
+    <component
+        :is="tag"
         :class="wrapperClass"
         :to="`/item/${item.key}`"
         class="token-details"
@@ -112,7 +116,7 @@ const mustacheIcons = computed(() => {
                 />
             </ul>
         </section>
-    </router-link>
+    </component>
 </template>
 
 <style lang="scss" scoped>
@@ -120,7 +124,8 @@ const mustacheIcons = computed(() => {
     display: grid;
     margin: 0.5em;
     padding: 0.75em;
-    transition: transform 0.2s ease-out, background-color 0.2s ease;
+    transition: transform 0.2s ease-out, background-color 0.2s ease,
+        box-shadow 0.2s ease-in;
     text-decoration: none;
     color: inherit;
     grid-row-gap: 0.5em;
@@ -135,9 +140,41 @@ const mustacheIcons = computed(() => {
 
         &:active,
         &:hover {
-            transform: scale(1.1);
+            transform: scale(1.05);
             color: var(--primary-contrast);
             background-color: var(--primary-transparent);
+        }
+
+        &.blue:hover {
+            box-shadow: var(--glow-blue);
+        }
+
+        &.orange:hover {
+            box-shadow: var(--glow-orange);
+        }
+
+        &.yellow:hover {
+            box-shadow: var(--glow-yellow);
+        }
+
+        &.green:hover {
+            box-shadow: var(--glow-green);
+        }
+
+        &.white:hover {
+            box-shadow: var(--glow-white);
+        }
+
+        &.purple:hover {
+            box-shadow: var(--glow-purple);
+        }
+
+        &.lime:hover {
+            box-shadow: var(--glow-lime);
+        }
+
+        &.violet:hover {
+            box-shadow: var(--glow-violet);
         }
     }
 
@@ -172,6 +209,38 @@ const mustacheIcons = computed(() => {
             max-width: available;
             margin-bottom: 0.125em;
             text-align: left;
+        }
+
+        &.blue .more {
+            box-shadow: var(--glow-blue);
+        }
+
+        &.orange .more {
+            box-shadow: var(--glow-orange);
+        }
+
+        &.yellow .more {
+            box-shadow: var(--glow-yellow);
+        }
+
+        &.green .more {
+            box-shadow: var(--glow-green);
+        }
+
+        &.white .more {
+            box-shadow: var(--glow-white);
+        }
+
+        &.purple .more {
+            box-shadow: var(--glow-purple);
+        }
+
+        &.lime .more {
+            box-shadow: var(--glow-lime);
+        }
+
+        &.violet .more {
+            box-shadow: var(--glow-violet);
         }
     }
 

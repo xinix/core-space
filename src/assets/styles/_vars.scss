@@ -1,13 +1,23 @@
 :root {
     --font-title: 'Saira Condensed', sans-serif;
     --font-main: 'Space Grotesk', sans-serif;
-
     --cassie: url('../images/cassie.png');
     --balcor: url('../images/balcor.png');
+    --core-space: url('../images/box-cs.png');
+    --black-star: url('../images/box-bsr.png');
+    --dead-or-alive: url('../images/box-dol.png');
+    --galactic-corps: url('../images/box-gc.png');
+    --purge-outbreak: url('../images/box-po.png');
+    --zed: url('../images/box-zed.png');
+    --cygnus: url('../images/box-cygnus.png');
+    --poseidon: url('../images/box-poseidon.png');
 
+    --skylark: url('../images/box-skylark.png');
+    --yamato: url('../images/box-yamato.png');
     --first-born: url('../images/box-fb.png');
     --fury: url('../images/box-fury.png');
     --line-of-fire: url('../images/box-lof.png');
+
     --rysa: url('../images/box-rysa.png');
     --trading-post-5: url('../images/box-tp5.png');
     --utility: url('../images/box-util.png');
@@ -16,9 +26,17 @@
     --shadow-md: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 2px 4px 0 rgb(0 0 0 / 8%);
     --shadow-lg: 0 15px 30px 0 rgb(0 0 0 / 11%), 0 5px 15px 0 rgb(0 0 0 / 8%);
     --glow: rgb(131, 183, 187, .3) 0px 0px 0px 3px;
-    --radiant: 0 0 16px 10px #ffffff, /* inner white */
-    0 0 24px 24px #ff00ff, /* middle magenta */
-    0 0 30px 28px #00ffff; /* outer cyan */
+
+    --glow-blue: 0px 0px 8px 2px #1e7bb8, 0px 0px 10px 8px #a5e1e1;
+    --glow-orange: 0px 0px 8px 2px #c0210c, 0px 0px 10px 8px #e4844b;
+    --glow-yellow: 0px 0px 8px 2px #e2b84d, 0px 0px 10px 8px #ebdcad;
+    --glow-purple: 0px 0px 8px 2px #7d1e5e, 0px 0px 10px 8px #d3a59f;
+    --glow-green: 0px 0px 8px 2px #529c42, 0px 0px 10px 8px #97c48a;
+    --glow-white: 0px 0px 8px 2px #aeaeae, 0px 0px 10px 8px #e5e5e5;
+    --glow-lime: 0px 0px 8px 2px #9a9a36, 0px 0px 10px 8px #e3e2bd;
+    --glow-violet: 0px 0px 8px 2px #3d509f, 0px 0px 10px 8px #a0aed7;
+
+    --radiant: 0 0 16px 10px #ffffff, 0 0 24px 24px #ff00ff, 0 0 30px 28px #00ffff;
 
     --magenta: #ff00ff;
 
@@ -30,6 +48,7 @@
     --dark-color: #ffffff;
     --light-bg: linear-gradient(45deg, #b5dde5, #d7f6fa, #80b4b4);
     --light-color: #000000;
+
 
     /* THEME COLORS */
     --body-bg: linear-gradient(45deg, #293c33, #151310, #4c605f, #293332);
@@ -57,6 +76,8 @@
     --secondary-a3: rgba(168, 66, 59, .75);
     --secondary-a4: rgba(113, 38, 25, .75);
 
+    --link-color: #7ce8e8;
+
     --input-bg: #151310;
     --input-color: #ffffff;
     --input-border: rgba(0, 0, 0, 0.15);
@@ -66,6 +87,8 @@ html[data-theme='light'] {
     --body-bg: linear-gradient(45deg, #b5dde5, #8ed0cd, #d7f6fa, #80b4b4);
     --body-color: black;
     --primary-contrast: black;
+
+    --link-color: #be20de;
 
     --input-bg: #ffffff;
     --input-color: #151310;

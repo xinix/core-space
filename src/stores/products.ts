@@ -9,13 +9,23 @@ export const useProducts = defineStore('products', {
             const products: ProductType[] = hist.split(';') as ProductType[]
             active.push(...products)
         } else {
-            active.push('first-born')
+            active.push('core-space', 'first-born')
         }
         return { active }
     },
     getters: {
         inCollectionCount: (state) => state.active.length,
         totalCount: () => 6,
+        options: () =>
+            [
+                'core-space',
+                'utility',
+                'first-born',
+                'fury',
+                'line-of-fire',
+                'rysa',
+                'trading-post-5',
+            ] as ProductType[],
     },
     actions: {
         save() {

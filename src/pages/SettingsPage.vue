@@ -43,6 +43,7 @@ const onSave = (ev: SubmitEvent) => {
                 <template #default>
                     <ProductSelector
                         v-model="products.active"
+                        :options="products.options"
                         @update:model-value="onSave"
                     />
                 </template>

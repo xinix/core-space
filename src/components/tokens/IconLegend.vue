@@ -104,7 +104,7 @@ const text = computed(() => {
                 color: black;
             }
 
-            &.stim-actions,
+            &.stim-combat,
             &.stim-skill,
             &.stim-heal {
                 font-size: 0.625em;

@@ -1,11 +1,13 @@
 import { CoreSpaceToken, TokenMap, TokenType } from '@/tokens/types'
 
-import fury from '@/tokens/products/fury'
+import coreSpace from '@/tokens/products/core-space'
+import utility from '@/tokens/products/utility'
+
 import firstBorn from '@/tokens/products/first-born'
 import lineOfFire from '@/tokens/products/line-of-fire'
+import fury from '@/tokens/products/fury'
 import rysa from '@/tokens/products/rysa'
 import tradingPost5 from '@/tokens/products/trading-post-5'
-import utility from '@/tokens/products/utility'
 
 function toCoreSpaceToken(token: TokenType): CoreSpaceToken {
     return {
@@ -15,6 +17,7 @@ function toCoreSpaceToken(token: TokenType): CoreSpaceToken {
 }
 
 const tokens: TokenMap = {
+    'core-space': coreSpace.map(toCoreSpaceToken),
     'first-born': firstBorn.map(toCoreSpaceToken),
     'fury': fury.map(toCoreSpaceToken),
     'line-of-fire': lineOfFire.map(toCoreSpaceToken),

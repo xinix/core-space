@@ -39,6 +39,7 @@ export default defineConfig({
                 short_name: 'Core Space',
                 description: 'Awesome index for Core Space inventory items',
                 theme_color: '#293c33',
+                background_color: '#83b7bb',
                 icons: [
                     {
                         src: 'pwa-192x192.png',

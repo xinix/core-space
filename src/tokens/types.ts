@@ -1,4 +1,5 @@
 export type ProductType =
+    | 'core-space'
     | 'first-born'
     | 'fury'
     | 'line-of-fire'
@@ -7,6 +8,7 @@ export type ProductType =
     | 'utility'
 
 export type TokenMap = {
+    'core-space': CoreSpaceToken[]
     'first-born': CoreSpaceToken[]
     'fury': CoreSpaceToken[]
     'line-of-fire': CoreSpaceToken[]
@@ -16,6 +18,11 @@ export type TokenMap = {
 }
 
 export type AttributeType =
+    | 'action-2'
+    | 'ammo-7'
+    | 'ammo-box'
+    | 'ammo-d6'
+    | 'dangerous'
     | 'fire'
     | 'bomb'
     | 'toxic'
@@ -59,7 +66,7 @@ export type AttributeType =
     | 'stim-skill-plus'
     | 'stim-heal'
     | 'stim-heal-plus'
-    | 'stim-actions'
+    | 'stim-combat'
     | 'reload-ammo'
     | 'freeze'
     | 'timewarp'
@@ -126,6 +133,11 @@ export type ItemDescription =
     | 'mines'
     | 'caaligorn'
     | 'joined'
+    | 'credits'
+    | 'hack'
+    | 'raw-blue'
+    | 'ship-parts'
+    | 'tech-pack'
 
 export type CoreSpaceToken = TokenType & {
     key: string
@@ -140,8 +152,9 @@ export type TokenType = {
         | 'yellow'
         | 'orange'
         | 'purple'
+        | 'violet'
         | 'green'
-        | 'light-green'
+        | 'lime'
         | 'brown'
         | 'white'
     size: 'nano' | 'sm' | 'md' | 'lg' | 'xl' | 'umd' | 'ulg'

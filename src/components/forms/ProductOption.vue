@@ -14,6 +14,7 @@ const props = withDefaults(
 const emit = defineEmits(['select'])
 
 const buyNow = {
+    'core-space': 'https://battlesystems.co.uk/product/core-space-starter-set/',
     'first-born':
         'https://battlesystems.co.uk/product/core-space-first-born-starter-set/',
     'fury': 'https://battlesystems.co.uk/product/core-space-fury-of-the-insane-god-expansion/',
@@ -150,30 +151,47 @@ const onSelect = (ev: MouseEvent) => {
 .buy-now {
     font-size: 100%;
     font-weight: bold;
+    position: relative;
     display: inline-flex;
     align-items: center;
-    padding-top: 1em;
+    margin-top: 1em;
+    padding: 0.325em 0.75em;
     transition: all 0.2s ease-out;
     text-decoration: none;
     opacity: 0.75;
-    color: #00ffff;
-    border-bottom: solid 2px #00ffff;
+    color: var(--link-color);
     justify-self: center;
+
+    span:nth-child(1) {
+        font-size: 200%;
+        transition: all 0.2s ease-in;
+    }
+
+    span:nth-child(2) {
+        position: absolute;
+        transition: all 0.2s ease-in;
+        transform: scale(-1, 1);
+        opacity: 0;
+    }
 
     &:active,
     &:hover {
-        padding: 0.5em;
         transform: scale(1.1);
         opacity: 1;
-    }
 
-    span:first-child {
-        font-size: 125%;
-    }
+        span:nth-child(1) {
+            transform: translateX(-1em) scale(-1, 1);
+        }
 
-    span + span {
-        margin-left: 0.5em;
+        span:nth-child(2) {
+            transform: translateX(1em) scale(1, 1);
+            opacity: 1;
+        }
     }
+}
+
+.product-option.core-space figure {
+    background-image: var(--core-space);
 }
 
 .product-option.first-born figure {

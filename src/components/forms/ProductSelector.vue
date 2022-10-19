@@ -2,17 +2,11 @@
 import { ProductType } from '@/tokens/types'
 import ProductOption from '@/components/forms/ProductOption.vue'
 
-const props = defineProps<{ modelValue: ProductType[] }>()
+const props = defineProps<{
+    modelValue: ProductType[]
+    options: ProductType[]
+}>()
 const emit = defineEmits(['update:modelValue'])
-
-const options: ProductType[] = [
-    'first-born',
-    'fury',
-    'line-of-fire',
-    'rysa',
-    'trading-post-5',
-    'utility',
-]
 
 const onSelect = (option: ProductType) => {
     const selected = [...props.modelValue]

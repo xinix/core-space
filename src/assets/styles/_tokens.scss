@@ -46,9 +46,14 @@
     }
 }
 
+
+/* Core Space */
+@import "@/assets/generated/core-space.css";
+@import "@/assets/generated/utility.css";
+
+/* First Born */
 @import "@/assets/generated/first-born.css";
 @import "@/assets/generated/fury.css";
 @import "@/assets/generated/line-of-fire.css";
 @import "@/assets/generated/rysa.css";
 @import "@/assets/generated/trading-post-5.css";
-@import "@/assets/generated/utility.css";

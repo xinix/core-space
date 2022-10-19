@@ -1,6 +1,10 @@
 // noinspection JSUnusedGlobalSymbols
 
 export default {
+    Action2Icon: () => import('@/components/icons/Action2Icon.vue'),
+    Ammo7Icon: () => import('@/components/icons/Ammo7Icon.vue'),
+    AmmoBoxIcon: () => import('@/components/icons/AmmoBoxIcon.vue'),
+    AmmoD6Icon: () => import('@/components/icons/AmmoD6Icon.vue'),
     AmmoIcon: () => import('@/components/icons/AmmoIcon.vue'),
     AmmoReturnsIcon: () => import('@/components/icons/AmmoReturnsIcon.vue'),
     ArtifactIcon: () => import('@/components/icons/ArtifactIcon.vue'),
@@ -18,6 +22,7 @@ export default {
     Burst1Icon: () => import('@/components/icons/Burst1Icon.vue'),
     Burst2Icon: () => import('@/components/icons/Burst2Icon.vue'),
     CloseIcon: () => import('@/components/icons/CloseIcon.vue'),
+    DangerousIcon: () => import('@/components/icons/DangerousIcon.vue'),
     DataIcon: () => import('@/components/icons/DataIcon.vue'),
     DeflectIcon: () => import('@/components/icons/DeflectIcon.vue'),
     DiscardIcon: () => import('@/components/icons/DiscardIcon.vue'),
@@ -79,7 +84,7 @@ export default {
     ShieldArmourIcon: () => import('@/components/icons/ShieldArmourIcon.vue'),
     SilentIcon: () => import('@/components/icons/SilentIcon.vue'),
     SpecialArmourIcon: () => import('@/components/icons/SpecialArmourIcon.vue'),
-    StimActionsIcon: () => import('@/components/icons/StimActionsIcon.vue'),
+    StimCombatIcon: () => import('@/components/icons/StimCombatIcon.vue'),
     StimHealIcon: () => import('@/components/icons/StimHealIcon.vue'),
     StimHealPlusIcon: () => import('@/components/icons/StimHealPlusIcon.vue'),
     StimSkillIcon: () => import('@/components/icons/StimSkillIcon.vue'),
