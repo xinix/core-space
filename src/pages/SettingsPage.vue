@@ -4,6 +4,8 @@ import FormField from '@/components/forms/FormField.vue'
 import ThemeOption from '@/components/forms/ThemeOption.vue'
 import ProductSelector from '@/components/forms/ProductSelector.vue'
 import ProgressBar from '@/components/forms/ProgressBar.vue'
+import CoreSpaceLogo from '@/components/app/CoreSpaceLogo.vue'
+import KofiIcon from '@/components/app/KofiIcon.vue'
 
 import { useTheme } from '@/stores/theme'
 import { useProducts } from '@/stores/products'
@@ -20,6 +22,8 @@ const onSave = (ev: SubmitEvent) => {
     tokens.load(products.active)
     return ev
 }
+
+const version = __APP_VERSION__
 </script>
 
 <template>
@@ -63,6 +67,64 @@ const onSave = (ev: SubmitEvent) => {
                     @update:model-value="onSave"
                 />
             </FormField>
+
+            <FormField label="about" name="app">
+                <div class="about">
+                    <CoreSpaceLogo />
+                    <div>
+                        <span v-html="$t('copyright')"></span>&nbsp;
+                        <a
+                            href="https://www.battlesystems.co.uk/"
+                            target="_blank"
+                            >https://www.BattleSystems.co.uk</a
+                        >
+                    </div>
+                    <strong>version {{ version }}</strong>
+                    <div class="about-me">
+                        <p>{{ $t('this-is-free') }}</p>
+                        <a
+                            class="buy-me-a-coffee"
+                            href="https://ko-fi.com/Q5Q7FSPQD"
+                            target="_blank"
+                        >
+                            <KofiIcon class="icon" />
+                            <span>{{ $t('buy-me-a-coffee') }}</span>
+                        </a>
+                    </div>
+
+                    <div class="license">
+                        <p>
+                            <a href="https://github.com/xinix/core-space"
+                                >Fork Me on Github</a
+                            >
+                        </p>
+
+                        <pre>
+MIT License
+
+Copyright (c) 2022
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.</pre
+                        >
+                    </div>
+                </div>
+            </FormField>
         </form>
     </div>
 </template>
@@ -93,6 +155,50 @@ const onSave = (ev: SubmitEvent) => {
             font-size: 125%;
             margin: 0 0.25em;
         }
+    }
+
+    .about {
+        display: grid;
+        grid-gap: 1.5em 1em;
+
+        p {
+            margin: 1em 0;
+        }
+    }
+
+    .buy-me-a-coffee {
+        font-weight: bold;
+        display: inline-flex;
+        align-items: center;
+        margin: 1em 0;
+        padding: 0.5em 1.5em;
+        transition: all 0.2s ease-in;
+        text-decoration: none;
+        color: black;
+        border-radius: 2em;
+        background-color: white;
+        box-shadow: var(--shadow-md);
+        gap: 0.75em;
+
+        .icon {
+            margin-bottom: -4px;
+            animation: shake 4s infinite;
+        }
+
+        &:active,
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+
+    .about-me p {
+        font-size: 1.25em;
+    }
+
+    .license {
+        font-size: 80%;
+        padding-top: 5em;
+        opacity: 0.8;
     }
 }
 </style>

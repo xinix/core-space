@@ -24,3 +24,28 @@
     transform: translateX(-1rem);
     opacity: 0;
 }
+
+/*** shake ***/
+@keyframes shake {
+    0% {
+        transform: translateX(0)
+    }
+    75% {
+        transform: translateY(-2px)
+    }
+    80% {
+        transform: translateY(-2px) rotate(17deg)
+    }
+    85% {
+        transform: translateY(-2px) rotate(-17deg)
+    }
+    90% {
+        transform: translateY(-2px) rotate(17deg)
+    }
+    95% {
+        transform: translateY(-2px) rotate(-17deg)
+    }
+    100% {
+        transform: translateY(0) rotate(0)
+    }
+}
