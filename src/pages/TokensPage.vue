@@ -48,7 +48,11 @@ const onClear = (ev: MouseEvent) => {
     </section>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
+.container {
+    padding-bottom: 50vh;
+}
+
 .tokens {
     display: flex;
     flex-wrap: wrap;

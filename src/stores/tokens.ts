@@ -22,17 +22,13 @@ export const useTokens = defineStore('tokens', {
     },
     getters: {
         items: (state) => {
-            if (state.active !== '') {
-                return state.rawItems.filter((a) => a.key === state.active)
-            }
-
             const q = state.q.toLowerCase().trim()
             if (q != '') {
                 return state.rawItems.filter(
                     (a) => a.name.toLowerCase().indexOf(q) >= 0
                 )
             }
-            return state.rawItems.sort(sortToken)
+            return state.rawItems
         },
         getItemByKey: (state) => {
             return (key: string) => {
@@ -42,10 +38,15 @@ export const useTokens = defineStore('tokens', {
     },
     actions: {
         load(products: ProductType[]) {
-            this.rawItems.splice(0, this.rawItems.length)
+            const items: CoreSpaceToken[] = []
             for (const product of products) {
-                this.rawItems.push(...tokens[product])
+                items.push(...tokens[product])
             }
+            this.rawItems.splice(
+                0,
+                this.rawItems.length,
+                ...items.sort(sortToken)
+            )
         },
     },
 })

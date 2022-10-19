@@ -1,6 +1,7 @@
 <script lang="ts" setup>
 import { ProductType } from '@/tokens/types'
 import { computed } from 'vue'
+import { useProducts } from '@/stores/products'
 
 const props = withDefaults(
     defineProps<{
@@ -11,21 +12,9 @@ const props = withDefaults(
     { tag: 'div' }
 )
 
-const emit = defineEmits(['select'])
+const products = useProducts()
 
-const buyNow = {
-    'core-space': 'https://battlesystems.co.uk/product/core-space-starter-set/',
-    'first-born':
-        'https://battlesystems.co.uk/product/core-space-first-born-starter-set/',
-    'fury': 'https://battlesystems.co.uk/product/core-space-fury-of-the-insane-god-expansion/',
-    'line-of-fire':
-        'https://battlesystems.co.uk/product/core-space-in-the-line-of-fire-expansion/',
-    'rysa': 'https://battlesystems.co.uk/product/core-space-gates-of-rysa-expansion/',
-    'trading-post-5':
-        'https://battlesystems.co.uk/product/core-space-trading-post-5-expansion/',
-    'utility':
-        'https://battlesystems.co.uk/product/core-space-utility-dashboards/',
-}
+const emit = defineEmits(['select'])
 
 const productClass = computed(() => {
     const result: any = {
@@ -39,6 +28,11 @@ const onSelect = (ev: MouseEvent) => {
     emit('select', props.option)
     return ev
 }
+
+const onClickBuy = (ev: MouseEvent) => {
+    ev.stopPropagation()
+    return ev
+}
 </script>
 
 <template>
@@ -48,9 +42,16 @@ const onSelect = (ev: MouseEvent) => {
                 <figure></figure>
                 <span class="checkbox material-symbols-rounded">done</span>
             </section>
-            <strong class="name">{{ $t(option) }}</strong>
+            <header class="product">
+                <strong class="name">{{ $t(option) }}</strong>
+            </header>
         </div>
-        <a :href="buyNow[option]" class="buy-now" target="_blank">
+        <a
+            :href="products.getBuyNowLink(option)"
+            class="buy-now"
+            target="_blank"
+            @click="onClickBuy"
+        >
             <span class="material-symbols-rounded">shopping_cart</span>
             <span>{{ $t('buy-now') }}</span>
         </a>
@@ -59,6 +60,7 @@ const onSelect = (ev: MouseEvent) => {
 
 <style lang="scss" scoped>
 .product-option {
+    position: relative;
     display: grid;
     grid-gap: 1em 1em;
 
@@ -93,7 +95,8 @@ const onSelect = (ev: MouseEvent) => {
             .checkbox {
                 transform: translateY(0);
                 opacity: 0.9;
-                background-color: var(--primary);
+                color: var(--primary);
+                background-color: black;
             }
         }
     }
@@ -148,43 +151,61 @@ const onSelect = (ev: MouseEvent) => {
     }
 }
 
-.buy-now {
-    font-size: 100%;
-    font-weight: bold;
+.product {
     position: relative;
+    display: flex;
+    text-align: center;
+
+    .name {
+        flex: 1;
+    }
+}
+
+.buy-now {
+    font-size: 80%;
+    font-weight: bold;
+    position: absolute;
+    top: 0;
+    right: 0;
     display: inline-flex;
+    overflow: hidden;
     align-items: center;
-    margin-top: 1em;
-    padding: 0.325em 0.75em;
-    transition: all 0.2s ease-out;
+    justify-content: center;
+    width: 3em;
+    margin: 1em;
+    padding: 0.6em 0.75em;
+    transition: all 0.2s ease-in;
     text-decoration: none;
-    opacity: 0.75;
-    color: var(--link-color);
+    color: var(--link-contrast);
+    border-radius: 3em;
+    background-color: var(--link-color);
     justify-self: center;
 
     span:nth-child(1) {
-        font-size: 200%;
+        font-size: 150%;
         transition: all 0.2s ease-in;
     }
 
     span:nth-child(2) {
-        position: absolute;
-        transition: all 0.2s ease-in;
-        transform: scale(-1, 1);
+        width: 0;
+        transition: transform 0.2s ease-in;
+        transform: translateX(1em) scale(0, 1);
+        white-space: nowrap;
         opacity: 0;
     }
 
     &:active,
     &:hover {
-        transform: scale(1.1);
-        opacity: 1;
+        width: 75%;
 
         span:nth-child(1) {
-            transform: translateX(-1em) scale(-1, 1);
+            font-size: 150%;
         }
 
         span:nth-child(2) {
-            transform: translateX(1em) scale(1, 1);
+            width: auto;
+            padding: 0 0.75em;
+            transform: translateX(0) scale(1, 1);
             opacity: 1;
         }
     }
@@ -192,6 +213,10 @@ const onSelect = (ev: MouseEvent) => {
 
 .product-option.core-space figure {
     background-image: var(--core-space);
+}
+
+.product-option.zed figure {
+    background-image: var(--zed);
 }
 
 .product-option.first-born figure {

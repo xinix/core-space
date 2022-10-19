@@ -9,12 +9,13 @@
   "search_placeholder": "Search for ...",
   "install_app": "Install the Core Space app?",
   "core-space": "Core Space",
+  "zed": "Shootout at Zed's Expansion",
   "first-born": "Core Space: First Born",
-  "fury": "Core Space: Fury of the Insane God Expansion",
-  "line-of-fire": "Core Space: In the Line of Fire Expansion",
-  "rysa": "Core Space: Gates of Ry'sa Expansion",
-  "trading-post-5": "Core Space: Trading Post 5 Expansion",
-  "utility": "Core Space: Utility Dashboards",
+  "fury": "Fury of the Insane God Expansion",
+  "line-of-fire": "In the Line of Fire Expansion",
+  "rysa": "Gates of Ry'sa Expansion",
+  "trading-post-5": "Trading Post 5 Expansion",
+  "utility": "Utility Dashboards",
   "no_result": "This is not what you were looking for, but couldn't find it either.",
   "buy-now": "Buy now!",
   "buy": "Buy",
@@ -137,5 +138,6 @@
   "raw-blue": "<strong>Raw Blue:</strong> is the unique energy source that powers the Purge. Normally it disperses once a Purge dies but it can be captured in an Energy Flask that can be sold on the black market.<br><br>The sale price is listed as 'SP' - special. To determine its value, roll the Chance Die:<ul><li><strong>1-2</strong> You can make a quick sale and gain 2UA.</li><li><strong>3-5</strong> You find a trustworthy buyer and make 5UA</li><li><strong>6</strong> You find someone desperate to get their hands on it and make a tidy 9UA.</li></ul>You do not have to sell the Raw Blue after rolling the die - you can instead choose to hold onto it and try for a better deal in the nex Trade Phase. Just remember it will be taking up valuable space in your hold, and you might need the money sooner than you think!",
   "dangerous": "<strong>Dangerous:</strong> After the shot is fired, the user suffers an attack with a number of combat dice equal to the number in the icon.",
   "ship-parts": "<strong>Ship parts:</strong> Ship parts can be spent in the Maintenance Phase to make the number of repairs stated on the token, to the same or different systems.",
-  "tech-pack": "<strong>Tech pack:</strong> This allow a Tech or Machine character to add one die to a Repair roll.<br><br>All items that can be repaired will require a number of Repair points to be spent. For mission objectives this will be detailed in the mission briefing, but otherwise use the following:<ul><li><strong>Equipment Tokens:</strong> 1 Repair Point</li><li><strong>Consoles:</strong> 3 Repair Points</li><li><strong>Defeated Machine Characters:</strong> 5 Repair Points (once Repaired, stand them up with 1 Health)</li><li><strong>Damaged Machine Characters:</strong> 1 Repair Point per Health Point</li></ul>To make a Repair action your character must be in contact with the thing that needs Repairing, and not in contact with any enemies. For items, the character must be holding them, or in contact with the character that is.<br><br>Roll one combat die. Each hit will you to apply 1 Repair Point. If this is not enough to fully repair the equipment, place a Reminder Counter on it to track the Repair Points.<br><br>Unless stated otherwise, a Machine character cannot make a Repair action on itself."
+  "tech-pack": "<strong>Tech pack:</strong> This allow a Tech or Machine character to add one die to a Repair roll.<br><br>All items that can be repaired will require a number of Repair points to be spent. For mission objectives this will be detailed in the mission briefing, but otherwise use the following:<ul><li><strong>Equipment Tokens:</strong> 1 Repair Point</li><li><strong>Consoles:</strong> 3 Repair Points</li><li><strong>Defeated Machine Characters:</strong> 5 Repair Points (once Repaired, stand them up with 1 Health)</li><li><strong>Damaged Machine Characters:</strong> 1 Repair Point per Health Point</li></ul>To make a Repair action your character must be in contact with the thing that needs Repairing, and not in contact with any enemies. For items, the character must be holding them, or in contact with the character that is.<br><br>Roll one combat die. Each hit will you to apply 1 Repair Point. If this is not enough to fully repair the equipment, place a Reminder Counter on it to track the Repair Points.<br><br>Unless stated otherwise, a Machine character cannot make a Repair action on itself.",
+  "scatter-core": "This weapon <strong>scatters the target</strong>, with no attacks of opportunity allowed. No dice roll is needed. The target can be scattered through a wall or terrain piece, but cannot end its move on top of it.<br><br>They cannot be scattered of the board, but can be scattered into mid-air if using multi-level terrain, in which case they will fall from their current height.<br><br>Roll {0} dice as shown for any character within one squares and {1} dice for any characters within two squares. Any hits will scatter them too. Note that this can be used on a friendly character.<br><br>To scatter an item or character, roll the <strong>Chance Die</strong>. The item or character is moved a number of squares from its current position using the number and direction shown on the die."
 }

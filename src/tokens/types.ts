@@ -1,5 +1,6 @@
 export type ProductType =
     | 'core-space'
+    | 'zed'
     | 'first-born'
     | 'fury'
     | 'line-of-fire'
@@ -9,6 +10,7 @@ export type ProductType =
 
 export type TokenMap = {
     'core-space': CoreSpaceToken[]
+    'zed': CoreSpaceToken[]
     'first-born': CoreSpaceToken[]
     'fury': CoreSpaceToken[]
     'line-of-fire': CoreSpaceToken[]
@@ -18,6 +20,7 @@ export type TokenMap = {
 }
 
 export type AttributeType =
+    | 'scatter-core'
     | 'action-2'
     | 'ammo-7'
     | 'ammo-box'
@@ -171,7 +174,7 @@ export type TokenType = {
     crystals?: CrystalType[]
     sell?: number | number[]
     blast?: number[]
-    scatter?: number
+    scatter?: number | number[]
     phase?: number
     armour?: number
     blue_armour?: number

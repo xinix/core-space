@@ -54,6 +54,7 @@ const mustacheIcons = computed(() => {
         { key: 'stim-combat', value: props.item.action },
         { key: 'freeze', value: props.item.freeze },
         { key: 'explode', value: props.item.explode },
+        { key: 'scatter-core', value: props.item.scatter, icon: 'scatter' },
     ]
     return icons.filter((x) => x.value != undefined)
 })

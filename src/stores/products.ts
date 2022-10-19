@@ -19,6 +19,7 @@ export const useProducts = defineStore('products', {
         options: () =>
             [
                 'core-space',
+                'zed',
                 'utility',
                 'first-born',
                 'fury',
@@ -26,6 +27,24 @@ export const useProducts = defineStore('products', {
                 'rysa',
                 'trading-post-5',
             ] as ProductType[],
+        getBuyNowLink: () => {
+            return (p: ProductType) =>
+                ({
+                    'core-space':
+                        'https://battlesystems.co.uk/product/core-space-starter-set/',
+                    'zed': 'https://battlesystems.co.uk/product/core-space-shootout-at-zeds-expansion/',
+                    'first-born':
+                        'https://battlesystems.co.uk/product/core-space-first-born-starter-set/',
+                    'fury': 'https://battlesystems.co.uk/product/core-space-fury-of-the-insane-god-expansion/',
+                    'line-of-fire':
+                        'https://battlesystems.co.uk/product/core-space-in-the-line-of-fire-expansion/',
+                    'rysa': 'https://battlesystems.co.uk/product/core-space-gates-of-rysa-expansion/',
+                    'trading-post-5':
+                        'https://battlesystems.co.uk/product/core-space-trading-post-5-expansion/',
+                    'utility':
+                        'https://battlesystems.co.uk/product/core-space-utility-dashboards/',
+                }[p])
+        },
     },
     actions: {
         save() {

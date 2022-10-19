@@ -49,9 +49,10 @@
     --light-bg: linear-gradient(45deg, #b5dde5, #d7f6fa, #80b4b4);
     --light-color: #000000;
 
-
     /* THEME COLORS */
     --body-bg: linear-gradient(45deg, #293c33, #151310, #4c605f, #293332);
+    --text-gradient: linear-gradient(135deg, #6b5e8d 45%, #aadabd);
+
     --body-color: #ffffff;
 
     --header-bg: rgba(0, 0, 0, .75);
@@ -77,6 +78,7 @@
     --secondary-a4: rgba(113, 38, 25, .75);
 
     --link-color: #7ce8e8;
+    --link-contrast: #151130;
 
     --input-bg: #151310;
     --input-color: #ffffff;
@@ -89,6 +91,7 @@ html[data-theme='light'] {
     --primary-contrast: black;
 
     --link-color: #be20de;
+    --link-contrast: #ffffff;
 
     --input-bg: #ffffff;
     --input-color: #151310;

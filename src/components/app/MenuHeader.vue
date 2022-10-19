@@ -1,6 +1,7 @@
 <script lang="ts" setup>
 import ThemeToggle from '@/components/buttons/ThemeToggle.vue'
 import InstallApp from '@/components/buttons/InstallApp.vue'
+import Logo from '@/components/app/CoreSpaceLogo.vue'
 
 import { computed, ref, watch } from 'vue'
 import { useTokens } from '@/stores/tokens'
@@ -53,8 +54,7 @@ const onClear = (ev: MouseEvent) => {
     <header :class="{ searching }" class="menu">
         <div class="container">
             <router-link class="logo" to="/">
-                <span>Core</span>
-                <span>Space</span>
+                <Logo />
             </router-link>
             <form
                 :class="searchClass"
@@ -121,7 +121,7 @@ const onClear = (ev: MouseEvent) => {
     font-size: 150%;
     font-weight: bold;
     display: grid;
-    margin-right: 1.5em;
+    margin-right: 0.5em;
     padding: 0 0.5em;
     transition: all 0.3s ease-out;
     text-align: center;
@@ -130,13 +130,13 @@ const onClear = (ev: MouseEvent) => {
     opacity: 0.75;
     color: var(--body-color);
 
-    span:first-child {
-        font-size: 125%;
+    img {
+        height: 2em;
     }
 
     &:active,
     &:hover {
-        transform: scale(1.15);
+        transform: scale(1.1);
         opacity: 1;
     }
 }

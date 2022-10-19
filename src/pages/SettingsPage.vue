@@ -71,6 +71,7 @@ const onSave = (ev: SubmitEvent) => {
 .settings {
     max-width: 1400px;
     margin: 1em auto;
+    padding-bottom: 50vh;
 
     header {
         margin-bottom: 3em;
