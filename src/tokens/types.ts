@@ -3,11 +3,12 @@ export type ProductType =
     | 'zed'
     | 'galactic-corps'
     | 'purge-outbreak'
-    | 'dead-or-alive'
     | 'cygnus'
     | 'poseidon'
     | 'skylark'
     | 'yamato'
+    | 'rogue'
+    | 'shift-change'
     | 'first-born'
     | 'fury'
     | 'line-of-fire'
@@ -20,7 +21,8 @@ export type TokenMap = {
     'zed': CoreSpaceToken[]
     'galactic-corps': CoreSpaceToken[]
     'purge-outbreak': CoreSpaceToken[]
-    'dead-or-alive': CoreSpaceToken[]
+    'rogue': CoreSpaceToken[]
+    'shift-change': CoreSpaceToken[]
     'cygnus': CoreSpaceToken[]
     'poseidon': CoreSpaceToken[]
     'skylark': CoreSpaceToken[]
@@ -44,6 +46,7 @@ export type AttributeType =
     | 'time-pulse'
     | 'scatter-core'
     | 'action-2'
+    | 'ammo-21'
     | 'ammo-7'
     | 'ammo-box'
     | 'ammo-d6'
@@ -168,6 +171,8 @@ export type ItemDescription =
     | 'chit'
     | 'aug'
     | 'merg'
+    | 'purge-tokens'
+    | 'port'
 
 export type CoreSpaceToken = TokenType & {
     key: string
@@ -187,6 +192,7 @@ export type TokenType = {
         | 'lime'
         | 'brown'
         | 'white'
+        | 'teal'
     size: 'nano' | 'sm' | 'md' | 'lg' | 'xl' | 'umd' | 'ulg'
     close?: number
     heavy?: number

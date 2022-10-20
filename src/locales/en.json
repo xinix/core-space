@@ -25,6 +25,8 @@
   "poseidon": "Poseidon Crew",
   "skylark": "Skylark Crew",
   "yamato": "Yamato Crew",
+  "rogue": "Rogue Purge Expansion",
+  "shift-change": "Shift Change at MegaCorp Expansion",
   "no_result": "This is not what you were looking for, but we couldn't find it either.",
   "buy-now": "Buy now!",
   "buy": "Buy",
@@ -164,5 +166,8 @@
   "mission-key": "A character carrying this item may <strong>move freely through closed and locked doors</strong>. Doors that they pass through will remain closed and/or locked if they already were. This item only works in the mission in which it is found.",
   "rock": "This item is used for mission rewards - you can <strong>carry a lot of money in a small space!</strong>",
   "heal-2": "When activated this item adds 2 health pegs. This may take a character over their starting health as long as there is space on the dashboard.",
-  "impervious-1": "This character can use the <strong>Impervious (up to level 1)</strong> skill.<ol><li><strong>Reaction:</strong> Use when another rule or Skill causes you to lose any actions or miss your next turn. Ignore the effect.</li></ol>"
+  "impervious-1": "This character can use the <strong>Impervious (up to level 1)</strong> skill.<ol><li><strong>Reaction:</strong> Use when another rule or Skill causes you to lose any actions or miss your next turn. Ignore the effect.</li></ol>",
+  "purge-tokens": "<strong>Rogue Purge</strong> have a wide range of brand-new equipment exclusive to them - the teal tokens. This equipment represents items they have crafted by splicing Purge technology with regular combat gear, often physically grafting the items onto their bodies.<br><br><strong>These items cannot be found or purchased.</strong> Instead in the Trader Phase the player will visit their Workshop. While there the player can combine tokens to create one of the new Purge items. The <strong>ingredients</strong> can be found on the back of the token.",
+  "ammo-21": "<strong>Purge Ammo Module:</strong> This item contains three batches of ammo. On first use the token is turned to have 14 at the top. On second use it is turned to have the 7 at the top, on the third use it is discarded. If this item has not yet been discarded at the end of a campaign mission, it is refilled automatically and placed face up in the next mission.",
+  "port": "<strong>Matter Tagger:</strong> This item teleports cargo back to your ship. When Searching a create, remove all of the contents and place it directly into your ship's hold. Any items that do not fit are discarded."
 }

@@ -177,6 +177,10 @@ const mustacheIcons = computed(() => {
         &.violet:hover {
             box-shadow: var(--glow-violet);
         }
+
+        &.teal:hover {
+            box-shadow: var(--glow-teal);
+        }
     }
 
     &.active {
@@ -242,6 +246,10 @@ const mustacheIcons = computed(() => {
 
         &.violet .more {
             box-shadow: var(--glow-violet);
+        }
+
+        &.teal .more {
+            box-shadow: var(--glow-teal);
         }
     }
 

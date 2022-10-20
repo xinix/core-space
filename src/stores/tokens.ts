@@ -40,7 +40,9 @@ export const useTokens = defineStore('tokens', {
         load(products: ProductType[]) {
             const items: CoreSpaceToken[] = []
             for (const product of products) {
-                items.push(...tokens[product])
+                if (tokens[product] != undefined) {
+                    items.push(...tokens[product])
+                }
             }
             this.rawItems.splice(
                 0,

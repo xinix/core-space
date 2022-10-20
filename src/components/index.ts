@@ -2,6 +2,7 @@
 
 export default {
     Action2Icon: () => import('@/components/icons/Action2Icon.vue'),
+    Ammo21Icon: () => import('@/components/icons/Ammo21Icon.vue'),
     Ammo7Icon: () => import('@/components/icons/Ammo7Icon.vue'),
     AmmoBoxIcon: () => import('@/components/icons/AmmoBoxIcon.vue'),
     AmmoD6Icon: () => import('@/components/icons/AmmoD6Icon.vue'),

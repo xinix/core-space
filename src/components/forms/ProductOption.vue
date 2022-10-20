@@ -47,6 +47,7 @@ const onClickBuy = (ev: MouseEvent) => {
             </header>
         </div>
         <a
+            v-if="products.getBuyNowLink(option)"
             :href="products.getBuyNowLink(option)"
             class="buy-now"
             target="_blank"
@@ -245,6 +246,14 @@ const onClickBuy = (ev: MouseEvent) => {
 
 .product-option.yamato figure {
     background-image: var(--yamato);
+}
+
+.product-option.rogue figure {
+    background-image: var(--rogue);
+}
+
+.product-option.shift-change figure {
+    background-image: var(--shift-change);
 }
 
 .product-option.first-born figure {

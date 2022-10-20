@@ -11,11 +11,12 @@ import fury from '@/tokens/products/fury'
 import rysa from '@/tokens/products/rysa'
 import tradingPost5 from '@/tokens/products/trading-post-5'
 import purgeOutbreak from '@/tokens/products/purge-outbreak'
-import deadOrAlive from '@/tokens/products/dead-or-alive'
+import shiftChange from '@/tokens/products/shift-change'
 import cygnus from '@/tokens/products/cygnus'
 import poseidon from '@/tokens/products/poseidon'
 import skylark from '@/tokens/products/skylark'
 import yamato from '@/tokens/products/yamato'
+import rouge from '@/tokens/products/rouge'
 
 function toCoreSpaceToken(token: TokenType): CoreSpaceToken {
     return {
@@ -29,11 +30,12 @@ const tokens: TokenMap = {
     'zed': zed.map(toCoreSpaceToken),
     'galactic-corps': galacticCorps.map(toCoreSpaceToken),
     'purge-outbreak': purgeOutbreak.map(toCoreSpaceToken),
-    'dead-or-alive': deadOrAlive.map(toCoreSpaceToken),
     'cygnus': cygnus.map(toCoreSpaceToken),
     'poseidon': poseidon.map(toCoreSpaceToken),
     'skylark': skylark.map(toCoreSpaceToken),
     'yamato': yamato.map(toCoreSpaceToken),
+    'rogue': rouge.map(toCoreSpaceToken),
+    'shift-change': shiftChange.map(toCoreSpaceToken),
     'first-born': firstBorn.map(toCoreSpaceToken),
     'fury': fury.map(toCoreSpaceToken),
     'line-of-fire': lineOfFire.map(toCoreSpaceToken),
