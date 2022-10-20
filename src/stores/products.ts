@@ -23,6 +23,10 @@ export const useProducts = defineStore('products', {
                 'galactic-corps',
                 'purge-outbreak',
                 'dead-or-alive',
+                'cygnus',
+                'poseidon',
+                'skylark',
+                'yamato',
                 'utility',
                 'first-born',
                 'fury',
@@ -42,6 +46,14 @@ export const useProducts = defineStore('products', {
                         'https://battlesystems.co.uk/product/core-space-purge-outbreak-expansion/',
                     'dead-or-alive':
                         'https://battlesystems.co.uk/product/core-space-wanted-dead-or-alive/',
+                    'cygnus':
+                        'https://battlesystems.co.uk/product/core-space-cygnus-crew/',
+                    'poseidon':
+                        'https://battlesystems.co.uk/product/core-space-poseidon-crew/',
+                    'skylark':
+                        'https://battlesystems.co.uk/product/core-space-skylark-crew/',
+                    'yamato':
+                        'https://battlesystems.co.uk/product/core-space-yamato-crew/',
                     'first-born':
                         'https://battlesystems.co.uk/product/core-space-first-born-starter-set/',
                     'fury': 'https://battlesystems.co.uk/product/core-space-fury-of-the-insane-god-expansion/',

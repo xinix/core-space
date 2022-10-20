@@ -63,6 +63,8 @@ const tokens: TokenType[] = [
         color: 'blue',
         size: 'sm',
         icons: ['time-pulse', 'reliable', 'discard'],
+        buy: 4,
+        sell: 1,
     },
     {
         product: 'galactic-corps',

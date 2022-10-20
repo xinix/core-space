@@ -4,6 +4,10 @@ export type ProductType =
     | 'galactic-corps'
     | 'purge-outbreak'
     | 'dead-or-alive'
+    | 'cygnus'
+    | 'poseidon'
+    | 'skylark'
+    | 'yamato'
     | 'first-born'
     | 'fury'
     | 'line-of-fire'
@@ -17,6 +21,10 @@ export type TokenMap = {
     'galactic-corps': CoreSpaceToken[]
     'purge-outbreak': CoreSpaceToken[]
     'dead-or-alive': CoreSpaceToken[]
+    'cygnus': CoreSpaceToken[]
+    'poseidon': CoreSpaceToken[]
+    'skylark': CoreSpaceToken[]
+    'yamato': CoreSpaceToken[]
     'first-born': CoreSpaceToken[]
     'fury': CoreSpaceToken[]
     'line-of-fire': CoreSpaceToken[]
@@ -26,6 +34,7 @@ export type TokenMap = {
 }
 
 export type AttributeType =
+    | 'impervious-1'
     | 'heal-2'
     | 'mission-key'
     | 'flash'
@@ -156,6 +165,9 @@ export type ItemDescription =
     | 'tech-pack'
     | 'mothers-venom'
     | 'rock'
+    | 'chit'
+    | 'aug'
+    | 'merg'
 
 export type CoreSpaceToken = TokenType & {
     key: string

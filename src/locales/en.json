@@ -21,6 +21,10 @@
   "rysa": "Gates of Ry'sa Expansion",
   "trading-post-5": "Trading Post 5 Expansion",
   "utility": "Utility Dashboards",
+  "cygnus": "Cygnus Crew",
+  "poseidon": "Poseidon Crew",
+  "skylark": "Skylark Crew",
+  "yamato": "Yamato Crew",
   "no_result": "This is not what you were looking for, but we couldn't find it either.",
   "buy-now": "Buy now!",
   "buy": "Buy",
@@ -83,7 +87,10 @@
   "mineral": "<strong>Minerals</strong> have no use in game, but they can be sold in the Trade Phase or combined to create powerful new weapons combining First Born and standard galactic technologies.<br><br><strong>Important!</strong> All mineral tokens must be returned to the supply/pouch between games. If you choose to use a mineral for crafting, but do not want to craft an item just yet, note it down with your stored UA to use later. The same will apply if a mineral token gives you two different minerals and you only choose to use one of them.",
   "free-close": "When this character moves into contact with an enemy, it gets an immediate <strong>free Close Assault action</strong>.",
   "na": "This item <strong>cannot be used in the same mission</strong> that you find it - turn it face down to remind yourself.",
-  "mech": "<strong>Exclusive Item:</strong> This weapon or item is exclusive to a characters with a MECH class.",
+  "mech": "<strong>Exclusive Item:</strong> This weapon or item is exclusive to characters with a MECH class.",
+  "aug": "<strong>Exclusive Item:</strong> This weapon or item is exclusive to characters with a AUGMENTED class.",
+  "chit": "<strong>Exclusive Item:</strong> This weapon or item is exclusive to characters with a CHIT class.",
+  "merg": "<strong>Exclusive Item:</strong> This weapon or item is exclusive to characters with a MERG class.",
   "buy-with-crystal": "This item can be crafted by spending minerals in its buy value in addition to a UA cost.<br><br>To craft this <strong>{0}</strong> you will need <strong>{1}UA</strong> and <strong>{2} crystal(s):</strong>",
   "sell-with-crystal": "This item can be sold for minerals in addition to a UA value.<br><br>If you sell this <strong>{0}</strong> you will get <strong>{1}UA</strong> and <strong>{2} crystal(s):</strong>",
   "effortless-reload": "This weapon allows you to <strong>Reload as an effortless</strong> action.",
@@ -156,5 +163,6 @@
   "flash": "This item is thrown like a grenade. All characters within 1 square of the detonation point are <strong>knocked prone</strong> and lose one action in their next turn (mark them with a Reminder Counter). Characters within 2 squares are not knocked prone but will still lose one action in their next turn.",
   "mission-key": "A character carrying this item may <strong>move freely through closed and locked doors</strong>. Doors that they pass through will remain closed and/or locked if they already were. This item only works in the mission in which it is found.",
   "rock": "This item is used for mission rewards - you can <strong>carry a lot of money in a small space!</strong>",
-  "heal-2": "When activated this item adds 2 health pegs. This may take a character over their starting health as long as there is space on the dashboard."
+  "heal-2": "When activated this item adds 2 health pegs. This may take a character over their starting health as long as there is space on the dashboard.",
+  "impervious-1": "This character can use the <strong>Impervious (up to level 1)</strong> skill.<ol><li><strong>Reaction:</strong> Use when another rule or Skill causes you to lose any actions or miss your next turn. Ignore the effect.</li></ol>"
 }

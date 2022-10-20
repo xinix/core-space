@@ -2,9 +2,9 @@ import { defineConfig } from 'vite'
 import { resolve } from 'path'
 import vue from '@vitejs/plugin-vue'
 import { VitePWA } from 'vite-plugin-pwa'
-import fs from 'fs' /* More info https://vitejs.dev/config/ */
+import fs from 'fs'
+import { createHtmlPlugin } from 'vite-plugin-html'
 
-/* More info https://vitejs.dev/config/ */
 export default defineConfig({
     define: {
         __VUE_I18N_FULL_INSTALL__: true,
@@ -32,6 +32,29 @@ export default defineConfig({
     },
     plugins: [
         vue(),
+        createHtmlPlugin({
+            minify: false,
+            pages: [
+                {
+                    filename: 'index.html',
+                    template: 'index.html',
+                    injectOptions: {
+                        data: {
+                            version: process.env.npm_package_version,
+                        },
+                    },
+                },
+                {
+                    filename: '404.html',
+                    template: '404.html',
+                    injectOptions: {
+                        data: {
+                            version: process.env.npm_package_version,
+                        },
+                    },
+                },
+            ],
+        }),
         VitePWA({
             registerType: 'autoUpdate',
             includeAssets: ['favicon.ico', 'apple-touch-icon.png', 'logo.svg'],

@@ -59,6 +59,7 @@ export default {
     IgnoreKnowledgeIcon: () =>
         import('@/components/icons/IgnoreKnowledgeIcon.vue'),
     IgnoreShieldIcon: () => import('@/components/icons/IgnoreShieldIcon.vue'),
+    Impervious1Icon: () => import('@/components/icons/Impervious1Icon.vue'),
     InfiniteIcon: () => import('@/components/icons/InfiniteIcon.vue'),
     InfraLensIcon: () => import('@/components/icons/InfraLensIcon.vue'),
     InterruptIcon: () => import('@/components/icons/InterruptIcon.vue'),

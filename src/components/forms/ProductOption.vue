@@ -231,6 +231,22 @@ const onClickBuy = (ev: MouseEvent) => {
     background-image: var(--dead-or-alive);
 }
 
+.product-option.cygnus figure {
+    background-image: var(--cygnus);
+}
+
+.product-option.poseidon figure {
+    background-image: var(--poseidon);
+}
+
+.product-option.skylark figure {
+    background-image: var(--skylark);
+}
+
+.product-option.yamato figure {
+    background-image: var(--yamato);
+}
+
 .product-option.first-born figure {
     background-image: var(--first-born);
 }
