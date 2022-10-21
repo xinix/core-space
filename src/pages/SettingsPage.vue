@@ -7,6 +7,8 @@ import ProgressBar from '@/components/forms/ProgressBar.vue'
 import CoreSpaceLogo from '@/components/app/CoreSpaceLogo.vue'
 import KofiIcon from '@/components/app/KofiIcon.vue'
 
+import nicoUrl from '@/assets/images/nico.png?url'
+
 import { useTheme } from '@/stores/theme'
 import { useProducts } from '@/stores/products'
 import { useTokens } from '@/stores/tokens'
@@ -80,9 +82,18 @@ const version = APP_VERSION
                             >https://www.BattleSystems.co.uk</a
                         >
                     </div>
-                    <strong>version {{ version }}</strong>
-                    <div class="about-me">
+                    <div>
+                        <strong>version {{ version }}</strong>
                         <p>{{ $t('this-is-free') }}</p>
+                    </div>
+                    <div class="about-me">
+                        <img
+                            :src="nicoUrl"
+                            alt="This is me!"
+                            class="float-pic"
+                        />
+                        <p v-html="$t('about-me')" />
+
                         <a
                             class="buy-me-a-coffee"
                             href="https://ko-fi.com/Q5Q7FSPQD"
@@ -200,8 +211,15 @@ const version = APP_VERSION
         }
     }
 
-    .about-me p {
+    .about-me {
         font-size: 1.25em;
+        line-height: 1.5;
+
+        img {
+            width: 100%;
+            max-width: 20em;
+            margin: 0 auto;
+        }
     }
 
     .license {
@@ -214,6 +232,13 @@ const version = APP_VERSION
             font-family: monospace;
             max-width: 600px;
         }
+    }
+}
+
+@media (min-width: 35em) {
+    .float-pic {
+        float: left;
+        margin: 0 1em 0.25em 0 !important;
     }
 }
 </style>
