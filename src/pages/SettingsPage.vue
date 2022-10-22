@@ -1,5 +1,4 @@
 <script lang="ts" setup>
-import BackButton from '@/components/buttons/BackButton.vue'
 import FormField from '@/components/forms/FormField.vue'
 import ThemeOption from '@/components/forms/ThemeOption.vue'
 import ProductSelector from '@/components/forms/ProductSelector.vue'
@@ -32,7 +31,6 @@ const version = APP_VERSION
 <template>
     <div class="settings">
         <header>
-            <BackButton class="btn" />
             <h1>
                 <span class="material-symbols-rounded">Settings</span>
                 {{ $t('preferences') }}

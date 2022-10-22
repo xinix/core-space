@@ -5,9 +5,14 @@ const TokenPage = () => import('@/pages/TokenPage.vue')
 const SettingsPage = () => import('@/pages/SettingsPage.vue')
 
 const routes = [
-    { path: '/', component: TokensPage },
-    { path: '/item/:slug', component: TokenPage, props: true },
-    { path: '/settings', component: SettingsPage },
+    { path: '/', component: TokensPage, meta: { search: true } },
+    {
+        path: '/item/:slug',
+        component: TokenPage,
+        props: true,
+        meta: { search: true, back: true },
+    },
+    { path: '/settings', component: SettingsPage, meta: { back: true } },
 ]
 
 function setupRouter() {
@@ -17,9 +22,13 @@ function setupRouter() {
     })
     router.afterEach(() => {
         const el = document.getElementById('app')
+
         if (el != null) {
             setTimeout(() => {
-                el.scrollTop = 0
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth',
+                })
             }, 200)
         }
     })

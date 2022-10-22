@@ -1,6 +1,5 @@
 <script lang="ts" setup>
 import TokenDetails from '@/components/tokens/TokenDetails.vue'
-import BackButton from '@/components/buttons/BackButton.vue'
 
 import { useTokens } from '@/stores/tokens'
 import { computed } from 'vue'
@@ -13,9 +12,6 @@ const item = computed(() => tokens.getItemByKey(props.slug))
 
 <template>
     <div class="container">
-        <header class="header">
-            <BackButton />
-        </header>
         <main v-if="item" class="details">
             <TokenDetails :item="item" active class="item" />
         </main>

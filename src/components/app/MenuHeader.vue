@@ -2,6 +2,7 @@
 import ThemeToggle from '@/components/buttons/ThemeToggle.vue'
 import InstallApp from '@/components/buttons/InstallApp.vue'
 import Logo from '@/components/app/CoreSpaceLogo.vue'
+import BackButton from '@/components/buttons/BackButton.vue'
 
 import { computed, ref, watch } from 'vue'
 import { useTokens } from '@/stores/tokens'
@@ -11,8 +12,19 @@ import { debounce } from '@/helpers/debounce'
 const tokens = useTokens()
 const router = useRouter()
 
+const props = withDefaults(
+    defineProps<{ showSearch?: boolean; showBack?: boolean }>(),
+    {
+        showBack: false,
+        showSearch: false,
+    }
+)
+
 const q = ref(tokens.q)
 const searching = ref(false)
+
+const showActions = computed(() => !searching.value)
+const showLogo = computed(() => !searching.value)
 
 watch(
     q,
@@ -21,6 +33,12 @@ watch(
         router.push('/')
     }, 600)
 )
+
+const headerClass = computed(() => ({
+    'searching': searching.value,
+    'with-back': props.showBack,
+    'with-search': props.showSearch,
+}))
 
 const searchClass = computed(() => ({
     'has-text': q.value.length > 0,
@@ -51,46 +69,56 @@ const onClear = (ev: MouseEvent) => {
 </script>
 
 <template>
-    <header :class="{ searching }" class="menu">
+    <header :class="headerClass" class="menu">
         <div class="container">
-            <router-link class="logo" to="/">
-                <Logo />
-            </router-link>
-            <form
-                :class="searchClass"
-                class="search"
-                @submit.prevent="onSearch"
-            >
-                <label class="label" for="q">
-                    <span class="material-symbols-rounded">search</span>
-                </label>
-                <input
-                    id="q"
-                    v-model.trim="q"
-                    :placeholder="$t('search_placeholder')"
-                    autocapitalize="off"
-                    autocomplete="off"
-                    autocorrect="off"
-                    class="search-input"
-                    name="q"
-                    type="text"
-                    @blur="onBlur"
-                    @focus="onFocus"
-                />
-                <input
-                    class="material-symbols-rounded search-clear"
-                    type="reset"
-                    value="close"
-                    @click.prevent="onClear"
-                />
-            </form>
-            <div class="actions">
-                <InstallApp class="install" />
-                <router-link to="/settings">
-                    <span class="material-symbols-rounded">Settings</span>
+            <transition duration="100" mode="out-in" name="slide">
+                <BackButton v-if="showBack" class="back" />
+                <router-link v-else-if="showLogo" class="logo" to="/">
+                    <Logo />
                 </router-link>
-                <ThemeToggle class="theme" />
-            </div>
+            </transition>
+
+            <transition name="slide">
+                <form
+                    v-if="showSearch"
+                    :class="searchClass"
+                    class="search"
+                    @submit.prevent="onSearch"
+                >
+                    <label class="label" for="q">
+                        <span class="material-symbols-rounded">search</span>
+                    </label>
+                    <input
+                        id="q"
+                        v-model.trim="q"
+                        :placeholder="$t('search_placeholder')"
+                        autocapitalize="off"
+                        autocomplete="off"
+                        autocorrect="off"
+                        class="search-input"
+                        name="q"
+                        type="text"
+                        @blur="onBlur"
+                        @focus="onFocus"
+                    />
+                    <input
+                        class="material-symbols-rounded search-clear"
+                        type="reset"
+                        value="close"
+                        @click.prevent="onClear"
+                    />
+                </form>
+            </transition>
+
+            <transition duration="100" name="slide">
+                <div v-if="showActions" class="actions">
+                    <InstallApp class="install" />
+                    <router-link to="/settings">
+                        <span class="material-symbols-rounded">Settings</span>
+                    </router-link>
+                    <ThemeToggle class="theme" />
+                </div>
+            </transition>
         </div>
     </header>
 </template>
@@ -107,12 +135,12 @@ const onClear = (ev: MouseEvent) => {
     backdrop-filter: blur(5px) grayscale(100%);
 
     .container {
-        display: grid;
+        display: flex;
         align-items: center;
         min-height: 5rem;
         margin: 0;
         padding: 0 1em;
-        grid-template-columns: auto 1fr auto;
+        gap: 0.5em;
     }
 }
 
@@ -121,7 +149,6 @@ const onClear = (ev: MouseEvent) => {
     font-size: 150%;
     font-weight: bold;
     display: grid;
-    margin-right: 0.5em;
     padding: 0 0.5em;
     transition: all 0.3s ease-out;
     text-align: center;
@@ -141,19 +168,22 @@ const onClear = (ev: MouseEvent) => {
     }
 }
 
+.back {
+    padding-right: 0.5em;
+}
+
 .actions {
     display: flex;
     align-items: center;
-    padding-left: 1em;
 }
 
 .search {
     font-size: 16px;
     position: relative;
     display: flex;
+    flex: 1;
     width: 100%;
     max-width: 40vw;
-    margin: 0 1em;
     padding: 0 1em;
     transition: all 0.2s ease-out;
     color: var(--input-color);
@@ -225,6 +255,7 @@ const onClear = (ev: MouseEvent) => {
 
 .actions {
     display: flex;
+    margin-left: auto;
     transition: all 0.2s ease-out;
     color: var(--body-color);
 
@@ -246,60 +277,28 @@ const onClear = (ev: MouseEvent) => {
     }
 }
 
-@media (min-width: 601px) {
-    .searching {
-        .container {
-            overflow: hidden;
-        }
-
-        .search {
-            left: 0;
-            max-width: 80vw;
-            transform: translateX(-6em);
-            animation: grow 300ms ease-in;
-
-            .search-button {
-                transform: translateX(0);
-            }
-        }
-
-        .logo {
-            transform: translateX(-5em);
-            opacity: 0;
-        }
-
-        .actions {
-            transform: translateX(20em);
-            opacity: 0;
-        }
+.searching {
+    .container {
+        overflow: hidden;
     }
-}
 
-@keyframes grow {
-    0% {
-        max-width: 40vw;
-    }
-    100% {
-        max-width: 60vw;
+    .search {
+        left: 0;
+        max-width: 90vw;
+
+        .search-button {
+            transform: translateX(0);
+        }
     }
 }
 
 @media (max-width: 600px) {
-    .container {
-        display: flex;
-        align-items: center;
-    }
     .search {
         flex: 1;
         width: 100%;
         max-width: 100%;
         padding: 0 0.5em;
     }
-    .actions {
-        margin-right: 0.5em;
-        justify-self: flex-end;
-    }
-    .logo,
     .theme {
         display: none;
     }
