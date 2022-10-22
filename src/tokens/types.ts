@@ -178,22 +178,26 @@ export type CoreSpaceToken = TokenType & {
     key: string
 }
 
+export type TokenColor =
+    | 'blue'
+    | 'yellow'
+    | 'orange'
+    | 'purple'
+    | 'violet'
+    | 'green'
+    | 'lime'
+    | 'brown'
+    | 'white'
+    | 'teal'
+
+export type TokenSize = 'nano' | 'sm' | 'md' | 'lg' | 'xl' | 'umd' | 'ulg'
+
 export type TokenType = {
     product: ProductType
     slug: string
     name: string
-    color:
-        | 'blue'
-        | 'yellow'
-        | 'orange'
-        | 'purple'
-        | 'violet'
-        | 'green'
-        | 'lime'
-        | 'brown'
-        | 'white'
-        | 'teal'
-    size: 'nano' | 'sm' | 'md' | 'lg' | 'xl' | 'umd' | 'ulg'
+    color: TokenColor
+    size: TokenSize
     close?: number
     heavy?: number
     throw?: number

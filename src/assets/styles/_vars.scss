@@ -39,6 +39,19 @@
     --glow-lime: 0px 0px 8px 2px #9a9a36, 0px 0px 10px 8px #e3e2bd;
     --glow-violet: 0px 0px 8px 2px #3d509f, 0px 0px 10px 8px #a0aed7;
     --glow-teal: 0px 0px 8px 2px #038686, 0px 0px 10px 8px #3fefef;
+    --glow-brown: 0px 0px 8px 2px #5c3111, 0px 0px 10px 8px #bea17f;
+
+    --blue: linear-gradient(45deg, #1e7bb8, #a5e1e1);
+    --orange: linear-gradient(45deg, #c0210c, #e4844b);
+    --yellow: linear-gradient(45deg, #e2b84d, #ebdcad);
+    --purple: linear-gradient(45deg, #7d1e5e, #d3a59f);
+    --green: linear-gradient(45deg, #529c42, #97c48a);
+    --white: linear-gradient(45deg, #aeaeae, #e5e5e5);
+    --lime: linear-gradient(45deg, #9a9a36, #e3e2bd);
+    --violet: linear-gradient(45deg, #3d509f, #a0aed7);
+    --teal: linear-gradient(45deg, #038686, #3fefef);
+    --brown: linear-gradient(45deg, #5c3111, #bea17f);
+
 
     --radiant: 0 0 16px 10px #ffffff, 0 0 24px 24px #ff00ff, 0 0 30px 28px #00ffff;
 
@@ -58,6 +71,9 @@
     --text-gradient: linear-gradient(135deg, #6b5e8d 45%, #aadabd);
 
     --body-color: #ffffff;
+
+    --popup-bg: #151310;
+    --popup-color: #ffffff;
 
     --header-bg: rgba(0, 0, 0, .75);
     --transparent-bg: rgba(0, 0, 0, 0.5);
@@ -93,6 +109,9 @@ html[data-theme='light'] {
     --body-bg: linear-gradient(45deg, #b5dde5, #8ed0cd, #d7f6fa, #80b4b4);
     --body-color: black;
     --primary-contrast: black;
+
+    --popup-bg: #d7f6fa;
+    --popup-color: black;
 
     --link-color: #be20de;
     --link-contrast: #ffffff;

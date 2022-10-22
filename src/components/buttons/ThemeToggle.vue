@@ -115,7 +115,7 @@ $light-bg: #9abbc0;
 }
 
 .theme-toggle {
-    margin: 0 1em;
+    margin: 0;
     background-color: transparent;
 
     &:active,

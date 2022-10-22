@@ -1,5 +1,10 @@
 import { defineStore } from 'pinia'
-import { CoreSpaceToken, ProductType } from '@/tokens/types'
+import {
+    CoreSpaceToken,
+    ProductType,
+    TokenColor,
+    TokenSize,
+} from '@/tokens/types'
 import tokens from '@/tokens'
 
 const sizeOrder = ['nano', 'sm', 'md', 'lg', 'xl', 'umd', 'ulg']
@@ -16,6 +21,8 @@ export const useTokens = defineStore('tokens', {
     state: () => {
         return {
             q: '',
+            sizes: [] as TokenSize[],
+            colors: [] as TokenColor[],
             active: '',
             rawItems: [] as CoreSpaceToken[],
         }
@@ -23,12 +30,21 @@ export const useTokens = defineStore('tokens', {
     getters: {
         items: (state) => {
             const q = state.q.toLowerCase().trim()
+            let result = state.rawItems
             if (q != '') {
-                return state.rawItems.filter(
+                result = result.filter(
                     (a) => a.name.toLowerCase().indexOf(q) >= 0
                 )
             }
-            return state.rawItems
+            if (state.colors.length > 0) {
+                result = result.filter(
+                    (a) => state.colors.indexOf(a.color) >= 0
+                )
+            }
+            if (state.sizes.length > 0) {
+                result = result.filter((a) => state.sizes.indexOf(a.size) >= 0)
+            }
+            return result
         },
         getItemByKey: (state) => {
             return (key: string) => {
@@ -49,6 +65,10 @@ export const useTokens = defineStore('tokens', {
                 this.rawItems.length,
                 ...items.sort(sortToken)
             )
+        },
+        filter(colors: TokenColor[], sizes: TokenSize[]) {
+            this.colors.splice(0, this.colors.length, ...colors)
+            this.sizes.splice(0, this.sizes.length, ...sizes)
         },
     },
 })

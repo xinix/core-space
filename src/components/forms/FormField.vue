@@ -1,10 +1,10 @@
 <script lang="ts" setup>
-defineProps<{ label: string; name: string }>()
+withDefaults(defineProps<{ label?: string; name: string }>(), { label: '' })
 </script>
 
 <template>
     <div class="form-field">
-        <div class="form-label">
+        <div v-if="label" class="form-label">
             <label :for="name">
                 {{ $t(label) }}
             </label>

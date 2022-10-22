@@ -2,6 +2,7 @@
 import ThemeToggle from '@/components/buttons/ThemeToggle.vue'
 import InstallApp from '@/components/buttons/InstallApp.vue'
 import Logo from '@/components/app/CoreSpaceLogo.vue'
+import FilterButton from '@/components/buttons/FilterButton.vue'
 import BackButton from '@/components/buttons/BackButton.vue'
 
 import { computed, ref, watch } from 'vue'
@@ -112,11 +113,12 @@ const onClear = (ev: MouseEvent) => {
 
             <transition duration="100" name="slide">
                 <div v-if="showActions" class="actions">
-                    <InstallApp class="install" />
+                    <FilterButton v-if="showSearch" />
                     <router-link to="/settings">
                         <span class="material-symbols-rounded">Settings</span>
                     </router-link>
                     <ThemeToggle class="theme" />
+                    <InstallApp class="install" />
                 </div>
             </transition>
         </div>
@@ -139,7 +141,7 @@ const onClear = (ev: MouseEvent) => {
         align-items: center;
         min-height: 5rem;
         margin: 0;
-        padding: 0 1em;
+        padding: 0 2em;
         gap: 0.5em;
     }
 }
@@ -258,9 +260,9 @@ const onClear = (ev: MouseEvent) => {
     margin-left: auto;
     transition: all 0.2s ease-out;
     color: var(--body-color);
+    gap: 1.5em;
 
     a {
-        margin-left: 1em;
         transition: all 0.2s ease-out;
         opacity: 0.75;
         color: inherit;
@@ -293,6 +295,9 @@ const onClear = (ev: MouseEvent) => {
 }
 
 @media (max-width: 600px) {
+    .menu .container {
+        padding: 0 1em;
+    }
     .search {
         flex: 1;
         width: 100%;

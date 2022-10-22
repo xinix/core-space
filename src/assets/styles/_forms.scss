@@ -11,24 +11,39 @@
     }
 }
 
+.checkbox + .checkbox {
+    margin-top: 1em;
+}
+
+.form-stacked .form-field {
+    display: grid;
+    grid-gap: 1em;
+    grid-template-columns: 1fr;
+}
+
 @media (min-width: 1000px) {
+
     .form-field {
         display: grid;
+        grid-gap: 1em 1em;
+        grid-template-columns: 1fr 5fr;
 
         .form-label {
             display: block;
         }
-
-        grid-gap: 1em 1em;
-        grid-template-columns: 1fr 5fr;
     }
 }
 
 
 .form-field + .form-field {
     margin-top: 2.5em;
-    padding-top: 2.5em;
-    border-top: dotted 5px var(--primary-transparent);
+}
+
+.form-dotted {
+    .form-field + .form-field {
+        padding-top: 2.5em;
+        border-top: dotted 5px var(--primary-transparent);
+    }
 }
 
 .theme-option + .theme-option {

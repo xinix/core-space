@@ -146,6 +146,10 @@ const mustacheIcons = computed(() => {
             background-color: var(--primary-transparent);
         }
 
+        &.brown:hover {
+            box-shadow: var(--glow-brown);
+        }
+
         &.blue:hover {
             box-shadow: var(--glow-blue);
         }
@@ -214,6 +218,10 @@ const mustacheIcons = computed(() => {
             max-width: available;
             margin-bottom: 0.125em;
             text-align: left;
+        }
+
+        &.brown .more {
+            box-shadow: var(--glow-brown);
         }
 
         &.blue .more {
@@ -287,6 +295,28 @@ const mustacheIcons = computed(() => {
     .token-details.active {
         margin: 0;
         padding: 0.325em;
+
+        .more {
+            padding: 0.5em;
+            background-color: transparent;
+
+            .list {
+                margin: 0;
+            }
+        }
+
+        &.brown .more,
+        &.blue .more,
+        &.orange .more,
+        &.yellow .more,
+        &.green .more,
+        &.white .more,
+        &.purple .more,
+        &.lime .more,
+        &.violet .more,
+        &.teal .more {
+            box-shadow: none;
+        }
     }
     .token-details.active.md,
     .token-details.active.lg,

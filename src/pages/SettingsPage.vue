@@ -37,7 +37,7 @@ const version = APP_VERSION
             </h1>
         </header>
 
-        <form @submit.prevent="onSave">
+        <form class="form-dotted" @submit.prevent="onSave">
             <FormField label="owned_products" name="products">
                 <template #label>
                     <ProgressBar

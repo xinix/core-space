@@ -8,6 +8,10 @@
     }
 }
 
+.popup-open {
+    overflow: hidden;
+}
+
 @media (max-width: 450px) {
     #app {
         > .content {
