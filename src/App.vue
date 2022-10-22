@@ -7,8 +7,8 @@ import { computed } from 'vue'
 
 const rt = useRoute()
 
-const search = computed(() => rt.meta.search ?? false)
-const back = computed(() => rt.meta.back ?? false)
+const search = computed<boolean>(() => !!rt.meta.search)
+const back = computed<boolean>(() => !!rt.meta.back)
 </script>
 
 <template>

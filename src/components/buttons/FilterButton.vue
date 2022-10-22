@@ -46,6 +46,11 @@ const toggle = () => {
     }
 }
 
+const onEsc = (ev: KeyboardEvent) => {
+    toggle()
+    return ev
+}
+
 const onToggle = (ev: MouseEvent) => {
     toggle()
     return ev
@@ -85,7 +90,7 @@ const onClear = (ev: MouseEvent) => {
             class="popup"
             tabindex="-1"
             @click.self="onToggle"
-            @keydown.esc="onToggle"
+            @keydown.esc="onEsc"
         >
             <div class="container">
                 <header class="header">

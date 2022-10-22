@@ -2,11 +2,12 @@
 import { onBeforeUnmount, ref } from 'vue'
 import { debounce } from '@/helpers/debounce'
 
-const toTop = () => {
+const toTop = (ev: MouseEvent) => {
     window.scrollTo({
         top: 0,
         behavior: 'smooth',
     })
+    return ev
 }
 const active = ref(false)
 
