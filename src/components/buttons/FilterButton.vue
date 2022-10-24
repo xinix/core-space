@@ -93,7 +93,7 @@ const onClear = (ev: MouseEvent) => {
             @keydown.esc="onEsc"
         >
             <div class="container">
-                <header class="header">
+                <header>
                     <h2>{{ $t('filter') }}</h2>
                     <button class="btn" type="button" @click="onToggle">
                         <span class="material-symbols-rounded">close</span>
@@ -135,7 +135,7 @@ const onClear = (ev: MouseEvent) => {
                     </FormField>
                 </form>
 
-                <footer class="footer">
+                <footer>
                     <button form="filter-form" type="submit">
                         {{ $t('apply') }}
                     </button>
@@ -210,7 +210,7 @@ const onClear = (ev: MouseEvent) => {
         }
     }
 
-    .header {
+    .container > header {
         display: flex;
         justify-content: space-between;
         padding: 2em;
@@ -236,7 +236,7 @@ const onClear = (ev: MouseEvent) => {
         padding: 0 1.25em;
     }
 
-    .footer {
+    .container > footer {
         button {
             font-family: var(--font-title);
             font-size: 1.5em;

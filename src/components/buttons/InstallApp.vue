@@ -39,7 +39,7 @@ const onInstall = (ev: MouseEvent) => {
 
 <style lang="scss" scoped>
 .btn-link {
-    padding: 0.6em;
+    padding: 0.6em 0.6em 0.6em 0;
     opacity: 0.75;
 
     span {

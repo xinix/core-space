@@ -303,7 +303,33 @@ const onClear = (ev: MouseEvent) => {
         width: 100%;
         max-width: 100%;
         padding: 0 0.5em;
+        border: solid 1px transparent;
+        box-shadow: none;
+
+        .label > span {
+            font-size: 200%;
+        }
+
+        .search-clear,
+        .search-input {
+            transform: scale(0);
+        }
     }
+
+    .searching .search {
+        border: solid 1px var(--primary);
+        box-shadow: var(--glow);
+
+        .label > span {
+            font-size: 150%;
+        }
+
+        .search-clear,
+        .search-input {
+            transform: scale(1);
+        }
+    }
+
     .theme {
         display: none;
     }
