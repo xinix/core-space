@@ -12,19 +12,27 @@ import { useTheme } from '@/stores/theme'
 import { useProducts } from '@/stores/products'
 import { useTokens } from '@/stores/tokens'
 import { APP_VERSION } from '@/helpers/env'
+import { useLanguage } from '@/stores/language'
+import { useI18n } from 'vue-i18n'
 
 const tokens = useTokens()
 const theme = useTheme()
 const products = useProducts()
+const language = useLanguage()
+const i18n = useI18n()
 
 const onSave = (ev: SubmitEvent) => {
     theme.save()
     theme.apply()
     products.save()
     tokens.load(products.active)
+    language.save()
+    language.apply()
+    i18n.locale.value = language.lang
     return ev
 }
 
+const langs = ['en', 'nl']
 const version = APP_VERSION
 </script>
 
@@ -52,6 +60,19 @@ const version = APP_VERSION
                         @update:model-value="onSave"
                     />
                 </template>
+            </FormField>
+
+            <FormField label="lang" name="lang">
+                <select
+                    id="lang"
+                    v-model="language.lang"
+                    name="lang"
+                    @update:model-value="onSave"
+                >
+                    <option v-for="lang in langs" :key="lang" :value="lang">
+                        {{ $t(lang) }}
+                    </option>
+                </select>
             </FormField>
 
             <FormField label="theme" name="theme">

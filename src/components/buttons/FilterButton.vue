@@ -51,6 +51,15 @@ const onEsc = (ev: KeyboardEvent) => {
     return ev
 }
 
+const onEnter = (ev: KeyboardEvent) => {
+    ev.preventDefault()
+    ev.cancelBubble = true
+
+    toggle()
+    tokens.filter(state.colors, state.sizes)
+    return ev
+}
+
 const onToggle = (ev: MouseEvent) => {
     toggle()
     return ev
@@ -58,17 +67,13 @@ const onToggle = (ev: MouseEvent) => {
 
 const onSave = (ev: SubmitEvent) => {
     toggle()
-    setTimeout(() => {
-        tokens.filter(state.colors, state.sizes)
-    }, 100)
+    tokens.filter(state.colors, state.sizes)
     return ev
 }
 
 const onClear = (ev: MouseEvent) => {
     toggle()
-    setTimeout(() => {
-        tokens.filter([], [])
-    }, 100)
+    tokens.filter([], [])
     return ev
 }
 </script>
@@ -91,14 +96,22 @@ const onClear = (ev: MouseEvent) => {
             tabindex="-1"
             @click.self="onToggle"
             @keydown.esc="onEsc"
+            @keydown.enter="onEnter"
         >
             <div class="container">
                 <header>
                     <h2>{{ $t('filter') }}</h2>
-                    <button class="btn" type="button" @click="onToggle">
-                        <span class="material-symbols-rounded">close</span>
-                        <code>ESC</code>
-                    </button>
+
+                    <div class="buttons">
+                        <button class="btn" form="filter-form" type="submit">
+                            <span class="material-symbols-rounded">check</span>
+                            <code>ENTER</code>
+                        </button>
+                        <button class="btn" type="button" @click="onToggle">
+                            <span class="material-symbols-rounded">close</span>
+                            <code>ESC</code>
+                        </button>
+                    </div>
                 </header>
                 <form
                     id="filter-form"
@@ -220,6 +233,10 @@ const onClear = (ev: MouseEvent) => {
             display: inline-flex;
             align-items: center;
             gap: 0.25em;
+        }
+
+        .btn + .btn {
+            margin-left: 0.5em;
         }
 
         code {

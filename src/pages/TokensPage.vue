@@ -32,19 +32,14 @@ const onClear = (ev: MouseEvent) => {
             {{ $t('no_result') }}
         </p>
 
-        <transition-group
-            :class="{ 'with-q': tokens.q !== '' }"
-            class="tokens"
-            name="list"
-            tag="div"
-        >
+        <div :class="{ 'with-q': tokens.q !== '' }" class="tokens">
             <TokenDetails
                 v-for="item in tokens.items"
                 :key="item.key"
                 :item="item"
                 class="item"
             />
-        </transition-group>
+        </div>
     </section>
 </template>
 
