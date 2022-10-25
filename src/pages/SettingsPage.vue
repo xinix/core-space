@@ -21,7 +21,7 @@ const products = useProducts()
 const language = useLanguage()
 const i18n = useI18n()
 
-const onSave = (ev: SubmitEvent) => {
+const onSave = () => {
     theme.save()
     theme.apply()
     products.save()
@@ -29,7 +29,6 @@ const onSave = (ev: SubmitEvent) => {
     language.save()
     language.apply()
     i18n.locale.value = language.lang
-    return ev
 }
 
 const langs = ['en', 'nl']

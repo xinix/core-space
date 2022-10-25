@@ -65,10 +65,9 @@ const onToggle = (ev: MouseEvent) => {
     return ev
 }
 
-const onSave = (ev: SubmitEvent) => {
+const onSave = () => {
     toggle()
     tokens.filter(state.colors, state.sizes)
-    return ev
 }
 
 const onClear = (ev: MouseEvent) => {

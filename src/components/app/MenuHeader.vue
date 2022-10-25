@@ -45,10 +45,9 @@ const searchClass = computed(() => ({
     'has-text': q.value.length > 0,
 }))
 
-const onSearch = (ev: SubmitEvent) => {
+const onSearch = () => {
     tokens.q = q.value
     router.push('/')
-    return ev
 }
 
 const onFocus = (ev: FocusEvent) => {
