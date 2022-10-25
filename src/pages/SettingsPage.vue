@@ -46,20 +46,19 @@ const version = APP_VERSION
         </header>
 
         <form class="form-dotted" @submit.prevent="onSave">
-            <FormField label="owned_products" name="products">
-                <template #label>
-                    <ProgressBar
-                        :total="products.totalCount"
-                        :value="products.inCollectionCount"
-                    />
-                </template>
-                <template #default>
-                    <ProductSelector
-                        v-model="products.active"
-                        :options="products.options"
-                        @update:model-value="onSave"
-                    />
-                </template>
+            <FormField label="theme" name="theme">
+                <ThemeOption
+                    v-model="theme.theme"
+                    name="dark-mode"
+                    value="dark"
+                    @update:model-value="onSave"
+                />
+                <ThemeOption
+                    v-model="theme.theme"
+                    name="light-mode"
+                    value="light"
+                    @update:model-value="onSave"
+                />
             </FormField>
 
             <FormField label="lang" name="lang">
@@ -75,19 +74,20 @@ const version = APP_VERSION
                 </select>
             </FormField>
 
-            <FormField label="theme" name="theme">
-                <ThemeOption
-                    v-model="theme.theme"
-                    name="dark-mode"
-                    value="dark"
-                    @update:model-value="onSave"
-                />
-                <ThemeOption
-                    v-model="theme.theme"
-                    name="light-mode"
-                    value="light"
-                    @update:model-value="onSave"
-                />
+            <FormField label="owned_products" name="products">
+                <template #label>
+                    <ProgressBar
+                        :total="products.totalCount"
+                        :value="products.inCollectionCount"
+                    />
+                </template>
+                <template #default>
+                    <ProductSelector
+                        v-model="products.active"
+                        :options="products.options"
+                        @update:model-value="onSave"
+                    />
+                </template>
             </FormField>
 
             <FormField label="about" name="app">
