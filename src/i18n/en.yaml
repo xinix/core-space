@@ -15,7 +15,7 @@ zed: Shootout at Zed's Expansion
 galactic-corps: Galactic Corps Expansion
 purge-outbreak: Purge Outbreak Expansion
 black-star: Black Star Rising Expansion
-dead-or-alive: 'Wanted: Dead or Alive Expansion'
+wanted: 'Wanted: Dead or Alive Expansion'
 first-born: 'Core Space: First Born'
 fury: Fury of the Insane God Expansion
 line-of-fire: In the Line of Fire Expansion
@@ -43,7 +43,15 @@ en: English
 nl: Nederlands
 fr: Français
 de: Deutsch
-about-me: "Hi! My name is Nico and I love Core Space. Ever since I first saw it on <a href=\"https://www.orderofgamers.com/games/core-space/\" target=\"_blank\">the Esoteric Order of Gamers</a> I was hooked. I bought the core game and every expansion available. In 2020 I backed the First Born kickstarter and also got everything \U0001F60B.<br><br>In 2022 I volunteered to demo First Born at Spiel in Essen, Germany and was lucky enough to be selected. I demoed the game for two days and got to work with Colin, Steward and Simon. After Essen I got the idea to make an App for Core Space where players can lookup the item tokens they find the game and get a detailed explanation about the symbols."
+about-me: >-
+  Hi! My name is Nico and I love Core Space. Ever since I first saw it on 
+  <a href=\"https://www.orderofgamers.com/games/core-space/\" target=\"_blank\">the Esoteric Order 
+  of Gamers</a> I was hooked. I bought the core game and every expansion available. In 2020 I backed 
+  the First Born kickstarter and also got everything \U0001F60B.<br><br>In 2022 I volunteered to 
+  demo First Born at Spiel in Essen, Germany and was lucky enough to be selected. I demoed the game 
+  for two days and got to work with Colin, Steward and Simon. After Essen I got the idea to make an 
+  App for Core Space where players can lookup the item tokens they find the game and get a detailed 
+  explanation about the symbols.
 s: Short
 m: Medium
 l: Long
@@ -766,3 +774,44 @@ lime: Lime
 brown: Brown
 white: White
 teal: Teal
+grapple: >-
+  The <strong>Grapple Gun</strong> can be fired by discarding a <strong>nano grappling hook</strong>
+  token. Choose a target point within LoS and the range shown on the weapon. Place your Trader in
+  that position, ignoring any attack of opportunity and any regardless of any height changes or
+  intervening terrain.
+stim-vest: >-
+  <strong>Stim vest:</strong> When this item is flipped it provides all the benefits shown on the
+  back. However, the character will automatically lose one health in every subsequent assessment
+  phase until they are defeated. While the armour is in effect they cannot use stims of any kind or
+  any item that restores Health. If the character is later revived the effects no longer apply.
+cuffs: >-
+  Items with this icon can be used to <strong>restrain</strong> another character. This could be part
+  of a mission objective, or you may wish to capture an enemy Trader to ransom them back to their
+  Captain!<br><br>You can attempt to cuff an enemy in base contact using a <strong>Persuade 
+  action</strong>. Enemy Traders use their own Skill statistic as a Persuade value to counter the
+  attempt. NPCs without a Persuade statistic cannot be cuffed.<br><br>If successful, place this 
+  token on the target's board. While it is there and a Trader from the captor's crew is in contact
+  with the captive, they cannot take actions or use Skills. They are moved with their captor. When
+  they activate all they can do is attempt to escape. Roll a number of dice equal to Skill statistic
+  or CLOSE ASSAULT value, whichever is higher. Add any MASSIVE values to the roll. If the roll beats
+  the number in the cuffs icon, discard the token. The character may act normally in the following 
+  round.<br><br>If captor and captive are ever not in contact, the captive may make a single Move
+  each turn in addition to their escape attempt.<br><br>Captive NPCs that return to a ship in cuffs
+  will not join their captor's crew.
+flame-fuel: >-
+  This weapon can fire at up to short range. Its attacks are resolved like a blast weapon, although
+  you can choose the target point without rolling. The attacks follow the rules for 
+  <strong>fire</strong>.<br><br>Firing the weapon requires fuel tokens. One of these must be rotated
+  each time it is fired. It does not use ammo pegs, but a pes must still be added to the Hostility 
+  Tracker if it is the first shot fired in a round.
+armour-re-roll: >-
+  The character may force an enemy to re-roll a single die from any attack made against them, unless
+  it ignores armour.
+stun: >-
+  When this weapon would apply damage, apply that many stun tokens instead. Purge, Rogue Purge, 
+  First Born, Machines, and characters wearing Shield Armour cannot suffer stun tokens and this 
+  <strong>weapon has not effect</strong>.<br><br>A character with more stun tokens than they have 
+  actions is knocked prone.<br><br>Characters may spend an action or Skill peg to remove one stun
+  token. Characters cannot perform other actions or use Skills until the tokens are removed.<br><br>
+  Massive characters remove a number of stun tokens at the start of their activation equal to their
+  Massive value.

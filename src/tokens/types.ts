@@ -15,6 +15,8 @@ export type ProductType =
     | 'rysa'
     | 'trading-post-5'
     | 'utility'
+    | 'wanted'
+    | 'black-star'
 
 export type TokenMap = {
     'core-space': CoreSpaceToken[]
@@ -33,9 +35,15 @@ export type TokenMap = {
     'rysa': CoreSpaceToken[]
     'trading-post-5': CoreSpaceToken[]
     'utility': CoreSpaceToken[]
+    'black-star': CoreSpaceToken[]
+    'wanted': CoreSpaceToken[]
 }
 
 export type AttributeType =
+    | 'stun'
+    | 'armour-re-roll'
+    | 'cuffs'
+    | 'grapple'
     | 'impervious-1'
     | 'heal-2'
     | 'mission-key'
@@ -153,6 +161,7 @@ export type AttributeType =
 export type CrystalType = 'green' | 'orange' | 'purple'
 
 export type ItemDescription =
+    | 'flame-fuel'
     | 'rotating'
     | 'larva'
     | 'mineral'
@@ -173,6 +182,7 @@ export type ItemDescription =
     | 'merg'
     | 'purge-tokens'
     | 'port'
+    | 'stim-vest'
 
 export type CoreSpaceToken = TokenType & {
     key: string

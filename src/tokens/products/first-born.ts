@@ -973,7 +973,7 @@ const tokens: TokenType[] = [
     {
         product: 'first-born',
         slug: 'n-target',
-        name: 'Target Lock',
+        name: 'Target laser',
         color: 'orange',
         size: 'nano',
         buy: 15,
@@ -1005,7 +1005,7 @@ const tokens: TokenType[] = [
     {
         product: 'first-born',
         slug: 'n-shield',
-        name: 'Timed shield',
+        name: 'Temporary shield',
         color: 'orange',
         size: 'nano',
         buy: 3,
@@ -1146,7 +1146,7 @@ const tokens: TokenType[] = [
         name: 'Timewarp',
         color: 'blue',
         size: 'nano',
-        icons: ['timewarp'],
+        icons: ['timewarp', 'discard'],
         buy: 7,
         sell: 5,
     },

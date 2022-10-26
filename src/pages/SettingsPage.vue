@@ -1,6 +1,7 @@
 <script lang="ts" setup>
 import FormField from '@/components/forms/FormField.vue'
 import ThemeOption from '@/components/forms/ThemeOption.vue'
+import BaseRadioGroup from '@/components/forms/BaseRadioGroup.vue'
 import ProductSelector from '@/components/forms/ProductSelector.vue'
 import ProgressBar from '@/components/forms/ProgressBar.vue'
 import CoreSpaceLogo from '@/components/app/CoreSpaceLogo.vue'
@@ -61,16 +62,12 @@ const version = APP_VERSION
             </FormField>
 
             <FormField label="lang" name="lang">
-                <select
-                    id="lang"
+                <BaseRadioGroup
                     v-model="language.lang"
+                    :options="langs"
                     name="lang"
                     @update:model-value="onSave"
-                >
-                    <option v-for="lang in langs" :key="lang" :value="lang">
-                        {{ $t(lang) }}
-                    </option>
-                </select>
+                />
             </FormField>
 
             <FormField label="owned_products" name="products">

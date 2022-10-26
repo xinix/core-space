@@ -228,8 +228,12 @@ const onClickBuy = (ev: MouseEvent) => {
     background-image: var(--purge-outbreak);
 }
 
-.product-option.dead-or-alive figure {
-    background-image: var(--dead-or-alive);
+.product-option.wanted figure {
+    background-image: var(--wanted);
+}
+
+.product-option.black-star figure {
+    background-image: var(--black-star);
 }
 
 .product-option.cygnus figure {

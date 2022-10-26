@@ -10,9 +10,11 @@ const productOptions: ProductType[] = [
     'poseidon',
     'skylark',
     'yamato',
-    'utility',
     'rogue',
     'shift-change',
+    'black-star',
+    'wanted',
+    'utility',
     'first-born',
     'fury',
     'line-of-fire',
@@ -66,6 +68,10 @@ export const useProducts = defineStore('products', {
                         'https://battlesystems.co.uk/product/core-space-trading-post-5-expansion/',
                     'utility':
                         'https://battlesystems.co.uk/product/core-space-utility-dashboards/',
+                    'black-star':
+                        'https://battlesystems.co.uk/product/core-space-black-star-rising/',
+                    'wanted':
+                        'https://battlesystems.co.uk/product/core-space-wanted-dead-or-alive/',
                 }[p])
         },
     },

@@ -17,6 +17,8 @@ import poseidon from '@/tokens/products/poseidon'
 import skylark from '@/tokens/products/skylark'
 import yamato from '@/tokens/products/yamato'
 import rouge from '@/tokens/products/rouge'
+import blackStar from '@/tokens/products/black-star'
+import wanted from '@/tokens/products/wanted'
 
 function toCoreSpaceToken(token: TokenType): CoreSpaceToken {
     return {
@@ -42,6 +44,8 @@ const tokens: TokenMap = {
     'rysa': rysa.map(toCoreSpaceToken),
     'trading-post-5': tradingPost5.map(toCoreSpaceToken),
     'utility': utility.map(toCoreSpaceToken),
+    'black-star': blackStar.map(toCoreSpaceToken),
+    'wanted': wanted.map(toCoreSpaceToken),
 }
 
 export default tokens

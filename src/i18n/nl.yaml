@@ -15,7 +15,7 @@ zed: Shootout at Zed's Uitbreiding
 galactic-corps: Galactic Corps Uitbreiding
 purge-outbreak: Purge Outbreak Uitbreiding
 black-star: Black Star Rising Uitbreiding
-dead-or-alive: 'Wanted: Dead or Alive Uitbreiding'
+wanted: 'Wanted: Dead or Alive Uitbreiding'
 first-born: 'Core Space: First Born'
 fury: Fury of the Insane God Uitbreiding
 line-of-fire: In the Line of Fire Uitbreiding
@@ -39,7 +39,15 @@ this-is-free: >-
   Dit is een onofficiële Core Space App, het is volledige gratis en zal dat
   altijd zijn.
 lang: Taal
-about-me: "Hallo! Mijn naam is Nico en ik ben grote fan van Core Space. Sinds ik het voor het eerst zag op <a href=\"https://www.orderofgamers.com/games/core-space/\" target=\"_blank\">the Esoteric Order of Gamers</a>, was ik verkocht. Ik kocht de core game en alle beschikbare uitbreidingen.  In 2020 backte ik de First Born kickstarter en ook daar ging ik \"all-in\" \U0001F60B.<br><br>In 2022 bood ik me aan om First Born te demonstreren op Spiel in Essen, Duitsland en was ik bij de gelukkige  die geselecteerd werden. Ik heb twee dagen demo gegeven en mocht samenwerken met Colin, Steward en Simon.  Na Essen kreeg ik het idee om een Core Space App te maken waar spelers informatie konden opzoeken  over de tokens die ze vonden in het spel."
+about-me: >-
+  Hallo! Mijn naam is Nico en ik ben grote fan van Core Space. Sinds ik het voor het eerst zag op 
+  <a href=\"https://www.orderofgamers.com/games/core-space/\" target=\"_blank\">the Esoteric Order 
+  of Gamers</a>, was ik verkocht. Ik kocht de core game en alle beschikbare uitbreidingen. 
+  In 2020 backte ik de First Born kickstarter en ook daar ging ik \"all-in\" \U0001F60B.<br><br>In 
+  2022 bood ik me aan om First Born te demonstreren op Spiel in Essen, Duitsland en was ik bij de 
+  gelukkige die geselecteerd werden. Ik heb twee dagen demo gegeven en mocht samenwerken met Colin, 
+  Steward en Simon. Na Essen kreeg ik het idee om een Core Space App te maken waar spelers 
+  informatie kunnen opzoeken over de tokens die ze vonden in het spel.
 s: Kort
 m: Medium
 l: Lang
@@ -809,3 +817,49 @@ lime: Limoen
 brown: Bruin
 white: Wit
 teal: Groenblauw
+grapple: >-
+  <strong>Grapple Gun:</strong> dit wapen kan worden afgevuurd door een <strong>nano 
+  grijphaak</strong> fiche af te leggen. Kies een punt binnen LoS en het bereik dat op het wapen 
+  wordt weergegeven. Plaats je Trader in die positie en negeer elke gelegenheidsaanval en ongeacht 
+  eventuele hoogteveranderingen of tussenliggend terrein.
+stim-vest: >-
+  <strong>Stim-vest:</strong> wanneer dit item wordt omgedraaid, biedt het alle voordelen die op de 
+  achterkant worden weergegeven. Het personage verliest echter automatisch één gezondheid in elke 
+  volgende beoordelingsfase totdat het wordt verslagen. Zolang het harnas van kracht is, kunnen ze 
+  geen stims van welke soort dan ook of items die de gezondheid herstellen, gebruiken. Als het 
+  personage later gereanimeerd wordt, zijn de effecten niet langer van toepassing.
+cuffs: >-
+  Items met dit pictogram kunnen worden gebruikt om een ander personage <strong>te bedwingen</strong>.
+  Dit kan deel uitmaken van een missiedoelstelling, of je wilt misschien een vijandelijke handelaar 
+  gevangennemen om losgeld te vragen aan zijn kapitein!<br><br>Je kunt proberen een vijand in 
+  basiscontact te boeien met een <strong>Overtuigingsactie</strong>. Vijandelijke Traders gebruiken 
+  hun eigen vaardigheidsstatistieken als overtuigingswaarde om de poging tegen te gaan. NPC's zonder 
+  een Persuade-statistiek kunnen niet worden geboeid.<br><br>Als dit lukt, plaats je dit token op het 
+  bord van het doelwit. Terwijl het daar is en een Trader van de bemanning van de ontvoerder in 
+  contact staat met de gevangene, kunnen ze geen acties ondernemen of vaardigheden gebruiken. Ze 
+  worden bewogen met hun ontvoerder. Wanneer ze activeren, kunnen ze alleen maar proberen te 
+  ontsnappen. Gooi een aantal dobbelstenen gelijk aan de Vaardigheidsstatistiek of de CLOSE
+  ASSAULT-waarde, welke van beide hoger is. Voeg alle MASSIVE-waarden toe aan de rol. Als de rol het 
+  nummer in het handboei-icoon verslaat, gooi je het fiche weg. Het personage kan zich normaal 
+  gedragen in de volgende ronde.<br><br>Als de gevangene en de ontvoerder geen contact met elkaar 
+  hebben, mag de gevangene naast zijn ontsnappingspoging ook één beweging per beurt maken.<br><br>
+  Gevangen NPC's die geboeid terugkeren naar een schip, zullen zich niet bij de bemanning van hun 
+  ontvoerder voegen.
+flame-fuel: >-
+  Dit wapen kan op korte afstand schieten. Zijn aanvallen worden opgelost als een explosiewapen, 
+  hoewel je het doelwit kunt kiezen zonder te rollen. De aanvallen volgen de regels voor 
+  <strong>vuur</strong>.<br><br>Voor het afvuren van het wapen zijn brandstof-fiches nodig. Een van 
+  deze moet worden gedraaid elke keer dat het wordt afgevuurd. Er wordt geen munitie gebruikt, maar 
+  er moet nog steeds een pin aan de Hostility Tracker worden toegevoegd als dit het eerste schot in 
+  een ronde is.
+armour-re-roll: >-
+  Je kan een vijand dwingen om één dobbelsteen opnieuw te werpen van elke aanval die tegen jou is 
+  gedaan, tenzij het schilden negeert.
+stun: >-
+  Wanneer dit wapen schade zou toebrengen, breng dan in plaats daarvan zoveel stun-fiches aan. Purge, 
+  Rogue Purge, First Born, Machines en personages die een Energie-schild dragen, kunnen geen 
+  stun-fiches krijgen en dit <strong>wapen heeft geen effect</strong>.<br><br>Een personage dat meer
+  stun-fiches dan acties heeft, wordt op de grond gegooid.<br><br>Personages kunnen een actie of 
+  vaardigheidspunt uitgeven om één stun-fiche te verwijderen. Personages kunnen geen andere acties 
+  uitvoeren of vaardigheden gebruiken totdat de tokens zijn verwijderd.<br><br>Gigantische personages
+  verwijderen een aantal stun tokens aan het begin van hun activering gelijk aan hun Gigantische waarde.

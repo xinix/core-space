@@ -56,6 +56,8 @@ const tokens: TokenType[] = [
         size: 'nano',
         action: 2,
         icons: ['effortless', 'discard'],
+        buy: 3,
+        sell: 1,
     },
     {
         product: 'shift-change',
@@ -168,7 +170,7 @@ const tokens: TokenType[] = [
     {
         product: 'shift-change',
         slug: 'n-reroll',
-        name: 'Re-roll ranged',
+        name: 'Ranged Re-roll',
         color: 'orange',
         size: 'nano',
         buy: 18,
@@ -218,11 +220,11 @@ const tokens: TokenType[] = [
     {
         product: 'shift-change',
         slug: 'quell-fury-chemical',
-        name: 'Quell fury chemical',
+        name: "Quell's fury chemical",
         color: 'blue',
         size: 'sm',
         short: 3,
-        medium: 3,
+        medium: 2,
         icons: ['fire'],
         buy: 31,
         sell: 18,
@@ -290,6 +292,8 @@ const tokens: TokenType[] = [
         color: 'orange',
         size: 'nano',
         icons: ['effortless', 'temp-armour', 'discard'],
+        buy: 4,
+        sell: 2,
     },
     {
         product: 'shift-change',

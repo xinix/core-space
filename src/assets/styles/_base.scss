@@ -25,6 +25,25 @@ h6 {
     line-height: 1.1;
 }
 
+* {
+    scrollbar-width: thin;
+    scrollbar-color: var(--primary-transparent) var(--header-bg);
+}
+
+*::-webkit-scrollbar {
+    width: 11px;
+}
+
+*::-webkit-scrollbar-track {
+    background: var(--header-bg);
+}
+
+*::-webkit-scrollbar-thumb {
+    border: 3px solid var(--transparent-bg);
+    border-radius: 6px;
+    background-color: var(--primary-transparent);
+}
+
 @media (min-width: 600px) {
     body {
         animation: gradient 15s ease infinite;

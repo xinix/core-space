@@ -76,7 +76,7 @@ const tokens: TokenType[] = [
         size: 'nano',
         description: ['purge-tokens'],
         action: 2,
-        icons: ['discard'],
+        icons: ['effortless', 'discard'],
     },
     {
         product: 'rogue',
