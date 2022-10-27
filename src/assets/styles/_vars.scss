@@ -104,6 +104,9 @@
     --input-color: #ffffff;
     --input-border: rgba(36, 41, 80, 0.15);
 
+    --code-bg: rgba(41, 41, 70, 0.75);
+    --code-color: #fafeff;
+
     --select-bg: rgba(21, 19, 16, .75);
     --select-color: #ffffff;
     --select-border: #83b7bb;
@@ -127,6 +130,9 @@ html[data-theme='light'] {
     --select-bg: rgba(255, 255, 255, .75);
     --select-color: #151310;
     --select-border: rgba(0, 0, 0, 0.15);
+
+    --code-bg: rgba(234, 234, 234, 0.75);
+    --code-color: #150310;
 
     --header-bg: rgba(255, 255, 255, .75);
     --transparent-bg: rgba(239, 232, 232, 0.5);

@@ -55,17 +55,40 @@ const onFocus = (ev: FocusEvent) => {
     return ev
 }
 
+let blurT: ReturnType<typeof setTimeout> | null = null
 const onBlur = (ev: FocusEvent) => {
+    blurT = setTimeout(() => {
+        blurT = null
+        searching.value = false
+    }, 300)
+    return ev
+}
+
+const searchInput = ref()
+
+const onClear = (ev: MouseEvent) => {
+    if (blurT != null) {
+        clearTimeout(blurT)
+        blurT = null
+    }
+    searching.value = true
+    q.value = ''
+    tokens.q = ''
+    router.push('/')
+    searchInput.value.focus()
+    return ev
+}
+
+const onEsc = (ev: KeyboardEvent) => {
     searching.value = false
     return ev
 }
 
-const onClear = (ev: MouseEvent) => {
-    q.value = ''
-    tokens.q = ''
-    router.push('/')
-    return ev
+const focus = () => {
+    searching.value = true
+    searchInput.value.focus()
 }
+defineExpose({ focus })
 </script>
 
 <template>
@@ -90,6 +113,7 @@ const onClear = (ev: MouseEvent) => {
                     </label>
                     <input
                         id="q"
+                        ref="searchInput"
                         v-model.trim="q"
                         :placeholder="$t('search_placeholder')"
                         autocapitalize="off"
@@ -100,6 +124,7 @@ const onClear = (ev: MouseEvent) => {
                         type="text"
                         @blur="onBlur"
                         @focus="onFocus"
+                        @keyup.esc="onEsc"
                     />
                     <input
                         class="material-symbols-rounded search-clear"
@@ -107,6 +132,7 @@ const onClear = (ev: MouseEvent) => {
                         value="close"
                         @click.prevent="onClear"
                     />
+                    <code>/</code>
                 </form>
             </transition>
 
@@ -241,6 +267,10 @@ const onClear = (ev: MouseEvent) => {
             visibility: visible;
             opacity: 0.9;
         }
+
+        code {
+            transform: translate(-3.5em, 0.5em);
+        }
     }
 
     .search-button:hover {
@@ -251,6 +281,17 @@ const onClear = (ev: MouseEvent) => {
 
     .search-clear:hover {
         transform: scale(1.2);
+    }
+
+    code {
+        font-weight: bold;
+        position: absolute;
+        right: 0;
+        padding: 0.325em 0.75em;
+        transform: translate(-0.5em, 0.5em);
+        color: var(--code-color);
+        border-radius: 0.325em;
+        background-color: var(--code-bg);
     }
 }
 
@@ -290,6 +331,10 @@ const onClear = (ev: MouseEvent) => {
         .search-button {
             transform: translateX(0);
         }
+
+        code {
+            display: none;
+        }
     }
 }
 
@@ -303,6 +348,7 @@ const onClear = (ev: MouseEvent) => {
         max-width: 100%;
         padding: 0 0.5em;
         border: solid 1px transparent;
+        background-color: transparent;
         box-shadow: none;
 
         .label > span {
@@ -317,6 +363,7 @@ const onClear = (ev: MouseEvent) => {
 
     .searching .search {
         border: solid 1px var(--primary);
+        background-color: var(--input-bg);
         box-shadow: var(--glow);
 
         .label > span {
