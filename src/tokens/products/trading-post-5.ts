@@ -32,6 +32,7 @@ const tokens: TokenType[] = [
         size: 'sm',
         explode: [6, 5, 4, 3],
         icons: ['reliable', 'bomb'],
+        description: ['supply-drop'],
         sell: 2,
     },
     {
@@ -54,6 +55,7 @@ const tokens: TokenType[] = [
         size: 'sm',
         heal: 4,
         sell: 0,
+        description: ['supply-drop'],
     },
     {
         product: 'trading-post-5',
@@ -166,6 +168,7 @@ const tokens: TokenType[] = [
         medium: 1,
         icons: ['burst-2'],
         sell: 3,
+        description: ['supply-drop'],
     },
     {
         product: 'trading-post-5',
@@ -175,6 +178,7 @@ const tokens: TokenType[] = [
         size: 'sm',
         shield: 2,
         sell: 1,
+        description: ['supply-drop'],
     },
     {
         product: 'trading-post-5',
@@ -207,6 +211,7 @@ const tokens: TokenType[] = [
         size: 'sm',
         icons: ['repair'],
         sell: 2,
+        description: ['supply-drop'],
     },
     {
         product: 'trading-post-5',
@@ -229,6 +234,7 @@ const tokens: TokenType[] = [
         action: 2,
         icons: ['effortless', 'discard'],
         sell: 0,
+        description: ['supply-drop'],
     },
     {
         product: 'trading-post-5',
@@ -238,6 +244,7 @@ const tokens: TokenType[] = [
         size: 'nano',
         icons: ['ammo', 'discard'],
         sell: 1,
+        description: ['supply-drop'],
     },
     {
         product: 'trading-post-5',
@@ -248,6 +255,7 @@ const tokens: TokenType[] = [
         heal: 2,
         icons: ['effortless', 'discard'],
         sell: 0,
+        description: ['supply-drop'],
     },
     {
         product: 'trading-post-5',
@@ -258,6 +266,7 @@ const tokens: TokenType[] = [
         grenade: [5, 3, 2],
         icons: ['discard'],
         sell: 2,
+        description: ['supply-drop'],
     },
     {
         product: 'trading-post-5',
@@ -268,6 +277,7 @@ const tokens: TokenType[] = [
         skill: 2,
         icons: ['effortless', 'discard'],
         sell: 0,
+        description: ['supply-drop'],
     },
     {
         product: 'trading-post-5',
@@ -277,6 +287,7 @@ const tokens: TokenType[] = [
         size: 'nano',
         icons: ['super-ammo', 'discard'],
         sell: 1,
+        description: ['supply-drop'],
     },
 ]
 export default tokens

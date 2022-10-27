@@ -9,6 +9,7 @@ const i18n = createI18n({
     locale: locale == null ? 'en' : locale,
     messages: { en, nl },
     fallbackLocale: 'en',
+    fallbackWarn: false,
     warnHtmlInMessage: false,
     warnHtmlMessage: false,
 })

@@ -183,6 +183,7 @@ export type ItemDescription =
     | 'purge-tokens'
     | 'port'
     | 'stim-vest'
+    | 'supply-drop'
 
 export type CoreSpaceToken = TokenType & {
     key: string
