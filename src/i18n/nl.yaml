@@ -15,8 +15,8 @@ zed: Shootout at Zed's Uitbreiding
 galactic-corps: Galactic Corps Uitbreiding
 purge-outbreak: Purge Outbreak Uitbreiding
 black-star: Black Star Rising Uitbreiding
-wanted: 'Wanted: Dead or Alive Uitbreiding'
-first-born: 'Core Space: First Born'
+wanted: "Wanted: Dead or Alive Uitbreiding"
+first-born: "Core Space: First Born"
 fury: Fury of the Insane God Uitbreiding
 line-of-fire: In the Line of Fire Uitbreiding
 rysa: Gates of Ry'sa Uitbreiding
@@ -28,13 +28,13 @@ skylark: Skylark Crew
 yamato: Yamato Crew
 rogue: Rogue Purge Uitbreiding
 shift-change: Shift Change at MegaCorp Uitbreiding
-no_result: 'Dit is niet naar wat je op zoek was, maar wij konden het ook niet vinden.'
+no_result: "Dit is niet naar wat je op zoek was, maar wij konden het ook niet vinden."
 buy-now: Nu kopen!
 buy: Kopen
 sell: Verkopen
 range: Bereik
 buy-me-a-coffee: Trakteer mij op een koffie
-copyright: 'All designs &copy; Battle Systems &#8482; 2022.'
+copyright: "All designs &copy; Battle Systems &#8482; 2022."
 this-is-free: >-
   Dit is een onofficiële Core Space App, het is volledige gratis en zal dat
   altijd zijn.
@@ -138,13 +138,13 @@ re-roll-ranged: >-
   Je mag een enkele <strong>een enkele dobbelsteen opnieuw rollen</strong> bij
   een afstandsaanval.
 throw: >-
-  Je kan dit item <strong>gooien</strong>. Om een item te gooien heb je LoS
-  nodig op je doelwit, en de meeste items kunnen enkel op <strong>korte
-  afstand</strong> gegooid worden. Als een item over een langere afstand gegooid
-  kunnen worden, staat er een M of L naast het icoon.<br><br>Een handwapen
-  gooien (zoals een mes) wordt afgehandeld <strong>zoals een afstandsaanval, met
-  {0} dobbelste(e)n(en)</strong>. Dekking, schild en andere modificatoren
-  blijven van toepassingen. Het gegooide wapen wordt verwijderd van het
+  Je kan dit item <strong>gooien</strong> als een <strong>moeiteloze</strong> actie. 
+  Om een item te gooien heb je LoS nodig op je doelwit, en de meeste items kunnen 
+  enkel op <strong>korte afstand</strong> gegooid worden. Als een item over een 
+  langere afstand gegooid kunnen worden, staat er een M of L naast het icoon.<br><br>
+  Een handwapen gooien (zoals een mes) wordt afgehandeld <strong>zoals een 
+  afstandsaanval, met {0} dobbelste(e)n(en)</strong>. Dekking, schild en andere 
+  modificatoren blijven van toepassingen. Het gegooide wapen wordt verwijderd van het
   dashboard en naast het doelwit geplaatst. Het kan later terug opgepakt worden
   zoals andere fiches.<br><br>Merk op dat gegooide wapen <strong>nog steeds stuk
   kunnen gaan</strong> als je 2 Misfire resultaten gooit. Draai het fiche in dat
@@ -207,7 +207,7 @@ target-lock: >-
   <strong>Target Lock:</strong> Dit wapen negeert gedeeltelijke dekking, en kan
   gebruikt worden tegen geëngageerde personage op elk bereik zonder het doelwit
   te randomiseren.
-silent: '<strong>Stil:</strong> Dit wapen voegt geen pin toe aan de Hostility Tracker.'
+silent: "<strong>Stil:</strong> Dit wapen voegt geen pin toe aan de Hostility Tracker."
 sustained-fire: >-
   <strong>Aanhoudend vuur:</strong> Als dit wapen raakt, mag je onmiddellijk
   <strong> een andere afstandsaanval</strong> uitvoeren met hetzelfde wapen als
@@ -414,8 +414,8 @@ stim-skill: >-
 stim-skill-plus: >-
   <strong>Skill Stim:</strong> Herstel {0} Skill pin(nen). Je mag hiermee over
   je maximum start Skill gaan.
-stim-combat: '<strong>Combat Stim:</strong> Neem {0} extra actie(s) deze beurt.'
-action-2: '<strong>Combat Stim:</strong> Neem 2 extra acties deze beurt.'
+stim-combat: "<strong>Combat Stim:</strong> Neem {0} extra actie(s) deze beurt."
+action-2: "<strong>Combat Stim:</strong> Neem 2 extra acties deze beurt."
 dyson-rod: >-
   <strong>Dyson Rods</strong> worden vooral as missie-gerelateerde items
   gebruikt. Controleer je missiedoelen om the achterhalen wat je ermee kan doen
