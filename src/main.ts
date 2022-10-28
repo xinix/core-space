@@ -25,4 +25,5 @@ app.mount('#app')
 
 const products = useProducts()
 const tokens = useTokens()
-tokens.load(products.active)
+
+tokens.load(products.active).then()

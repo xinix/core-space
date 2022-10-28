@@ -185,10 +185,6 @@ export type ItemDescription =
     | 'stim-vest'
     | 'supply-drop'
 
-export type CoreSpaceToken = TokenType & {
-    key: string
-}
-
 export type TokenColor =
     | 'blue'
     | 'yellow'
@@ -203,12 +199,73 @@ export type TokenColor =
 
 export type TokenSize = 'nano' | 'sm' | 'md' | 'lg' | 'xl' | 'umd' | 'ulg'
 
+export const SIZE_ENUM: any = {
+    0: 'nano',
+    1: 'sm',
+    2: 'md',
+    3: 'lg',
+    4: 'xl',
+    5: 'umd',
+    6: 'ulg',
+}
+
+export const SIZE_NUMBERS = {
+    nano: 0,
+    sm: 1,
+    md: 2,
+    lg: 3,
+    xl: 4,
+    umd: 5,
+    ulg: 6,
+}
+
 export type TokenType = {
     product: ProductType
     slug: string
     name: string
     color: TokenColor
     size: TokenSize
+    close?: number
+    heavy?: number
+    throw?: number
+    grenade?: number[]
+    explode?: number[]
+    range?: 's' | 'm' | 'l'
+    short?: number
+    medium?: number
+    long?: number
+    buy?: number | number[]
+    crystals?: CrystalType[]
+    sell?: number | number[]
+    blast?: number[]
+    scatter?: number | number[]
+    phase?: number
+    armour?: number
+    blue_armour?: number
+    blue_armour_regen?: number
+    shield?: number
+    dyson?: number
+    move?: number
+    scramble?: number[]
+    heal?: number
+    super_heal?: number
+    skill?: number
+    super_skill?: number
+    action?: number
+    freeze?: number[]
+    util?: 'all' | 'nano' | 'sling'
+    fuel?: number
+    description?: ItemDescription[]
+    icons?: AttributeType[]
+}
+
+export type CoreSpaceToken = {
+    key: string
+    size: number
+    product: ProductType
+    slug: string
+    name: string
+    color: TokenColor
     close?: number
     heavy?: number
     throw?: number

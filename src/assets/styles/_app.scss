@@ -5,6 +5,10 @@
 
     > .content {
         padding: 1rem;
+
+        &:focus {
+            outline: none;
+        }
     }
 }
 

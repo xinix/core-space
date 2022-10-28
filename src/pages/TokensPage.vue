@@ -1,40 +1,34 @@
 <script lang="ts" setup>
 import TokenDetails from '@/components/tokens/TokenDetails.vue'
+import BusyLoading from '@/components/app/BusyLoading.vue'
 
-import { computed } from 'vue'
-import { useTokens } from '@/stores/tokens'
+import { useCoreSpaceTokens } from '@/use/core-space-tokens'
 
-const tokens = useTokens()
-
-const qSummary = computed(
-    () => `Search results for: <strong>${tokens.q}</strong>`
-)
-
-const onClear = (ev: MouseEvent) => {
-    tokens.q = ''
-    return ev
-}
+const { loading, items, qSummary, containerClass, onClear } =
+    useCoreSpaceTokens()
 </script>
 
 <template>
     <section class="container">
-        <p v-if="tokens.q" class="summary">
+        <p v-if="qSummary" class="summary">
             <span v-html="qSummary" />
             <button class="btn-link" type="button" @click="onClear">
                 {{ $t('clear_filter') }}
             </button>
         </p>
 
-        <p v-if="tokens.items.length === 0" class="empty">
+        <BusyLoading v-if="loading" />
+
+        <p v-else-if="items && items.length === 0" class="empty">
             <em>🥹</em>
             <br />
             <br />
             {{ $t('no_result') }}
         </p>
 
-        <div :class="{ 'with-q': tokens.q !== '' }" class="tokens">
+        <div :class="containerClass" class="tokens">
             <TokenDetails
-                v-for="item in tokens.items"
+                v-for="item in items"
                 :key="item.key"
                 :item="item"
                 class="item"
@@ -55,6 +49,10 @@ const onClear = (ev: MouseEvent) => {
 
     &.with-q {
         justify-content: center;
+    }
+
+    &:focus {
+        outline: none;
     }
 }
 

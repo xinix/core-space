@@ -3,7 +3,7 @@ import IconLegend from '@/components/tokens/IconLegend.vue'
 import JustText from '@/components/tokens/JustText.vue'
 import BuyWithCrystals from '@/components/tokens/BuyWithCrystals.vue'
 
-import { AttributeType, CoreSpaceToken } from '@/tokens/types'
+import { AttributeType, CoreSpaceToken, SIZE_ENUM } from '@/tokens/types'
 import { computed } from 'vue'
 
 const props = withDefaults(
@@ -17,15 +17,17 @@ const wrapperClass = computed(() => {
     const cls: any = {
         active: props.active,
     }
-    cls[props.item.size] = true
+    const size = SIZE_ENUM[props.item.size]
+    cls[size] = true
     cls[props.item.color] = true
     return cls
 })
 
 const tokenClass = computed(() => {
     const cls: any = {}
+    const size = SIZE_ENUM[props.item.size]
     cls[props.item.product] = true
-    cls[props.item.size] = true
+    cls[size] = true
     cls[props.item.slug] = true
     return cls
 })

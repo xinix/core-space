@@ -2,24 +2,36 @@ import { defineStore } from 'pinia'
 import {
     CoreSpaceToken,
     ProductType,
+    SIZE_ENUM,
+    SIZE_NUMBERS,
     TokenColor,
     TokenSize,
+    TokenType,
 } from '@/tokens/types'
-import tokens from '@/tokens'
-
-const sizeOrder = ['nano', 'sm', 'md', 'lg', 'xl', 'umd', 'ulg']
+import axios from 'axios'
+import { db } from '@/db'
 
 const sortToken = (a: CoreSpaceToken, b: CoreSpaceToken) => {
     return (
         a.color.localeCompare(b.color) ||
-        sizeOrder.indexOf(a.size) - sizeOrder.indexOf(b.size) ||
+        a.size - b.size ||
         a.name.localeCompare(b.name)
     )
+}
+
+function toCoreSpaceToken(token: TokenType): CoreSpaceToken {
+    return {
+        ...token,
+        key: `${token.product}-${token.slug}`,
+        size: SIZE_NUMBERS[token.size],
+    }
 }
 
 export const useTokens = defineStore('tokens', {
     state: () => {
         return {
+            changed: true,
+            loading: false,
             q: '',
             sizes: [] as TokenSize[],
             colors: [] as TokenColor[],
@@ -42,29 +54,44 @@ export const useTokens = defineStore('tokens', {
                 )
             }
             if (state.sizes.length > 0) {
-                result = result.filter((a) => state.sizes.indexOf(a.size) >= 0)
+                result = result.filter(
+                    (a) => state.sizes.indexOf(SIZE_ENUM[a.size]) >= 0
+                )
             }
             return result
         },
-        getItemByKey: (state) => {
-            return (key: string) => {
-                return state.rawItems.find((a) => a.key === key)
+        getItemByKey: () => {
+            return async (key: string) => {
+                return db.tokens.get({ key })
             }
         },
     },
     actions: {
-        load(products: ProductType[]) {
-            const items: CoreSpaceToken[] = []
+        async load(products: ProductType[]) {
+            this.loading = true
+            this.changed = false
+            this.rawItems.splice(0, this.rawItems.length)
             for (const product of products) {
-                if (tokens[product] != undefined) {
-                    items.push(...tokens[product])
+                const counters = await db.tokens.where({ product }).count()
+                if (counters > 0) continue
+
+                try {
+                    const url = `/data/${product}.json`
+                    const { data } = await axios.get(url)
+                    await db.tokens.bulkAdd(data.map(toCoreSpaceToken))
+                } catch (error) {
+                    console.error(`Could not fetch "${product}"`, error)
                 }
             }
-            this.rawItems.splice(
-                0,
-                this.rawItems.length,
-                ...items.sort(sortToken)
+            this.rawItems.push(
+                ...(
+                    await db.tokens.where('product').anyOf(products).toArray()
+                ).sort(sortToken)
             )
+            this.loading = false
+        },
+        setChanged() {
+            this.changed = true
         },
         filter(colors: TokenColor[], sizes: TokenSize[]) {
             this.colors.splice(0, this.colors.length, ...colors)
