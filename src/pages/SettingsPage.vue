@@ -32,7 +32,7 @@ const onSave = () => {
     i18n.locale.value = language.lang
 }
 
-const langs = ['en', 'nl']
+const langs = ['en', 'nl', 'fr']
 const version = APP_VERSION
 </script>
 
