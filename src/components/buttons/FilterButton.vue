@@ -79,6 +79,7 @@ const onClear = (ev: MouseEvent) => {
 <template>
     <a
         :class="{ active: hasFilter }"
+        :title="$t('filter')"
         class="btn btn-filter"
         href="javascript:void(0)"
         type="button"

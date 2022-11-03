@@ -664,10 +664,8 @@
   name: Outland pistol
   color: blue
   size: sm
-  buy:
-    - 0
-  sell:
-    - 0
+  buy: 0
+  sell: 0
   short: 1
 - product: first-born
   slug: outland-pistol-2
@@ -1112,10 +1110,8 @@
   icons:
     - effortless
     - discard
-  buy:
-    - 0
-  sell:
-    - 0
+  buy: 0
+  sell: 0
 - product: first-born
   slug: n-phase
   name: Phase engram

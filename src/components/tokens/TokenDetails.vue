@@ -66,7 +66,7 @@ const mustacheIcons = computed(() => {
     <component
         :is="tag"
         :class="wrapperClass"
-        :to="`/item/${item.key}`"
+        :to="{ name: 'token', params: { slug: item.key } }"
         class="token-details"
         tabindex="-1"
     >

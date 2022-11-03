@@ -24,6 +24,7 @@
     --utility: url('../images/box-util.png');
 
     --nico: url('../images/nico.png');
+    --trade-phase-bg: url('../images/trade-phase.jpg');
 
     --shadow-sm: 3px 3px 6px 0 rgb(0 0 0 / 10%), -3px -3px 6px 0 rgb(212 210 210 / 10%);
     --shadow-md: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 2px 4px 0 rgb(0 0 0 / 8%);
@@ -110,6 +111,10 @@
     --select-bg: rgba(21, 19, 16, .75);
     --select-color: #ffffff;
     --select-border: #83b7bb;
+
+    --post-bg: rgba(21, 19, 16, .75);
+    --post-color: #ffffff;
+    --post-image: url('../images/tokens.jpg');
 }
 
 html[data-theme='light'] {
@@ -130,6 +135,9 @@ html[data-theme='light'] {
     --select-bg: rgba(255, 255, 255, .75);
     --select-color: #151310;
     --select-border: rgba(0, 0, 0, 0.15);
+
+    --post-bg: rgba(255, 255, 255, .75);
+    --post-color: #151310;
 
     --code-bg: rgba(234, 234, 234, 0.75);
     --code-color: #150310;

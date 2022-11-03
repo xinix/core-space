@@ -3,7 +3,7 @@
     display: block;
     min-width: 100%;
 
-    > .content {
+    .wrapper > .content {
         padding: 1rem;
 
         &:focus {
@@ -18,7 +18,7 @@
 
 @media (max-width: 450px) {
     #app {
-        > .content {
+        .wrapper > .content {
             padding: 1em 0.25em;
         }
     }
