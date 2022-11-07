@@ -15,8 +15,8 @@ zed: Shootout at Zed's Expansion
 galactic-corps: Galactic Corps Expansion
 purge-outbreak: Purge Outbreak Expansion
 black-star: Black Star Rising Expansion
-wanted: 'Wanted: Dead or Alive Expansion'
-first-born: 'Core Space: First Born'
+wanted: "Wanted: Dead or Alive Expansion"
+first-born: "Core Space: First Born"
 fury: Fury of the Insane God Expansion
 line-of-fire: In the Line of Fire Expansion
 rysa: Gates of Ry'sa Expansion
@@ -28,13 +28,13 @@ skylark: Skylark Crew
 yamato: Yamato Crew
 rogue: Rogue Purge Expansion
 shift-change: Shift Change at MegaCorp Expansion
-no_result: 'This is not what you were looking for, but we couldn''t find it either.'
+no_result: "This is not what you were looking for, but we couldn't find it either."
 buy-now: Buy now!
 buy: Buy
 sell: Sell
 range: Range
 buy-me-a-coffee: Buy me a coffee
-copyright: 'All designs &copy; Battle Systems &#8482; 2022.'
+copyright: "All designs &copy; Battle Systems &#8482; 2022."
 this-is-free: >-
   This is an unofficial Core Space App, it is completely free and always will
   be.
@@ -137,11 +137,11 @@ re-roll-ranged: >-
   The character may <strong>re-roll a single die</strong> from any ranged
   assault attack.
 throw: >-
-  This item can be <strong>thrown</strong>. Throwing an item requires LoS to the
-  target, and most items can only be <strong>thrown at short range</strong>. If
-  an item can be thrown at a longer distance there be an M or L next to the
-  icon.<br><br>Throwing a close assault weapon is resolved <strong>like a ranged
-  attack, using {0} dice</strong>. Cover, armour and any other modifiers apply
+  This item can be <strong>thrown</strong> as an <strong>effortless action</strong>. 
+  Throwing an item requires LoS to the target, and most items can only be <strong>thrown 
+  at short range</strong>. If an item can be thrown at a longer distance there be an M 
+  or L next to the icon.<br><br>Throwing a close assault weapon is resolved <strong>like 
+  a ranged attack, using {0} dice</strong>. Cover, armour and any other modifiers apply
   as normal. The thrown weapon is removed from your dashboard and placed on the
   floor adjacent to the target. It can be picked up again from the floor like
   any other token.<br><br>Note that thrown weapons <strong>can break just like
@@ -394,8 +394,8 @@ stim-skill: >-
 stim-skill-plus: >-
   <strong>Skill Stim:</strong> Restore {0} Skill pegs. This may take the user
   beyond their starting Skill.
-stim-combat: '<strong>Combat Stim:</strong> Take {0} extra actions this turn.'
-action-2: '<strong>Combat Stim:</strong> Take 2 extra actions this turn.'
+stim-combat: "<strong>Combat Stim:</strong> Take {0} extra actions this turn."
+action-2: "<strong>Combat Stim:</strong> Take 2 extra actions this turn."
 dyson-rod: >-
   <strong>Dyson Rods</strong> are mainly used as mission related items. Check
   your mission objective to find out what you can do with them. Otherwise they
