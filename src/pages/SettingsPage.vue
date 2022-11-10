@@ -32,7 +32,7 @@ const onSave = () => {
     i18n.locale.value = language.lang
 }
 
-const langs = ['en', 'nl', 'fr']
+const langs = ['en', 'nl', 'fr', 'de']
 const version = APP_VERSION
 </script>
 
@@ -100,6 +100,17 @@ const version = APP_VERSION
                     <div>
                         <strong>version {{ version }}</strong>
                         <p>{{ $t('this-is-free') }}</p>
+                    </div>
+                    <div>
+                        <strong>{{ $t('translated-by') }}:</strong>
+                        <dl class="description">
+                            <dt>{{ $t('fr') }}</dt>
+                            <dd>David Le Prado</dd>
+                            <dt>{{ $t('de') }}</dt>
+                            <dd>David Golda</dd>
+                            <dt>{{ $t('nl') }}</dt>
+                            <dd>Nico Van den Winckel</dd>
+                        </dl>
                     </div>
                     <div class="about-me">
                         <img

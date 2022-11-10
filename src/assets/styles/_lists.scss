@@ -35,5 +35,16 @@
     > li + li {
         margin-top: .5em;
     }
+}
 
+.description {
+    display: grid;
+    margin: .5em;
+    grid-template-columns: auto 1fr;
+    gap: .5em;
+
+    dt {
+        font-weight: bold;
+        text-align: right;
+    }
 }
