@@ -1,13 +1,24 @@
 <script lang="ts" setup>
-const posts = [
-    'bs-mart',
-    'ucp',
-    'claw-store',
-    'armourote',
-    'tech-noir',
-    'giger',
-    'workshop',
-].map((s) => ({ slug: s, info: `${s}-info` }))
+import { computed } from 'vue'
+import { useProducts } from '@/stores/products'
+
+const products = useProducts()
+
+const posts = computed(() => {
+    return [
+        'bs-mart',
+        'ucp',
+        'claw-store',
+        'armourote',
+        'tech-noir',
+        'giger',
+        'workshop',
+    ]
+        .filter((post) =>
+            post === 'workshop' ? products.active.indexOf('rogue') >= 0 : true
+        )
+        .map((s) => ({ slug: s, info: `${s}-info` }))
+})
 </script>
 
 <template>
@@ -21,6 +32,7 @@ const posts = [
                 <router-link
                     v-for="post in posts"
                     :key="post.slug"
+                    :class="post.slug"
                     :to="{ name: 'trading-post', params: { slug: post.slug } }"
                     class="post"
                 >
@@ -92,6 +104,35 @@ const posts = [
         background-image: var(--post-image);
         background-position: center center;
         background-size: cover;
+    }
+
+    &.bs-mart figure {
+        background-image: var(--bs-mart-image);
+    }
+
+    &.ucp figure {
+        background-image: var(--ucp-image);
+    }
+
+    &.claw-store figure {
+        background-image: var(--claw-store-image);
+    }
+
+    &.armourote figure {
+        background-image: var(--armourote-image);
+        background-position: center 65%;
+    }
+
+    &.tech-noir figure {
+        background-image: var(--tech-noir-image);
+    }
+
+    &.giger figure {
+        background-image: var(--giger-image);
+    }
+
+    &.workshop figure {
+        background-image: var(--workshop-image);
     }
 
     small {
