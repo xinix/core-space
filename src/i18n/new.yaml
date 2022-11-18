@@ -1,0 +1,39 @@
+trading-posts: Trading posts
+welcome-trader: >-
+  Welcome Trader!<br><br>The galaxy has a huge variety of trading posts, and not every store will sell 
+  every item that you want. After each game you will need to choose one (and only one) trading post
+  to visit.<br><br>Which store do you want to visit today?
+bs-mart: BS-Mart General Store
+bs-mart-info: >-
+  No matter which trading post you pick, you can <strong>always</strong> visit the General Store 
+  <strong>as well</strong>. The General Store stocks items of all types with a cost of up to 4UA.
+ucp: Up Close & Personnel
+ucp-info: >-
+  Up Close & Personnel stocks <strong>Close Assault weapons</strong> costing between <strong>5-9 UA
+  </strong>. Any Close Assault weapons with 5-9UA purchase price that you sell while visiting Up
+  Close & Personnel will earn a 1UA bonus per item.
+claw-store: Claw Store
+claw-store-info: >-
+  Claw Store stocks <strong>Ranged Assault weapons</strong> costing between <strong>5-9 UA</strong>.
+  Any Ranged Assault weapons with a 5-9UA purchase price that you sell while visiting Claw Store will
+  earn you a 1UA bonus per item.
+armourote: Armourote
+armourote-info: >-
+  Armourote stocks <strong>armour</strong> costing between <strong>5-9 UA</strong>.
+  Any armour with a 5-9UA purchase price that you sell while visiting Armourote will
+  earn you a 1UA bonus per item.
+tech-noir: Tech Noir
+tech-noir-info: >-
+  Tech Noir stocks <strong>special items</strong> costing between <strong>5-9 UA</strong>.
+  Any special item with a 5-9UA purchase price that you sell while visiting Tech Noir will
+  earn you a 1UA bonus per item.
+giger: Giger's Emporium
+giger-info: >-
+  Giger's Emporium stocks <strong>all types</strong> costing between <strong>10 UA or 
+  more</strong>. Any rare items or item with a 10UA+ purchase price that you sell while
+  visiting Giger's Emporium will earn you a 1UA bonus per item.
+workshop: The Workshop
+workshop-info: >-
+  The Workshop is <strong>only accessible by Rogue Purge</strong> crews and allows them to
+  craft items. The required <em>ingredients</em> are listed on the other side. All Purge
+  items can be sold as if they were Raw Blue.

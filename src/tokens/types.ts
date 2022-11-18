@@ -18,26 +18,14 @@ export type ProductType =
     | 'wanted'
     | 'black-star'
 
-export type TokenMap = {
-    'core-space': CoreSpaceToken[]
-    'zed': CoreSpaceToken[]
-    'galactic-corps': CoreSpaceToken[]
-    'purge-outbreak': CoreSpaceToken[]
-    'rogue': CoreSpaceToken[]
-    'shift-change': CoreSpaceToken[]
-    'cygnus': CoreSpaceToken[]
-    'poseidon': CoreSpaceToken[]
-    'skylark': CoreSpaceToken[]
-    'yamato': CoreSpaceToken[]
-    'first-born': CoreSpaceToken[]
-    'fury': CoreSpaceToken[]
-    'line-of-fire': CoreSpaceToken[]
-    'rysa': CoreSpaceToken[]
-    'trading-post-5': CoreSpaceToken[]
-    'utility': CoreSpaceToken[]
-    'black-star': CoreSpaceToken[]
-    'wanted': CoreSpaceToken[]
-}
+export type TradingPost =
+    | 'bs-mart'
+    | 'ucp'
+    | 'claw-store'
+    | 'armourote'
+    | 'tech-noir'
+    | 'giger'
+    | 'workshop'
 
 export type AttributeType =
     | 'stun'
@@ -225,6 +213,7 @@ export type TokenType = {
     name: string
     color: TokenColor
     size: TokenSize
+    count: number
     close?: number
     heavy?: number
     throw?: number
@@ -263,6 +252,7 @@ export type CoreSpaceToken = {
     key: string
     size: number
     product: ProductType
+    count: number
     slug: string
     name: string
     color: TokenColor
@@ -298,4 +288,10 @@ export type CoreSpaceToken = {
     fuel?: number
     description?: ItemDescription[]
     icons?: AttributeType[]
+    sold?: number
+}
+
+export type MarketRecord = {
+    tokenKey: string
+    sold: number
 }

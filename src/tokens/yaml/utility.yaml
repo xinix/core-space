@@ -1,4 +1,5 @@
 - product: utility
+  count: 1
   slug: "back-pack"
   name: "Back pack"
   color: lime
@@ -9,6 +10,7 @@
   icons:
     - "backpack-all"
 - product: utility
+  count: 1
   slug: bandolier
   name: Bandolier
   color: lime
@@ -20,6 +22,7 @@
     - belt
     - "backpack-nano"
 - product: utility
+  count: 1
   slug: "enhanced-combat-suit"
   name: "Enhanced combat suit"
   color: violet
@@ -34,6 +37,7 @@
   buy: 58
   sell: 35
 - product: utility
+  count: 1
   slug: "heavy-demolition-harness"
   name: "Heavy demolition harness"
   color: violet
@@ -47,6 +51,7 @@
   buy: 42
   sell: 20
 - product: utility
+  count: 1
   slug: "heavy-fusion-cannon"
   name: "Heavy fusion cannon"
   color: violet
@@ -58,6 +63,7 @@
   description:
     - joined
 - product: utility
+  count: 1
   slug: "jump-pack-fueled"
   name: "Jump pack fueled"
   color: violet
@@ -72,6 +78,7 @@
   buy: 25
   sell: 14
 - product: utility
+  count: 1
   slug: "mech-arm"
   name: "Mech arm"
   color: violet
@@ -82,6 +89,7 @@
   buy: 12
   sell: 8
 - product: utility
+  count: 1
   slug: "mounted-fusion-gun"
   name: "Mounted fusion gun"
   color: violet
@@ -92,6 +100,7 @@
   buy: 18
   sell: 10
 - product: utility
+  count: 1
   slug: "mounted-line-rifle"
   name: "Mounted line rifle"
   color: violet
@@ -105,6 +114,7 @@
   buy: 32
   sell: 14
 - product: utility
+  count: 1
   slug: "multi-tech-harness"
   name: "Multi tech harness"
   color: violet
@@ -117,6 +127,7 @@
   buy: 24
   sell: 12
 - product: utility
+  count: 1
   slug: "outlands-exosuit"
   name: "Outlands exosuit"
   color: violet
@@ -132,6 +143,7 @@
   buy: 45
   sell: 22
 - product: utility
+  count: 1
   slug: "shield-rig-regen"
   name: "Shield rig regen"
   color: violet
@@ -140,6 +152,7 @@
   buy: 40
   sell: 18
 - product: utility
+  count: 1
   slug: "shield-rig"
   name: "Shield rig"
   color: violet
@@ -148,6 +161,7 @@
   buy: 38
   sell: 18
 - product: utility
+  count: 1
   slug: "sling-mount"
   name: "Sling mount"
   color: lime
@@ -159,6 +173,7 @@
   buy: 8
   sell: 5
 - product: utility
+  count: 1
   slug: "smart-pack"
   name: "Smart pack"
   color: lime
@@ -169,6 +184,7 @@
   buy: 24
   sell: 12
 - product: utility
+  count: 1
   slug: "utility-belt"
   name: "Utility belt"
   color: lime

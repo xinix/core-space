@@ -42,17 +42,16 @@ en: English
 nl: Nederlands
 fr: Français
 de: Deutsch
-translated-by: Übersetzt von
 about-me: >-
   Hi! Mein Name is Nico und ich liebe Core Space! Nachdem ich das Spiel das erste Mal hier 
-  <a href="https://www.orderofgamers.com/games/core-space/" target="_blank">the Esoteric Order 
-  of Gamers</a> gesehen habe, hat es mich gefesselt. Ich besitze das Grundspiel und alle Erweiterungen. 
-  2020 unterstütze ich den First Born Kickstarter mit allen Erweiterungen 😋.<br><br>Im Jahr 
-  2022 bewarb ich mich als freiwilliger Helfer und Erklärer für First Born auf der Spiel in Essen, 
-  Deutschland und hatte das Glück ausgewählt zu werden. Zwei Tage lang durfte ich das Spiel in Essen 
-  in zusammen mit Colin, Steward and Simon erklären. Nach der Messe hatte ich die Idee eine App zu 
+  <a href=\"https://www.orderofgamers.com/games/core-space/\" target=\"_blank\">the Esoteric Order 
+  of Gamers</a> gesehen habe, hat es mich gefesselt. Ich besitze das Grundspiel und alle 
+  Erweiterungen. 2020 unterstütze ich den First Born Kickstarter mit allen Erweiterungen 😋.<br><br>
+  2022 bewarb ich mich als freiwilliger Helfer und Erklärer für CoreSpace First Born auf der Spiel 
+  in Essen (D) und hatte das Glück erwählt zu werden. Zwei Tage lang durfte ich das Spiel in Essen 
+  zusammen mit Colin, Steward and Simon erklären. Nach der Messe hatte ich die Idee eine App zu 
   programmieren, die es Spielern ermöglicht detailierte Erklärungen zu gefundenen Items und den 
-  entsprechenden Symbolen zu erhalten.
+  entsprechenden Symbolen zu erhalten."
 s: Nah / Short
 m: Medium
 l: Weit / Long
@@ -82,12 +81,12 @@ armour: >-
 rare: >-
   Dieser Gegenstand / Item ist <strong>selten</strong> und kann nicht gekauft werden. 
   Der Gegenstand kann nur durch eine Suchen Aktion während einer Mission gefunden werden.
-effortless: Dieser Gegenstand / Item kann als <strong>kostenlose (effortless)</strong> Aktion genutzt werden.
+effortless: Dieser Gegenstand / Item kann als <strong>kostenlose (= effortless)</strong> Aktion genutzt werden.
 flip: >-
   Nach dem Benutzen dieses Gegenstandes / Item wird der <strong>Token auf die Rückseite gedreht</strong>. Die meisten Gegenstände / Items haben auf der Rückseite einen alternativen Effekt.
   Falls nicht, kann der Gegenstand / Item bis zum Ende der Mission nicht mehr benutzt werden.
   <br><br>Manche Gegenstände / Items mit diesem Symbol werden nicht "benutzt".
-  Stattdessen wird durch das Umdrehen (dies ist meist eine kostenlose (effortless) Aktion) der Effekt auf der Rückseite ausgelöst.
+  Stattdessen wird durch das Umdrehen (dies ist meist eine kostenlose (= effortless) Aktion) der Effekt auf der Rückseite ausgelöst.
 discard: >-
   Nach dem Benutzen dieses Gegenstandes / Item wird der Gegenstand <strong>abgelegt</strong> und zurück in den Beutel für Ausrüstung gelegt.
 mine: >-
@@ -129,10 +128,10 @@ throw: >-
   Die meisten Gegenstände / Items können nur auf <strong>kurze Reichweite (=short range)</strong> geworfen werden.
   Falls ein Gegenstand / Item weiter geworfen werden kann, wird die Reichweite durch ein M oder L auf dem Token gekennzeichnet.
   <br><br>Das Werfen eine Nahkampfwaffe wird wie eine <strong>Fernkampfangriff</strong> behandelt, indem <strong>{0} Kampfwürfel geworfen werden</strong>. 
-  Auch Deckung, Panzerung und andere Modifikatoren werden wir bei jedem anderen Fernkampfangriff angewendet.
+  Auch Deckung, Panzerung und andere Modifikatoren werden wie bei jedem anderen Fernkampfangriff angewendet.
   Der geworfenen Gegenstand wird aus dem Charakterboard entfernt und neben dem Ziel abgelegt. Anschließend kann es - wie jeder andere Token - wieder aufgenommen werden. 
-  <br><br>Nicht vergessen: ein geworfener Gegenstand kann, wie jede andere Waffe, bei <strong>(2) Fehlschuss (=misfire) Würfelergebnissen zerbrechen</strong>.  
-  In diesem Fall wird der Gegensatand als Erinnerung auf die Rückseite gedreht.
+  <br><br>Nicht vergessen: ein geworfener Gegenstand kann, wie jede andere Waffe, bei <strong>(2) Fehlwurf (=misfire) Würfelergebnissen zerbrechen</strong>.  
+  In diesem Fall wird der Gegenstand als Erinnerung auf die Rückseite gedreht.
 grenade: >-
   Eine <strong>Explosivwaffe</strong>, die alle in der Nähe befindlichen Charaktere trifft. 
   <br><br>Das Ziel eines Angriffs mit dieser Waffe kann ein Charakter sein oder jeder andere Punkt auf dem Spielbrett. Die Effekte des Angriffs werden in beiden Fällen gleich behandelt.
@@ -173,61 +172,48 @@ target-lock: >-
 silent: >-
   <strong>Schalldämpfer:</strong> Beim Abfeuern dieser Waffe wird kein Munitionspin auf der Bedrohungsanzeige (= hostility tracker) platziert um das Bedrohungslevel zu erhöhen.
 sustained-fire: >-
-  <strong>Dauerfeuer:</strong> If this weapon hits, you may immediately
-  <strong>make another ranged attack</strong> with the same weapon as an
-  <strong>effortless action</strong>. The second attack must target the same
-  enemy, or an enemy within short range of them.
+  <strong>Dauerfeuer:</strong> Falls beim Angriff mit dieser Waffe ein Treffersymbol erzielt wird, darf sofort
+  <strong>ein weiterer Angriff</strong> mit dieser Waffe als <strong>kostenlose (= effortless) Aktion</strong> ausgeführt werden.
+  Dieser Angriff muss auf dasselben Ziel oder ein anderes Ziel, das innerhalb kurzer Reichweite (= short range) zum ursprünglichen Ziel ist, ausgeführt werden.
 short: >-
-  <strong>Short ranged assault:</strong> Ranged assault attacks cannot be made
-  against targets engaged with you. If you are engaged with enemies while making
-  a ranged attack, the may make an <strong>attack of opportunity</strong>
-  against you.<br><br><strong>Roll {0} attack dice</strong> for short ranged
-  attack. Partial cover reduces the number of hits by 1. Remove an ammo
-  peg.<br><br>After the first RANGED ASSAULT action made by a trader in each
-  round, place the peg in the hostility tracker.
+  <strong>Fernkampf - Kurze Reichweite:</strong> Angriffe auf kurze Reichweite können nicht auf Ziele ausgeführt werden, die mit dir im Nahkampf sind. Falls du mit einem Gegner im Nahkampf bist
+  und einen Fernkampfangriff ausführen willst, hat der Gegner die Möglichkeit für einen <strong>freien Angriff (=attacks of opportunity)</strong>.
+  <br><br>Um einen Angriff auf kurze Reichweite auszuführen, <strong>wirf {0} Kampfwürfel</strong> 
+  Bei Zielen in teilweiser Deckung (= partial cover), wird die Anzahl der Treffer um (1) Eins reduziert. Entferne danach einen Munitionspin. 
+  <br><br>Falls dieser Angriff der erste FERNANGRIFF dieser Spielrunde ist, wird der Munitionspin in die Bedrohungsanzeige (= hostility tracker) gesteckt.
 medium: >-
-  <strong>Medium ranged assault:</strong> Roll {0} attack dice for medium ranged
-  attack. Remove an ammo peg.<br><br><strong>When shooting at engaged characters
-  at medium range</strong>, after rolling to hit you must roll the Knowledge Die
-  to determine which of the combatants you have hit. Modifiers such as cover and
-  armour are worked out based on the actual target.
+  <strong>Fernkampf - Mittlere Reichweite:</strong> Wirf {0} Angriffswürfel. Entferne einen (1) Munitionspin.
+  <br><br><strong>Falls du ein Ziel in mittlerer Reichweite angreifst</strong>, dass sich in einem Nahkampf befindet, musst du nach einem erfolgeichen Wurf mit den Kampfwürfel(n) den Knowledge Würfel werfen, 
+  um zu entscheiden wen du getroffen hast.
+  Nachdem das Ziel definiert worden ist, können eventuell noch Modifikatoren wie Deckung oder Panzerung zum Tragen kommen.
 long: >-
-  <strong>Long ranged assault:</strong> Roll {0} attack dice for long ranged
-  attack. Remove an ammo peg.<br><br><strong>When shooting at engaged characters
-  at long range</strong>, after rolling to hit you must roll the Knowledge Die
-  to determine which of the combatants you have hit. Modifiers such as cover and
-  armour are worked out based on the actual target.
+  <strong>Fernkampf - Große Reichweite:</strong> Wirf {0} Angriffswürfel. Entferne einen (1) Munitionspin.
+  <br><br><strong>Falls du ein Ziel in großer Reichweite angreifst</strong>, dass sich in einem Nahkampf befindet, musst du nach einem erfolgeichen Wurf mit den Kampfwürfel(n) den Knowledge Würfel werfen, 
+  um zu entscheiden wen du getroffen hast.
+  Nachdem das Ziel definiert worden ist, können eventuell noch Modifikatoren wie Deckung oder Panzerung zum Tragen kommen.
 close: >-
-  <strong>Close assault:</strong> if your trader is engaged with an enemy, they
-  can attack them with a close assault weapon.<br><br><strong>Roll {0} combat
-  dice</strong> for a standard attack.<br><br>Standard hits ignore misfire
-  results.
+  <strong>Nahkampf:</strong> Falls dein Charakter mit einem Gegner im Nahkampf ist, kann diese Waffe benutzt werden.
+  <br><br><strong>Wirf {0} Kampfwürfel</strong> für einen einfachen Angriff.<br><br>Bei einem einfachen Angriff werden Fehlwurf (= misfire) Symbole ignoriert.
 heavy: >-
-  <strong>Heavy assault:</strong> if your trader is engaged with an enemy, they
-  can attack with a heavy close assault weapon.<br><br><strong>Roll {0} attack
-  dice</strong>.<br><br>If 2 or more misfires are rolled, this weapon is broken:
-  flip the token face-down. If fighting unarmed, or your weapon has a reliable
-  icon, misfires have no effect.
+  <strong>Kampfkunst:</strong> Falls du mit einem Gegner im Nahkampf bist, kannst du mittels Kampfkunst mit dieser Waffe schweren Schaden anrichten.
+  <br><br><strong>Wirf {0} Kampfwürfel</strong>.<br><br>Falls du zwei (2) oder mehr Fehlwurf Symbole wirfst, ist die Waffe beschädigt. Drehe zur Erinnerung den Token auf die Rückseite.
+  Falls du ohne Waffe kämpfst oder die Waffe eine zuverlässige (= reliable) Waffe ist, können Fehlwurf Symbole ignoriert werden.
 dyson: >-
-  This item extracts and <strong>stores First Born energy</strong>. The first
-  hit of each First Born ranged attack made against the holder of this item is
-  negated, and an Energy Counter is placed on top of all items held with this
-  icon.<br><br>This item <strong>can hold up to {0} counter(s)</strong>. If this
-  number is exceeded, the item overloads - it is destroyed and the holder
-  suffers an attack with {0} attack dice.<br><br>The item has no effect if a
-  character is wearing or benefiting from shield armour.<br><br><strong>When
-  sold, its value is increased</strong> by a number of UA equal to the counters
-  on the item.
+  Dieses Item / Gegenstand <strong>speichert alle Energie der Erstgeborenen</strong>.
+  Beim einem Treffer eines Fernkampfangriffs eines Erstgeborenen auf den Besitzer dieses Items / Gegenstandes, werden die Auswirkungen des Angriffes ignoriert. 
+  Stattdessen wird ein Energie Marker (= energy counter) auf alle Token die dieses Symbol haben, platziert. 
+  <br><br>Dieses Item / Gegenstand kann bis zu <strong>{0} Energie Marker</strong> speichern, danach überlädt das Item / Gegenstand.
+  Im Fall einer Überladung wird das Item / Gegenstand zerstört und der Besitzer des Gegenstandes erleidet einen Angriff mit {0} Kampfwürfeln.
+  <br><br>Die Effekte auf dieses Item / Gegenstand werden ignoriert, falls der Besitzer einen Energie-Schild benutzt oder unter dem Einfluss eines Energie-Schildes ist.
+  <br><br><strong>Beim Verkauf dieses Items / Gegenstandes, erhöht sich der Wert
+  </strong> um einen UA für jeden Energie Marker auf dem entsprechenden Item / Gegenstand.
 dyson-throw: >-
-  This item can be <strong>thrown</strong> at an enemy. The number of dice
-  rolled against the target is equal to the <strong>full number of Energy
-  Counters on the item</strong>. As usual, the thrown token will land on the
-  floor next to the target, with no Energy Counters remaining.
+  Dieses Item / Gegenstand kann auf einen Gegner<strong>geworfen</strong> werden. Bei dem Angriff können soviele Kampfwürfel geworfen werden, wie <strong>Energie Marker</strong> auf dem Item / Gegenstand liegen. 
+  Anschließend wird das Item / Gegenstand ohne Energie-Marker neben dem Ziel auf dem Boden abgelegt.
 dyson-range: >-
-  This item can be used to make <strong>ranged attacks</strong> at up to medium
-  range. The number of dice rolled is equal to the number of Energy Counters
-  discarded during the attack, which may be <strong>some or all of the available
-  counters</strong>.
+  Dieses Item / Gegenstand kann für einen Fernkampfangriff bis zu <strong>mittlerer Reichweite (= medium range)</strong> genutzt werden.
+  Bei dem Angriff können Kampfwürfel bis zur Höhe der Energie-Marker auf dem Item / Gegenstand genutzt werden.
+  Es ist möglich <strong>alle oder nur einen Teil</strong>der Energie-Marker für den Angriff zu nutzen.
 boomerang: >-
   When thrown, as long as <strong>at least one hit was scored</strong> this item
   is not removed from the thrower's item tray. If no hits are scored it will be

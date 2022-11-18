@@ -1,4 +1,5 @@
 - product: skylark
+  count: 1
   slug: "data-credits-2k"
   name: "Data credits 2k"
   color: purple
@@ -7,6 +8,7 @@
     - credits
   sell: 2
 - product: skylark
+  count: 1
   slug: "energy-baton"
   name: "Energy baton"
   color: blue
@@ -16,6 +18,7 @@
   buy: 4
   sell: 2
 - product: skylark
+  count: 1
   slug: "flack-jacket-shiny"
   name: "Flack jacket shiny"
   color: yellow
@@ -24,6 +27,7 @@
   buy: 8
   sell: 7
 - product: skylark
+  count: 2
   slug: "grenade-energy-aug-only"
   name: "Grenade energy aug only"
   color: blue
@@ -40,6 +44,7 @@
   buy: 8
   sell: 4
 - product: skylark
+  count: 1
   slug: "neoflex-plate-upgrade"
   name: "Neoflex plate upgrade"
   color: yellow
@@ -49,6 +54,7 @@
     - na
     - mech
 - product: skylark
+  count: 1
   slug: "officer-pistol-custom"
   name: "Officer pistol custom"
   color: blue
@@ -61,6 +67,7 @@
     - rare
   sell: 6
 - product: skylark
+  count: 1
   slug: "shield-module-upgrade"
   name: "Shield module upgrade"
   color: yellow
@@ -72,6 +79,7 @@
   buy: 12
   sell: 5
 - product: skylark
+  count: 1
   slug: "shield-pod-upgrade"
   name: "Shield pod upgrade"
   color: yellow
@@ -82,6 +90,7 @@
   buy: 6
   sell: 4
 - product: skylark
+  count: 1
   slug: "titan-fist-power-arm"
   name: "Titan fist power arm"
   color: blue
@@ -91,6 +100,7 @@
   buy: 18
   sell: 10
 - product: skylark
+  count: 1
   slug: "utility-knife"
   name: "Utility knife"
   color: blue

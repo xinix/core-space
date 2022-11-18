@@ -1,4 +1,5 @@
 - product: shift-change
+  count: 1
   slug: ammo-box
   name: Ammo box large
   color: orange
@@ -11,6 +12,7 @@
   buy: 14
   sell: 8
 - product: shift-change
+  count: 1
   slug: bio-tag-blade
   name: Bio tag blade
   color: blue
@@ -22,6 +24,7 @@
   buy: 19
   sell: 8
 - product: shift-change
+  count: 1
   slug: breach-rifle
   name: Breach rifle
   color: blue
@@ -33,6 +36,7 @@
   buy: 37
   sell: 21
 - product: shift-change
+  count: 1
   slug: burst-vest
   name: Burst vest
   color: yellow
@@ -47,6 +51,7 @@
   buy: 14
   sell: 8
 - product: shift-change
+  count: 3
   slug: combat-stim
   name: Combat stim
   color: orange
@@ -58,6 +63,7 @@
   buy: 3
   sell: 1
 - product: shift-change
+  count: 1
   slug: cyclone-rifle
   name: Cyclone rifle
   color: blue
@@ -67,6 +73,7 @@
   icons:
     - burst
 - product: shift-change
+  count: 1
   slug: detonator-l
   name: Detonator
   color: blue
@@ -79,6 +86,7 @@
   buy: 21
   sell: 13
 - product: shift-change
+  count: 1
   slug: detonator-m
   name: Detonator
   color: blue
@@ -91,6 +99,7 @@
   buy: 15
   sell: 9
 - product: shift-change
+  count: 1
   slug: flash-bomb
   name: Flash bomb
   color: blue
@@ -101,6 +110,7 @@
   buy: 3
   sell: 1
 - product: shift-change
+  count: 2
   slug: grenade
   name: Grenade
   color: blue
@@ -114,6 +124,7 @@
   buy: 5
   sell: 4
 - product: shift-change
+  count: 4
   slug: medi-stim
   name: Medi stim
   color: orange
@@ -125,6 +136,7 @@
   buy: 2
   sell: 1
 - product: shift-change
+  count: 4
   slug: mine
   name: Mine
   color: blue
@@ -141,6 +153,7 @@
   buy: 4
   sell: 1
 - product: shift-change
+  count: 5
   slug: n-ammo
   name: Ammo clip
   color: orange
@@ -152,6 +165,7 @@
   buy: 4
   sell: 2
 - product: shift-change
+  count: 4
   slug: n-key
   name: Mission key
   color: orange
@@ -162,6 +176,7 @@
     - rare
   sell: 2
 - product: shift-change
+  count: 2
   slug: n-poison
   name: Toxic Blade
   color: blue
@@ -173,6 +188,7 @@
   buy: 7
   sell: 5
 - product: shift-change
+  count: 2
   slug: n-reroll
   name: Ranged Re-roll
   color: orange
@@ -182,6 +198,7 @@
   icons:
     - re-roll-ranged
 - product: shift-change
+  count: 1
   slug: n-rock
   name: Rock
   color: purple
@@ -191,6 +208,7 @@
   buy: 10
   sell: 10
 - product: shift-change
+  count: 4
   slug: n-walkie
   name: Walkie
   color: orange
@@ -200,6 +218,7 @@
   icons:
     - swap
 - product: shift-change
+  count: 2
   slug: objective
   name: Objective
   color: green
@@ -207,6 +226,7 @@
   icons:
     - objective
 - product: shift-change
+  count: 1
   slug: ptd-vest
   name: Ptd vest
   color: yellow
@@ -222,6 +242,7 @@
   buy: 14
   sell: 8
 - product: shift-change
+  count: 1
   slug: quell-fury-chemical
   name: Quell's fury chemical
   color: blue
@@ -233,6 +254,7 @@
   buy: 31
   sell: 18
 - product: shift-change
+  count: 1
   slug: ship-parts-4
   name: Ship parts 4
   color: purple
@@ -243,6 +265,7 @@
     - rare
   sell: 8
 - product: shift-change
+  count: 2
   slug: skill-stim
   name: Skill stim
   color: orange
@@ -254,6 +277,7 @@
   buy: 4
   sell: 1
 - product: shift-change
+  count: 1
   slug: stim-vest
   name: Stim vest
   color: yellow
@@ -268,6 +292,7 @@
   buy: 31
   sell: 12
 - product: shift-change
+  count: 1
   slug: tactical-rifle
   name: Tactical rifle
   color: blue
@@ -280,6 +305,7 @@
   buy: 32
   sell: 14
 - product: shift-change
+  count: 2
   slug: target-laser
   name: Target laser
   color: orange
@@ -289,6 +315,7 @@
   buy: 15
   sell: 8
 - product: shift-change
+  count: 1
   slug: temp-shield
   name: Temporary shield
   color: orange
@@ -300,6 +327,7 @@
   buy: 4
   sell: 2
 - product: shift-change
+  count: 2
   slug: timewarp-nade
   name: Timewarp nade
   color: blue

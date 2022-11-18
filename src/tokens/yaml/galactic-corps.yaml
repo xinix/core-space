@@ -1,4 +1,5 @@
 - product: galactic-corps
+  count: 1
   slug: ammo-mag
   name: Ammo mag
   color: orange
@@ -9,6 +10,7 @@
   buy: 2
   sell: 1
 - product: galactic-corps
+  count: 1
   slug: data-pad
   name: Data pad
   color: orange
@@ -19,6 +21,7 @@
   buy: 4
   sell: 2
 - product: galactic-corps
+  count: 1
   slug: energy-baton
   name: Energy baton
   color: blue
@@ -28,6 +31,7 @@
   buy: 4
   sell: 2
 - product: galactic-corps
+  count: 1
   slug: energy-pistol
   name: Energy pistol
   color: blue
@@ -39,6 +43,7 @@
   buy: 9
   sell: 4
 - product: galactic-corps
+  count: 1
   slug: grenade-emp-pulse
   name: Grenade emp pulse
   color: blue
@@ -51,6 +56,7 @@
   buy: 4
   sell: 1
 - product: galactic-corps
+  count: 1
   slug: grenade-time-pulse
   name: Grenade time pulse
   color: blue
@@ -62,6 +68,7 @@
   buy: 4
   sell: 1
 - product: galactic-corps
+  count: 1
   slug: juggernaut-riot-fist
   name: Juggernaut riot fist
   color: blue
@@ -73,6 +80,7 @@
     - rare
   sell: 10
 - product: galactic-corps
+  count: 1
   slug: jump-pack
   name: Jump pack
   color: orange
@@ -86,6 +94,7 @@
   buy: 5
   sell: 4
 - product: galactic-corps
+  count: 1
   slug: machine-pistol
   name: Machine pistol
   color: blue
@@ -95,6 +104,7 @@
   buy: 12
   sell: 6
 - product: galactic-corps
+  count: 1
   slug: medi-stim
   name: Medi stim
   color: orange
@@ -104,6 +114,7 @@
     - effortless
     - discard
 - product: galactic-corps
+  count: 1
   slug: military-pistol
   name: Military pistol
   color: blue

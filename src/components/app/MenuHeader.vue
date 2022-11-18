@@ -147,7 +147,7 @@ defineExpose({ focus })
                         :title="$t('trading-posts')"
                         :to="{ name: 'trading-posts' }"
                     >
-                        <span class="material-symbols-rounded">local_mall</span>
+                        <span class="material-symbols-rounded">storefront</span>
                     </router-link>
                     <router-link
                         :title="$t('preferences')"

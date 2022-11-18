@@ -1,4 +1,5 @@
 - product: purge-outbreak
+  count: 3
   slug: mothers-venom
   name: Mothers venom
   color: blue

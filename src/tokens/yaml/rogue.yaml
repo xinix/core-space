@@ -1,4 +1,5 @@
 - product: rogue
+  count: 1
   slug: ammo-module
   name: Ammo module
   color: teal
@@ -8,6 +9,7 @@
   icons:
     - ammo-21
 - product: rogue
+  count: 1
   slug: annis-wing
   name: Annis wing
   color: teal
@@ -17,6 +19,7 @@
   close: 3
   armour: 2
 - product: rogue
+  count: 2
   slug: armour
   name: Armour
   color: teal
@@ -25,6 +28,7 @@
     - purge-tokens
   armour: 1
 - product: rogue
+  count: 1
   slug: assassin-claw
   name: Assassin claw
   color: teal
@@ -33,6 +37,7 @@
     - purge-tokens
   close: 4
 - product: rogue
+  count: 1
   slug: assassins-pride
   name: Assassins pride
   color: teal
@@ -43,6 +48,7 @@
     - re-roll
   close: 3
 - product: rogue
+  count: 5
   slug: blue-nade
   name: Blue nade
   color: teal
@@ -54,6 +60,7 @@
     - 3
     - 1
 - product: rogue
+  count: 2
   slug: cloth-graft-armour
   name: Cloth graft armour
   color: teal
@@ -65,6 +72,7 @@
   shield: 2
   armour: 2
 - product: rogue
+  count: 4
   slug: combat-stim
   name: Combat stim
   color: teal
@@ -76,6 +84,7 @@
     - effortless
     - discard
 - product: rogue
+  count: 2
   slug: devons-strong-arm
   name: Devons strong arm
   color: teal
@@ -88,6 +97,7 @@
   medium: 2
   long: 1
 - product: rogue
+  count: 1
   slug: focus-banger
   name: Focus banger
   color: teal
@@ -99,6 +109,7 @@
   short: 3
   medium: 1
 - product: rogue
+  count: 2
   slug: harvey-bang
   name: Harvey's bang
   color: teal
@@ -110,6 +121,7 @@
   short: 2
   medium: 1
 - product: rogue
+  count: 2
   slug: harvey-banger
   name: Harvey's banger
   color: teal
@@ -119,6 +131,7 @@
   short: 3
   medium: 1
 - product: rogue
+  count: 1
   slug: harveys-big-banger
   name: Harvey's big banger
   color: teal
@@ -129,6 +142,7 @@
   short: 3
   medium: 1
 - product: rogue
+  count: 1
   slug: harveys-gauntlet
   name: Harvey's gauntlet
   color: teal
@@ -141,6 +155,7 @@
   medium: 2
   long: 1
 - product: rogue
+  count: 2
   slug: harveys-twin
   name: Harvey's twin
   color: teal
@@ -152,6 +167,7 @@
   short: 2
   medium: 1
 - product: rogue
+  count: 1
   slug: hunters-brace
   name: Hunter's brace
   color: teal
@@ -163,6 +179,7 @@
   short: 3
   medium: 2
 - product: rogue
+  count: 1
   slug: hunters-flame
   name: Hunter's flame
   color: teal
@@ -174,6 +191,7 @@
   short: 2
   medium: 1
 - product: rogue
+  count: 3
   slug: key
   name: Key
   color: teal
@@ -183,6 +201,7 @@
   icons:
     - mission-key
 - product: rogue
+  count: 1
   slug: matter-tagger
   name: Matter tagger
   color: teal
@@ -193,6 +212,7 @@
   icons:
     - flip
 - product: rogue
+  count: 1
   slug: mothers-gaze
   name: Mothers gaze
   color: teal
@@ -205,6 +225,7 @@
   medium: 3
   long: 1
 - product: rogue
+  count: 2
   slug: mothers-orb-20
   name: Mothers orb 2.0
   color: teal
@@ -219,6 +240,7 @@
     - 4
     - 1
 - product: rogue
+  count: 1
   slug: mothers-orb
   name: Mothers orb
   color: teal
@@ -233,6 +255,7 @@
     - 3
     - 2
 - product: rogue
+  count: 1
   slug: motion-disruptor
   name: Motion disruptor
   color: teal
@@ -244,6 +267,7 @@
   short: 3
   medium: 1
 - product: rogue
+  count: 2
   slug: poncho-makeshift-armour
   name: Poncho makeshift armour
   color: teal
@@ -252,6 +276,7 @@
     - purge-tokens
   armour: 1
 - product: rogue
+  count: 1
   slug: power-clamp
   name: Power clamp
   color: teal
@@ -263,6 +288,7 @@
     - effortless
     - flip
 - product: rogue
+  count: 1
   slug: pumped-strong-arm
   name: Pumped strong arm
   color: teal
@@ -273,6 +299,7 @@
   medium: 2
   long: 2
 - product: rogue
+  count: 1
   slug: reroll-range
   name: Reroll range
   color: teal
@@ -282,6 +309,7 @@
   icons:
     - re-roll-ranged
 - product: rogue
+  count: 3
   slug: scatter-nade
   name: Scatter nade
   color: teal
@@ -293,6 +321,7 @@
     - scatter
     - discard
 - product: rogue
+  count: 2
   slug: shield-clamp
   name: Shield clamp
   color: teal
@@ -301,6 +330,7 @@
     - purge-tokens
   shield: 2
 - product: rogue
+  count: 3
   slug: skill-stim
   name: Skill stim
   color: teal
@@ -311,6 +341,7 @@
   icons:
     - discard
 - product: rogue
+  count: 1
   slug: spiders-venom
   name: Spiders venom
   color: teal
@@ -321,6 +352,7 @@
     - toxic
   close: 2
 - product: rogue
+  count: 1
   slug: target-lens-armour
   name: Target lens armour
   color: teal
@@ -330,6 +362,7 @@
   icons:
     - re-roll-ranged
 - product: rogue
+  count: 6
   slug: yellow-nade
   name: Yellow nade
   color: teal

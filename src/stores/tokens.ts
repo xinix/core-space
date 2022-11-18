@@ -2,14 +2,17 @@ import { defineStore } from 'pinia'
 import {
     CoreSpaceToken,
     ProductType,
-    SIZE_ENUM,
     SIZE_NUMBERS,
     TokenColor,
     TokenSize,
     TokenType,
+    TradingPost,
 } from '@/tokens/types'
 import axios from 'axios'
 import { db } from '@/db'
+import { marketFilter } from '@/helpers/market-filter'
+import { tokenFilter } from '@/helpers/token-filter'
+import { joinsTokens } from '@/db/joins-tokens'
 
 const sortToken = (a: CoreSpaceToken, b: CoreSpaceToken) => {
     return (
@@ -33,6 +36,7 @@ export const useTokens = defineStore('tokens', {
             changed: true,
             loading: false,
             q: '',
+            tradingPost: null as TradingPost | null,
             sizes: [] as TokenSize[],
             colors: [] as TokenColor[],
             active: '',
@@ -42,24 +46,26 @@ export const useTokens = defineStore('tokens', {
     getters: {
         items: (state) => {
             const q = state.q.toLowerCase().trim()
-            let result = state.rawItems
-            if (q != '') {
-                result = result.filter(
-                    (a) => a.name.toLowerCase().indexOf(q) >= 0
-                )
-            }
-            if (state.colors.length > 0) {
-                result = result.filter(
-                    (a) => state.colors.indexOf(a.color) >= 0
-                )
-            }
-            if (state.sizes.length > 0) {
-                result = result.filter(
-                    (a) => state.sizes.indexOf(SIZE_ENUM[a.size]) >= 0
-                )
-            }
-            return result
+            return tokenFilter(state.rawItems, {
+                q,
+                sizes: state.sizes,
+                colors: state.colors,
+            })
         },
+
+        market: (state) => {
+            if (state.tradingPost == null) return []
+            const q = state.q.toLowerCase().trim()
+            return tokenFilter(
+                marketFilter(state.tradingPost, state.rawItems),
+                {
+                    q,
+                    sizes: state.sizes,
+                    colors: state.colors,
+                }
+            )
+        },
+
         getItemByKey: () => {
             return async (key: string) => {
                 return db.tokens.get({ key })
@@ -85,7 +91,9 @@ export const useTokens = defineStore('tokens', {
             }
             this.rawItems.push(
                 ...(
-                    await db.tokens.where('product').anyOf(products).toArray()
+                    await joinsTokens(
+                        db.tokens.where('product').anyOf(products)
+                    )
                 ).sort(sortToken)
             )
             this.loading = false
@@ -96,6 +104,37 @@ export const useTokens = defineStore('tokens', {
         filter(colors: TokenColor[], sizes: TokenSize[]) {
             this.colors.splice(0, this.colors.length, ...colors)
             this.sizes.splice(0, this.sizes.length, ...sizes)
+        },
+        visit(tradingPost: TradingPost) {
+            this.tradingPost = tradingPost
+        },
+
+        buy(token: CoreSpaceToken) {
+            const index = this.rawItems.findIndex(
+                (item) => item.key === token.key
+            )
+            const { count, sold } = token
+            let newSold = sold == undefined ? 0 : sold
+            newSold++
+            if (newSold > count) {
+                newSold = count
+            }
+            this.rawItems[index].sold = newSold
+            db.market.put({ tokenKey: token.key, sold: newSold }, token.key)
+        },
+
+        sell(token: CoreSpaceToken) {
+            const index = this.rawItems.findIndex(
+                (item) => item.key === token.key
+            )
+            const { sold } = token
+            let newSold = sold == undefined ? 0 : sold
+            newSold--
+            if (newSold < 0) {
+                newSold = 0
+            }
+            this.rawItems[index].sold = newSold
+            db.market.put({ tokenKey: token.key, sold: newSold }, token.key)
         },
     },
 })

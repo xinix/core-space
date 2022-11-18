@@ -1,4 +1,5 @@
 - product: poseidon
+  count: 1
   slug: ammo
   name: Ammo mag
   color: orange
@@ -9,6 +10,7 @@
   buy: 2
   sell: 1
 - product: poseidon
+  count: 1
   slug: combat-axe
   name: Combat axe
   color: blue
@@ -19,6 +21,7 @@
   buy: 4
   sell: 2
 - product: poseidon
+  count: 1
   slug: flack-jacket-shiny
   name: Flack jacket shiny
   color: yellow
@@ -27,6 +30,7 @@
   buy: 8
   sell: 7
 - product: poseidon
+  count: 1
   slug: grenade-time-pulse
   name: Grenade time pulse
   color: blue
@@ -38,6 +42,7 @@
   buy: 4
   sell: 1
 - product: poseidon
+  count: 1
   slug: havoc-pistol-chemical
   name: Havoc pistol chemical
   color: blue
@@ -47,6 +52,7 @@
     - rare
   sell: 9
 - product: poseidon
+  count: 1
   slug: jump-pack
   name: Jump pack
   color: orange
@@ -60,6 +66,7 @@
     - effortless
     - flip
 - product: poseidon
+  count: 1
   slug: military-pistol-enhanced
   name: Military pistol enhanced
   color: blue
@@ -72,6 +79,7 @@
   buy: 9
   sell: 4
 - product: poseidon
+  count: 1
   slug: outland-pistol-custom
   name: Outland pistol custom
   color: blue
@@ -82,6 +90,7 @@
   buy: 3
   sell: 1
 - product: poseidon
+  count: 1
   slug: shock-assault-tonfa
   name: Shock assault tonfa
   color: blue

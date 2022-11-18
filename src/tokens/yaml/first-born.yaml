@@ -1,4 +1,5 @@
 - product: first-born
+  count: 2
   slug: port-engram
   name: Port engram
   color: green
@@ -9,6 +10,7 @@
     - effortless
     - flip
 - product: first-born
+  count: 2
   slug: shield-engram
   name: Shield engram
   color: green
@@ -22,6 +24,7 @@
     - physical_armour
     - discard
 - product: first-born
+  count: 1
   slug: phase-engram
   name: Phase engram
   color: green
@@ -32,6 +35,7 @@
     - effortless
     - flip
 - product: first-born
+  count: 1
   slug: liege-shard-roll
   name: Liege shard
   color: green
@@ -42,6 +46,7 @@
   icons:
     - re-roll
 - product: first-born
+  count: 1
   slug: liege-shard-eff
   name: Liege shard
   color: green
@@ -52,6 +57,7 @@
   icons:
     - effortless
 - product: first-born
+  count: 1
   slug: dyson-spike
   name: Dyson spike
   color: green
@@ -64,6 +70,7 @@
   range: m
   sell: 8
 - product: first-born
+  count: 1
   slug: dyson-draw-5
   name: Dyson draw
   color: green
@@ -73,6 +80,7 @@
   icons:
     - dyson-throw
 - product: first-born
+  count: 1
   slug: dyson-draw-3
   name: Dyson draw
   color: green
@@ -82,6 +90,7 @@
   icons:
     - dyson-throw
 - product: first-born
+  count: 1
   slug: dyson-vent-5
   name: Dyson vent
   color: green
@@ -91,6 +100,7 @@
   icons:
     - dyson-range
 - product: first-born
+  count: 1
   slug: dyson-vent-3
   name: Dyson vent
   color: green
@@ -100,6 +110,7 @@
   icons:
     - dyson-range
 - product: first-born
+  count: 1
   slug: phase-loop-4
   name: Phase loop
   color: green
@@ -109,6 +120,7 @@
   icons:
     - boomerang
 - product: first-born
+  count: 1
   slug: phase-loop-3
   name: Phase loop
   color: green
@@ -118,6 +130,7 @@
   icons:
     - boomerang
 - product: first-born
+  count: 2
   slug: larva
   name: Larva
   color: green
@@ -127,6 +140,7 @@
   icons:
     - flip
 - product: first-born
+  count: 1
   slug: repair-4
   name: Fibril
   color: green
@@ -136,6 +150,7 @@
     - repair
     - discard
 - product: first-born
+  count: 1
   slug: repair-2
   name: Fibril
   color: green
@@ -145,6 +160,7 @@
     - repair
     - discard
 - product: first-born
+  count: 1
   slug: repair-1
   name: Fibril
   color: green
@@ -154,6 +170,7 @@
     - repair
     - discard
 - product: first-born
+  count: 1
   slug: necro-flask
   name: Necro flask
   color: green
@@ -162,6 +179,7 @@
   icons:
     - necro-flask
 - product: first-born
+  count: 1
   slug: sypher-orb
   name: Sypher orb
   color: green
@@ -172,6 +190,7 @@
     - event
     - discard
 - product: first-born
+  count: 1
   slug: ecco-orb
   name: Ecco orb
   color: green
@@ -183,6 +202,7 @@
     - deflect
     - flip
 - product: first-born
+  count: 1
   slug: photon-shifter
   name: Photon shifter
   color: green
@@ -192,6 +212,7 @@
     - fade-to-black-3
     - flip
 - product: first-born
+  count: 1
   slug: matter-shifter-1
   name: Matter shifter
   color: green
@@ -201,6 +222,7 @@
     - blast-2
     - flip
 - product: first-born
+  count: 1
   slug: matter-shifter-2
   name: Matter shifter
   color: green
@@ -210,6 +232,7 @@
     - manipulate-3
     - flip
 - product: first-born
+  count: 1
   slug: liege-ring-4
   name: Liege ring
   color: green
@@ -221,6 +244,7 @@
   icons:
     - discard
 - product: first-born
+  count: 1
   slug: liege-ring-3
   name: Liege ring
   color: green
@@ -232,6 +256,7 @@
   icons:
     - discard
 - product: first-born
+  count: 1
   slug: artifact-1
   name: Artifact
   color: green
@@ -242,6 +267,7 @@
   icons:
     - artifact
 - product: first-born
+  count: 1
   slug: artifact-2
   name: Artifact
   color: green
@@ -252,6 +278,7 @@
   icons:
     - artifact
 - product: first-born
+  count: 1
   slug: quantum-lens
   name: Quantum lens
   color: green
@@ -263,6 +290,7 @@
     - infra-lens
     - flip
 - product: first-born
+  count: 1
   slug: artifact-3
   name: Artifact
   color: green
@@ -275,6 +303,7 @@
   icons:
     - artifact
 - product: first-born
+  count: 1
   slug: artifact-4
   name: Artifact
   color: green
@@ -287,6 +316,7 @@
   icons:
     - artifact
 - product: first-born
+  count: 1
   slug: artifact-5
   name: Artifact
   color: green
@@ -299,6 +329,7 @@
   icons:
     - artifact
 - product: first-born
+  count: 1
   slug: artifact-6
   name: Artifact
   color: green
@@ -311,6 +342,7 @@
   icons:
     - artifact
 - product: first-born
+  count: 1
   slug: bracer
   name: Bracer
   color: green
@@ -323,6 +355,7 @@
     - silent
     - infinite
 - product: first-born
+  count: 1
   slug: shard-fins-3
   name: Shard fins
   color: green
@@ -334,6 +367,7 @@
   icons:
     - effortless
 - product: first-born
+  count: 1
   slug: shard-fins-4
   name: Shard fins
   color: green
@@ -344,6 +378,7 @@
     - effortless
     - flip
 - product: first-born
+  count: 1
   slug: raw-minerals
   name: Raw minerals
   color: green
@@ -352,6 +387,7 @@
   description:
     - mineral
 - product: first-born
+  count: 1
   slug: raw-minerals-1
   name: Raw minerals
   color: green
@@ -360,6 +396,7 @@
   description:
     - mineral
 - product: first-born
+  count: 1
   slug: liege-shard
   name: Liege shard
   color: green
@@ -370,6 +407,7 @@
   icons:
     - free-close
 - product: first-born
+  count: 1
   slug: mining-drubber
   name: Mining drubber
   color: orange
@@ -379,6 +417,7 @@
   icons:
     - mine
 - product: first-born
+  count: 1
   slug: combat-vest
   name: Combat vest
   color: yellow
@@ -387,6 +426,7 @@
   buy: 7
   sell: 3
 - product: first-born
+  count: 1
   slug: combat-vest-shiny
   name: Combat vest shiny
   color: yellow
@@ -395,6 +435,7 @@
   sell: 4
   armour: 1
 - product: first-born
+  count: 1
   slug: shield-belt
   name: Shield belt
   color: yellow
@@ -403,6 +444,7 @@
   buy: 4
   sell: 2
 - product: first-born
+  count: 1
   slug: shield-belt-custom
   name: Shield belt custom
   color: yellow
@@ -411,6 +453,7 @@
   buy: 7
   sell: 3
 - product: first-born
+  count: 1
   slug: neoflex-plate-upgrade
   name: Neoflex plate upgrade
   color: yellow
@@ -420,6 +463,7 @@
     - na
     - mech
 - product: first-born
+  count: 1
   slug: common-pistol
   name: Common pistol
   color: blue
@@ -431,6 +475,7 @@
   icons:
     - burst-1
 - product: first-born
+  count: 2
   slug: military-pistol
   name: Military pistol
   color: blue
@@ -442,6 +487,7 @@
   icons:
     - burst-1
 - product: first-born
+  count: 2
   slug: energy-pistol
   name: Energy pistol
   color: blue
@@ -453,6 +499,7 @@
   icons:
     - full-charge
 - product: first-born
+  count: 2
   slug: machine-pistol
   name: Machine pistol
   color: blue
@@ -462,6 +509,7 @@
   short: 3
   medium: 1
 - product: first-born
+  count: 1
   slug: officer-pistol-custom
   name: Officer's pistol custom
   color: blue
@@ -474,6 +522,7 @@
   icons:
     - burst-1
 - product: first-born
+  count: 1
   slug: burst-vest
   name: Burst vest
   color: yellow
@@ -488,6 +537,7 @@
     - flip
     - discard
 - product: first-born
+  count: 1
   slug: utility-knife
   name: Utility knife
   color: blue
@@ -497,6 +547,7 @@
   close: 1
   throw: 1
 - product: first-born
+  count: 1
   slug: energy-combat-knife
   name: Energy combat knife
   color: blue
@@ -506,6 +557,7 @@
   close: 2
   throw: 2
 - product: first-born
+  count: 1
   slug: short-sword-crafted
   name: Short sword crafted
   color: blue
@@ -516,6 +568,7 @@
   heavy: 3
   throw: 2
 - product: first-born
+  count: 2
   slug: hunter-trophy
   name: Hunter's trophy objective
   color: brown
@@ -523,6 +576,7 @@
   icons:
     - trophy
 - product: first-born
+  count: 1
   slug: magnum-custom
   name: Magnum custom
   color: blue
@@ -535,6 +589,7 @@
   short: 3
   medium: 2
 - product: first-born
+  count: 1
   slug: military-twin
   name: Military twin
   color: blue
@@ -548,6 +603,7 @@
   icons:
     - burst-1
 - product: first-born
+  count: 1
   slug: quell-riposte
   name: Quell's riposte
   color: blue
@@ -561,6 +617,7 @@
   icons:
     - burst-1
 - product: first-born
+  count: 1
   slug: havoc-custom
   name: Havoc custom
   color: blue
@@ -575,6 +632,7 @@
   icons:
     - re-roll
 - product: first-born
+  count: 1
   slug: combat-sword
   name: Combat sword
   color: blue
@@ -584,6 +642,7 @@
   short: 2
   heavy: 3
 - product: first-born
+  count: 1
   slug: combat-rifle-custom
   name: Combat rifle custom
   color: blue
@@ -596,6 +655,7 @@
     - reliable
     - burst-1
 - product: first-born
+  count: 1
   slug: shock-rifle
   name: Shock rifle
   color: blue
@@ -607,6 +667,7 @@
   icons:
     - effortless-reload
 - product: first-born
+  count: 1
   slug: breach-rifle
   name: Breach rifle
   color: blue
@@ -618,6 +679,7 @@
   icons:
     - burst-2
 - product: first-born
+  count: 1
   slug: tactical-rifle
   name: Tactical rifle
   color: blue
@@ -630,6 +692,7 @@
     - burst-1
     - reliable
 - product: first-born
+  count: 1
   slug: outland-gun
   name: Outland gun
   color: blue
@@ -645,6 +708,7 @@
     - burst-1
     - super-reliable
 - product: first-born
+  count: 1
   slug: kalamite-fist
   name: Kalamite fist
   color: blue
@@ -660,6 +724,7 @@
   icons:
     - effortless
 - product: first-born
+  count: 1
   slug: outland-pistol-1
   name: Outland pistol
   color: blue
@@ -668,6 +733,7 @@
   sell: 0
   short: 1
 - product: first-born
+  count: 1
   slug: outland-pistol-2
   name: Outland pistol
   color: blue
@@ -676,6 +742,7 @@
   sell: 1
   short: 2
 - product: first-born
+  count: 1
   slug: jump-pack
   name: Jump pack
   color: orange
@@ -689,6 +756,7 @@
     - effortless
     - flip
 - product: first-born
+  count: 1
   slug: sensor-goggles
   name: Sensor goggles
   color: orange
@@ -699,6 +767,7 @@
     - effortless
     - search
 - product: first-born
+  count: 1
   slug: medi-pack
   name: Medi pack
   color: orange
@@ -710,6 +779,7 @@
     - effortless
     - discard
 - product: first-born
+  count: 2
   slug: n-shard
   name: Shard
   color: green
@@ -719,6 +789,7 @@
   icons:
     - effortless
 - product: first-born
+  count: 5
   slug: dyson-rod
   name: Dyson rod
   color: green
@@ -730,6 +801,7 @@
   description:
     - dyson-rod
 - product: first-born
+  count: 2
   slug: n-engram
   name: Shift engram
   color: green
@@ -740,6 +812,7 @@
     - pairs
     - flip
 - product: first-born
+  count: 2
   slug: n-orb-5
   name: Nano orb
   color: green
@@ -752,6 +825,7 @@
   icons:
     - discard
 - product: first-born
+  count: 2
   slug: n-orb-4
   name: Nano orb
   color: green
@@ -764,6 +838,7 @@
   icons:
     - discard
 - product: first-born
+  count: 3
   slug: s-heal
   name: Health stim (S)
   color: green
@@ -773,6 +848,7 @@
   icons:
     - discard
 - product: first-born
+  count: 1
   slug: s-skill-2
   name: Skill stim (S)
   color: green
@@ -782,6 +858,7 @@
   icons:
     - discard
 - product: first-born
+  count: 1
   slug: s-skill-3
   name: Skill stim (S)
   color: green
@@ -791,6 +868,7 @@
   icons:
     - discard
 - product: first-born
+  count: 2
   slug: s-action-2
   name: Action stim
   color: green
@@ -800,6 +878,7 @@
   icons:
     - discard
 - product: first-born
+  count: 1
   slug: s-action-3
   name: Action stim
   color: green
@@ -809,6 +888,7 @@
   icons:
     - discard
 - product: first-born
+  count: 1
   slug: raw-green
   name: Raw minerals
   color: green
@@ -817,6 +897,7 @@
   description:
     - mineral
 - product: first-born
+  count: 2
   slug: raw-orange
   name: Raw minerals
   color: green
@@ -825,6 +906,7 @@
   description:
     - mineral
 - product: first-born
+  count: 1
   slug: raw-purple
   name: Raw minerals
   color: green
@@ -833,6 +915,7 @@
   description:
     - mineral
 - product: first-born
+  count: 1
   slug: n-event
   name: Sypher orb
   color: green
@@ -842,6 +925,7 @@
     - event
     - discard
 - product: first-born
+  count: 2
   slug: n-key
   name: Key
   color: green
@@ -850,6 +934,7 @@
   icons:
     - key
 - product: first-born
+  count: 2
   slug: n-freeze
   name: Freeze blast
   color: green
@@ -859,6 +944,7 @@
     - 2
     - 2
 - product: first-born
+  count: 1
   slug: detonator-l
   name: Detonator
   color: blue
@@ -871,6 +957,7 @@
   icons:
     - effortless
 - product: first-born
+  count: 1
   slug: detonator-m
   name: Detonator
   color: blue
@@ -883,6 +970,7 @@
   icons:
     - effortless
 - product: first-born
+  count: 3
   slug: n-mine
   name: Mine
   color: blue
@@ -899,6 +987,7 @@
     - effortless
     - discard
 - product: first-born
+  count: 2
   slug: n-walkie
   name: Walkie Talkie
   color: orange
@@ -908,6 +997,7 @@
   icons:
     - swap
 - product: first-born
+  count: 5
   slug: n-ammo
   name: Ammo
   color: orange
@@ -918,6 +1008,7 @@
     - ammo
     - discard
 - product: first-born
+  count: 1
   slug: n-reroll
   name: Ranged Re-roll
   color: orange
@@ -927,6 +1018,7 @@
   icons:
     - re-roll-ranged
 - product: first-born
+  count: 2
   slug: n-action
   name: Stim Actions
   color: orange
@@ -938,6 +1030,7 @@
     - effortless
     - discard
 - product: first-born
+  count: 3
   slug: n-heal
   name: Stim Heal
   color: orange
@@ -949,6 +1042,7 @@
     - effortless
     - discard
 - product: first-born
+  count: 2
   slug: n-skill
   name: Stim Skill
   color: orange
@@ -960,6 +1054,7 @@
     - effortless
     - discard
 - product: first-born
+  count: 1
   slug: n-target
   name: Target laser
   color: orange
@@ -969,6 +1064,7 @@
   icons:
     - target-lock
 - product: first-born
+  count: 3
   slug: n-throw
   name: Throwing knife
   color: blue
@@ -979,6 +1075,7 @@
   icons:
     - effortless
 - product: first-born
+  count: 5
   slug: n-nade
   name: Grenade
   color: blue
@@ -992,6 +1089,7 @@
   icons:
     - discard
 - product: first-born
+  count: 1
   slug: n-shield
   name: Temporary shield
   color: orange
@@ -1003,6 +1101,7 @@
     - temp-armour
     - discard
 - product: first-born
+  count: 1
   slug: ammo-box
   name: Ammo box
   color: orange
@@ -1015,6 +1114,7 @@
   buy: 5
   sell: 2
 - product: first-born
+  count: 1
   slug: breach-pistol
   name: Breach pistol
   color: blue
@@ -1030,6 +1130,7 @@
   buy: 5
   sell: 2
 - product: first-born
+  count: 1
   slug: combat-axe
   name: Combat axe
   color: blue
@@ -1040,6 +1141,7 @@
   buy: 4
   sell: 2
 - product: first-born
+  count: 1
   slug: combat-knife-crafted
   name: Combat knife crafted
   color: blue
@@ -1050,6 +1152,7 @@
   buy: 4
   sell: 2
 - product: first-born
+  count: 1
   slug: dyson-core
   name: Dyson core
   color: green
@@ -1060,6 +1163,7 @@
     - discard
   sell: 11
 - product: first-born
+  count: 1
   slug: laser-cutter
   name: Laser cutter
   color: orange
@@ -1069,6 +1173,7 @@
   buy: 4
   sell: 2
 - product: first-born
+  count: 1
   slug: machine-rifle-grenade-launcher
   name: Machine rifle grenade launcher
   color: blue
@@ -1081,6 +1186,7 @@
   buy: 25
   sell: 17
 - product: first-born
+  count: 1
   slug: marine-combat-suit
   name: Marine combat suit
   color: yellow
@@ -1091,6 +1197,7 @@
   buy: 34
   sell: 18
 - product: first-born
+  count: 1
   slug: marine-military-pistol
   name: Marine military pistol
   color: blue
@@ -1102,6 +1209,7 @@
   buy: 14
   sell: 8
 - product: first-born
+  count: 2
   slug: medi-stim
   name: Medi stim
   color: orange
@@ -1113,6 +1221,7 @@
   buy: 0
   sell: 0
 - product: first-born
+  count: 1
   slug: n-phase
   name: Phase engram
   color: yellow
@@ -1123,6 +1232,7 @@
   crystals:
     - purple
 - product: first-born
+  count: 1
   slug: n-timewarp
   name: Timewarp
   color: blue
@@ -1133,6 +1243,7 @@
   buy: 7
   sell: 5
 - product: first-born
+  count: 3
   slug: objective
   name: Objective
   color: green
@@ -1140,6 +1251,7 @@
   icons:
     - objective
 - product: first-born
+  count: 1
   slug: repeat-pistol
   name: Repeat pistol
   color: blue
@@ -1154,6 +1266,7 @@
     - orange
     - green
 - product: first-born
+  count: 4
   slug: s-ammo
   name: Accelerant ammo
   color: orange
@@ -1165,6 +1278,7 @@
   crystals:
     - orange
 - product: first-born
+  count: 1
   slug: shock-tonfa-compact
   name: Shock tonfa compact
   color: blue
@@ -1174,6 +1288,7 @@
   buy: 14
   sell: 9
 - product: first-born
+  count: 1
   slug: smart-shot-energy-rifle
   name: Smart shot energy rifle
   color: blue
@@ -1188,6 +1303,7 @@
   crystals:
     - green
 - product: first-born
+  count: 1
   slug: sneak-pistol
   name: Sneak pistol
   color: blue
@@ -1200,6 +1316,7 @@
   buy: 10
   sell: 4
 - product: first-born
+  count: 1
   slug: tactical-bracers
   name: Tactical bracers
   color: blue
@@ -1214,6 +1331,7 @@
   crystals:
     - orange
 - product: first-born
+  count: 1
   slug: caaligorn-hunt-rifle
   name: Caaligorn hunt rifle
   color: blue
@@ -1227,6 +1345,7 @@
     - super-reliable
   sell: 24
 - product: first-born
+  count: 1
   slug: dialena-shard-guard
   name: Dialena shard guard
   color: green
@@ -1238,6 +1357,7 @@
     - purple
     - purple
 - product: first-born
+  count: 1
   slug: dyson-vent-8
   name: Dyson vent
   color: green
@@ -1247,6 +1367,7 @@
     - dyson-range
   sell: 14
 - product: first-born
+  count: 1
   slug: iconoclast-shard-sword
   name: Iconoclast shard sword
   color: green
@@ -1256,6 +1377,7 @@
     - ignore-shield
   sell: 12
 - product: first-born
+  count: 1
   slug: mantle-armour
   name: Mantle armour
   color: green
@@ -1265,6 +1387,7 @@
     - flip
   sell: 21
 - product: first-born
+  count: 1
   slug: potent-fibril
   name: Potent fibril
   color: green
@@ -1273,6 +1396,7 @@
     - repair
   sell: 20
 - product: first-born
+  count: 1
   slug: velocity-bond
   name: Velocity bond
   color: green

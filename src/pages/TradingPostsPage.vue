@@ -1,20 +1,23 @@
 <script lang="ts" setup>
 import { computed } from 'vue'
 import { useProducts } from '@/stores/products'
+import { TradingPost } from '@/tokens/types'
 
 const products = useProducts()
 
+const tradingPosts: TradingPost[] = [
+    'bs-mart',
+    'ucp',
+    'claw-store',
+    'armourote',
+    'tech-noir',
+    'giger',
+    'workshop',
+]
+
 const posts = computed(() => {
-    return [
-        'bs-mart',
-        'ucp',
-        'claw-store',
-        'armourote',
-        'tech-noir',
-        'giger',
-        'workshop',
-    ]
-        .filter((post) =>
+    return tradingPosts
+        .filter((post: TradingPost) =>
             post === 'workshop' ? products.active.indexOf('rogue') >= 0 : true
         )
         .map((s) => ({ slug: s, info: `${s}-info` }))
@@ -26,8 +29,10 @@ const posts = computed(() => {
         <div class="bg-image"></div>
 
         <div class="box">
-            <h1>{{ $t('trading-posts') }}</h1>
-            <p v-html="$t('welcome-trader')" />
+            <header>
+                <h1>{{ $t('trading-posts') }}</h1>
+                <p v-html="$t('welcome-trader')" />
+            </header>
             <nav>
                 <router-link
                     v-for="post in posts"
@@ -58,6 +63,10 @@ const posts = computed(() => {
     background-position: center center;
     background-size: cover;
     filter: blur(2px);
+}
+
+.box header {
+    padding: 0 1em;
 }
 
 .container {
@@ -157,6 +166,10 @@ const posts = computed(() => {
 @media (min-width: 600px) {
     .post {
         flex-basis: 48%;
+    }
+
+    .box header {
+        padding: 0;
     }
 }
 

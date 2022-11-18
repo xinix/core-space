@@ -817,3 +817,41 @@ lime: Vert pâle
 brown: Marron
 white: Blanc
 teal: Turquoise
+trading-posts: Trading posts
+welcome-trader: >-
+  Bienvenue Marchands !<br><br>La galaxie compte une grande variété de Comptoirs Commerciaux qui
+  vendent tous les objets que vous cherchez. Après chaque partie, vous devrez choisir UN (et un seul)
+  Comptoir Commercial à visiter.<br><br>Quel Comptoir voulez-vous visiter aujourd'hui ?
+bs-mart: Magasins BS-Mart
+bs-mart-info: >-
+  Quel que soit le Comptoir Commercial que vous choisissez, vous pouvez <strong>toujours</strong> visiter
+  ce magasin. Les BS-Mart stockent des objets de tous types d'une valeur maximale de 4 UA.
+ucp: Up Close & Personnel
+ucp-info: >-
+  Up Close & Personnel stockent des armes de <strong>Combat rapproché</strong> d'une valeur allant de
+  <strong>5 à 9 UA</strong>. Chaque arme de Combat rapproché d'un Coût de 5 à 9 UA que vous vendez chez
+  Up Close & Personnel rapporte un bonus de +1 UA.
+claw-store: Claw Store
+claw-store-info: >-
+  Claw Store stockent des armes de <strong>Combat à distance</strong> d'une valeur allant de
+  <strong>5 à 9 UA</strong>. Chaque arme de Combat à distance d'un Coût de 5 à 9 UA que vous vendez chez
+  Claw Store rapporte un bonus de +1 UA.
+armourote: Armourote
+armourote-info: >-
+  Armourote stocke des <strong>armures</strong> coûtant entre <strong>5 et 9 UA</strong>.
+  Chaque armure d'un Coût de 5 à 9 UA que vous vendez chez Armourote vous rapporte un bonus de +1 UA.
+tech-noir: Tech Noir
+tech-noir-info: >-
+  Tech Noir stocke des <strong>articles spécieux</strong> (pion oranges) d'un prix compris <strong>entre 5 et 9 UA</strong>.
+  Chaque objet spécial avec un Coût de 5 à 9 UA que vous vendrez chez Tech Noir vous rapportera un bonus
+  de +1 UA.
+giger: Giger's Emporium
+giger-info: >-
+  Giger's Emporium stocke des articles de <strong>tous types</strong> coûtant <strong>10 UA ou plus</strong>. 
+  Chaque objet rare d'un Coût de 10 UA ou plus que vous vendez chez Giger's Emporium vous rapporte un bonus
+  de +1 UA.
+workshop: The Workshop
+workshop-info: >-
+  L'Atelier <strong>n'est accessible que par la Purge Renégate</strong> et leur permet de fabriquer des objets.
+  Les <em>ingrédients</em> sont indiqués au dos du jeton. Toute arme de la Purge peut être vendue au même
+  tarif qu'un pion d'Azurium.

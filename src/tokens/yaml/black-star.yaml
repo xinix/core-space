@@ -10,6 +10,7 @@
     - discard
   buy: 14
   sell: 8
+  count: 1
 - product: black-star
   slug: ammo
   name: Ammo
@@ -20,6 +21,7 @@
   icons:
     - ammo
     - discard
+  count: 10
 - product: black-star
   slug: bio-tag-blade
   name: Bio tag blade
@@ -31,6 +33,7 @@
     - boomerang
   sell: 18
   buy: 34
+  count: 1
 - product: black-star
   slug: breach-rifle
   name: Breach rifle
@@ -42,6 +45,7 @@
     - burst-2
   sell: 21
   buy: 37
+  count: 1
 - product: black-star
   slug: burst-vest
   name: Burst vest
@@ -56,6 +60,7 @@
     - discard
   buy: 14
   sell: 8
+  count: 1
 - product: black-star
   slug: combat-stim
   name: Combat stim
@@ -67,6 +72,7 @@
     - discard
   buy: 3
   sell: 1
+  count: 4
 - product: black-star
   slug: cyclone-rifle
   name: Cyclone rifle
@@ -78,6 +84,7 @@
     - burst
   buy: 34
   sell: 18
+  count: 1
 - product: black-star
   slug: detonator-l
   name: Detonator
@@ -90,6 +97,7 @@
     - effortless
   buy: 21
   sell: 13
+  count: 1
 - product: black-star
   slug: detonator-m
   name: Detonator
@@ -102,6 +110,7 @@
     - effortless
   buy: 15
   sell: 9
+  count: 1
 - product: black-star
   slug: flash-bomb
   name: Flash bomb
@@ -112,6 +121,7 @@
     - flash
   buy: 3
   sell: 1
+  count: 1
 - product: black-star
   slug: gold
   name: Gold
@@ -121,6 +131,7 @@
     - rock
   buy: 10
   sell: 10
+  count: 1
 - product: black-star
   slug: grapple-gun
   name: Grapple gun
@@ -131,6 +142,7 @@
     - grapple
   buy: 8
   sell: 4
+  count: 1
 - product: black-star
   slug: grapple
   name: Grapple
@@ -141,6 +153,7 @@
     - discard
   buy: 1
   sell: 0
+  count: 5
 - product: black-star
   slug: grenade
   name: Grenade
@@ -154,6 +167,7 @@
     - discard
   buy: 5
   sell: 4
+  count: 5
 - product: black-star
   slug: heal-stim
   name: Heal stim
@@ -165,6 +179,7 @@
     - discard
   buy: 2
   sell: 1
+  count: 4
 - product: black-star
   slug: key
   name: Key
@@ -175,6 +190,7 @@
     - effortless
     - rare
   sell: 2
+  count: 4
 - product: black-star
   slug: machine-pistol-enhanced
   name: Machine pistol enhanced
@@ -185,6 +201,7 @@
     - sustained-fire
   buy: 14
   sell: 12
+  count: 1
 - product: black-star
   slug: machine-rifle-grenade-launcher
   name: Machine rifle grenade launcher
@@ -197,6 +214,7 @@
     - grenade-launcher
   buy: 21
   sell: 17
+  count: 1
 - product: black-star
   slug: mine
   name: Mine
@@ -213,6 +231,7 @@
     - discard
   buy: 4
   sell: 1
+  count: 4
 - product: black-star
   slug: multi-pad
   name: Multi pad
@@ -222,6 +241,7 @@
     - data
   buy: 7
   sell: 3
+  count: 1
 - product: black-star
   slug: objective
   name: Objective
@@ -229,6 +249,7 @@
   size: nano
   icons:
     - objective
+  count: 3
 - product: black-star
   slug: poison-throw
   name: Poison throw
@@ -240,6 +261,7 @@
     - effortless
   buy: 8
   sell: 4
+  count: 4
 - product: black-star
   slug: ptd-vest
   name: P.T.D. vest
@@ -252,6 +274,7 @@
     - scatter
     - flip
   sell: 21
+  count: 1
 - product: black-star
   slug: quells-fury-chemical
   name: Quell's fury chemical
@@ -263,6 +286,7 @@
     - fire
   buy: 31
   sell: 18
+  count: 1
 - product: black-star
   slug: ranged-re-roll
   name: Ranged re-roll
@@ -272,6 +296,7 @@
     - re-roll-ranged
   buy: 18
   sell: 11
+  count: 2
 - product: black-star
   slug: ship-parts-4
   name: Ship parts 4
@@ -282,6 +307,7 @@
   icons:
     - rare
   sell: 8
+  count: 1
 - product: black-star
   slug: skill-stim
   name: Skill stim
@@ -293,6 +319,7 @@
     - discard
   buy: 4
   sell: 1
+  count: 4
 - product: black-star
   slug: stim-vest
   name: Stim vest
@@ -307,6 +334,7 @@
     - effortless
     - flip
     - heal-2
+  count: 1
 - product: black-star
   slug: tactical-rifle
   name: Tactical rifle
@@ -319,6 +347,7 @@
     - burst-1
   buy: 32
   sell: 14
+  count: 1
 - product: black-star
   slug: target-laser
   name: Target laser
@@ -328,6 +357,7 @@
     - target-lock
   buy: 15
   sell: 8
+  count: 2
 - product: black-star
   slug: tech-wrench
   name: Tech wrench
@@ -338,6 +368,7 @@
     - repair
   buy: 8
   sell: 5
+  count: 1
 - product: black-star
   slug: temporary-shield
   name: Temporary shield
@@ -349,6 +380,7 @@
     - discard
   buy: 4
   sell: 2
+  count: 2
 - product: black-star
   slug: throwing-knife
   name: Throwing knife
@@ -359,6 +391,7 @@
     - effortless
   buy: 1
   sell: 0
+  count: 3
 - product: black-star
   slug: timewarp
   name: Timewarp
@@ -369,6 +402,7 @@
     - discard
   buy: 7
   sell: 5
+  count: 2
 - product: black-star
   slug: walkie
   name: Walkie
@@ -378,6 +412,7 @@
     - swap
   buy: 5
   sell: 3
+  count: 3
 - product: black-star
   slug: yellow-nade
   name: Yellow nade
@@ -391,3 +426,4 @@
     - 2
   buy: 6
   sell: 5
+  count: 2

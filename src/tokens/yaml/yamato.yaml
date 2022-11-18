@@ -1,4 +1,5 @@
 - product: yamato
+  count: 1
   slug: "common-pistol"
   name: "Common pistol"
   color: blue
@@ -10,6 +11,7 @@
   buy: 3
   sell: 1
 - product: yamato
+  count: 1
   slug: "empathic-cuffs"
   name: "Empathic cuffs"
   color: orange
@@ -19,6 +21,7 @@
     - rare
   sell: 8
 - product: yamato
+  count: 2
   slug: knife
   name: Knife
   color: blue
@@ -27,6 +30,7 @@
   buy: 0
   sell: 0
 - product: yamato
+  count: 1
   slug: "machine-pistol"
   name: "Machine pistol"
   color: blue
@@ -36,6 +40,7 @@
   buy: 12
   sell: 6
 - product: yamato
+  count: 1
   slug: "merg-plating"
   name: "Merg plating"
   color: yellow
@@ -46,6 +51,7 @@
   buy: 30
   sell: 18
 - product: yamato
+  count: 1
   slug: "military-coat"
   name: "Military coat"
   color: yellow
@@ -57,6 +63,7 @@
     - flip
     - rare
 - product: yamato
+  count: 1
   slug: "military-pistol"
   name: "Military pistol"
   color: blue
@@ -68,6 +75,7 @@
   buy: 8
   sell: 4
 - product: yamato
+  count: 2
   slug: "n-ammo"
   name: "Ammo mag"
   color: orange
@@ -78,6 +86,7 @@
   buy: 2
   sell: 1
 - product: yamato
+  count: 1
   slug: "storm-bracers"
   name: "Storm bracers"
   color: blue

@@ -95,8 +95,8 @@ const onClear = (ev: MouseEvent) => {
             class="popup"
             tabindex="-1"
             @click.self="onToggle"
-            @keydown.esc="onEsc"
-            @keydown.enter="onEnter"
+            @keyup.esc="onEsc"
+            @keyup.enter="onEnter"
         >
             <div class="container">
                 <header>

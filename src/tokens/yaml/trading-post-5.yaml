@@ -1,4 +1,5 @@
 - product: "trading-post-5"
+  count: 1
   slug: "ammo-box-lg"
   name: "Large ammo box"
   color: orange
@@ -11,6 +12,7 @@
   buy: 14
   sell: 8
 - product: "trading-post-5"
+  count: 1
   slug: "detonator-l"
   name: Detonator
   color: blue
@@ -23,6 +25,7 @@
   buy: 21
   sell: 13
 - product: "trading-post-5"
+  count: 1
   slug: "hi-ex"
   name: "Hi ex"
   color: white
@@ -39,6 +42,7 @@
     - "supply-drop"
   sell: 2
 - product: "trading-post-5"
+  count: 1
   slug: "machine-rifle-compact"
   name: "Machine rifle compact"
   color: blue
@@ -50,6 +54,7 @@
   buy: 17
   sell: 8
 - product: "trading-post-5"
+  count: 2
   slug: "medi-pack"
   name: "Medi pack"
   color: white
@@ -59,6 +64,7 @@
   description:
     - "supply-drop"
 - product: "trading-post-5"
+  count: 1
   slug: "military-pistol"
   name: "Military machine pistol"
   color: blue
@@ -70,6 +76,7 @@
   buy: 18
   sell: 10
 - product: "trading-post-5"
+  count: 1
   slug: "mining-drubber"
   name: "Mining drubber"
   color: orange
@@ -79,6 +86,7 @@
   buy: 4
   sell: 2
 - product: "trading-post-5"
+  count: 1
   slug: "multi-pad"
   name: "Multi pad"
   color: orange
@@ -88,6 +96,7 @@
   buy: 7
   sell: 3
 - product: "trading-post-5"
+  count: 1
   slug: "n-bomb"
   name: Bomb
   color: blue
@@ -104,6 +113,7 @@
   buy: 5
   sell: 2
 - product: "trading-post-5"
+  count: 2
   slug: "n-mine"
   name: Mine
   color: blue
@@ -120,6 +130,7 @@
   buy: 4
   sell: 1
 - product: "trading-post-5"
+  count: 1
   slug: "n-wrench"
   name: Wrench
   color: orange
@@ -129,6 +140,7 @@
   buy: 3
   sell: 2
 - product: "trading-post-5"
+  count: 1
   slug: "outland-gun"
   name: "Outland gun"
   color: blue
@@ -144,6 +156,7 @@
     - orange
     - green
 - product: "trading-post-5"
+  count: 3
   slug: "poison-throw"
   name: "Poison throw"
   color: blue
@@ -155,6 +168,7 @@
   buy: 8
   sell: 4
 - product: "trading-post-5"
+  count: 1
   slug: "power-claw"
   name: "Power claw"
   color: blue
@@ -164,6 +178,7 @@
   buy: 14
   sell: 7
 - product: "trading-post-5"
+  count: 1
   slug: "quell-spit-pistol"
   name: "Quell spit pistol"
   color: white
@@ -176,6 +191,7 @@
   description:
     - "supply-drop"
 - product: "trading-post-5"
+  count: 1
   slug: "shield-clamp"
   name: "Shield clamp"
   color: white
@@ -185,6 +201,7 @@
   description:
     - "supply-drop"
 - product: "trading-post-5"
+  count: 1
   slug: "shield-module-blue"
   name: "Shield module blue"
   color: yellow
@@ -196,6 +213,7 @@
   buy: 12
   sell: 5
 - product: "trading-post-5"
+  count: 1
   slug: "shield-module-red"
   name: "Shield module red"
   color: yellow
@@ -212,6 +230,7 @@
     - purple
     - green
 - product: "trading-post-5"
+  count: 1
   slug: "tech-pack"
   name: "Tech pack"
   color: white
@@ -222,6 +241,7 @@
   description:
     - "supply-drop"
 - product: "trading-post-5"
+  count: 1
   slug: "thump-knife"
   name: "Thump knife"
   color: blue
@@ -232,6 +252,7 @@
   buy: 8
   sell: 4
 - product: "trading-post-5"
+  count: 1
   slug: "w-action"
   name: "Stim actions"
   color: white
@@ -244,6 +265,7 @@
   description:
     - "supply-drop"
 - product: "trading-post-5"
+  count: 3
   slug: "w-ammo"
   name: Ammo
   color: white
@@ -255,6 +277,7 @@
   description:
     - "supply-drop"
 - product: "trading-post-5"
+  count: 2
   slug: "w-heal"
   name: "Stim heal"
   color: white
@@ -267,6 +290,7 @@
   description:
     - "supply-drop"
 - product: "trading-post-5"
+  count: 2
   slug: "w-nade"
   name: Grenade
   color: white
@@ -281,6 +305,7 @@
   description:
     - "supply-drop"
 - product: "trading-post-5"
+  count: 1
   slug: "w-skill"
   name: "Stim skill"
   color: white
@@ -293,6 +318,7 @@
   description:
     - "supply-drop"
 - product: "trading-post-5"
+  count: 3
   slug: "ws-ammo"
   name: "Accelerant ammo"
   color: white

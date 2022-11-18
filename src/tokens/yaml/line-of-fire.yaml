@@ -1,4 +1,5 @@
 - product: line-of-fire
+  count: 1
   slug: burst-vest
   name: Burst vest
   color: white
@@ -13,6 +14,7 @@
     - discard
   sell: 4
 - product: line-of-fire
+  count: 1
   slug: hi-ex
   name: Hi-ex explosive
   color: white
@@ -29,6 +31,7 @@
     - bomb
   sell: 2
 - product: line-of-fire
+  count: 1
   slug: medi-pack
   name: Medi pack
   color: white
@@ -37,6 +40,7 @@
     - supply-drop
   heal: 4
 - product: line-of-fire
+  count: 1
   slug: n-action
   name: Stim action
   color: white
@@ -48,6 +52,7 @@
     - effortless
     - discard
 - product: line-of-fire
+  count: 2
   slug: n-heal
   name: Stim heal
   color: white
@@ -59,6 +64,7 @@
     - effortless
     - discard
 - product: line-of-fire
+  count: 1
   slug: n-skill
   name: Stim skill
   color: white
@@ -70,6 +76,7 @@
     - effortless
     - discard
 - product: line-of-fire
+  count: 1
   slug: tactical-military-pistol
   name: Tactical military pistol
   color: white
@@ -82,6 +89,7 @@
     - burst-1
   sell: 3
 - product: line-of-fire
+  count: 1
   slug: tech-pack
   name: Tech pack
   color: white
@@ -92,6 +100,7 @@
     - repair
   sell: 1
 - product: line-of-fire
+  count: 4
   slug: w-ammo
   name: Ammo
   color: white
@@ -103,6 +112,7 @@
     - discard
   sell: 1
 - product: line-of-fire
+  count: 2
   slug: w-mine
   name: Grenade
   color: white
@@ -117,6 +127,7 @@
     - discard
   sell: 2
 - product: line-of-fire
+  count: 1
   slug: ws-ammo
   name: Accelerant ammo
   color: white
