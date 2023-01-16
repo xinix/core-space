@@ -94,7 +94,7 @@ defineExpose({ focus })
 <template>
     <header :class="headerClass" class="menu">
         <div class="container">
-            <transition duration="100" mode="out-in" name="slide">
+            <transition :duration="100" mode="out-in" name="slide">
                 <BackButton v-if="showBack" class="back" />
                 <router-link v-else-if="showLogo" class="logo" to="/">
                     <Logo />
@@ -136,7 +136,7 @@ defineExpose({ focus })
                 </form>
             </transition>
 
-            <transition duration="100" name="slide">
+            <transition :duration="100" name="slide">
                 <div v-if="showActions" class="actions">
                     <FilterButton v-if="showSearch" />
                     <router-link to="/settings">
