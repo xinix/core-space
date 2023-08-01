@@ -32,9 +32,16 @@ export const useTokens = defineStore('tokens', {
             const q = state.q.toLowerCase().trim()
             let result = state.rawItems
             if (q != '') {
+                const qs = state.q.toLowerCase().split(',').map(term => term.trim()).filter(term => term != '');
                 result = result.filter(
-                    (a) => a.name.toLowerCase().indexOf(q) >= 0
-                )
+                    (a) => qs.some(q => {
+                        if (q.startsWith('"') && q.endsWith('"') && q.length > 1) {
+                            return a.name.toLowerCase() == q.toLocaleLowerCase().replace(/"/g, '');
+                        } else {
+                            return a.name.toLowerCase().indexOf(q) >= 0;
+                        }
+                    })
+                );
             }
             if (state.colors.length > 0) {
                 result = result.filter(
