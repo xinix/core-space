@@ -32,9 +32,10 @@ export const useTokens = defineStore('tokens', {
             const q = state.q.toLowerCase().trim()
             let result = state.rawItems
             if (q != '') {
-                result = result.filter(
-                    (a) => a.name.toLowerCase().indexOf(q) >= 0
-                )
+              const qs = state.q.toLowerCase().split(',').map(term => term.trim()).filter(term => term != '');
+              result = result.filter(
+                (a) => qs.some(q => a.name.toLowerCase().indexOf(q) >= 0)
+              )
             }
             if (state.colors.length > 0) {
                 result = result.filter(
@@ -46,6 +47,7 @@ export const useTokens = defineStore('tokens', {
             }
             return result
         },
+
         getItemByKey: (state) => {
             return (key: string) => {
                 return state.rawItems.find((a) => a.key === key)
