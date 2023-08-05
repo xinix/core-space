@@ -34,6 +34,12 @@ git commit -m "New release"
 git subtree push dist origin gh-pages
 ```
 
+### Changelog
+added comma seperated search
+added exact search for test in double quotes
+added inventory save and restore state for the 4 CS first born characters and ship hold
+
+
 ### License
 
     MIT License
