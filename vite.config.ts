@@ -13,13 +13,14 @@ export default defineConfig({
         __APP_VERSION__: JSON.stringify(process.env.npm_package_version),
     },
     server: {
-        host: 'core-space.dev',
+        host: 'localhost',
         open: true,
-        port: 8765,
-        https: {
-            key: fs.readFileSync('./.cert/key.pem'),
-            cert: fs.readFileSync('./.cert/cert.pem'),
-        },
+        port: 8765
+        //,
+        //https: {
+        //    key: fs.readFileSync('./.cert/key.pem'),
+        //    cert: fs.readFileSync('./.cert/cert.pem'),
+        //},
     },
     base: '/core-space/',
     build: {

@@ -1,10 +1,11 @@
 <script lang="ts" setup>
 import TokenDetails from '@/components/tokens/TokenDetails.vue'
 
-import { computed } from 'vue'
+import { computed, ref } from 'vue'
 import { useTokens } from '@/stores/tokens'
+import { onMounted } from 'vue'
 
-const tokens = useTokens()
+const tokens = useTokens()  
 
 const qSummary = computed(
     () => `Search results for: <strong>${tokens.q}</strong>`
@@ -14,9 +15,93 @@ const onClear = (ev: MouseEvent) => {
     tokens.q = ''
     return ev
 }
+
+//create new instance of tokens called tokens1
+const tokens1 = useTokens();
+const tokens2 = useTokens();
+const tokens3 = useTokens();
+const tokens4 = useTokens();
+const tokens5 = useTokens();
+
+const latestsavestateID = ref(0);
+
+
+
+
+const saveState = (savestateID: number) => {
+    localStorage.setItem(`tokens${savestateID}`, JSON.stringify(tokens.$state));
+    latestsavestateID.value = savestateID;
+
+    console.log(`State saved with ID ${savestateID}:`, `tokens${savestateID}`.$state);
+};
+
+const restoreState = (savestateID: number) => {
+    const savedState = localStorage.getItem(`tokens${savestateID}`);
+    if (savedState) {
+        //set the state of productstore using savedState
+        tokens.$state = JSON.parse(savedState);
+        latestsavestateID.value = savestateID;
+
+// set the vlaue of the serachinput element to the value of the q property
+        // @ts-ignore   
+        document.getElementById("q").value = tokens.$state.q;
+        
+
+
+
+        console.log(`State restored with ID ${savestateID}:`, tokens.$state);
+    }
+};
+
+const activeCharacter = computed(() => {
+    if (latestsavestateID.value === 1) {
+        return "Cassie";
+    } else if (latestsavestateID.value === 2) {
+        return "Balcor";
+    }
+    else if (latestsavestateID.value === 3) {
+        return "Wade";
+    }
+    else if (latestsavestateID.value === 4) {
+        return "Hopper";
+    }
+    else if (latestsavestateID.value === 5) {
+        return "Ship";
+    }
+     else {
+        return "None";
+    }
+});
+
+
 </script>
 
 <template>
+    <h1>Active Character: {{ activeCharacter }}</h1>
+    <div class="state-buttons,buy-me-a-coffee">
+         <button class="buy-me-a-coffee" @click="saveState(1)">Save Cassie</button>
+        <!-- Insert 8 spaces -->
+        &nbsp;&nbsp;
+         <button class="buy-me-a-coffee" @click="restoreState(1)">Restore Cassie</button>
+         &nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;  
+        <button class="buy-me-a-coffee" @click="saveState(2)">Save Balcor</button>
+        &nbsp;&nbsp;
+        <button class="buy-me-a-coffee" @click="restoreState(2)">Restore Balcor</button>
+        &nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;
+         <button class="buy-me-a-coffee" @click="saveState(3)">Save Wade</button>
+        
+        &nbsp;&nbsp;
+         <button class="buy-me-a-coffee" @click="restoreState(3)">Restore Wade</button>
+         &nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;
+        <button class="buy-me-a-coffee" @click="saveState(4)">Save Hopper</button>
+        &nbsp;&nbsp;
+        <button class="buy-me-a-coffee" @click="restoreState(4)">Restore Hopper</button>
+        &nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;
+        <button class="buy-me-a-coffee" @click="saveState(5)">Save Ship</button>
+        &nbsp;&nbsp;
+        <button class="buy-me-a-coffee" @click="restoreState(5)">Restore Ship</button>
+    </div>        
+  
     <section class="container">
         <p v-if="tokens.q" class="summary">
             <span v-html="qSummary" />
@@ -100,4 +185,20 @@ const onClear = (ev: MouseEvent) => {
 .list-leave-to {
     opacity: 0;
 }
+
+.buy-me-a-coffee {
+        font-weight: bold;
+        display: inline-flex;
+        align-items: center;
+        margin: 1em 0;
+        padding: 0.5em 1.5em;
+        transition: all 0.2s ease-in;
+        text-decoration: none;
+        color: black;
+        border-radius: 2em;
+        background-color: white;
+        box-shadow: var(--shadow-md);
+        gap: 0.75em;
+}
+
 </style>

@@ -33,7 +33,7 @@ const tokens: TokenType[] = [
     {
         product: 'first-born',
         slug: 'liege-shard-roll',
-        name: 'Liege shard',
+        name: 'Liege shard (roll)',
         color: 'green',
         size: 'sm',
         close: 3,
@@ -66,7 +66,7 @@ const tokens: TokenType[] = [
     {
         product: 'first-born',
         slug: 'dyson-draw-5',
-        name: 'Dyson draw',
+        name: 'Dyson draw (5)',
         color: 'green',
         size: 'sm',
         sell: 8,
@@ -76,7 +76,7 @@ const tokens: TokenType[] = [
     {
         product: 'first-born',
         slug: 'dyson-draw-3',
-        name: 'Dyson draw',
+        name: 'Dyson draw (3)',
         color: 'green',
         size: 'sm',
         sell: 5,
@@ -86,7 +86,7 @@ const tokens: TokenType[] = [
     {
         product: 'first-born',
         slug: 'dyson-vent-5',
-        name: 'Dyson vent',
+        name: 'Dyson vent (5)',
         color: 'green',
         size: 'sm',
         sell: 8,
@@ -96,7 +96,7 @@ const tokens: TokenType[] = [
     {
         product: 'first-born',
         slug: 'dyson-vent-3',
-        name: 'Dyson vent',
+        name: 'Dyson vent (3)',
         color: 'green',
         size: 'sm',
         sell: 8,
@@ -106,7 +106,7 @@ const tokens: TokenType[] = [
     {
         product: 'first-born',
         slug: 'phase-loop-4',
-        name: 'Phase loop',
+        name: 'Phase loop (4)',
         color: 'green',
         size: 'sm',
         sell: 12,
@@ -116,7 +116,7 @@ const tokens: TokenType[] = [
     {
         product: 'first-born',
         slug: 'phase-loop-3',
-        name: 'Phase loop',
+        name: 'Phase loop (3)',
         color: 'green',
         size: 'sm',
         sell: 6,
@@ -135,7 +135,7 @@ const tokens: TokenType[] = [
     {
         product: 'first-born',
         slug: 'repair-4',
-        name: 'Fibril',
+        name: 'Fibril (4)',
         color: 'green',
         size: 'sm',
         sell: 8,
@@ -144,7 +144,7 @@ const tokens: TokenType[] = [
     {
         product: 'first-born',
         slug: 'repair-2',
-        name: 'Fibril',
+        name: 'Fibril (2)',
         color: 'green',
         size: 'sm',
         sell: 5,
@@ -153,7 +153,7 @@ const tokens: TokenType[] = [
     {
         product: 'first-born',
         slug: 'repair-1',
-        name: 'Fibril',
+        name: 'Fibril (1)',
         color: 'green',
         size: 'sm',
         sell: 3,
@@ -199,7 +199,7 @@ const tokens: TokenType[] = [
     {
         product: 'first-born',
         slug: 'matter-shifter-1',
-        name: 'Matter shifter',
+        name: 'Matter shifter (1)',
         color: 'green',
         size: 'sm',
         sell: 4,
@@ -208,7 +208,7 @@ const tokens: TokenType[] = [
     {
         product: 'first-born',
         slug: 'matter-shifter-2',
-        name: 'Matter shifter',
+        name: 'Matter shifter (2)',
         color: 'green',
         size: 'sm',
         sell: 5,
@@ -217,7 +217,7 @@ const tokens: TokenType[] = [
     {
         product: 'first-born',
         slug: 'liege-ring-4',
-        name: 'Liege ring',
+        name: 'Liege ring (4)',
         color: 'green',
         size: 'sm',
         sell: 6,
@@ -228,7 +228,7 @@ const tokens: TokenType[] = [
     {
         product: 'first-born',
         slug: 'liege-ring-3',
-        name: 'Liege ring',
+        name: 'Liege ring (3)',
         color: 'green',
         size: 'sm',
         sell: 4,
@@ -239,7 +239,7 @@ const tokens: TokenType[] = [
     {
         product: 'first-born',
         slug: 'artifact-1',
-        name: 'Artifact',
+        name: 'Artifact (1)',
         color: 'green',
         size: 'sm',
         sell: [4, 8],
@@ -248,7 +248,7 @@ const tokens: TokenType[] = [
     {
         product: 'first-born',
         slug: 'artifact-2',
-        name: 'Artifact',
+        name: 'Artifact (2)',
         color: 'green',
         size: 'sm',
         sell: [4, 8],
@@ -267,7 +267,7 @@ const tokens: TokenType[] = [
     {
         product: 'first-born',
         slug: 'artifact-3',
-        name: 'Artifact',
+        name: 'Artifact (3)',
         color: 'green',
         size: 'sm',
         sell: [4, 5, 7, 11],
@@ -276,7 +276,7 @@ const tokens: TokenType[] = [
     {
         product: 'first-born',
         slug: 'artifact-4',
-        name: 'Artifact',
+        name: 'Artifact (4)',
         color: 'green',
         size: 'sm',
         sell: [4, 5, 7, 11],
@@ -285,7 +285,7 @@ const tokens: TokenType[] = [
     {
         product: 'first-born',
         slug: 'artifact-5',
-        name: 'Artifact',
+        name: 'Artifact (5)',
         color: 'green',
         size: 'sm',
         sell: [4, 5, 7, 11],
@@ -294,7 +294,7 @@ const tokens: TokenType[] = [
     {
         product: 'first-born',
         slug: 'artifact-6',
-        name: 'Artifact',
+        name: 'Artifact (6)',
         color: 'green',
         size: 'sm',
         sell: [4, 5, 7, 11],
@@ -314,7 +314,7 @@ const tokens: TokenType[] = [
     {
         product: 'first-born',
         slug: 'shard-fins-3',
-        name: 'Shard fins',
+        name: 'Shard fins (3)',
         color: 'green',
         size: 'sm',
         sell: 8,
@@ -324,7 +324,7 @@ const tokens: TokenType[] = [
     {
         product: 'first-born',
         slug: 'shard-fins-4',
-        name: 'Shard fins',
+        name: 'Shard fins (4)',
         color: 'green',
         size: 'sm',
         sell: 4,
@@ -334,7 +334,7 @@ const tokens: TokenType[] = [
     {
         product: 'first-born',
         slug: 'raw-minerals',
-        name: 'Raw minerals',
+        name: 'Raw minerals (Green Yellow)',
         color: 'green',
         size: 'sm',
         sell: 3,
@@ -343,7 +343,7 @@ const tokens: TokenType[] = [
     {
         product: 'first-born',
         slug: 'raw-minerals-1',
-        name: 'Raw minerals',
+        name: 'Raw minerals (Yellow Yellow)',
         color: 'green',
         size: 'sm',
         sell: 4,
@@ -821,7 +821,7 @@ const tokens: TokenType[] = [
     {
         product: 'first-born',
         slug: 'raw-green',
-        name: 'Raw minerals',
+        name: 'Raw minerals (Green)',
         color: 'green',
         size: 'nano',
         sell: 2,
@@ -830,7 +830,7 @@ const tokens: TokenType[] = [
     {
         product: 'first-born',
         slug: 'raw-orange',
-        name: 'Raw minerals',
+        name: 'Raw minerals (Yellow)',
         color: 'green',
         size: 'nano',
         sell: 3,
@@ -839,7 +839,7 @@ const tokens: TokenType[] = [
     {
         product: 'first-born',
         slug: 'raw-purple',
-        name: 'Raw minerals',
+        name: 'Raw minerals (Purple)',
         color: 'green',
         size: 'nano',
         sell: 6,
@@ -874,7 +874,7 @@ const tokens: TokenType[] = [
     {
         product: 'first-born',
         slug: 'detonator-l',
-        name: 'Detonator',
+        name: 'Detonator (L)',
         color: 'blue',
         size: 'nano',
         buy: 22,
@@ -886,7 +886,7 @@ const tokens: TokenType[] = [
     {
         product: 'first-born',
         slug: 'detonator-m',
-        name: 'Detonator',
+        name: 'Detonator (M)',
         color: 'blue',
         size: 'nano',
         buy: 15,
