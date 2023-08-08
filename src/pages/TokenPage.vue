@@ -11,6 +11,7 @@ const item = computed(() => tokens.getItemByKey(props.slug))
 </script>
 
 <template>
+    normal call
     <div class="container">
         <main v-if="item" class="details">
             <TokenDetails :item="item" active class="item" />

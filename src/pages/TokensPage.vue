@@ -1,9 +1,17 @@
 <script lang="ts" setup>
-import TokenDetails from '@/components/tokens/TokenDetails.vue'
 
 import { computed, ref } from 'vue'
 import { useTokens } from '@/stores/tokens'
 import { onMounted } from 'vue'
+import TokenDetails from '@/components/tokens/TokenDetails.vue'
+
+
+const showDetails = ref(false)
+
+
+
+    
+
 
 const tokens = useTokens()  
 
@@ -25,7 +33,16 @@ const tokens5 = useTokens();
 
 const latestsavestateID = ref(0);
 
+const toggleShowDetails = () => {
+    if (showDetails.value === true) {
+        showDetails.value = false;
+    } else {
+        showDetails.value = true;
+    }
+//write showdetails to console
+    console.log(`showDetails: ${showDetails.value}`);
 
+}
 
 
 const saveState = (savestateID: number) => {
@@ -34,6 +51,8 @@ const saveState = (savestateID: number) => {
 
     console.log(`State saved with ID ${savestateID}:`, `tokens${savestateID}`.$state);
 };
+
+
 
 const restoreState = (savestateID: number) => {
     const savedState = localStorage.getItem(`tokens${savestateID}`);
@@ -77,6 +96,9 @@ const activeCharacter = computed(() => {
 </script>
 
 <template>
+  
+  <button class="buy-me-a-coffee" @click="toggleShowDetails">Details View</button>
+
     <h1>Active Character: {{ activeCharacter }}</h1>
     <div class="state-buttons,buy-me-a-coffee">
          <button class="buy-me-a-coffee" @click="saveState(1)">Save Cassie</button>
@@ -102,7 +124,7 @@ const activeCharacter = computed(() => {
         <button class="buy-me-a-coffee" @click="restoreState(5)">Restore Ship</button>
     </div>        
   
-    <section class="container">
+    <section v-if="!showDetails" class="container">
         <p v-if="tokens.q" class="summary">
             <span v-html="qSummary" />
             <button class="btn-link" type="button" @click="onClear">
@@ -126,9 +148,29 @@ const activeCharacter = computed(() => {
             />
         </div>
     </section>
+
+    <section v-if="showDetails" class="container" >
+hello
+        <main  class="details">
+            <TokenDetails v-for="item in tokens.items" :key="item.key" :item="item" />
+        </main>
+    </section>
+
+
+   
 </template>
+                 
+    
+
 
 <style lang="scss" scoped>
+
+.details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
 .container {
     padding-bottom: 50vh;
 }
