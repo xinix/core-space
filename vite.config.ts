@@ -16,11 +16,11 @@ export default defineConfig({
         host: 'core-space.dev',
         open: true,
         port: 8765
-        //,
-        //https: {
-        //    key: fs.readFileSync('./.cert/key.pem'),
-        //    cert: fs.readFileSync('./.cert/cert.pem'),
-        //},
+        ,
+        https: {
+            key: fs.readFileSync('./.cert/key.pem'),
+            cert: fs.readFileSync('./.cert/cert.pem'),
+        },
     },
     base: '/core-space/',
     build: {
