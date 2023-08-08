@@ -13,7 +13,7 @@ export default defineConfig({
         __APP_VERSION__: JSON.stringify(process.env.npm_package_version),
     },
     server: {
-        host: 'localhost',
+        host: 'core-space.dev',
         open: true,
         port: 8765
         //,
