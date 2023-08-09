@@ -22,7 +22,7 @@ export default defineConfig({
             cert: fs.readFileSync('./.cert/cert.pem'),
         },
     },
-    base: '/core-space/',
+    base: '/REPONAME/',
     build: {
         rollupOptions: {
             input: {
