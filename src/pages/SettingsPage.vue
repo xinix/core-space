@@ -107,7 +107,10 @@ const version = APP_VERSION
                             <dt>{{ $t('fr') }}</dt>
                             <dd>David Le Prado</dd>
                             <dt>{{ $t('de') }}</dt>
-                            <dd>David Golda</dd>
+                            <dd>
+                                <div>Andre Penning</div>
+                                <div>David Golda</div>
+                            </dd>
                             <dt>{{ $t('nl') }}</dt>
                             <dd>Nico Van den Winckel</dd>
                         </dl>

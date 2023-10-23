@@ -46,11 +46,28 @@ export const useTokens = defineStore('tokens', {
     getters: {
         items: (state) => {
             const q = state.q.toLowerCase().trim()
-            return tokenFilter(state.rawItems, {
-                q,
-                sizes: state.sizes,
-                colors: state.colors,
-            })
+            let result = state.rawItems
+            if (q != '') {
+                const qs = state.q.toLowerCase().split(',').map(term => term.trim()).filter(term => term != '');
+                result = result.filter(
+                    (a) => qs.some(q => {
+                        if (q.startsWith('"') && q.endsWith('"') && q.length > 1) {
+                            return a.name.toLowerCase() == q.toLocaleLowerCase().replace(/"/g, '');
+                        } else {
+                            return a.name.toLowerCase().indexOf(q) >= 0;
+                        }
+                    })
+                );
+            }
+            if (state.colors.length > 0) {
+                result = result.filter(
+                    (a) => state.colors.indexOf(a.color) >= 0
+                )
+            }
+            if (state.sizes.length > 0) {
+                result = result.filter((a) => state.sizes.indexOf(a.size) >= 0)
+            }
+            return result
         },
 
         market: (state) => {
