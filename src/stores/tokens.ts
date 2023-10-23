@@ -2,6 +2,7 @@ import { defineStore } from 'pinia'
 import {
     CoreSpaceToken,
     ProductType,
+    SIZE_ENUM,
     SIZE_NUMBERS,
     TokenColor,
     TokenSize,
@@ -48,16 +49,27 @@ export const useTokens = defineStore('tokens', {
             const q = state.q.toLowerCase().trim()
             let result = state.rawItems
             if (q != '') {
-                const qs = state.q.toLowerCase().split(',').map(term => term.trim()).filter(term => term != '');
-                result = result.filter(
-                    (a) => qs.some(q => {
-                        if (q.startsWith('"') && q.endsWith('"') && q.length > 1) {
-                            return a.name.toLowerCase() == q.toLocaleLowerCase().replace(/"/g, '');
+                const qs = state.q
+                    .toLowerCase()
+                    .split(',')
+                    .map((term) => term.trim())
+                    .filter((term) => term != '')
+                result = result.filter((a) =>
+                    qs.some((q) => {
+                        if (
+                            q.startsWith('"') &&
+                            q.endsWith('"') &&
+                            q.length > 1
+                        ) {
+                            return (
+                                a.name.toLowerCase() ==
+                                q.toLocaleLowerCase().replace(/"/g, '')
+                            )
                         } else {
-                            return a.name.toLowerCase().indexOf(q) >= 0;
+                            return a.name.toLowerCase().indexOf(q) >= 0
                         }
                     })
-                );
+                )
             }
             if (state.colors.length > 0) {
                 result = result.filter(
@@ -65,7 +77,9 @@ export const useTokens = defineStore('tokens', {
                 )
             }
             if (state.sizes.length > 0) {
-                result = result.filter((a) => state.sizes.indexOf(a.size) >= 0)
+                result = result.filter(
+                    (a) => state.sizes.indexOf(SIZE_ENUM[a.size]) >= 0
+                )
             }
             return result
         },
