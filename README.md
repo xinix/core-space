@@ -31,7 +31,7 @@ All rights belong to [Battle Systems](https://www.battlesystems.co.uk)
 ```
 npm run build
 git commit -m "New release"
-git subtree push dist origin gh-pages
+git subtree push --prefix dist origin gh-pages
 ```
 
 ### License
