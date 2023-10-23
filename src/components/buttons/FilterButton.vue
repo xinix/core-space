@@ -79,6 +79,7 @@ const onClear = (ev: MouseEvent) => {
 <template>
     <a
         :class="{ active: hasFilter }"
+        :title="$t('filter')"
         class="btn btn-filter"
         href="javascript:void(0)"
         type="button"
@@ -94,8 +95,8 @@ const onClear = (ev: MouseEvent) => {
             class="popup"
             tabindex="-1"
             @click.self="onToggle"
-            @keydown.esc="onEsc"
-            @keydown.enter="onEnter"
+            @keyup.esc="onEsc"
+            @keyup.enter="onEnter"
         >
             <div class="container">
                 <header>

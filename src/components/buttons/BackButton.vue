@@ -3,6 +3,10 @@ import { useRouter } from 'vue-router'
 
 const router = useRouter()
 const onBack = (ev: MouseEvent) => {
+    if (router.currentRoute.value.name === 'trading-post') {
+        return router.push({ name: 'trading-posts' })
+    }
+
     router.push('/')
     return ev
 }

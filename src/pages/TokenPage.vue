@@ -1,24 +1,25 @@
 <script lang="ts" setup>
-import TokenDetails from '@/components/tokens/TokenDetails.vue'
+import TokenLoader from '@/components/tokens/TokenLoader.vue'
 
-import { useTokens } from '@/stores/tokens'
-import { computed } from 'vue'
-
-const props = defineProps<{ slug: string }>()
-const tokens = useTokens()
-
-const item = computed(() => tokens.getItemByKey(props.slug))
+defineProps<{ slug: string }>()
 </script>
 
 <template>
     <div class="container">
-        <main v-if="item" class="details">
-            <TokenDetails :item="item" active class="item" />
+        <main class="details">
+            <suspense>
+                <TokenLoader :slug="slug" />
+                <template #fallback>Loading...</template>
+            </suspense>
         </main>
     </div>
 </template>
 
 <style lang="scss">
+.container:focus {
+    outline: none;
+}
+
 .details {
     display: flex;
     flex-wrap: wrap;

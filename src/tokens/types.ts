@@ -18,26 +18,14 @@ export type ProductType =
     | 'wanted'
     | 'black-star'
 
-export type TokenMap = {
-    'core-space': CoreSpaceToken[]
-    'zed': CoreSpaceToken[]
-    'galactic-corps': CoreSpaceToken[]
-    'purge-outbreak': CoreSpaceToken[]
-    'rogue': CoreSpaceToken[]
-    'shift-change': CoreSpaceToken[]
-    'cygnus': CoreSpaceToken[]
-    'poseidon': CoreSpaceToken[]
-    'skylark': CoreSpaceToken[]
-    'yamato': CoreSpaceToken[]
-    'first-born': CoreSpaceToken[]
-    'fury': CoreSpaceToken[]
-    'line-of-fire': CoreSpaceToken[]
-    'rysa': CoreSpaceToken[]
-    'trading-post-5': CoreSpaceToken[]
-    'utility': CoreSpaceToken[]
-    'black-star': CoreSpaceToken[]
-    'wanted': CoreSpaceToken[]
-}
+export type TradingPost =
+    | 'bs-mart'
+    | 'ucp'
+    | 'claw-store'
+    | 'armourote'
+    | 'tech-noir'
+    | 'giger'
+    | 'workshop'
 
 export type AttributeType =
     | 'stun'
@@ -185,10 +173,6 @@ export type ItemDescription =
     | 'stim-vest'
     | 'supply-drop'
 
-export type CoreSpaceToken = TokenType & {
-    key: string
-}
-
 export type TokenColor =
     | 'blue'
     | 'yellow'
@@ -203,12 +187,33 @@ export type TokenColor =
 
 export type TokenSize = 'nano' | 'sm' | 'md' | 'lg' | 'xl' | 'umd' | 'ulg'
 
+export const SIZE_ENUM: any = {
+    0: 'nano',
+    1: 'sm',
+    2: 'md',
+    3: 'lg',
+    4: 'xl',
+    5: 'umd',
+    6: 'ulg',
+}
+
+export const SIZE_NUMBERS = {
+    nano: 0,
+    sm: 1,
+    md: 2,
+    lg: 3,
+    xl: 4,
+    umd: 5,
+    ulg: 6,
+}
+
 export type TokenType = {
     product: ProductType
     slug: string
     name: string
     color: TokenColor
     size: TokenSize
+    count: number
     close?: number
     heavy?: number
     throw?: number
@@ -241,4 +246,52 @@ export type TokenType = {
     fuel?: number
     description?: ItemDescription[]
     icons?: AttributeType[]
+}
+
+export type CoreSpaceToken = {
+    key: string
+    size: number
+    product: ProductType
+    count: number
+    slug: string
+    name: string
+    color: TokenColor
+    close?: number
+    heavy?: number
+    throw?: number
+    grenade?: number[]
+    explode?: number[]
+    range?: 's' | 'm' | 'l'
+    short?: number
+    medium?: number
+    long?: number
+    buy?: number | number[]
+    crystals?: CrystalType[]
+    sell?: number | number[]
+    blast?: number[]
+    scatter?: number | number[]
+    phase?: number
+    armour?: number
+    blue_armour?: number
+    blue_armour_regen?: number
+    shield?: number
+    dyson?: number
+    move?: number
+    scramble?: number[]
+    heal?: number
+    super_heal?: number
+    skill?: number
+    super_skill?: number
+    action?: number
+    freeze?: number[]
+    util?: 'all' | 'nano' | 'sling'
+    fuel?: number
+    description?: ItemDescription[]
+    icons?: AttributeType[]
+    sold?: number
+}
+
+export type MarketRecord = {
+    tokenKey: string
+    sold: number
 }

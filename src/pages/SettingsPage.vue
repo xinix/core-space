@@ -26,9 +26,9 @@ const onSave = () => {
     theme.save()
     theme.apply()
     products.save()
-    tokens.load(products.active)
     language.save()
     language.apply()
+    tokens.setChanged()
     i18n.locale.value = language.lang
 }
 

@@ -1,0 +1,190 @@
+- product: fury
+  count: 1
+  slug: dyson-draw-12
+  name: Dyson draw 12
+  color: green
+  size: sm
+  sell: 5
+  icons:
+    - dyson
+    - dyson-range
+- product: fury
+  count: 1
+  slug: dyson-draw-8
+  name: Dyson draw 8
+  color: green
+  size: sm
+  sell: 5
+  icons:
+    - dyson
+    - dyson-range
+- product: fury
+  count: 1
+  slug: guardian-bane
+  name: Guardian bane
+  color: blue
+  size: xl
+  close: 4
+  crystals:
+    - purple
+    - orange
+    - green
+  sell: 30
+  icons:
+    - scythe
+- product: fury
+  count: 1
+  slug: insanity-blades
+  name: Insanity blades
+  color: blue
+  size: md
+  close: 3
+  buy: 0
+  crystals:
+    - purple
+  sell: 21
+  icons:
+    - fear
+- product: fury
+  count: 1
+  slug: line-pistol-energy
+  name: Line pistol energy
+  color: blue
+  size: sm
+  short: 3
+  crystals:
+    - orange
+  buy: 18
+  sell: 12
+  icons:
+    - triple-charge
+- product: fury
+  count: 1
+  slug: line-rifle-advanced-energy
+  name: Line rifle advanced energy
+  color: blue
+  size: lg
+  short: 3
+  medium: 3
+  long: 3
+  crystals:
+    - green
+    - green
+    - green
+  buy: 25
+  sell: 18
+  icons:
+    - triple-charge
+- product: fury
+  count: 1
+  slug: machine-pistol
+  name: Machine pistol
+  color: blue
+  size: sm
+  short: 3
+  crystals:
+    - orange
+    - green
+  buy: 15
+  sell: 12
+  icons:
+    - sustained-fire
+    - reliable
+- product: fury
+  count: 1
+  slug: n-ammo
+  name: Ammo
+  color: orange
+  size: nano
+  icons:
+    - ammo
+    - discard
+- product: fury
+  count: 2
+  slug: n-heal
+  name: Heal stim
+  color: orange
+  size: nano
+  heal: 3
+  buy: 4
+  sell: 2
+  icons:
+    - effortless
+    - discard
+- product: fury
+  count: 1
+  slug: n-reroll
+  name: Ranged Re-roll
+  color: orange
+  size: nano
+  buy: 18
+  sell: 11
+  icons:
+    - re-roll-ranged
+- product: fury
+  count: 3
+  slug: n-shard-yellow
+  name: Yellow Shard
+  color: green
+  size: nano
+  throw: 4
+  sell: 3
+  icons:
+    - effortless
+- product: fury
+  count: 1
+  slug: n-walkie
+  name: Walkie
+  color: orange
+  size: nano
+  buy: 5
+  sell: 3
+  icons:
+    - swap
+- product: fury
+  count: 1
+  slug: recoil-custom-headgear
+  name: Recoil custom headgear
+  color: yellow
+  size: sm
+  throw: 3
+  buy: 22
+  sell: 18
+  armour: 1
+  icons:
+    - effortless-armour
+    - boomerang
+- product: fury
+  count: 2
+  slug: s-ammo
+  name: Accelerant ammo
+  color: orange
+  size: nano
+  crystals:
+    - orange
+  buy: 0
+  sell: 3
+  icons:
+    - super-ammo
+    - discard
+- product: fury
+  count: 1
+  slug: shroud-armour
+  name: Shroud armour
+  color: green
+  size: sm
+  armour: 1
+  sell: 14
+  icons:
+    - ignore-knowledge
+    - true-born
+- product: fury
+  count: 1
+  slug: titan-combat-combo
+  name: Titan combat combo
+  color: yellow
+  size: sm
+  armour: 1
+  buy: 27
+  sell: 15
+  close: 3

@@ -12,7 +12,9 @@ const back = computed<boolean>(() => !!rt.meta.back)
 
 const menu = ref()
 const main = ref()
+
 setTimeout(() => main.value.focus(), 100)
+
 const onKeyPress = (ev: KeyboardEvent) => {
     if (ev.key === '/') {
         menu.value.focus()
@@ -22,20 +24,22 @@ const onKeyPress = (ev: KeyboardEvent) => {
 </script>
 
 <template>
-    <MenuHeader
-        ref="menu"
-        :show-back="back"
-        :show-search="search"
-        tabindex="-2"
-        @keyup="onKeyPress"
-    />
-    <main ref="main" class="content" tabindex="-1" @keyup="onKeyPress">
-        <router-view v-slot="{ Component, route }">
-            <transition mode="out-in" name="slide-fade">
-                <component :is="Component" :key="route.path" />
-            </transition>
-        </router-view>
+    <div class="wrapper">
+        <MenuHeader
+            ref="menu"
+            :show-back="back"
+            :show-search="search"
+            tabindex="-2"
+            @keyup="onKeyPress"
+        />
+        <main ref="main" class="content" tabindex="-1" @keyup="onKeyPress">
+            <router-view v-slot="{ Component, route }">
+                <transition mode="out-in" name="slide-fade">
+                    <component :is="Component" :key="route.path" />
+                </transition>
+            </router-view>
 
-        <ToTopButton />
-    </main>
+            <ToTopButton />
+        </main>
+    </div>
 </template>

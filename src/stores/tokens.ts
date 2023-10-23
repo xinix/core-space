@@ -2,25 +2,41 @@ import { defineStore } from 'pinia'
 import {
     CoreSpaceToken,
     ProductType,
+    SIZE_NUMBERS,
     TokenColor,
     TokenSize,
+    TokenType,
+    TradingPost,
 } from '@/tokens/types'
-import tokens from '@/tokens'
-
-const sizeOrder = ['nano', 'sm', 'md', 'lg', 'xl', 'umd', 'ulg']
+import axios from 'axios'
+import { db } from '@/db'
+import { marketFilter } from '@/helpers/market-filter'
+import { tokenFilter } from '@/helpers/token-filter'
+import { joinsTokens } from '@/db/joins-tokens'
 
 const sortToken = (a: CoreSpaceToken, b: CoreSpaceToken) => {
     return (
         a.color.localeCompare(b.color) ||
-        sizeOrder.indexOf(a.size) - sizeOrder.indexOf(b.size) ||
+        a.size - b.size ||
         a.name.localeCompare(b.name)
     )
+}
+
+function toCoreSpaceToken(token: TokenType): CoreSpaceToken {
+    return {
+        ...token,
+        key: `${token.product}-${token.slug}`,
+        size: SIZE_NUMBERS[token.size],
+    }
 }
 
 export const useTokens = defineStore('tokens', {
     state: () => {
         return {
+            changed: true,
+            loading: false,
             q: '',
+            tradingPost: null as TradingPost | null,
             sizes: [] as TokenSize[],
             colors: [] as TokenColor[],
             active: '',
@@ -53,29 +69,89 @@ export const useTokens = defineStore('tokens', {
             }
             return result
         },
-        getItemByKey: (state) => {
-            return (key: string) => {
-                return state.rawItems.find((a) => a.key === key)
+
+        market: (state) => {
+            if (state.tradingPost == null) return []
+            const q = state.q.toLowerCase().trim()
+            return tokenFilter(
+                marketFilter(state.tradingPost, state.rawItems),
+                {
+                    q,
+                    sizes: state.sizes,
+                    colors: state.colors,
+                }
+            )
+        },
+
+        getItemByKey: () => {
+            return async (key: string) => {
+                return db.tokens.get({ key })
             }
         },
     },
     actions: {
-        load(products: ProductType[]) {
-            const items: CoreSpaceToken[] = []
+        async load(products: ProductType[]) {
+            this.loading = true
+            this.changed = false
+            this.rawItems.splice(0, this.rawItems.length)
             for (const product of products) {
-                if (tokens[product] != undefined) {
-                    items.push(...tokens[product])
+                const counters = await db.tokens.where({ product }).count()
+                if (counters > 0) continue
+
+                try {
+                    const url = `/data/${product}.json`
+                    const { data } = await axios.get(url)
+                    await db.tokens.bulkAdd(data.map(toCoreSpaceToken))
+                } catch (error) {
+                    console.error(`Could not fetch "${product}"`, error)
                 }
             }
-            this.rawItems.splice(
-                0,
-                this.rawItems.length,
-                ...items.sort(sortToken)
+            this.rawItems.push(
+                ...(
+                    await joinsTokens(
+                        db.tokens.where('product').anyOf(products)
+                    )
+                ).sort(sortToken)
             )
+            this.loading = false
+        },
+        setChanged() {
+            this.changed = true
         },
         filter(colors: TokenColor[], sizes: TokenSize[]) {
             this.colors.splice(0, this.colors.length, ...colors)
             this.sizes.splice(0, this.sizes.length, ...sizes)
+        },
+        visit(tradingPost: TradingPost) {
+            this.tradingPost = tradingPost
+        },
+
+        buy(token: CoreSpaceToken) {
+            const index = this.rawItems.findIndex(
+                (item) => item.key === token.key
+            )
+            const { count, sold } = token
+            let newSold = sold == undefined ? 0 : sold
+            newSold++
+            if (newSold > count) {
+                newSold = count
+            }
+            this.rawItems[index].sold = newSold
+            db.market.put({ tokenKey: token.key, sold: newSold }, token.key)
+        },
+
+        sell(token: CoreSpaceToken) {
+            const index = this.rawItems.findIndex(
+                (item) => item.key === token.key
+            )
+            const { sold } = token
+            let newSold = sold == undefined ? 0 : sold
+            newSold--
+            if (newSold < 0) {
+                newSold = 0
+            }
+            this.rawItems[index].sold = newSold
+            db.market.put({ tokenKey: token.key, sold: newSold }, token.key)
         },
     },
 })

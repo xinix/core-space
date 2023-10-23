@@ -96,7 +96,11 @@ defineExpose({ focus })
         <div class="container">
             <transition :duration="100" mode="out-in" name="slide">
                 <BackButton v-if="showBack" class="back" />
-                <router-link v-else-if="showLogo" class="logo" to="/">
+                <router-link
+                    v-else-if="showLogo"
+                    :to="{ name: 'tokens' }"
+                    class="logo"
+                >
                     <Logo />
                 </router-link>
             </transition>
@@ -139,7 +143,16 @@ defineExpose({ focus })
             <transition :duration="100" name="slide">
                 <div v-if="showActions" class="actions">
                     <FilterButton v-if="showSearch" />
-                    <router-link to="/settings">
+                    <router-link
+                        :title="$t('trading-posts')"
+                        :to="{ name: 'trading-posts' }"
+                    >
+                        <span class="material-symbols-rounded">storefront</span>
+                    </router-link>
+                    <router-link
+                        :title="$t('preferences')"
+                        :to="{ name: 'settings' }"
+                    >
                         <span class="material-symbols-rounded">Settings</span>
                     </router-link>
                     <ThemeToggle class="theme" />
