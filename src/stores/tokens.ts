@@ -9,11 +9,11 @@ import {
     TokenType,
     TradingPost,
 } from '@/tokens/types'
-import axios from 'axios'
 import { db } from '@/db'
 import { marketFilter } from '@/helpers/market-filter'
 import { tokenFilter } from '@/helpers/token-filter'
 import { joinsTokens } from '@/db/joins-tokens'
+import { loadDataJson } from '@/helpers/data-loader'
 
 const sortToken = (a: CoreSpaceToken, b: CoreSpaceToken) => {
     return (
@@ -113,8 +113,7 @@ export const useTokens = defineStore('tokens', {
                 if (counters > 0) continue
 
                 try {
-                    const url = `/data/${product}.json`
-                    const { data } = await axios.get(url)
+                    const data = (await loadDataJson(product)) as TokenType[]
                     await db.tokens.bulkAdd(data.map(toCoreSpaceToken))
                 } catch (error) {
                     console.error(`Could not fetch "${product}"`, error)
