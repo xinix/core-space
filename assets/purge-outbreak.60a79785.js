@@ -1,1 +1,0 @@
-const e=[{product:"purge-outbreak",count:3,slug:"mothers-venom",name:"Mothers venom",color:"blue",size:"xl",short:5,medium:5,long:3,description:["mothers-venom"],icons:["cannot-reload"],sell:15}];export{e as default};
