@@ -1127,8 +1127,8 @@
     - orange
     - orange
     - green
-  buy: 5
-  sell: 2
+  buy: 45
+  sell: 18
 - product: first-born
   count: 1
   slug: combat-axe
