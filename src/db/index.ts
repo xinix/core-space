@@ -18,6 +18,8 @@ export class CoreSpaceDB extends Dexie {
             })
             .upgrade((tx) => tx.table('tokens').clear())
 
+        this.version(3).upgrade((tx) => tx.table('tokens').clear())
+
         // e.g. CLEAR tokens table on upgrade
         // this.version(2).upgrade((tx) => tx.table('tokens').clear())
     }

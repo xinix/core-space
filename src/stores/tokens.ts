@@ -68,17 +68,17 @@ export const useTokens = defineStore('tokens', {
                         } else {
                             return a.name.toLowerCase().indexOf(q) >= 0
                         }
-                    })
+                    }),
                 )
             }
             if (state.colors.length > 0) {
                 result = result.filter(
-                    (a) => state.colors.indexOf(a.color) >= 0
+                    (a) => state.colors.indexOf(a.color) >= 0,
                 )
             }
             if (state.sizes.length > 0) {
                 result = result.filter(
-                    (a) => state.sizes.indexOf(SIZE_ENUM[a.size]) >= 0
+                    (a) => state.sizes.indexOf(SIZE_ENUM[a.size]) >= 0,
                 )
             }
             return result
@@ -93,7 +93,7 @@ export const useTokens = defineStore('tokens', {
                     q,
                     sizes: state.sizes,
                     colors: state.colors,
-                }
+                },
             )
         },
 
@@ -108,6 +108,7 @@ export const useTokens = defineStore('tokens', {
             this.loading = true
             this.changed = false
             this.rawItems.splice(0, this.rawItems.length)
+            console.log('update items')
             for (const product of products) {
                 const counters = await db.tokens.where({ product }).count()
                 if (counters > 0) continue
@@ -122,9 +123,9 @@ export const useTokens = defineStore('tokens', {
             this.rawItems.push(
                 ...(
                     await joinsTokens(
-                        db.tokens.where('product').anyOf(products)
+                        db.tokens.where('product').anyOf(products),
                     )
-                ).sort(sortToken)
+                ).sort(sortToken),
             )
             this.loading = false
         },
@@ -141,7 +142,7 @@ export const useTokens = defineStore('tokens', {
 
         buy(token: CoreSpaceToken) {
             const index = this.rawItems.findIndex(
-                (item) => item.key === token.key
+                (item) => item.key === token.key,
             )
             const { count, sold } = token
             let newSold = sold == undefined ? 0 : sold
@@ -155,7 +156,7 @@ export const useTokens = defineStore('tokens', {
 
         sell(token: CoreSpaceToken) {
             const index = this.rawItems.findIndex(
-                (item) => item.key === token.key
+                (item) => item.key === token.key,
             )
             const { sold } = token
             let newSold = sold == undefined ? 0 : sold
