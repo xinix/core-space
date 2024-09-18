@@ -28,7 +28,7 @@ const filter = {
     'bs-mart': (items: CoreSpaceToken[]): CoreSpaceToken[] => {
         /* all items with buy <= 4UA */
         return items.filter(
-            (a) => isWithin(a.buy, 4, 4) && a.crystals == undefined,
+            (a) => isWithin(a.buy, 4, 999) && a.crystals == undefined,
         )
     },
     'ucp': (items: CoreSpaceToken[]): CoreSpaceToken[] => {
@@ -61,7 +61,7 @@ const filter = {
     },
     'giger': (items: CoreSpaceToken[]): CoreSpaceToken[] => {
         /* all items with buy +10UA */
-        return items.filter((a) => isWithin(a.buy, 10, 10))
+        return items.filter((a) => isWithin(a.buy, 10, 999))
     },
     'workshop': (items: CoreSpaceToken[]): CoreSpaceToken[] => {
         /* purge items  */
