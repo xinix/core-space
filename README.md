@@ -12,14 +12,13 @@ the [Esoteric Order of Gamers](https://www.orderofgamers.com/games/core-space/) 
 bought the core game and every expansion available. In 2020 I backed the First Born kickstarter and
 also got everything 😋.
 
-This year I volunteered to demo First Born at Spiel in Essen, Germany and was lucky enough to be
+In 2022 I volunteered to demo First Born at Spiel in Essen, Germany and was lucky enough to be
 selected. I demoed the game for two days and got to work with Colin, Steward and Simon. After Essen
 I got the idea to make an App for Core Space where players can lookup the item tokens they find the
 game and get a detailed explanation about the symbols.
 
 And here it is, both base games (Core Space and First Born) and most expansions are added. The
-webapp is free for anyone to use and can even be installed on your phone. I still have to add the
-two latest Core Space expansions (Black Star Rising / Wanted: Dead or Alive).
+webapp is free for anyone to use and can even be installed on your phone.
 
 Check out the latest version on [xinix.github.io/core-space](https://xinix.github.io/core-space)
 
